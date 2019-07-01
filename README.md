@@ -3,16 +3,18 @@ This course looks at the more advanced aspects of geographic information systems
 
 It is expected that students will have completed GEOG 215, GEOG 415 or an introductory course in GIS at another institution.
 
+This document is also available as a [PDF](README.pdf).
+
 ## Important dates
 Item | Dates
- -: | :-
+ -- | --
 Trimester | 8 July to 9 November 2019
 Teaching period | 8 July to 11 October 2019
 Mid-trimester break | 19 August to 1 September 2019
 Last assessment item due | 18 October 2019
 Study period | NA
 Examination period | NA
-Withdrawal dates | See [Course additions and withdrawals](www.victoria.ac.nz/home/admisenrol/payments/withdrawalsrefunds)
+Withdrawal dates | See [Course additions and  withdrawals](www.victoria.ac.nz/home/admisenrol/payments/withdrawalsrefunds)
 
 If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
 
@@ -37,13 +39,13 @@ Both David O'Sullivan and Andy Rae will attend the lab sessions, which other tha
 Here's the trimester schedule we will aim to follow. **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, when available.
 
 Week | Tue | Thu | Lab | Notes
- :-: |:-- | :-- | :-- | :--
-8 Jul | Review of GIS knowledge (Mairéad de Roiste) | Course overview (Mairéad de Roiste) | No lab |
+ -- | -- | -- | -- | --
+8 Jul | Review of GIS knowledge (_Mairéad de Roiste_) | Course overview (_Mairéad de Roiste_) | No lab |
 15 Jul | Project topics overview and group formation | The miracle of GPS | **GPS exercise** (5%) |
 22 Jul | Open science, open source, and doing GIS in code | Making maps in code | Intro to _R_ for spatial |
-29 Jul | Issues with data | Data cleaning | **Making maps in _R_** (15%) |
-5 Aug | Statistics I | Statistics II | **Data cleaning in _R_** (15%) |
-12 Aug | Spatial analysis | Doing a GIS project | **Simple statistical analysis in _R_** (15%) |
+29 Jul | Issues with data | Data cleaning | **Making maps in _R_** (15%) | Project meeting with instructor
+5 Aug | Statistics I | Statistics II | **Data cleaning in _R_** (15%) | Project meeting with instructor
+12 Aug | Spatial analysis | Doing a GIS project | **Simple statistical analysis in _R_** (15%) | Project meeting with instructor
 &nbsp; | &nbsp; | BREAK | &nbsp; | &nbsp; | &nbsp;
 2 Sep | Topics per project needs | Guest | Lab time: project work |
 9 Sep | Topics per project needs | Guest | Lab time: project work |
@@ -72,11 +74,17 @@ is likely to be useful for anyone who wants to extend their *R* knowledge. Also 
 Lab sessions follow the lecture sessions and will cover related practical topics. Lab materials will generally be found [here](labs/). Only four sessions have an associated assessed assignment, but you should attend all labs and particpate fully to broaden your knowledge of GIScience methods and tools as any of the approaches covered may prove useful for you in other parts of the program. (Note also that a portion of the course credit is for participation in all aspects of the course.)
 
 ### Software
-Most of the lab work will be completed in the [*R*](https://www.r-project.org/) programming language for statistical computing, using various packages tailored to spatial analysis work. *R*
+Most of the guided lab work will be completed in the [*R*](https://www.r-project.org/) programming language for statistical computing, using various packages tailored to geospatial work. *R*
 
 We will use *R* from the [*RStudio*](https://www.rstudio.com/) environment which makes managing work more straightforward.
 
 Both *R* and *RStudio* are available on the lab computers. Both are freely downloadable for use on your own computer (they work on all three major platforms). We can take a look if you are having issues with your installation, but are likely to suggest that you uninstall and reinstall. In some cases problems might arise from different versions of key packages, in which case you will have to work with the lab machine versions as we can't support multiple versions across different platforms.
+
+## GIS group project
+50% of the assessment for the course is based on a group project that you will formally start work on in the second half of trimester (although project groups and topics will be known long before that and better outcomes are likely if you make a start earlier rather than later.) Asssessment of the projects is based on a progress presentation in week 10, and on individual written reports due in the week after lectures end. Reports are to be individually written and assessed. More details of project topics, and expectations of the project work itself will be provided in the second week of trimester (or sooner if available).
+
+### ESRI online tutorials
+As part of your project work and preparation, you should complete one or more ESRI online tutorials. These will extend your GIS skills in areas that benefit your group project. The project summaries include the most relevant tutorials for that project. The tutorials normally take up to 3 hours. You will need a headset for most tutorials.
 
 ## Course learning objectives (CLOs)
 1. Appreciate and describe the scope, limitations and challenges of GIS in real world applications;
@@ -91,18 +99,16 @@ Both *R* and *RStudio* are available on the lab computers. Both are freely downl
     + To enrich your written and verbal communication skills which are vital in any use of GIS
 
 ## Assessment
-This course is 100% internally assessed.  Assessment is based on four lab assignments worth 12.5% of overall course credit each, and a final assignment worth 50% of course credit due in the exam period.
+This course is 100% internally assessed.  Assessment is based on the various items listed below.
 
 Assessment item | Credit | Due date | CLOs
-:- | :-: | :-: | :-:
+ -- | -- | -- | --
 GPS exercise | 5% | 26 Jul | 2
 Making maps in _R_ | 15% | 2 Aug | 2
 Data cleaning in _R_ | 15% | 9 Aug | 2 4
 Simple statistical analysis in _R_ | 15% | 6 Sep | 6
-Project presentation | 15% | 24 & 26 Sep | 1 3 5 6 7
-Written project report | 35% | 18 Oct | 1 3 5 6 7
-
-More detailed guidance on the written report will be provided once the course is under way.
+Project presentation | 10% | 24 & 26 Sep | 1 3 5 6 7
+Written project report | 40% | 18 Oct | 1 3 5 6 7
 
 Assessments are to submitted electronically via dropbox on [Blackboard](https://blackboard.vuw.ac.nz/). I will aim to return coursework within 3 weeks. Extensions should be requested from the SGEES administration office. If you anticipate problems come and talk to me.
 
@@ -123,18 +129,17 @@ The primary mode of communication for the course will be via Blackboard, so plea
 Class representatives provide a way to communicate feedback to the teaching staff during the course. Class representatives will be selected in the first week or two of class, and details of how to contact them will be provided as soon as they are available.
 
 ### Other useful resources
-+ [Academic Integrity and Plagiarism](http://www.victoria.ac.nz/home/study/plagiarism)
-+ [Aegrotats](http:\\www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
-+ [Academic Progress](http:\\www.victoria.ac.nz/home/study/academic-progress) (including restrictions and non-engagement)
-+ [Dates and deadlines](http:\\www.victoria.ac.nz/home/study/dates)
-+ [Grades](http:\\www.victoria.ac.nz/home/study/exams-and-assessments/grades)
-+ [Resolving academic issues](http:\\www.victoria.ac.nz/home/about/avcacademic/publications2#grievances)
-+ [Special passes](http:\\www.victoria.ac.nz/home/about/avcacademic/publications2#specialpass)
-+ [Statutes and policies including the Student Conduct Statute](http:\\www.victoria.ac.nz/home/about/policy)
-+ [Student support](http:\\www.victoria.ac.nz/home/viclife/studentservice)
-+ [Students with disabilities](http:\\www.victoria.ac.nz/st_services/disability)
-+ [Student Charter](http:\\www.victoria.ac.nz/home/viclife/student-charter)
-+ [Student Contract](http:\\www.victoria.ac.nz/home/admisenrol/enrol/studentcontract)
-+ [Turnitin](http:\\www.cad.vuw.ac.nz/wiki/index.php/Turnitin)
-+ [University structure](http:\\www.victoria.ac.nz/home/about)
-+ [VUWSA](http:\\www.vuwsa.org.nz)
++ [Academic Integrity and Plagiarism](https://www.victoria.ac.nz/home/study/plagiarism)
++ [Aegrotats](https:\\www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
++ [Academic Progress](https:\\www.victoria.ac.nz/home/study/academic-progress) (including restrictions and non-engagement)
++ [Dates and deadlines](https:\\www.victoria.ac.nz/home/study/dates)
++ [Grades](https:\\www.victoria.ac.nz/home/study/exams-and-assessments/grades)
++ [Resolving academic issues](https://www.victoria.ac.nz/documents/policy/academic/academic-grievance-policy.pdf)
++ [Statutes and policies including the Student Conduct Statute](https://www.victoria.ac.nz/about/governance/strategy/academic-policies)
++ [Student support](https:\\www.victoria.ac.nz/home/viclife/studentservice)
++ [Students with disabilities](https:\\www.victoria.ac.nz/st_services/disability)
++ [Student Charter](https:\\www.victoria.ac.nz/home/viclife/student-charter)
++ [Student Contract](https:\\www.victoria.ac.nz/home/admisenrol/enrol/studentcontract)
++ [Turnitin](https:\\www.cad.vuw.ac.nz/wiki/index.php/Turnitin)
++ [University structure](https://www.victoria.ac.nz/about/governance)
++ [VUWSA](https:\\www.vuwsa.org.nz)
