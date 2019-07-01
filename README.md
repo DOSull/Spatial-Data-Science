@@ -11,7 +11,7 @@ This course looks at the more advanced aspects of geographic information systems
 
 It is expected that students will have completed GEOG 215, GEOG 415 or an introductory course in GIS at another institution.
 
-This document is also available as a [PDF](README.pdf) (although links may not work in that version).
+This document is also available as a [PDF](README.pdf?raw=true) (although links may not work in that version).
 
 ### Important dates
 Item | Dates
