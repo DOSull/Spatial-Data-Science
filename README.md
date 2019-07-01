@@ -9,7 +9,7 @@
 # Geog 315 Advanced Geographic Information Systems
 This course looks at the more advanced aspects of geographic information systems (GIS). There is a particular emphasis on open source tools and on approaches to doing geospatial analysis in code using *R* as these are becoming increasingly important in science and other workplace settings. The major assessment component of the class is a group project which gives students an opportunity to explore particular methods and topics of interest to themselves, and also to develop teamwork and project planning skills.
 
-It is expected that students will have completed GEOG 215, GEOG 415 or an introductory course in GIS at another institution.
+It is expected that students will have completed [GEOG 215](https://www.victoria.ac.nz/courses/geog/415/2019/offering?crn=25033), [GEOG 415](https://www.victoria.ac.nz/courses/geog/415/2019/offering?crn=25033) or an introductory course in GIS at another institution.
 
 This document is also available as a [PDF](README.pdf?raw=true) (although links may not work in that version).
 
