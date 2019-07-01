@@ -5,6 +5,7 @@
 [assessment](#assessment) \~
 [links](#additional-information)
 
+**last updated** 1 July 2019
 # Geog 315 Advanced Geographic Information Systems
 This course looks at the more advanced aspects of geographic information systems (GIS). There is a particular emphasis on open source tools and on approaches to doing geospatial analysis in code using *R* as these are becoming increasingly important in science and other workplace settings. The major assessment component of the class is a group project which gives students an opportunity to explore particular methods and topics of interest to themselves, and also to develop teamwork and project planning skills.
 
