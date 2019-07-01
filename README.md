@@ -11,7 +11,7 @@ This course looks at the more advanced aspects of geographic information systems
 
 It is expected that students will have completed GEOG 215, GEOG 415 or an introductory course in GIS at another institution.
 
-This document is also available as a [PDF](README.pdf).
+This document is also available as a [PDF](README.pdf) (although links may not work in that version).
 
 ### Important dates
 Item | Dates
@@ -22,9 +22,9 @@ Mid-trimester break | 19 August to 1 September 2019
 Last assessment item due | 18 October 2019
 Study period | NA
 Examination period | NA
-Withdrawal dates | See [Course additions and  withdrawals](www.victoria.ac.nz/home/admisenrol/payments/withdrawalsrefunds)
+Withdrawal dates | See [Course additions and  withdrawals](https://www.victoria.ac.nz/home/admisenrol/payments/withdrawalsrefunds)
 
-If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
+If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](https://www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
 
 ### Lecture and lab schedule
 Lectures are in AM 105 from 12-1 on Tuesdays and Thursdays.
@@ -37,7 +37,7 @@ Both David O'Sullivan and Andy Rae will attend the lab sessions, which other tha
 
 #### Lecturer/coordinator
 **Prof. [David O'Sullivan](mailto:david.osullivan@vuw.ac.nz)**
-**Office** CO227 **Extn.** 6492 **Office hours by appointment** [click here](http://calendly.com/dosullivan)
+**Office** CO227 **Extn.** 6492 **Office hours by appointment** [click here](https://calendly.com/dosullivan)
 
 #### GIS Technician
 **[Andrew Rae](mailto:andrew.rae@vuw.ac.nz)**
@@ -79,7 +79,7 @@ is likely to be useful for anyone who wants to extend their *R* knowledge. Also 
 + Lovelace R, J Nowosad and J Münchow. 2019. [*Geocomputation with R*](https://geocompr.robinlovelace.net/). Boca Raton: Taylor & Francis
 
 ## Labs
-Lab sessions follow the lecture sessions and will cover related practical topics. Lab materials will generally be found [here](labs/). Only four sessions have an associated assessed assignment, but you should attend all labs and particpate fully to broaden your knowledge of GIScience methods and tools as any of the approaches covered may prove useful for you in other parts of the program. (Note also that a portion of the course credit is for participation in all aspects of the course.)
+Lab sessions follow the lecture sessions and will cover related practical topics. Lab materials will generally be found [here](labs/README.md). Only four sessions have an associated assessed assignment, but you should attend all labs and particpate fully to broaden your knowledge of GIScience methods and tools as any of the approaches covered may prove useful for you in other parts of the program. (Note also that a portion of the course credit is for participation in all aspects of the course.)
 
 ### Software
 Most of the guided lab work will be completed in the [*R*](https://www.r-project.org/) programming language for statistical computing, using various packages tailored to geospatial work. *R*
