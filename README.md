@@ -83,8 +83,12 @@ Both *R* and *RStudio* are available on the lab computers. Both are freely downl
 ## GIS group project
 50% of the assessment for the course is based on a group project that you will formally start work on in the second half of trimester (although project groups and topics will be known long before that and better outcomes are likely if you make a start earlier rather than later.) Asssessment of the projects is based on a progress presentation in week 10, and on individual written reports due in the week after lectures end. Reports are to be individually written and assessed. More details of project topics, and expectations of the project work itself will be provided in the second week of trimester (or sooner if available).
 
+For more detail on the group project, see [here](projects/README.md).
+
 ### ESRI online tutorials
 As part of your project work and preparation, you should complete one or more ESRI online tutorials. These will extend your GIS skills in areas that benefit your group project. The project summaries include the most relevant tutorials for that project. The tutorials normally take up to 3 hours. You will need a headset for most tutorials.
+
+For more details of the tutorials, see [here](projects/esri-online-courses.md). 
 
 ## Course learning objectives (CLOs)
 1. Appreciate and describe the scope, limitations and challenges of GIS in real world applications;
