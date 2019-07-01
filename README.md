@@ -1,3 +1,5 @@
+[timetable](#lab-and-lecture-timetable)-[lectures](#Lectures)-[labs](#Labs)-[group project](#GIS-group-project)-[learning objectives](#Course-learning-objectives-(CLOs))-[assessment](#Assessment)-[additional](#Additional-information)
+
 # Geog 315 Advanced Geographic Information Systems
 This course looks at the more advanced aspects of geographic information systems (GIS). There is a particular emphasis on open source tools and on approaches to doing geospatial analysis in code using *R* as these are becoming increasingly important in science and other workplace settings. The major assessment component of the class is a group project which gives students an opportunity to explore particular methods and topics of interest to themselves, and also to develop teamwork and project planning skills.
 
@@ -5,7 +7,7 @@ It is expected that students will have completed GEOG 215, GEOG 415 or an introd
 
 This document is also available as a [PDF](README.pdf).
 
-## Important dates
+### Important dates
 Item | Dates
  -- | --
 Trimester | 8 July to 9 November 2019
@@ -18,20 +20,20 @@ Withdrawal dates | See [Course additions and  withdrawals](www.victoria.ac.nz/ho
 
 If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
 
-## Lecture and lab schedule
+### Lecture and lab schedule
 Lectures are in AM 105 from 12-1 on Tuesdays and Thursdays.
 
 Lab sessions are in KK 217 and 218 from 12-1:50 on Fridays (starting week 2).
 
 
-## Contact details
+### Contact details
 Both David O'Sullivan and Andy Rae will attend the lab sessions, which other than urgent cases is probably the best way to contact us.
 
-### Lecturer/coordinator
+#### Lecturer/coordinator
 **Prof. [David O'Sullivan](mailto:david.osullivan@vuw.ac.nz)**
 **Office** CO227 **Extn.** 6492 **Office hours by appointment** [click here](http://calendly.com/dosullivan)
 
-### GIS Technician
+#### GIS Technician
 **[Andrew Rae](mailto:andrew.rae@vuw.ac.nz)**
 **Office** CO502 **Office hours** TBD
 
@@ -88,7 +90,7 @@ For more detail on the group project, see [here](projects/README.md).
 ### ESRI online tutorials
 As part of your project work and preparation, you should complete one or more ESRI online tutorials. These will extend your GIS skills in areas that benefit your group project. The project summaries include the most relevant tutorials for that project. The tutorials normally take up to 3 hours. You will need a headset for most tutorials.
 
-For more details of the tutorials, see [here](projects/esri-online-courses.md). 
+For more details of the tutorials, see [here](projects/esri-online-courses.md).
 
 ## Course learning objectives (CLOs)
 1. Appreciate and describe the scope, limitations and challenges of GIS in real world applications;
