@@ -49,11 +49,11 @@ Here's the trimester schedule we will aim to follow. **Bolded labs** have an ass
 Week | Tue | Thu | Lab | Notes
  -- | -- | -- | -- | --
 8 Jul | Review of GIS knowledge (_Mairéad de Roiste_) | Course overview (_Mairéad de Roiste_) | No lab |
-15 Jul | Project topics overview and group formation | The miracle of GPS | [**GPS exercise**](labs/lab-01-geog-315-2019.md) (5%) |
+15 Jul | Project topics overview and group formation | The miracle of GPS | [**GPS exercise**](labs/lab-01-geog-315-2019.md) (5%) due immediately |
 22 Jul | Open science, open source, and doing GIS in code | Making maps in code | Intro to _R_ for spatial |
-29 Jul | Issues with data | Data cleaning | **Making maps in _R_** (15%) | Project meeting with instructor
-5 Aug | Statistics I | Statistics II | **Data cleaning in _R_** (15%) | Project meeting with instructor
-12 Aug | Spatial analysis | Doing a GIS project | **Simple statistical analysis in _R_** (15%) | Project meeting with instructor
+29 Jul | Issues with data | Data cleaning | **Making maps in _R_** (15%) due 9 Aug | Project meeting with instructor
+5 Aug | Statistics I | Statistics II | **Data cleaning in _R_** (15%) due 16 Aug| Project meeting with instructor
+12 Aug | Spatial analysis | Doing a GIS project | **Simple statistical analysis in _R_** (15%) due 6 Sep| Project meeting with instructor
 &nbsp; | &nbsp; | BREAK | &nbsp; | &nbsp; | &nbsp;
 2 Sep | Topics per project needs | Guest | Lab time: project work |
 9 Sep | Topics per project needs | Guest | Lab time: project work |
@@ -115,11 +115,11 @@ This course is 100% internally assessed.  Assessment is based on the various ite
 
 Assessment item | Credit | Due date | CLOs
  -- | -- | -- | --
-GPS exercise | 5% | 26 Jul | 2
-Making maps in _R_ | 15% | 2 Aug | 2
-Data cleaning in _R_ | 15% | 9 Aug | 2 4
+GPS exercise | 5% | 19 Jul | 2
+Making maps in _R_ | 15% | 9 Aug | 2
+Data cleaning in _R_ | 15% | 16 Aug | 2 4
 Simple statistical analysis in _R_ | 15% | 6 Sep | 6
-Project presentation | 10% | 24 & 26 Sep | 1 3 5 6 7
+Project presentation | 10% | 24 or 26 Sep | 1 3 5 6 7
 Written project report | 40% | 18 Oct | 1 3 5 6 7
 
 Assessments are to submitted electronically via dropbox on [Blackboard](https://blackboard.vuw.ac.nz/). I will aim to return coursework within 3 weeks. Extensions should be requested from the SGEES administration office. If you anticipate problems come and talk to me.
