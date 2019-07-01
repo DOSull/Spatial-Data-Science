@@ -1,7 +1,7 @@
 # Group projects
 More information on the project expectations, assessment, etc. will be linked from this page.
 + [Project topics](project-topics.md)
-+ [ESRI online courses](esri-online-courses-md)
++ [ESRI online courses](esri-online-courses.md)
 + [The written report](project-report.md)
 +
 
