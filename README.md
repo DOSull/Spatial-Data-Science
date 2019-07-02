@@ -41,7 +41,7 @@ Both David O'Sullivan and Andy Rae will attend the lab sessions, which other tha
 
 #### GIS Technician
 **[Andrew Rae](mailto:andrew.rae@vuw.ac.nz)**
-**Office** CO502 **Office hours** TBD
+**Office** CO502 **Office hours** Mon 2-4 in CO110
 
 ## Lab and lecture timetable
 Here's the trimester schedule we will aim to follow. **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, when available.
@@ -89,7 +89,11 @@ We will use *R* from the [*RStudio*](https://www.rstudio.com/) environment which
 Both *R* and *RStudio* are available on the lab computers. Both are freely downloadable for use on your own computer (they work on all three major platforms). We can take a look if you are having issues with your installation, but are likely to suggest that you uninstall and reinstall. In some cases problems might arise from different versions of key packages, in which case you will have to work with the lab machine versions as we can't support multiple versions across different platforms.
 
 ## GIS group project
-50% of the assessment for the course is based on a group project that you will formally start work on in the second half of trimester (although project groups and topics will be known long before that and better outcomes are likely if you make a start earlier rather than later.) Asssessment of the projects is based on a progress presentation in week 10, and on individual written reports due in the week after lectures end. Reports are to be individually written and assessed. More details of project topics, and expectations of the project work itself will be provided in the second week of trimester (or sooner if available).
+50% of the assessment for the course is based on a group project that you will formally start work on in the second half of trimester.
+
+Regardless of that late start, project groups and topics will be known long before that and better outcomes are likely if you make a start earlier rather than later. To encourage making an early start, and to focus your thinking groups are required to schedule a meeting at some point between week 4 and week 6 to ensure that you are clear about goals, project organisation, and expectations. Further, there will be project presentations in week 10 so that you have an incentive to make progress well before the end of trimester. This is also a good opportunity to get feedback from class mates.
+
+Asssessment of the projects is based on the progress presentation in week 10, and on individual written reports due in the week after lectures end. Reports are individually written and assessed. More details of project topics, and expectations of the project work itself will be provided in the second week of trimester (or sooner if available).
 
 For more detail on the group project, see [here](projects/README.md).
 
