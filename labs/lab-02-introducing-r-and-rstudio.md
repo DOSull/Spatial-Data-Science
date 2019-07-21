@@ -1,5 +1,7 @@
 # Introducing *R* and *RStudio*
-The data for this lab are in [this file](geog315-lab-02.zip?raw=true) and also those provided from your GPS unit from last week.
+The data for this lab are in [this file](geog315-lab-02.zip?raw=true) which also includes data from the GPS exercise last week. This is a *zip* file and must be unpacked into a folder on the machine you are using. If you are unsure how to do this, ask, as if you get it wrong, you will inevitably run into problems later in the session.
+
+A preview of the results you can expect to see from this session is available [here](https://southosullivan.com/geog315/labs/lab-02-introducing-r-and-rstudio.html).
 
 ## Introduction
 This lab will introduce you to the statistical analysis and programming environment *R*, running in *RStudio* (which makes it a bit easier to deal with). *R* has become one of the standard tools for statistical analysis particularly in the academic research community, but [increasingly also in commercial and other work settings](https://statfr.blogspot.com/2018/08/r-generation-story-of-statistical.html). It is well suited to this environment for a number of reasons, particularly
