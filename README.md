@@ -31,7 +31,6 @@ Lectures are in AM 105 from 12-1 on Tuesdays and Thursdays.
 
 Lab sessions are in KK 217 and 218 from 12-1:50 on Fridays (starting week 2).
 
-
 ### Contact details
 Both David O'Sullivan and Andy Rae will attend the lab sessions, which other than urgent cases is probably the best way to contact us.
 
@@ -50,7 +49,7 @@ Week | Tue | Thu | Lab | Notes
  -- | -- | -- | -- | --
 8 Jul | Review of GIS knowledge (_Mairéad de Roiste_) | Course overview: [Running a GIS project](http://southosullivan.com/geog315/RunningAGISProject/) (_Mairéad de Roiste_) | No lab |
 15 Jul | Project topics overview and group formation | [The miracle of GPS](https://southosullivan.com/geog315/GPS/) | [**GPS exercise**](labs/lab-01-geog-315-2019.md) (5%) due immediately |
-22 Jul | Open science, open source, and doing GIS in code | Making maps in code | [Intro to _R_ for spatial](labs/lab-02-introducing-r-and-rstudio.md) |
+22 Jul | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/Open/) | Making maps in code | [Intro to _R_ for spatial](labs/lab-02-introducing-r-and-rstudio.md) |
 29 Jul | Issues with data | Data cleaning | **Making maps in _R_** (15%) due 9 Aug | Project meeting with instructor
 5 Aug | Statistics I | Statistics II | **Data cleaning in _R_** (15%) due 16 Aug| Project meeting with instructor
 12 Aug | Spatial analysis | Doing a GIS project | **Simple statistical analysis in _R_** (15%) due 6 Sep| Project meeting with instructor
