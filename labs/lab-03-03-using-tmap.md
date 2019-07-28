@@ -54,7 +54,8 @@ If `palette_explorer()` doesn't work, then you can inspect mny of the available 
 Specifying the colours and the attribute is only half the choropleth map design problem. The other aspect is to specify both the number of colours to use, and more importantly how to divide the values of the mapped attribute into classes for colouring. This aspect of the design is determined by the `style` and `n` parameters. For example
 
 ```{r}
-tm_shape(lower48) + tm_polygons(col='gop', palette='-RdBu', style='cont', n=11, convert2density=TRUE, area='votes', midpoint=0.5)
+tm_shape(lower48) + 
+  tm_polygons(col='dem', palette='Blues', style='quantile', n=11)
 ```
 
 will produce a classification based on *equal intervals* and 10 classes. There are a number of different possible classification styles:
