@@ -4,7 +4,7 @@ The data for this week are election results from the US Presidential Election of
 
 The data are at the county level for the US (over 3000 counties of wildly varying populations), with numbers of votes recorded for the two major parties &mdash;Democrat (`dem`) and Republican (`gop`)&mdash; along with some other minor parties: Libertarian (`lib`), Green (`grn`), Evan McMullin (`una`) and 'Other' (`oth`).
 
-You will find the data in this [zip archive file](election.zip). As before download and extract these data to a folder **on the H: drive** of your computer. Then open *RStudio* and use **Session - Set working Directory - Choose Working Directory...** to set the session working directory to the folder where you saved the data.
+You will find the data in this [zip archive file](election.zip?raw=true). As before download and extract these data to a folder **on the H: drive** of your computer. Then open *RStudio* and use **Session - Set working Directory - Choose Working Directory...** to set the session working directory to the folder where you saved the data.
 
 Then you can read the data using the `st_read` function as we did last week
 
