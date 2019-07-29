@@ -50,7 +50,7 @@ Week | Tue | Thu | Lab | Notes
 8 Jul | Review of GIS knowledge (_Mairéad de Roiste_) | Course overview: [Running a GIS project](https://southosullivan.com/geog315/RunningAGISProject/) (_Mairéad de Roiste_) | No lab |
 15 Jul | Project topics overview and group formation | [The miracle of GPS](https://southosullivan.com/geog315/GPS/) | [**GPS exercise**](labs/lab-01-geog-315-2019.md) (5%) due immediately |
 22 Jul | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/Open/) | [Starting *R*](https://southosullivan.com/geog315/Starting-r/) | [Intro to _R_ for spatial](labs/lab-02-introducing-r-and-rstudio.md) |
-29 Jul | Issues with data | Data cleaning | [**Making maps in _R_**](labs/lab-03-00-overview.md) (15%) due 9 Aug | Project meeting with instructor
+29 Jul | [Choropleth map design](https://southosullivan.com/geog315/ChoroplethMaps/) | Data cleaning | [**Making maps in _R_**](labs/lab-03-00-overview.md) (15%) due 9 Aug | Project meeting with instructor
 5 Aug | Statistics I | Statistics II | **Data cleaning in _R_** (15%) due 16 Aug| Project meeting with instructor
 12 Aug | Spatial analysis | Doing a GIS project | **Simple statistical analysis in _R_** (15%) due 6 Sep| Project meeting with instructor
 &nbsp; | &nbsp; | BREAK | &nbsp; | &nbsp; | &nbsp;
