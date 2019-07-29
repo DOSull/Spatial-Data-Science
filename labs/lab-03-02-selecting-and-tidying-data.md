@@ -104,10 +104,10 @@ st_write(states, 'states.shp', delete_layer=TRUE)
 ## Adding new attributes
 Often the attributes we are provided with in a dataset are not quite what we want. Perhaps we want proportions or percentages rather than counts. Or maybe we want densities per unit area, or maybe we want the differences or sums of the original attributes.
 
-It is easy to add new attributes to an existing dataset. For example, to create a new variable showing the percentage of population in each state that voted we could do:
+It is easy to add new attributes to an existing dataset using the `mutate` function from the `dplyr` package. For example, to create a new variable showing the percentage of population in each state that voted we can do:
 
 ```{r}
-states$turnout <- states$votes / states$population * 100
+states <- states %>% mutate(turnout = votes / population * 100)
 hist(states$turnout)
 ```
 
