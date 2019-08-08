@@ -12,7 +12,7 @@ Again, the instructions this week are in several parts.
 + [Introducing the data](lab-04-01-introducing-the-data.md)
 + [Dealing with map projections](lab-04-02-map-projections.md)
 + [Spatial joins, summarising data, and throwing away spatial information](lab-04-03-spatial-joins.md)
-+ [The assignment summarised](lab-04-05-assignment-summarised.md)
++ [The assignment summarised](lab-04-04-assignment-summarised.md)
 
 
 
