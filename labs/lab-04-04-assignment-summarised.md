@@ -19,4 +19,7 @@ Here are the questions from the lab all in one place for ease of reference. The 
 ### [**Question 5**](lab-04-03-spatial-joins.md#question-5) 
 #### Make a simple map from the `abb.counts` dataset using the new count variable `n` to colour the dots associated with the listings. You've already used the `tm_dots` function in previous steps, and it will work here also. You can use all the same options available in the `tm_polygons` function for making choroplethm maps that you have seen previously (palettes, styles, etc.). If you are feeling adventurous you could instead use `tm_bubbles` which will let you scale symbols according to a number with a `size` option. Include your map output and a short write up explaining what you think the map shows. (35%)
 
+## Submission instructions
+Prepare a PDF document that includes answers to the above questions. There are are a couple of maps requested, and the whole document should only need to be 2-3 pages (maximum). Submit the PDF file to [the dropbox provided on Blackboard here](https://blackboard.vuw.ac.nz/webapps/assignment/uploadAssignment?content_id=_2510955_1&course_id=_101127_1&group_id=&mode=cpview). The due date is 12:00PM (noon) on 16 August 2019. Remember that you can easily export maps to PNG format images for inclusion in a Word document from *RStudio*.
+
 **[Go back to the overview](lab-04-00-overview.md)**
