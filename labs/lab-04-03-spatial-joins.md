@@ -178,5 +178,5 @@ abb.tracts <- abb.tracts %>%
 st_write(abb.tracts, 'la-abb-tracts-p2770.shp', delete_layer=TRUE)
 ```
 
-**Now [go back to the overview](lab-03-00-overview.md)**
+**Now [go back to the overview](lab-04-00-overview.md)**
 

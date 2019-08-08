@@ -122,4 +122,4 @@ st_write(ca_tracts, 'ca-tracts-p2770.shp', delete_layer=TRUE)
 
 If you need to reload the data at any point you should use these new shapefiles and not the originals. The new projected coordinates are only made permanent when we write the data out to the file system like this.
 
-**Now [go back to the overview](lab-03-00-overview.md)**
+**Now [go back to the overview](lab-04-00-overview.md)**

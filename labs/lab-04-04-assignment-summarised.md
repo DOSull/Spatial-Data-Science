@@ -19,4 +19,4 @@ Here are the questions from the lab all in one place for ease of reference. The 
 ### [**Question 5**](lab-04-03-spatial-joins.md#question-5) 
 #### Make a simple map from the `abb.counts` dataset using the new count variable `n` to colour the dots associated with the listings. You've already used the `tm_dots` function in previous steps, and it will work here also. You can use all the same options available in the `tm_polygons` function for making choroplethm maps that you have seen previously (palettes, styles, etc.). If you are feeling adventurous you could instead use `tm_bubbles` which will let you scale symbols according to a number with a `size` option. Include your map output and a short write up explaining what you think the map shows. (35%)
 
-**[Go back to the overview](lab-03-00-overview.md)**
+**[Go back to the overview](lab-04-00-overview.md)**
