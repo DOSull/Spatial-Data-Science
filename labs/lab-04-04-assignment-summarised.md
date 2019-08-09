@@ -6,9 +6,7 @@ Here are the questions from the lab all in one place for ease of reference. The 
 #### Explain to the best of your ability what has gone wrong in the mapping that we just attempted. Look back to when you loaded the two datasets at the bounding box information provided when each dataset was loaded. (15%)
 
 ### [**Question 2**](lab-04-02-map-projections.md#question-2) 
-#### Explain to the best of your ability what is happening when you use the command above
-    ca_tracts <- st_transform(ca_tracts, **st_crs(abb)**)
-#### with specific reference to how we specify the projection to be used in the transformation, that is the part in **bold** text. (10%)
+#### Explain to the best of your ability what is happening when you use the command above,  `ca_tracts <- st_transform(ca_tracts, st_crs(abb))` with specific reference to how we specify the projection to be used in the transformation, that is the `st_crs(abb)` part. (10%)
 
 ### [**Question 3**](lab-04-03-spatial-joins.md#question-3) 
 #### How would you change the code above to restrict the data to a different county, say Alameda (code `001`, in the Bay Area across from San Francisco). *Demonstrate that you know how to do this, by including a simple map of the census tracts for Alameda County in your answer*. (20%)
