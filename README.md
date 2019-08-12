@@ -52,7 +52,7 @@ Week | Tue | Thu | Lab | Notes
 22 Jul | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/Open/) | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Intro to _R_ for spatial](labs/lab-02-introducing-r-and-rstudio.md) |
 29 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [Data wrangling](https://southosullivan.com/geog315/data-munging/) | [**Making maps in _R_**](labs/lab-03-00-overview.md) (15%) due 9 Aug | [Project meeting with instructor](https://calendly.com/dosullivan)
 5 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | [**Spatial data wrangling in _R_**](labs/lab-04-00-overview.md) (15%) due 16 Aug| [Project meeting with instructor](https://calendly.com/dosullivan)
-12 Aug | Spatial analysis | Doing a GIS project | **Simple statistical analysis in _R_** (15%) due 6 Sep| [Project meeting with instructor](https://calendly.com/dosullivan)
+12 Aug | [Spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | Doing a GIS project | **Simple statistical analysis in _R_** (15%) due 6 Sep| [Project meeting with instructor](https://calendly.com/dosullivan)
 &nbsp; | &nbsp; | BREAK | &nbsp; | &nbsp; | &nbsp;
 2 Sep | Topics per project needs | Guest | Lab time: project work |
 9 Sep | Topics per project needs | Guest | Lab time: project work |
