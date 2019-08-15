@@ -18,6 +18,6 @@ Here are the questions from the lab all in one place for ease of reference. I ha
 #### For the model you made, include the code used to generate it and the output from the `summary` function. Also make a residuals map of your model. Briefly explain why you chose to build the model you did. What influenced your choice of variables to include? Explain what your model seems to show based on the results provided by the `summary` function. (**30%**)
 
 ## Submission instructions
-Prepare a PDF document that includes answers to the above questions. There are are a couple of maps requested, and the whole document should only need to be 2-3 pages (maximum). Submit the PDF file to [the dropbox provided on Blackboard here](https://blackboard.vuw.ac.nz/webapps/assignment/uploadAssignment?content_id=_2510956_1&course_id=_101127_1&group_id=&mode=cpview). The due date is 12:00PM (noon) on 6 September 2019. 
+Prepare a PDF document that includes answers to the above questions. The whole document should only need to be 2-3 pages (maximum). Submit the PDF file to [the dropbox provided on Blackboard here](https://blackboard.vuw.ac.nz/webapps/assignment/uploadAssignment?content_id=_2510956_1&course_id=_101127_1&group_id=&mode=cpview). The due date is 12:00PM (noon) on 6 September 2019. 
 
-One option this week would be to make your answers as an `Rmd` file and then *knit* them to a Word document...
+One option this week might be to make your answers as an `Rmd` file and then *knit* it to a Word document which you could then make into a PDF...
