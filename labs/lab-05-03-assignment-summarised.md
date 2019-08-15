@@ -12,7 +12,10 @@ Here are the questions from the lab all in one place for ease of reference. I ha
 #### Write a brief interpretation of this model describing in words what it seems to tell us about the effect of various neighbourhood factors on the numbers of Airbnb listings in the neighhbourhood. (**15%**)
 
 ### **Question 4**
-Where does the model do particularly badly? Briefly speculate on what other factors not considered in this model might explain this. (Keep in mind that the amenity data is rather haphazard; what kind of 'amenities' does it miss?) (**20%**)
+#### Where does the model do particularly badly? Briefly speculate on what other factors not considered in this model might explain this. (Keep in mind that the amenity data is rather haphazard; what kind of 'amenities' does it miss?) (**20%**)
+
+### **Question 5**
+#### For the model you made, include the code used to generate it and the output from the `summary` function. Also make a residuals map of your model. Briefly explain why you chose to build the model you did. What influenced your choice of variables to include? Explain what your model seems to show based on the results provided by the `summary` function. (**30%**)
 
 ## Submission instructions
 Prepare a PDF document that includes answers to the above questions. There are are a couple of maps requested, and the whole document should only need to be 2-3 pages (maximum). Submit the PDF file to [the dropbox provided on Blackboard here](https://blackboard.vuw.ac.nz/webapps/assignment/uploadAssignment?content_id=_2510956_1&course_id=_101127_1&group_id=&mode=cpview). The due date is 12:00PM (noon) on 6 September 2019. 
