@@ -55,11 +55,11 @@ Week | Tue | Thu | Lab | Notes
 12 Aug | [Spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/) | [**Simple statistical analysis in _R_**](labs/lab-05-00-overview.md) (15%) due 6 Sep| [Project meeting with instructor](https://calendly.com/dosullivan)
 &nbsp; | &nbsp; | BREAK | &nbsp; | &nbsp; | &nbsp;
 2 Sep | [Running a GIS project revisited](https://southosullivan.com/geog315/a-game-of-two-halves/) | Network analysis | Lab time: project work |
-9 Sep | Guest lecture (Daniel Silk, LINZ) | Surface analysis | Lab time: project work |
+9 Sep | Guest lecture ([Daniel Silk](https://twitter.com/influink), [LINZ](https://www.linz.govt.nz/)) | Surface analysis | Lab time: project work |
 16 Sep | Project assistance | No class | Lab time: project work |
 23 Sep | Project progress presentations I | Project progress presentations II | Lab time: project work |
 30 Sep | Project progress presentations III | Project assistance | Lab time: project work |
-7 Oct | Guest | Project assistance | Lab time: project work |
+7 Oct | Guest lecture ([Hamish Campbell](https://polemic.nz/), [Koordinates](https://koordinates.com/company/)) | Project assistance | Lab time: project work |
 
 ## Lectures
 Lectures will consist of 40 minutes or so of presented material with time for more open-ended discussion and Q&A based on any reading or other materials students have been asked to explore ahead of class.
