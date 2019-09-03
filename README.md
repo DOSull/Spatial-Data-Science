@@ -54,7 +54,7 @@ Week | Tue | Thu | Lab | Notes
 5 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | [**Spatial data wrangling in _R_**](labs/lab-04-00-overview.md) (15%) due 16 Aug| [Project meeting with instructor](https://calendly.com/dosullivan)
 12 Aug | [Spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/) | [**Simple statistical analysis in _R_**](labs/lab-05-00-overview.md) (15%) due 6 Sep| [Project meeting with instructor](https://calendly.com/dosullivan)
 &nbsp; | &nbsp; | BREAK | &nbsp; | &nbsp; | &nbsp;
-2 Sep | [Running a GIS project revisited](https://southosullivan.com/geog315/a-game-of-two-halves/) | Network analysis | Lab time: project work |
+2 Sep | [Running a GIS project revisited](https://southosullivan.com/geog315/a-game-of-two-halves/) | [Network analysis](https://southosullivan.com/geog315/network-analysis/) | Lab time: project work |
 9 Sep | Guest lecture ([Daniel Silk](https://twitter.com/influink), [LINZ](https://www.linz.govt.nz/)) | Surface analysis | Lab time: project work |
 16 Sep | Project assistance | No class | Lab time: project work |
 23 Sep | Project progress presentations I | Project progress presentations II | Lab time: project work |
