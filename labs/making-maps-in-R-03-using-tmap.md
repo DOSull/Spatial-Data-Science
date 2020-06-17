@@ -21,11 +21,11 @@ A good resource for understanding `tmap` is provided by this [book chapter](http
 The idea of `tmap` is that we layer map elements onto a map object. We've already seen this last week, so a simple map is something like
 
 ```{r}
-tm_shape(lower48) + 
+tm_shape(lower48) +
   tm_polygons()
 ```
 
-The first part of the above command `tm_shape(lower48)` says something like "I am going to make a map, with input dataset is `lower48`". `tm_shape` makes the map object, which we can then add more information to. In the simple example above, we add to it `+ tm_polygons()`, which says something like "and you should style the map based on the fact the data are polygons". For the particular kind of map you are making in this assignment&mdash;a *choropleth* map&mdash; most of the critical information about how the map should look will be included in the parameters we supply to the `tm_polygons` function. 
+The first part of the above command `tm_shape(lower48)` says something like "I am going to make a map, with input dataset is `lower48`". `tm_shape` makes the map object, which we can then add more information to. In the simple example above, we add to it `+ tm_polygons()`, which says something like "and you should style the map based on the fact the data are polygons". For the particular kind of map you are making in this assignment&mdash;a *choropleth* map&mdash; most of the critical information about how the map should look will be included in the parameters we supply to the `tm_polygons` function.
 
 The various aspects of this are discussed in the sections listed below
 + [Specifying the attribute to be mapped](#specifying-the-attribute-to-map)
@@ -38,7 +38,7 @@ The various aspects of this are discussed in the sections listed below
 The most basic parameter of the `tm_polygons` function is the colour of the polygons. This can be a single colour for all polygons
 
 ```{r}
-tm_shape(lower48) + 
+tm_shape(lower48) +
   tm_polygons(col = 'darkgrey', border.col = 'white')
 ```
 
@@ -47,7 +47,7 @@ I've also shown here how you can change the outline colour (`border.col`) for fu
 A single colour isn't very interesting, if instead we want to base the colours on the value of one of the dataset attributes, we name that attribute in the call to `tm_polygons`:
 
 ```{r}
-tm_shape(lower48) + 
+tm_shape(lower48) +
   tm_polygons(col = 'votes')
 ```
 
@@ -55,7 +55,7 @@ tm_shape(lower48) +
 Just like *ArcGIS* `tmap` has a mysterious preference for a kind of muddy orange colour as the default. Just like *ArcGIS* it allows you specify a very wide range of alternative colour palettes, and you should consider the choice of these carefully in making your map. We specify the colour palette by name. You reverse the direction of the palette by prefixing its name with a `-` sign.
 
 ```{r}
-tm_shape(lower48) + 
+tm_shape(lower48) +
   tm_polygons(col = 'votes', palette = 'PRGn')
 ```
 
@@ -72,7 +72,7 @@ If `palette_explorer()` doesn't work, then you can inspect many of the available
 Specifying the colours and the attribute is only half the choropleth map design problem. The other aspect is to specify both the number of colours to use, and more importantly how to divide the values of the mapped attribute into classes for colouring. This aspect of the design is determined by the `style` and `n` parameters. For example
 
 ```{r}
-tm_shape(lower48) + 
+tm_shape(lower48) +
   tm_polygons(col = 'dem', palette = 'Blues', style = 'quantile', n = 9)
 ```
 
@@ -92,12 +92,12 @@ One thing you should do is examine the distribution of the attribute you are map
 hist(lower48$votes)
 ```
 
-For example, in this case, the `votes` attribute is highly skewed, because there are a small number of very high population counties. This means that if we use `equal` intervals in this case (say intervals of 200,000 as in the histogram) then almost all the counties will be in the first class and there will be lots of classes (i.e., colours) with no associated county. In such a case it would make more sense to use a `quantile` style, although we then have to be sure that the chosen class boundaries make sense. 
+For example, in this case, the `votes` attribute is highly skewed, because there are a small number of very high population counties. This means that if we use `equal` intervals in this case (say intervals of 200,000 as in the histogram) then almost all the counties will be in the first class and there will be lots of classes (i.e., colours) with no associated county. In such a case it would make more sense to use a `quantile` style, although we then have to be sure that the chosen class boundaries make sense.
 
 One option is the `pretty` style, which will choose data values that are easy to read at equally space intervals.
 
 ```{r}
-tm_shape(lower48) + 
+tm_shape(lower48) +
   tm_polygons(col = 'votes', palette = 'viridis', style = 'pretty')
 ```
 
@@ -107,9 +107,9 @@ In preparing your final map for this assignment the choice of colour palette, nu
 To add an additional layer to a map, you add another `tm_shape` function call. In this case, we could add state boundaries
 
 ```{r}
-tm_shape(lower48) + 
-  tm_fill(col = 'population', palette = 'Reds', style = 'quantile', n = 9) + 
-  tm_shape(states) + 
+tm_shape(lower48) +
+  tm_fill(col = 'population', palette = 'Reds', style = 'quantile', n = 9) +
+  tm_shape(states) +
   tm_polygons(alpha = 0, border.col = 'black')
 ```
 
@@ -119,19 +119,19 @@ In this example, I have used `alpha=0` to make the states transparent, so we onl
 There are many other map elements that can be controlled using `tmap` functions. We can add a north arrow and scale bar using `tm_compass()` and `tm_scale_bar()`. We can move the position of the legend around using `tm_legend()` options. We can add text using `tm_text()`. Here's an example with many options.
 
 ```{r}
-tm_shape(lower48) + 
-  tm_fill(col = 'population', palette = 'Reds', style = 'quantile', n = 9, alpha = 0.75) + 
+tm_shape(lower48) +
+  tm_fill(col = 'population', palette = 'Reds', style = 'quantile', n = 9, alpha = 0.75) +
   tm_legend(outside = TRUE, outside.position = 'right') +
-  tm_shape(states) + 
+  tm_shape(states) +
   tm_polygons(alpha = 0, border.col = 'black', lwd = 2) +
-  tm_text(text = 'state', shadow = TRUE, remove.overlap = TRUE) + 
+  tm_text(text = 'state', shadow = TRUE, remove.overlap = TRUE) +
   tm_compass() +
   tm_scale_bar(position = 'left')
 ```
 
 Two options that are good to know about both used here are that the line thickness in plots is controlled by a `lwd` setting, and opacity of colours by an `alpha` setting.
 
-This is not a perfect map by any means. The duplicate labels on the states happen because some states have more than one polygon (for example California and Texas have offshore islands) and it seems to be impossible to stop `tmap` labelling each island (the `remove.overlap` option helps a bit). It's possible to fix this problem by making a new data layer that has one point location for each state, and using that to position the labels, but we'll not worry about that for now. 
+This is not a perfect map by any means. The duplicate labels on the states happen because some states have more than one polygon (for example California and Texas have offshore islands) and it seems to be impossible to stop `tmap` labelling each island (the `remove.overlap` option helps a bit). It's possible to fix this problem by making a new data layer that has one point location for each state, and using that to position the labels, but we'll not worry about that for now.
 
 The best way to figure out all these options is to either ask for help in the lab session, or to use the help available, by prefixing the command with a `?` mark, such as
 
@@ -143,4 +143,4 @@ Any of the functions in *R* has associated help that you can consult in this way
 
 Above all, you should not be afraid to experiment!
 
-Now [go back to the overview](making-maps-in-R-00-overview.md) or [on to the assignment details](making-maps-in-R-assignment.md).
+Now [go back to the overview](making-maps-in-R-00-overview.md) or [on to the assignment details](making-maps-in-R-04-assignment.md).
