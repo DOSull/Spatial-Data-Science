@@ -10,7 +10,7 @@ library(tmap)
 library(dplyr)
 ```
 
-The data for this week are election results from the US Presidential Election of 2016 (the one that gave us president Donald J. Trump). 
+The data for this week are election results from the US Presidential Election of 2016 (the one that gave us president Donald J. Trump).
 
 The data are at the county level for the US (over 3000 counties of wildly varying populations), with numbers of votes recorded for the two major parties &mdash;Democrat (`dem`) and Republican (`gop`)&mdash; along with some other minor parties: Libertarian (`lib`), Green (`grn`), Evan McMullin (`una`) and 'Other' (`oth`).
 
@@ -55,8 +55,8 @@ Of more relevance to the assignment are the vote and population information cont
 In the assignment it is important to consider if these vote *counts* are what you want to map (and why) or if it makes more sense to make additional variables for the vote *share* of the different candidates, or even of the margin of victory, or difference between various candidate's votes. To quickly map any one of these attributes, use the following (you can change the variable or the colours easily)
 
 ```{r}
-tm_shape(results) + 
+tm_shape(results) +
   tm_polygons(col='dem', palette='Blues')
 ```
 
-Now [go back to the overview](making-maps-in-R-00-overview.md) or [on to the next page](making-maps-in-R-selecting-and-tidying-data.md).
+Now [go back to the overview](making-maps-in-R-00-overview.md) or [on to the next page](making-maps-in-R-02-selecting-and-tidying-data.md).
