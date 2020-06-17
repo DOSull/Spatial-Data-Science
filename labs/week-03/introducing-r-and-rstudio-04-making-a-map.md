@@ -1,4 +1,3 @@
-#### Geog 315 T2 2020
 Reload the data, if you happen to have restarted.
 ```{r}
 quakes <- read.csv('earthquakes.csv')
@@ -6,6 +5,7 @@ quakes <- read.csv('earthquakes.csv')
 
 You can see what to expect from these instructions [here](https://southosullivan.com/geog315/labs/introducing-r-and-r-studio-04-making-maps.html).
 
+#### Geog 315 T2 2020
 # Making a map
 To mentally prepare you for what's coming, the next few paragraphs walk you through making a map of these data, using some packages that we will look at more closely in the coming weeks. I think it is helpful to do this just to get a feeling for what is going on before we dive into details in the coming weeks.
 
@@ -31,13 +31,13 @@ map <- tm_shape(nz)
 and then add information to tell *R* how to display the map. In this case, we are mapping polygons, so the `tm_polygons` function provides the needed information (to find out more about the available options, type `?tm_polygons` at the command prompt.
 
 ```{r}
-map + 
+map +
   tm_polygons(col = 'green', border.col = 'black')
 ```
 
 If we want to add a few more cartographic frills like a compass rose and scale bar, we can do that too:
 ```{r}
-map + 
+map +
   tm_polygons(col = 'darkseagreen2', border.col = 'skyblue', lwd = 0.5) +
   tm_layout(main.title = 'Aotearoa New Zealand',
             main.title.position = 'center',

@@ -1,4 +1,3 @@
-#### Geog 315 T2 2020
 Reload the data, if you happen to have restarted.
 ```{r}
 quakes <- read.csv('earthquakes.csv')
@@ -6,6 +5,7 @@ quakes <- read.csv('earthquakes.csv')
 
 You can see what to expect from these instructions [here](https://southosullivan.com/geog315/labs/introducing-r-and-r-studio-03-exploring-data.html).
 
+#### Geog 315 T2 2020
 # Exploring the data
 *R* provides many different ways to get a feel for the data you are working with. One option is to *plot* it.
 ```{r}
