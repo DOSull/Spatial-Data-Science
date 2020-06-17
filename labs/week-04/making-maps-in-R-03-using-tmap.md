@@ -143,4 +143,4 @@ Any of the functions in *R* has associated help that you can consult in this way
 
 Above all, you should not be afraid to experiment!
 
-Now [go back to the overview](making-maps-in-R-00-overview.md) or [on to the assignment details](making-maps-in-R-04-assignment.md).
+Now [go back to the overview](README.md) or [on to the assignment details](making-maps-in-R-04-assignment.md).

@@ -59,4 +59,4 @@ tm_shape(results) +
   tm_polygons(col='dem', palette='Blues')
 ```
 
-Now [go back to the overview](making-maps-in-R-00-overview.md) or [on to the next page](making-maps-in-R-02-selecting-and-tidying-data.md).
+Now [go back to the overview](README.md) or [on to the next page](making-maps-in-R-02-selecting-and-tidying-data.md).

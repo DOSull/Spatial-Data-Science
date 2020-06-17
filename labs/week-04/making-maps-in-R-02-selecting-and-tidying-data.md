@@ -40,13 +40,13 @@ So, to get rid of Alaska and Hawai'i we can do this:
 lower48 <- filter(results, state!='AK' & state!='HI')
 ```
 
-Here we've combined the requirement that the state not be Alaska (AK) *and* not be Hawai'i (HI) using the `&` operator. This works fine and is there is nothing wrong with this approach. 
+Here we've combined the requirement that the state not be Alaska (AK) *and* not be Hawai'i (HI) using the `&` operator. This works fine and is there is nothing wrong with this approach.
 
 However, an approach that is beginning to be used more widely makes use of *pipe* operations symbolise by `%>%` to pass an input dataset through a series of operations. This looks like the following:
 
 ```{r}
-lower48 <- results %>% 
-  filter(state!='AK') %>% 
+lower48 <- results %>%
+  filter(state!='AK') %>%
   filter(state!='HI')
 ```
 
@@ -56,16 +56,16 @@ First, check we got what we wanted:
 plot(lower48)
 ```
 
-Because filtering data is not our primary focus right now, we will worry more about exactly how this works in later lectures and assignments. 
+Because filtering data is not our primary focus right now, we will worry more about exactly how this works in later lectures and assignments.
 
-For now, it is enough to know that we can do this kind of filtering to make new datasets, that the `filter` function is how we do it, and that the *pipe operator* `%>%` is a neat way to do it. 
+For now, it is enough to know that we can do this kind of filtering to make new datasets, that the `filter` function is how we do it, and that the *pipe operator* `%>%` is a neat way to do it.
 
 The way to read the the command above is "start with `results` as the input, pipe it into the first filter (which throws away Alaska, `AK`) then pipe it into a second filter (which throws away Hawai'i, `HI`)". Pipe functions are a big feature of the *R* **tidyverse**.
 
 Either way, we now we have a dataset with only the contiguous ('lower 48') states of the US.
 
 ## Saving data
-Saving a dataset is easy. Just as there is a `st_read` function, there is an `st_write` function. We tell it the dataset to save, and the filename to use, and that's pretty much it. 
+Saving a dataset is easy. Just as there is a `st_read` function, there is an `st_write` function. We tell it the dataset to save, and the filename to use, and that's pretty much it.
 
 The only complication is that if the file already exists, then we also have to tell it that it is OK to delete the existing file, using a `delete_layer` parameter. So here goes with `delete_layer` set to `TRUE` just in case you end up running this command again later.
 
@@ -85,15 +85,15 @@ will save a GeoJSON file. However, this can get a little tricky if projections a
 The `lower48` dataset includes an attribute `state` which tells us the US state in which each county is found. We can use this information to make a new shapefile by *dissolving* counties together based on the value of this attribute. In *ArcGIS* you may have seen this already as a 'dissolve' operation. It would be nice if exactly that function was available in `sf` we actually use the `dplyr` function `group_by` instead. Again we make use of pipes:
 
 ```{r}
-states <- lower48 %>% 
-  group_by(state) %>% 
+states <- lower48 %>%
+  group_by(state) %>%
   summarise_if(is.numeric, sum)
 ```
 
-Here we pass the `lower48` dataset to the `group_by` function, which will use the `state` attribute to group counties. The second pipe sends this result to the `summarise_if` function, which checks if attributes are numeric (the `is.numeric` parameter), and if they are combines values by using a `sum` operation. 
+Here we pass the `lower48` dataset to the `group_by` function, which will use the `state` attribute to group counties. The second pipe sends this result to the `summarise_if` function, which checks if attributes are numeric (the `is.numeric` parameter), and if they are combines values by using a `sum` operation.
 
 ```{r}
-tm_shape(states) + 
+tm_shape(states) +
   tm_polygons(col='population')
 ```
 
@@ -109,11 +109,11 @@ Often the attributes we are provided with in a dataset are not quite what we wan
 It is easy to add new attributes to an existing dataset using the `mutate` function from the `dplyr` package. For example, to create a new variable showing the percentage of population in each state that voted we can do:
 
 ```{r}
-states %<>% 
+states %<>%
   mutate(turnout = votes / population * 100)
 ```
 
-Here we use a slight variation of the pipe operator `%<>%` to do the mutate operation 'in place' i.e. without making a new dataset, just adding to the existing one. 
+Here we use a slight variation of the pipe operator `%<>%` to do the mutate operation 'in place' i.e. without making a new dataset, just adding to the existing one.
 
 ```{r}
 tm_shape(states) + tm_polygons(col='turnout')
@@ -125,7 +125,7 @@ Generally speaking it is easier to add new attributes to a dataset, and then whe
 
 Keep in mind if you add new attributes or make new datasets in this way that
 
-+ they are just as valid as the original datasets and attributes, and 
-+ they aren't permanently remembered until you use `st_write` to save them to a file. 
++ they are just as valid as the original datasets and attributes, and
++ they aren't permanently remembered until you use `st_write` to save them to a file.
 
-Now [go back to the overview](making-maps-in-R-00-overview.md) or [on to the next page](making-maps-in-R-03-using-tmap.md).
+Now [go back to the overview](README.md) or [on to the next page](making-maps-in-R-03-using-tmap.md).
