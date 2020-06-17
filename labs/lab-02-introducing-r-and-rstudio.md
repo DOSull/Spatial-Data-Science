@@ -1,3 +1,4 @@
+#### Geog 315 T2 2019
 # Introducing *R* and *RStudio*
 The data for this lab are in [this file](geog315-lab-02.zip?raw=true) which also includes data from the GPS exercise last week. This is a *zip* file and must be unpacked into a folder on the machine you are using. If you are unsure how to do this, ask, as if you get it wrong, you will inevitably run into problems later in the session.
 

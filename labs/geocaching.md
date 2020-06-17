@@ -1,3 +1,4 @@
+#### Geog 315 T2 2019
 ## Geog 315 Lab 1 GPS and data capture
 For a printable version of these instructions go [here](lab-01-geog-315-2019.pdf).
 

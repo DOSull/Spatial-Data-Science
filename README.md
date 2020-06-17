@@ -5,21 +5,24 @@
 [assessment](#assessment) \~
 [links](#additional-information)
 
-**last updated** 1 July 2019
+**last updated** 17 June 2020
+
+**NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
+
 # Geog 315 Advanced Geographic Information Systems
 This course looks at the more advanced aspects of geographic information systems (GIS). There is a particular emphasis on open source tools and on approaches to doing geospatial analysis in code using *R* as these are becoming increasingly important in science and other workplace settings. The major assessment component of the class is a group project which gives students an opportunity to explore particular methods and topics of interest to themselves, and also to develop teamwork and project planning skills.
 
-It is expected that students will have completed [GEOG 215](https://www.victoria.ac.nz/courses/geog/415/2019/offering?crn=25033), [GEOG 415](https://www.victoria.ac.nz/courses/geog/415/2019/offering?crn=25033) or an introductory course in GIS at another institution.
+It is expected that students will have completed [GEOG 215](https://www.wgtn.ac.nz/courses/geog/215/2020/offering?crn=25033), [GEOG 415](https://www.wgtn.ac.nz/courses/geog/415/2020/offering?crn=25033) or an introductory course in GIS at another institution.
 
 This document is also available as a [PDF](README.pdf?raw=true) (although links may not work in that version).
 
 ### Important dates
 Item | Dates
  -- | --
-Trimester | 8 July to 9 November 2019
-Teaching period | 8 July to 11 October 2019
-Mid-trimester break | 19 August to 1 September 2019
-Last assessment item due | 18 October 2019
+Trimester | 13 July to 24 October 2020
+Teaching period | 13 July to 16 October 2020
+Mid-trimester break | 17 August to 30 August 2020
+Last assessment item due | 16 October 2020
 Study period | NA
 Examination period | NA
 Withdrawal dates | See [Course additions and  withdrawals](https://www.victoria.ac.nz/home/admisenrol/payments/withdrawalsrefunds)
@@ -27,9 +30,9 @@ Withdrawal dates | See [Course additions and  withdrawals](https://www.victoria.
 If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](https://www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
 
 ### Lecture and lab schedule
-Lectures are in AM 105 from 12-1 on Tuesdays and Thursdays.
+Lectures are in LT102 Murphy from 1:10-2 on Tuesdays and Fridays.
 
-Lab sessions are in KK 217 and 218 from 12-1:50 on Fridays (starting week 2).
+Lab sessions are in KK 216 from 10-11:50 on Thursdays.
 
 ### Contact details
 Both David O'Sullivan and Andy Rae will attend the lab sessions, which other than urgent cases is probably the best way to contact us.
@@ -45,21 +48,21 @@ Both David O'Sullivan and Andy Rae will attend the lab sessions, which other tha
 ## Lab and lecture timetable
 Here's the trimester schedule we will aim to follow. **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, when available.
 
-Week | Tue | Thu | Lab | Notes
- -- | -- | -- | -- | --
-8 Jul | Review of GIS knowledge (_Mairéad de Roiste_) | Course overview: [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) (_Mairéad de Roiste_) | No lab |
-15 Jul | Project topics overview and group formation | [The miracle of GPS](https://southosullivan.com/geog315/gps/) | [**GPS exercise**](labs/lab-01-geog-315-2019.md) (5%) due immediately |
-22 Jul | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/Open/) | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Intro to _R_ for spatial](labs/lab-02-introducing-r-and-rstudio.md) |
-29 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [Data wrangling](https://southosullivan.com/geog315/data-munging/) | [**Making maps in _R_**](labs/lab-03-00-overview.md) (15%) due 9 Aug | [Project meeting with instructor](https://calendly.com/dosullivan)
-5 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | [**Spatial data wrangling in _R_**](labs/lab-04-00-overview.md) (15%) due 16 Aug| [Project meeting with instructor](https://calendly.com/dosullivan)
-12 Aug | [Spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/) | [**Simple statistical analysis in _R_**](labs/lab-05-00-overview.md) (15%) due 6 Sep| [Project meeting with instructor](https://calendly.com/dosullivan)
-&nbsp; | &nbsp; | BREAK | &nbsp; | &nbsp; | &nbsp;
-2 Sep | [Running a GIS project revisited](https://southosullivan.com/geog315/a-game-of-two-halves/) | [Network analysis](https://southosullivan.com/geog315/network-analysis/) | Lab time: project work |
-9 Sep | Guest lecture ([Daniel Silk](https://twitter.com/influink), [LINZ](https://www.linz.govt.nz/)) | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) | Lab time: project work |
-16 Sep | Project assistance | No class | Lab time: project work |
-23 Sep | Project progress presentations I | Project progress presentations II | Lab time: project work |
-30 Sep | Project progress presentations III | Project assistance | Lab time: project work |
-7 Oct | Guest lecture ([Hamish Campbell](https://polemic.nz/), [Koordinates](https://koordinates.com/company/)) | Project assistance | Lab time: project work |
+ &nbsp; | Date | Tue | Thu (lab) | Fri | Notes
+ -- | -- | -- | -- | -- | --
+1 | 13 Jul | Course introduction | Lab session to get software setup | Project topics overview and group formation  [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/)
+2 | 20 Jul | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/Open/) | [**Geocaching exercise**](labs/geocaching.md) (5%) due immediately | [Starting *R*](https://southosullivan.com/geog315/starting-r/)
+3 | 27 Jul | Tidy data | [Introducing *R* and *RStudio*](lab-02-introducing-r-and-rstudi.md) | [Data wrangling in *R*](https://southosullivan.com/geog315/data-munging/) | [Project meeting with instructor](https://calendly.com/dosullivan)
+4 | 3 Aug | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps in _R_**](labs/lab-03-00-overview.md) (15%) due 14 Aug | [Spatial data wrangling I](https://southosullivan.com/geog315/spatial-data-munging/) | [Project meeting with instructor](https://calendly.com/dosullivan)
+5 | 10 Aug | Spatial data wrangling II | [**Spatial data wrangling in _R_**](labs/lab-04-00-overview.md) (20%) due 4 Sep | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | [Project meeting with instructor](https://calendly.com/dosullivan)
+&nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp; | &nbsp;
+6 | 31 Aug | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/) | [**Simple statistical analysis in _R_**](labs/lab-05-00-overview.md) (20%) due 11 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) |
+7 | 7 Sep | [Getting into it: running a GIS project](https://southosullivan.com/geog315/a-game-of-two-halves/) | Project work | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) |
+8 | 14 Sep | [Network analysis](https://southosullivan.com/geog315/network-analysis/) | Project work | Simulation models |
+9 | 21 Sep | Guest / project work | Project work | Guest / project work |
+10 | 28 Sep | _Project presentations I_ | Project work | _Project presentations II_ |
+11 | 5 Oct | _Project presentations III_ | Project work | Guest / project work |
+12 | 12 Oct | Guest / project work | Project work | Guest / project work |
 
 ## Lectures
 Lectures will consist of 40 minutes or so of presented material with time for more open-ended discussion and Q&A based on any reading or other materials students have been asked to explore ahead of class.
@@ -118,12 +121,12 @@ This course is 100% internally assessed.  Assessment is based on the various ite
 
 Assessment item | Credit | Due date | CLOs
  -- | -- | -- | --
-GPS exercise | 5% | 19 Jul | 2
-Making maps in _R_ | 15% | 9 Aug | 2
-Data cleaning in _R_ | 15% | 16 Aug | 2 4
-Simple statistical analysis in _R_ | 15% | 6 Sep | 6
-Project presentation | 10% | 24 or 26 Sep | 1 3 5 6 7
-Written project report | 40% | 18 Oct | 1 3 5 6 7
+GPS exercise | 5% | 23 Jul | 2
+Making maps in _R_ | 15% | 7 Aug | 2
+Data cleaning in _R_ | 20% | 14 Aug | 2 4
+Simple statistical analysis in _R_ | 20% | 4 Sep | 6
+Project presentation | 10% | 29 Sep, 2 Oct or 6 Oct | 1 3 5 6 7
+Written project report | 30% | 16 Oct | 1 3 5 6 7
 
 Assessments are to submitted electronically via dropbox on [Blackboard](https://blackboard.vuw.ac.nz/). I will aim to return coursework within 3 weeks. Extensions should be requested from the SGEES administration office. If you anticipate problems come and talk to me.
 
