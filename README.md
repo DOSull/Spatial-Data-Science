@@ -5,7 +5,7 @@
 [assessment](#assessment) \~
 [links](#additional-information)
 
-**last updated** 17 June 2020
+**last updated** 18 June 2020
 
 **NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
 
@@ -57,7 +57,7 @@ Here's the trimester schedule we will aim to follow. **Bolded labs** have an ass
 5 | 10 Aug | Clustering II | **Geodemographic analysis** (20%) due 10 Sep | Applications of clustering analysis
 &nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp;
 6 | 31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | | Regression modelling 1
-7 | 7 Sep | Regression modelling 2 |  [**Building a simple statistical model**](labs/lab-05-00-overview.md) (20%) due 24 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
+7 | 7 Sep | Regression modelling 2 |  **Building a simple statistical model** (20%) due 24 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
 8 | 14 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) / guest
 9 | 21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | **Introducing the mini-projects** (30%) due 16 Oct| Literate programming in *RMarkdown*
 10 | 28 Sep | [Network analysis](https://southosullivan.com/geog315/network-analysis/) / guest | Project work | Simulation models, time and dynamics / guest

@@ -1,6 +1,6 @@
 #### Geog 315 T2 2020
 # Introducing *R* and *RStudio*
-The data for this lab are in [this file](quakes.zip?raw=true). This is a *zip* file and must be unpacked into a folder you have access to on the machine you are using. If you are working on a lab machine, it needs to be a folder on the **H: drive**. If you are unsure how to do this, ask for help, as if you get it wrong, you will inevitably run into problems later in the session.
+The data for this lab are in [this file](data.zip?raw=true). This is a *zip* file and must be unpacked into a folder you have access to on the machine you are using. If you are working on a lab machine, it needs to be a folder on the **H: drive**. If you are unsure how to do this, ask for help, as if you get it wrong, you will inevitably run into problems later in the session.
 
 ## Introduction
 This lab will introduce you to the statistical analysis and programming environment *R*, running in *RStudio* (which makes it a bit easier to deal with). *R* has become one of the standard tools for statistical analysis particularly in the academic research community, but [increasingly also in commercial and other work settings](https://statfr.blogspot.com/2018/08/r-generation-story-of-statistical.html). *R* is well suited to these settings for a number of reasons, particularly
@@ -21,5 +21,11 @@ When you are running *R* you will want a web connection to install any additiona
 This lab introduces *R* by just asking you to get on with it, without stopping to explain too much, at least not at first. This is because it's probably better, to just do things with *R* to get a feel for what it's about without thinking too hard about what is going on; kind of like learning to swim by jumping in at the deep end. You may sometimes feel like you are drowning. Try not to worry too much and stick with it, and bear in mind that the assignments will not assume you are some kind of *R* guru.
 
 Ask questions, confer with your fellow students, consult Google (this [cartoon](https://xkcd.com/627/) is good advice).
+
+## Previews of what's coming
+To see what's coming in the next few pages of instructions, check out these links:
+
+* [Exploring data](https://southosullivan.com/geog315/labs/introducing-r-and-rstudio-03-exploring-data.html)
+* [Simple maps](https://southosullivan.com/geog315/labs/introducing-r-and-rstudio-04-making-a-map.html)
 
 Now on to the [first page of instructions](introducing-r-and-rstudio-01-overview-of-rstudio.md).
