@@ -121,12 +121,11 @@ This course is 100% internally assessed.  Assessment is based on the various ite
 
 Assessment item | Credit | Due date | CLOs
  -- | -- | -- | --
-GPS exercise | 5% | 23 Jul | 2
-Making maps in _R_ | 15% | 7 Aug | 2
-Data cleaning in _R_ | 20% | 14 Aug | 2 4
-Simple statistical analysis in _R_ | 20% | 4 Sep | 6
-Project presentation | 10% | 29 Sep, 2 Oct or 6 Oct | 1 3 5 6 7
-Written project report | 30% | 16 Oct | 1 3 5 6 7
+Making maps | 15% | 6 Aug | 2
+Spatial data manipulation | 15% | 13 Aug | 2 4
+Geodemographic analysis | 20% | 10 Sep | 6
+Building a simple statistical model | 20% | 24 Sep | 6
+Mini-project | 30% | 16 Oct | 1 3 5 6 7
 
 Assessments are to submitted electronically via dropbox on [Blackboard](https://blackboard.vuw.ac.nz/). I will aim to return coursework within 3 weeks. Extensions should be requested from the SGEES administration office. If you anticipate problems come and talk to me.
 
