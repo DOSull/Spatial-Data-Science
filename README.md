@@ -10,7 +10,7 @@
 **NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
 
 # Geog 315 Advanced Geographic Information Systems
-This course looks at the more advanced aspects of geographic information systems (GIS). There is a particular emphasis on open source tools and on approaches to doing geospatial analysis in code using *R* as these are becoming increasingly important in science and other workplace settings. The major assessment component of the class is a group project which gives students an opportunity to explore particular methods and topics of interest to themselves, and also to develop teamwork and project planning skills.
+This course looks at the more advanced aspects of geographic information systems (GIS). There is a particular emphasis on open source tools and on approaches to doing geospatial analysis in code using *R* as these are becoming increasingly important in science and other workplace settings. The major assessment component of the class is a mini-project exercise which gives students an opportunity to explore methods and topics of interest to themselves, and also to develop confidence exploring and present results from the analysis of spatial data using a modern literate programming approach.
 
 It is expected that students will have completed [GEOG 215](https://www.wgtn.ac.nz/courses/geog/215/2020/offering?crn=25033), [GEOG 415](https://www.wgtn.ac.nz/courses/geog/415/2020/offering?crn=25033) or an introductory course in GIS at another institution.
 
@@ -30,9 +30,9 @@ Withdrawal dates | See [Course additions and  withdrawals](https://www.victoria.
 If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](https://www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
 
 ### Lecture and lab schedule
-Lectures are in LT102 Murphy from 1:10-2 on Tuesdays and Fridays.
+Lectures are in **LT102 Murphy** from **1:10-2:00** on **Tuesdays** and **Fridays**.
 
-Lab sessions are in KK 216 from 10-11:50 on Thursdays.
+Lab sessions are in **KK 216** from **10:00-11:50** on **Thursdays**.
 
 ### Contact details
 Both David O'Sullivan and Andy Rae will attend the lab sessions, which other than urgent cases is probably the best way to contact us.
@@ -48,21 +48,21 @@ Both David O'Sullivan and Andy Rae will attend the lab sessions, which other tha
 ## Lab and lecture timetable
 Here's the trimester schedule we will aim to follow. **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, when available.
 
- &nbsp; | Date | Tue | Thu (lab) | Fri | Notes
- -- | -- | -- | -- | -- | --
-1 | 13 Jul | Course introduction | Lab session to get software setup | Project topics overview and group formation  [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/)
-2 | 20 Jul | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/Open/) | [**Geocaching exercise**](labs/geocaching.md) (5%) due immediately | [Starting *R*](https://southosullivan.com/geog315/starting-r/)
-3 | 27 Jul | Tidy data | [Introducing *R* and *RStudio*](lab-02-introducing-r-and-rstudio.md) | [Data wrangling in *R*](https://southosullivan.com/geog315/data-munging/) | [Project meeting with instructor](https://calendly.com/dosullivan)
-4 | 3 Aug | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps in _R_**](labs/week-04/README.md) (15%) due 14 Aug | [Spatial data wrangling I](https://southosullivan.com/geog315/spatial-data-munging/) | [Project meeting with instructor](https://calendly.com/dosullivan)
-5 | 10 Aug | Spatial data wrangling II | [**Spatial data wrangling in _R_**](labs/lab-04-00-overview.md) (20%) due 4 Sep | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | [Project meeting with instructor](https://calendly.com/dosullivan)
-&nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp; | &nbsp;
-6 | 31 Aug | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/) | [**Simple statistical analysis in _R_**](labs/lab-05-00-overview.md) (20%) due 11 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) |
-7 | 7 Sep | [Getting into it: running a GIS project](https://southosullivan.com/geog315/a-game-of-two-halves/) | Project work | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) |
-8 | 14 Sep | [Network analysis](https://southosullivan.com/geog315/network-analysis/) | Project work | Simulation models |
-9 | 21 Sep | Guest / project work | Project work | Guest / project work |
-10 | 28 Sep | _Project presentations I_ | Project work | _Project presentations II_ |
-11 | 5 Oct | _Project presentations III_ | Project work | Guest / project work |
-12 | 12 Oct | Guest / project work | Project work | Guest / project work |
+ &nbsp; | Date | Tue | Thu (lab) | Fri
+ -- | -- | -- | -- | --
+1 | 13 Jul | Course introduction | Lab session to get software setup | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/Open/)
+2 | 20 Jul | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02/README.md) | Tidy data
+3 | 27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03/README.md) (15%) due 6 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
+4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/lab-04-00-overview.md) (15%) due 13 Aug | Clustering I
+5 | 10 Aug | Clustering II | **Geodemographic analysis** (20%) due 10 Sep | Applications of clustering analysis
+&nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp;
+6 | 31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | | Regression modelling 1
+7 | 7 Sep | Regression modelling 2 |  [**Building a simple statistical model**](labs/lab-05-00-overview.md) (20%) due 24 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
+8 | 14 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) / guest
+9 | 21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | **Introducing the mini-projects** (30%) due 16 Oct| Literate programming in *RMarkdown*
+10 | 28 Sep | [Network analysis](https://southosullivan.com/geog315/network-analysis/) / guest | Project work | Simulation models, time and dynamics / guest
+11 | 5 Oct | Other topics / guest | Project work | Other topics / guest
+12 | 12 Oct | Other topics / guest | Project work | Other topics / guest
 
 ## Lectures
 Lectures will consist of 40 minutes or so of presented material with time for more open-ended discussion and Q&A based on any reading or other materials students have been asked to explore ahead of class.
@@ -90,7 +90,7 @@ We will use *R* from the [*RStudio*](https://www.rstudio.com/) environment which
 
 Both *R* and *RStudio* are available on the lab computers. Both are freely downloadable for use on your own computer (they work on all three major platforms). We can take a look if you are having issues with your installation, but are likely to suggest that you uninstall and reinstall. In some cases problems might arise from different versions of key packages, in which case you will have to work with the lab machine versions as we can't support multiple versions across different platforms.
 
-## GIS group project
+## TODO: GIS group project
 50% of the assessment for the course is based on a group project that you will formally start work on in the second half of trimester.
 
 Regardless of that late start, project groups and topics will be known long before that and better outcomes are likely if you make a start earlier rather than later. To encourage making an early start, and to focus your thinking groups are required to schedule a meeting at some point between week 4 and week 6 to ensure that you are clear about goals, project organisation, and expectations. Further, there will be project presentations in week 10 so that you have an incentive to make progress well before the end of trimester. This is also a good opportunity to get feedback from class mates.
@@ -99,7 +99,7 @@ Asssessment of the projects is based on the progress presentation in week 10, an
 
 For more detail on the group project, see [here](projects/README.md).
 
-### ESRI online tutorials
+### TODO: ESRI online tutorials
 As part of your project work and preparation, you should complete one or more ESRI online tutorials. These will extend your GIS skills in areas that benefit your group project. The project summaries include the most relevant tutorials for that project. The tutorials normally take up to 3 hours. You will need a headset for most tutorials.
 
 For more details of the tutorials, see [here](projects/esri-online-courses.md).
