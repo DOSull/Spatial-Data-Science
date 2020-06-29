@@ -1,7 +1,6 @@
 [timetable](#lab-and-lecture-timetable) \~
 [lectures](#lectures) \~
 [labs](#labs) \~
-[group project](#gis-group-project) \~
 [assessment](#assessment) \~
 [links](#additional-information)
 
@@ -90,7 +89,7 @@ We will use *R* from the [*RStudio*](https://www.rstudio.com/) environment which
 
 Both *R* and *RStudio* are available on the lab computers. Both are freely downloadable for use on your own computer (they work on all three major platforms). We can take a look if you are having issues with your installation, but are likely to suggest that you uninstall and reinstall. In some cases problems might arise from different versions of key packages, in which case you will have to work with the lab machine versions as we can't support multiple versions across different platforms.
 
-## TODO: GIS group project
+<!-- ## TODO: GIS group project
 50% of the assessment for the course is based on a group project that you will formally start work on in the second half of trimester.
 
 Regardless of that late start, project groups and topics will be known long before that and better outcomes are likely if you make a start earlier rather than later. To encourage making an early start, and to focus your thinking groups are required to schedule a meeting at some point between week 4 and week 6 to ensure that you are clear about goals, project organisation, and expectations. Further, there will be project presentations in week 10 so that you have an incentive to make progress well before the end of trimester. This is also a good opportunity to get feedback from class mates.
@@ -102,7 +101,7 @@ For more detail on the group project, see [here](projects/README.md).
 ### TODO: ESRI online tutorials
 As part of your project work and preparation, you should complete one or more ESRI online tutorials. These will extend your GIS skills in areas that benefit your group project. The project summaries include the most relevant tutorials for that project. The tutorials normally take up to 3 hours. You will need a headset for most tutorials.
 
-For more details of the tutorials, see [here](projects/esri-online-courses.md).
+For more details of the tutorials, see [here](projects/esri-online-courses.md). -->
 
 ## Course learning objectives (CLOs)
 1. Appreciate and describe the scope, limitations and challenges of geospatial methods in real world applications;
