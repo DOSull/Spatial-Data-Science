@@ -60,12 +60,12 @@ Here's the trimester schedule we will aim to follow. **Bolded labs** have an ass
  -- | -- | -- | -- | --
 1 | 13 Jul | Course introduction | [Lab session to get software setup](labs/week-02/README.md) | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/Open/)
 2 | 20 Jul | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02/README.md) | Tidy data
-3 | 27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03/README.md) (15%) due 6 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
-4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/lab-04-00-overview.md) (15%) due 13 Aug | Clustering I
+3 | 27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03/README.md) (15%) due 10 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
+4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/lab-04-00-overview.md) (15%) due 31 Aug | Clustering I
 5 | 10 Aug | Clustering II | **Geodemographic analysis** (20%) due 10 Sep | Applications of clustering analysis
 &nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp;
 6 | 31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | | Regression modelling 1
-7 | 7 Sep | Regression modelling 2 |  **Building a simple statistical model** (20%) due 24 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
+7 | 7 Sep | Regression modelling 2 |  **Building a simple statistical model** (20%) due 21 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
 8 | 14 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) / guest
 9 | 21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | **Introducing the mini-projects** (30%) due 16 Oct| Literate programming in *RMarkdown*
 10 | 28 Sep | [Network analysis](https://southosullivan.com/geog315/network-analysis/) / guest | Project work | Simulation models, time and dynamics / guest
@@ -130,10 +130,10 @@ This course is 100% internally assessed.  Assessment is based on the various ite
 
 Assessment item | Credit | Due date | CLOs
  -- | -- | -- | --
-Making maps | 15% | 6 Aug | 2
-Spatial data manipulation | 15% | 13 Aug | 2 4
+Making maps | 15% | 10 Aug | 2
+Spatial data manipulation | 15% | 31 Aug | 2 4
 Geodemographic analysis | 20% | 10 Sep | 6
-Building a simple statistical model | 20% | 24 Sep | 6
+Building a simple statistical model | 20% | 21 Sep | 6
 Mini-project | 30% | 16 Oct | 1 3 5 6 7
 
 Assessments are to submitted electronically via dropbox on [Blackboard](https://blackboard.vuw.ac.nz/). I will aim to return coursework within 3 weeks. Extensions should be requested from the SGEES administration office. If you anticipate problems come and talk to me.
