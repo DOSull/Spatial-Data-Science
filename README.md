@@ -15,6 +15,15 @@ It is expected that students will have completed [GEOG 215](https://www.wgtn.ac.
 
 This document is also available as a [PDF](README.pdf?raw=true) (although links may not work in that version).
 
+## Note about delivery of this course in T2 2020
+This class is offered face-to-face for both lectures and labs. If you are unable to attend face-to-face, lectures will be recorded and available on Blackboard soon after.
+
+Software required to complete lab sessions is free to download and install so that you can complete labs while working remotely. Details of getting set up in this way will be available in the first week of semester.
+
+Additionally supplemental video tutorial material will be provided (some made by me, some available online) to assist students in completion of labs remotely. 
+
+In addition a course Slack channel provides for rapid responses to technical questions about lab materials (please make use of it, and also answer other's questions if you can!). If you have particular difficulties with labs and are working remotely then appointments to meet by zoom can be made from [this link](https://calendly.com/dosullivan).
+
 ### Important dates
 Item | Dates
  -- | --
