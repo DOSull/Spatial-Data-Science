@@ -4,7 +4,7 @@
 [assessment](#assessment) \~
 [links](#additional-information)
 
-**last updated** 18 June 2020
+**last updated** 8 July 2020
 
 **NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
 
@@ -20,7 +20,7 @@ This class is offered face-to-face for both lectures and labs. If you are unable
 
 Software required to complete lab sessions is free to download and install so that you can complete labs while working remotely. Details of getting set up in this way will be available in the first week of semester.
 
-Additionally supplemental video tutorial material will be provided (some made by me, some available online) to assist students in completion of labs remotely. 
+Additionally supplemental video tutorial material will be provided (some made by me, some available online) to assist students in completion of labs remotely.
 
 In addition a course Slack channel provides for rapid responses to technical questions about lab materials (please make use of it, and also answer other's questions if you can!). If you have particular difficulties with labs and are working remotely then appointments to meet by zoom can be made from [this link](https://calendly.com/dosullivan).
 
@@ -58,7 +58,7 @@ Here's the trimester schedule we will aim to follow. **Bolded labs** have an ass
 
  &nbsp; | Date | Tue | Thu (lab) | Fri
  -- | -- | -- | -- | --
-1 | 13 Jul | Course introduction | Lab session to get software setup | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/Open/)
+1 | 13 Jul | Course introduction | [Lab session to get software setup](labs/week-02/README.md) | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/Open/)
 2 | 20 Jul | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02/README.md) | Tidy data
 3 | 27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03/README.md) (15%) due 6 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
 4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/lab-04-00-overview.md) (15%) due 13 Aug | Clustering I
