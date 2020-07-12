@@ -152,7 +152,7 @@ The primary mode of communication for the course will be via Blackboard, so plea
 **_Check in regularly on Blackboard!_**
 
 ### Class representatives
-Class representatives provide a way to communicate feedback to the teaching staff during the course. Class representatives will be selected in the first week or two of class, and details of how to contact them will be provided as soon as they are available.
+Class representatives provide a way to communicate feedback to the teaching staff during the course. Class representatives will be selected in the first week or two of class, and details of how to contact them will be provided as soon as they are available. Anyone interested in taking on this role, just let me know, so we can resolve any competition! Once we've agreed who is doing it, they can [sign up here](https://www.vuwsa.org.nz/class-representatives).
 
 ### Other useful resources
 + [Academic Integrity and Plagiarism](https://www.victoria.ac.nz/home/study/plagiarism)
