@@ -98,6 +98,23 @@ We will use *R* from the [*RStudio*](https://www.rstudio.com/) environment which
 
 Both *R* and *RStudio* are available on the lab computers. Both are freely downloadable for use on your own computer (they work on all three major platforms). We can take a look if you are having issues with your installation, but are likely to suggest that you uninstall and reinstall. In some cases problems might arise from different versions of key packages, in which case you will have to work with the lab machine versions as we can't support multiple versions across different platforms.
 
+## Mini-projects
+The final assessment in the class is a mini-project, which is a more open-ended and slightly more substantial exercise in data analysis and presentation. Lab _and_ lecture time in the last 3 weeks or so of semester will be allocated to supporting you in this exercise.
+
+An assortment of datasets will be provided, from which you choose one to work on. The data will need some tidying and sorting to be suitable for use, and you will be expected to figure out the analysis workflow yourself, in order to pursue a particular angle of inquiry.
+
+Datasets are still being assembled, but will cover a range of topics including:
+
++ Wellington house prices
++ Police involved shootings in the US
++ Landslides in Aotearoa New Zealand
++ Distribution of _tradescantia_ in Aotearoa New Zealand
++ COVID cases in Hong Kong
+
+So hopefully you'll be able to find something of interest. If you have a dataset from some other class or an idea for a topic not in the list of available topics, then please be in touch and we can discuss possibilities.
+
+You can complete this assignment using whatever mix of tools you feel most comfortable with, and that are best suited to the job. Guidance on how *RMarkdown* may be particularly suited to a project of this kind will be offered.
+
 <!-- ## TODO: GIS group project
 50% of the assessment for the course is based on a group project that you will formally start work on in the second half of trimester.
 
