@@ -51,7 +51,7 @@ Both David O'Sullivan and Andy Rae will attend the lab sessions, which other tha
 
 #### GIS Technician
 **[Andrew Rae](mailto:andrew.rae@vuw.ac.nz)**
-**Office** CO502 **Office hours** Mon 2-4 in CO110
+**Office** CO502 **Office hours** Wed 10-12 in CO110
 
 ## Lab and lecture timetable
 Here's the trimester schedule we will aim to follow. **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, when available.
