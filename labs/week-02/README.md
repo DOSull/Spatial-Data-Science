@@ -22,10 +22,7 @@ This lab introduces *R* by just asking you to get on with it, without stopping t
 
 Ask questions, confer with your fellow students, consult Google (this [cartoon](https://xkcd.com/627/) is good advice).
 
-## Previews of what's coming
-To see what's coming in the next few pages of instructions, check out these links:
-
-* [Exploring data](https://southosullivan.com/geog315/labs/introducing-r-and-rstudio-03-exploring-data.html)
-* [Simple maps](https://southosullivan.com/geog315/labs/introducing-r-and-rstudio-04-making-a-map.html)
+## A preview of what's coming
+To see what's coming in the next few pages of instructions, check out [this link](https://southosullivan.com/geog315/labs/lab-02-introducing-r-and-rstudio.html).
 
 Now on to the [first page of instructions](introducing-r-and-rstudio-01-overview-of-rstudio.md).
