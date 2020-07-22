@@ -25,4 +25,7 @@ Ask questions, confer with your fellow students, consult Google (this [cartoon](
 ## A preview of what's coming
 To see what's coming in the next few pages of instructions, check out [this link](https://southosullivan.com/geog315/labs/lab-02-introducing-r-and-rstudio.html).
 
+### Videos supporting this week's lab material
+You'll find videos supporting this week's lab [here](https://southosullivan.com/geog315/video/week-02-lab/). View them at any time for additional help.
+
 Now on to the [first page of instructions](introducing-r-and-rstudio-01-overview-of-rstudio.md).
