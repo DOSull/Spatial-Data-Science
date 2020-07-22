@@ -26,6 +26,13 @@ Ask questions, confer with your fellow students, consult Google (this [cartoon](
 To see what's coming in the next few pages of instructions, check out [this link](https://southosullivan.com/geog315/labs/lab-02-introducing-r-and-rstudio.html).
 
 ### Videos supporting this week's lab material
-You'll find videos supporting this week's lab [here](https://southosullivan.com/geog315/video/week-02-lab/). View them at any time for additional help.
+You'll find videos supporting this week's lab [here](https://southosullivan.com/geog315/video/week-02-lab/). These are as follows:
+
++ [Overview of the RStudio interface](http://southosullivan.com/geog315/video/week-02-lab/geog315-week02-01-r-intro-overview-of-interface.mp4)
++ [Opening a dataset and *following the instructions*](http://southosullivan.com/geog315/video/week-02-lab/geog315-week02-02-r-intro-read-the-instructions.mp4)
++ [Making a map](http://southosullivan.com/geog315/video/week-02-lab/geog315-week02-03-r-intro-make-a-map.mp4)
++ [Installing packages](http://southosullivan.com/geog315/video/week-02-lab/geog315-week02-04-r-intro-installing-packages.mp4)
+
+View them at any time for additional help.
 
 Now on to the [first page of instructions](introducing-r-and-rstudio-01-overview-of-rstudio.md).
