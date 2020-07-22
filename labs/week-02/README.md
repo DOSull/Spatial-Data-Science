@@ -9,11 +9,11 @@ This lab will introduce you to the statistical analysis and programming environm
 2. it is easily extensible; and
 3. because of 1 and 2, many new methods of analysis first become available in *packages* contributed to the *R* ecosystem by researchers in the field.
 
-The last point is why we are using *R* in this course.
+The last point is why we are using *R* in this course. All required software is installed on the lab machines.
 
 Like any good software, versions of *R* are available for MacOS, Windows and Linux so you can install a copy on your own computer and work on this lab in your own time&mdash;you don't need to be at the timetabled lab sections to complete the assignment, although you will find it helpful to attend to get assistance from the instructors, and also from one another.
 
-To get up and running on your own computer, you will need to download and install *R* itself, from [here](http://cran.r-project.org/) and also, optionally, (**but highly recommended**) install *RStudio* from [here](http://www.RStudio.com/products/RStudio/download/). You should have attended the lab session in the first week of semester to get help with this, but if you are still having difficulties, just ask, and we'll do what we can to help. Installation is pretty straightforward on all platforms.
+To get up and running on your own computer, you will need to download and install *R* itself, and also, optionally, (**but HIGHLY recommended**) install *RStudio*. [Details of the installation](../week-01/README.md) were provided last week. If you are still having difficulties, just ask, and we'll do what we can to help. Installation is pretty straightforward on all platforms.
 
 When you are running *R* you will want a web connection to install any additional packages called for in lab instructions. You will also find it useful to have a reasonably high resolution display (an old 1024&times;768 display will not be much fun to work on, but high pixel density modern displays, such as 4K, can be a bit painful also, without tweaking the display settings). For this reason alone, you may find it good to work on the lab machines.
 
