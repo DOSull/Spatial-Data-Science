@@ -25,6 +25,6 @@ There is plenty wrong with this map, so don't necessarily consider it something 
 
 When you have made a map you are happy with, use the plot export feature in *RStudio* to export it to a PNG image file, and then include it in a Word document, including a short write up explaining the design choices you made to produce your map. There is no need to provide the *R* code you used&mdash;I am more interested in the design choices, not how they were accomplished. Half the mark for this assignment will be based on the map, and half on your explanation of the choices you made.
 
-Once you have finished your write up (it does not need to be very long) then export the Word document to a PDF file (make sure the document includes your map!) and save it to a filename that *includes your name*. Upload this PDF document to the dropbox provided on Blackboard by the end of the day on **31 August 2020**.
+Once you have finished your write up (it does not need to be very long) then export the Word document to a PDF file (make sure the document includes your map!) and save it to a filename that *includes your name*. Upload this PDF document to the dropbox provided on Blackboard by the end of the day on **10 August 2020**.
 
 [Go back to the overview](README.md)
