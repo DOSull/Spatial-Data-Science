@@ -1,6 +1,4 @@
 #### Geog 315 T2 2020
-You can see what the results of running code in this page look like [here](https://southosullivan.com/geog315/labs/making-maps-in-R-03-using-tmap.html).
-
 In case you have restarted the session, reload the libraries and data again
 
 ```{r}
@@ -139,7 +137,7 @@ The best way to figure out all these options is to either ask for help in the la
 ?tm_legend
 ```
 
-Any of the functions in *R* has associated help that you can consult in this way. The explanations can be a little bit technical sometimes, but it is a good idea to get used to consulting the help in this way.
+Any of the functions in *R* has associated help that you can consult in this way. The explanations can be a little bit technical sometimes, but it is a good idea to get used to consulting the help.
 
 Above all, you should not be afraid to experiment!
 

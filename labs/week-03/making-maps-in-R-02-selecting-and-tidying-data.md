@@ -1,6 +1,4 @@
 #### Geog 315 T2 2020
-You can see what the results of running code in this page look like [here](https://southosullivan.com/geog315/labs/making-maps-in-R-02-introducing-the-data.html).
-
 In case you have restarted the session, reload the libraries and data again
 
 ```{r}
@@ -25,7 +23,7 @@ The tasks covered in this document are
 The data in the `election.gpkg` file is a bit odd in that it has Alaska and Hawai'i where Mexico is in real life. To show how easy it is to select data in *R* we will use the `filter` function from the `dplyr` package to get rid of these. The variable we need to do the selection on is `state`. Say we wanted just to map California, we can do this:
 
 ```{r}
-plot(filter(results, state=='CA'))
+plot(filter(results, state == 'CA'))
 ```
 
 How does this work? `filter` takes as its first argument the full dataset (in this case `results`), and as its second argument a *condition* telling which cases to retain in the filtered dataset. Here we want all those cases with the `state` value 'CA' (i.e., California). If we wanted all those states *NOT* California, we can use *not equals* which is designated by `!=`
@@ -37,7 +35,7 @@ plot(filter(results, state != 'CA'))
 So, to get rid of Alaska and Hawai'i we can do this:
 
 ```{r}
-lower48 <- filter(results, state!='AK' & state!='HI')
+lower48 <- filter(results, state != 'AK' & state != 'HI')
 ```
 
 Here we've combined the requirement that the state not be Alaska (AK) *and* not be Hawai'i (HI) using the `&` operator. This works fine and is there is nothing wrong with this approach.
@@ -46,8 +44,8 @@ However, an approach that is beginning to be used more widely makes use of *pipe
 
 ```{r}
 lower48 <- results %>%
-  filter(state!='AK') %>%
-  filter(state!='HI')
+  filter(state != 'AK') %>%
+  filter(state != 'HI')
 ```
 
 First, check we got what we wanted:
@@ -70,16 +68,16 @@ Saving a dataset is easy. Just as there is a `st_read` function, there is an `st
 The only complication is that if the file already exists, then we also have to tell it that it is OK to delete the existing file, using a `delete_layer` parameter. So here goes with `delete_layer` set to `TRUE` just in case you end up running this command again later.
 
 ```{r}
-st_write(lower48, 'lower48.gpkg', delete_layer=TRUE)
+st_write(lower48, 'lower48.gpkg', delete_layer = TRUE)
 ```
 
 That's it. You should find that there is now a new geopackage file in the folder you are working in. We can also save to other data formats. For example
 
 ```{r}
-st_write(lower48, 'lower48.geojson', driver='GeoJSON', delete_layer = TRUE)
+st_write(lower48, 'lower48.geojson', driver = 'GeoJSON', delete_layer = TRUE)
 ```
 
-will save a GeoJSON file. However, this can get a little tricky if projections are not carefully considered, so for now just *note the possibility*.
+will save a GeoJSON file.
 
 ## Grouping data
 The `lower48` dataset includes an attribute `state` which tells us the US state in which each county is found. We can use this information to make a new shapefile by *dissolving* counties together based on the value of this attribute. In *ArcGIS* you may have seen this already as a 'dissolve' operation. It would be nice if exactly that function was available in `sf` we actually use the `dplyr` function `group_by` instead. Again we make use of pipes:
@@ -94,13 +92,13 @@ Here we pass the `lower48` dataset to the `group_by` function, which will use th
 
 ```{r}
 tm_shape(states) +
-  tm_polygons(col='population')
+  tm_polygons(col = 'population')
 ```
 
 With all that done, we can write the `states` dataset out to a new shapefile
 
 ```{r}
-st_write(states, 'states.gpkg', delete_layer=TRUE)
+st_write(states, 'states.gpkg', delete_layer = TRUE)
 ```
 
 ## Adding new attributes
@@ -116,7 +114,8 @@ states %<>%
 Here we use a slight variation of the pipe operator `%<>%` to do the mutate operation 'in place' i.e. without making a new dataset, just adding to the existing one.
 
 ```{r}
-tm_shape(states) + tm_polygons(col='turnout')
+tm_shape(states) +
+  tm_polygons(col = 'turnout')
 ```
 
 Try adding some other new variables, such as (say) the margin between the Republican (`gop`) and Democratic (`dem`) votes in each state, or the percentage of votes cast for one of the parties.

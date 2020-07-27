@@ -2,8 +2,8 @@
 # Making thematic maps in *R*
 We cover a lot of ground in this lab, including handling simple spatial data in *R*, and the options available for mapping using the `tmap` package. Keep in mind that you can refer back to last week's material if you need to refresh your memory of anything we did previously.
 
-The instructions this week are in several parts, to make it a bit easier to follow. You can get a preview of some of the sections from the preview links shown.
- 
+The instructions this week are in several parts, to make it a bit easier to follow.
+
 + [Introducing the data](making-maps-in-R-01-introducing-the-data.md)
 + [Selecting and tidying the data](making-maps-in-R-02-selecting-and-tidying-data.md) [_preview_](https://southosullivan.com/geog315/labs/making-maps-in-R-02-selecting-and-tidying-data.html)
 + [How to use the `tmap` functions](making-maps-in-R-03-using-tmap.md) [_preview_](https://southosullivan.com/geog315/labs/making-maps-in-R-03-using-tmap.html)

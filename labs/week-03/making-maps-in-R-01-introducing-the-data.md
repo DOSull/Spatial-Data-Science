@@ -1,6 +1,4 @@
 #### Geog 315 T2 2020
-You can see what the results of running code in this page look like [here](https://southosullivan.com/geog315/labs/making-maps-in-R-01-introducing-the-data.html).
-
 # Introducing the data
 First you need to load the `sf` library for handling spatial data, `tmap` for mapping, and `dplyr` for data wrangling.
 
@@ -56,7 +54,7 @@ In the assignment it is important to consider if these vote *counts* are what yo
 
 ```{r}
 tm_shape(results) +
-  tm_polygons(col='dem', palette='Blues')
+  tm_polygons(col = 'dem', palette = 'Blues')
 ```
 
 Now [go back to the overview](README.md) or [on to the next page](making-maps-in-R-02-selecting-and-tidying-data.md).

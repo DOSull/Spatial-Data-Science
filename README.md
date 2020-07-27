@@ -4,7 +4,7 @@
 [assessment](#assessment) \~
 [links](#additional-information)
 
-**last updated** 8 July 2020
+**this page last updated** 21 July 2020
 
 **NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
 
