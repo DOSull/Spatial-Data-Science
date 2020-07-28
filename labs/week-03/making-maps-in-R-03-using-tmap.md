@@ -23,7 +23,7 @@ tm_shape(lower48) +
   tm_polygons()
 ```
 
-The first part of the above command `tm_shape(lower48)` says something like "I am going to make a map, with input dataset is `lower48`". `tm_shape` makes the map object, which we can then add more information to. In the simple example above, we add to it `+ tm_polygons()`, which says something like "and you should style the map based on the fact the data are polygons". For the particular kind of map you are making in this assignment&mdash;a *choropleth* map&mdash; most of the critical information about how the map should look will be included in the parameters we supply to the `tm_polygons` function.
+The first part of the above command `tm_shape(lower48)` says something like "stand back! I am going to make a map, with input dataset `lower48`". `tm_shape` makes the map object, which we can then add more layers to. In the simple example above, we add to it `+ tm_polygons()`, which says something like "and you should style the map based on the fact the data are polygons". For the particular kind of map you are making in this assignment&mdash;a *choropleth* map&mdash; most of the critical information about how the map should look will be included in additional parameters we supply to the `tm_polygons` function.
 
 The various aspects of this are discussed in the sections listed below
 + [Specifying the attribute to be mapped](#specifying-the-attribute-to-map)
@@ -57,7 +57,7 @@ tm_shape(lower48) +
   tm_polygons(col = 'votes', palette = 'PRGn')
 ```
 
-All the named palettes can be examined using the palette explorer in the `tmaptools` package. This might require you to install an additional library. If so use the **Tools - Install Packages...** menu option in *RStudio* to do so:
+All the named palettes can be examined using the palette explorer in the `tmaptools` package. This might require you to install an additional library. If so use the **Tools - Install Packages...** menu option in *RStudio* to do so. After `tmaptools` is installed, you can do:
 
 ```{r}
 library(tmaptools)
@@ -74,11 +74,11 @@ tm_shape(lower48) +
   tm_polygons(col = 'dem', palette = 'Blues', style = 'quantile', n = 9)
 ```
 
-will produce a classification based on *equal intervals* and 9 classes. There are a number of different possible classification styles:
+will produce a classification based on *qauntiles* and 9 classes. There are a number of different possible classification styles:
 
 + `equal` will divide the data range into equal length intervals
 + `sd` is a variant of equal intervals where the intervals will be in some round number of *standard deviations*
-+ `quantile` will divide the range so that each class has an approximately equal number of cases (in this counties); depending on how the data are distributed, this may result in intervals of very different sizes
++ `quantile` will divide the range so that each class has an approximately equal number of cases (in this case counties); depending on how the data are distributed, this may result in intervals of very different sizes
 + `kmeans`, `hclust`, `bclust`, `fisher` and `jenks` will attempt to cluster the data into groups that make sense with respect to the distribution of the data values
 + `cont` will not set up classes at all, but will assign colours to cases (i.e., counties) based on their exact values along a continuous range
 
@@ -90,9 +90,9 @@ One thing you should do is examine the distribution of the attribute you are map
 hist(lower48$votes)
 ```
 
-For example, in this case, the `votes` attribute is highly skewed, because there are a small number of very high population counties. This means that if we use `equal` intervals in this case (say intervals of 200,000 as in the histogram) then almost all the counties will be in the first class and there will be lots of classes (i.e., colours) with no associated county. In such a case it would make more sense to use a `quantile` style, although we then have to be sure that the chosen class boundaries make sense.
+For example, in this case, the `votes` attribute is highly skewed, because there are a small number of very high population counties. This means that if we use `equal` intervals (say intervals of 200,000 as in the histogram) then almost all the counties will be in the first class and there will be lots of classes (i.e., colours) with no associated county. In such a case it would make more sense to use a `quantile` style, although we then have to be sure that the chosen class boundaries make sense. Of course, the design problem will change if you focus on mapping not numbers of votes, but shares of the vote, since these are more comparable across counties regardless of their population (since they are inherently limited to a range between 0 and 100%).
 
-One option is the `pretty` style, which will choose data values that are easy to read at equally space intervals.
+One option is the `pretty` style, which will choose data values that are easy to read at equally spaced intervals.
 
 ```{r}
 tm_shape(lower48) +
@@ -111,7 +111,7 @@ tm_shape(lower48) +
   tm_polygons(alpha = 0, border.col = 'black')
 ```
 
-In this example, I have used `alpha=0` to make the states transparent, so we only see their borders, and I have ensured that there are no county boundaries by using `tm_fill` instead of `tm_polygons` for the `lower48` layer of the map.
+In this example, I have used `alpha = 0` to make the states transparent, so we only see their borders, and I have ensured that there are no county boundaries by using `tm_fill` instead of `tm_polygons` for the `lower48` layer of the map. notice that the order of adding layers is important. The `tm_fill` function applies to the most recently added data layer (`lower48`), then the `states` data layer is added, and so the `tm_polygons` function which follows applies to it.
 
 ## Other stuff
 There are many other map elements that can be controlled using `tmap` functions. We can add a north arrow and scale bar using `tm_compass()` and `tm_scale_bar()`. We can move the position of the legend around using `tm_legend()` options. We can add text using `tm_text()`. Here's an example with many options.
@@ -129,9 +129,9 @@ tm_shape(lower48) +
 
 Two options that are good to know about both used here are that the line thickness in plots is controlled by a `lwd` setting, and opacity of colours by an `alpha` setting.
 
-This is not a perfect map by any means. The duplicate labels on the states happen because some states have more than one polygon (for example California and Texas have offshore islands) and it seems to be impossible to stop `tmap` labelling each island (the `remove.overlap` option helps a bit). It's possible to fix this problem by making a new data layer that has one point location for each state, and using that to position the labels, but we'll not worry about that for now.
+This is not a perfect map by any means. You may see duplicate labels on the states because some states have more than one polygon (for example California and Texas have offshore islands) and `tmap` may labelling each island (the `remove.overlap` option helps a bit). There are ways to fix this kind of problem, but we won't worry about that for now.
 
-The best way to figure out all these options is to either ask for help in the lab session, or to use the help available, by prefixing the command with a `?` mark, such as
+The best way to figure out all these options is to either ask for help in the lab sessions, or to use the help available, by prefixing the command you want to know more about with a `?` mark, such as
 
 ```{r}
 ?tm_legend
