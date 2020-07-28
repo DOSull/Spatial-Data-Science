@@ -38,9 +38,9 @@ So, to get rid of Alaska and Hawai'i we can do this:
 lower48 <- filter(results, state != 'AK' & state != 'HI')
 ```
 
-Here we've combined the requirement that the state not be Alaska (AK) *and* not be Hawai'i (HI) using the `&` operator. This works fine and is there is nothing wrong with this approach.
+Here we've combined the requirement that the state not be Alaska (AK) *and* not be Hawai'i (HI) using the `&` operator. This works fine and there is nothing wrong with this way of doing things.
 
-However, an approach that is beginning to be used more widely makes use of *pipe* operations symbolise by `%>%` to pass an input dataset through a series of operations. This looks like the following:
+However, an approach that is beginning to be used more widely makes use of *pipe* operations symbolise by `%>%` to pass an input dataset through a series of operations. This looks like this:
 
 ```{r}
 lower48 <- results %>%
@@ -58,7 +58,7 @@ Because filtering data is not our primary focus right now, we will worry more ab
 
 For now, it is enough to know that we can do this kind of filtering to make new datasets, that the `filter` function is how we do it, and that the *pipe operator* `%>%` is a neat way to do it.
 
-The way to read the the command above is "start with `results` as the input, pipe it into the first filter (which throws away Alaska, `AK`) then pipe it into a second filter (which throws away Hawai'i, `HI`)". Pipe functions are a big feature of the *R* **tidyverse**.
+The way to read the the command above is "start with `results` as the input, pipe it into the first filter (which throws away Alaska, `AK`) then pipe it into a second filter (which throws away Hawai'i, `HI`)". Pipe functions are a central feature of the *R* **tidyverse**.
 
 Either way, we now we have a dataset with only the contiguous ('lower 48') states of the US.
 
@@ -125,6 +125,6 @@ Generally speaking it is easier to add new attributes to a dataset, and then whe
 Keep in mind if you add new attributes or make new datasets in this way that
 
 + they are just as valid as the original datasets and attributes, and
-+ they aren't permanently remembered until you use `st_write` to save them to a file.
++ **they aren't permanently stored until you use `st_write` to save them to a file**
 
 Now [go back to the overview](README.md) or [on to the next page](making-maps-in-R-03-using-tmap.md).
