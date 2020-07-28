@@ -16,7 +16,7 @@ The spatial data we just loaded has some quirks, so in this document, I explain 
 The tasks covered in this document are
 + [Filtering data](#filtering-data) to remove Alaska and Hawai'i
 + [Saving data to spatial data files](#saving-data) to make the filtering we did permanent
-+ [Grouping data](#grouping-data) to make a states shapefile
++ [Grouping data](#grouping-data) to make a states dataset
 + [Adding new attributes](#adding-new-attributes) to a dataset using `mutate`
 
 ## Filtering data
