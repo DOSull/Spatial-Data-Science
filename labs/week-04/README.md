@@ -1,10 +1,12 @@
 #### Geog 315 T2 2020
 # Spatial data wrangling in *R*
-Last week you (hopefully) got accustomed to basic map-making using the `sf` and `tmap`. 
+Last week you (hopefully) got accustomed to basic map-making using the `sf` and `tmap`.
 
-This week we focus more on typical kinds of data wrangling that are required *before* you can even think about making useful maps continue this exploration.
+This week we focus more on typical kinds of data wrangling that are required *before* you can even think about making useful maps.
 
-This time there are questions through the different sections so that you have a better idea when you should be paying close attention, and also so that it is easier to see where you can get credit for completing tasks and answering questions. I have also made the ability to answer the questions less dependent on totally *getting* the details of the code.
+This time there are questions through the different sections so that you have a better idea when you should be paying close attention, and also so that it is easier to see where you can get credit for completing tasks and answering questions.
+
+I have also made the ability to answer the questions less dependent on totally *getting* the details of the code.
 
 You can look at the last page, to get an overview of the assignment requirements.
 
@@ -14,3 +16,6 @@ Again, the instructions this week are in several parts (previews of some pages a
 + [Dealing with map projections](spatial-data-manipulation-02-map-projections.md) [_preview_](https://southosullivan.com/geog315/labs/spatial-data-manipulation-02-map-projections.html)
 + [Spatial joins, summarising data, and throwing away spatial information](spatial-data-manipulation-03-spatial-joins.md) [_preview_](https://southosullivan.com/geog315/labs/spatial-data-manipulation-03-spatial-joins.html)
 + [The assignment summarised](spatial-data-manipulation-04-assignment.md)
+
+## Videos
+**Coming soon...**

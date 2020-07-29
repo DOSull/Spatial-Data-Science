@@ -40,7 +40,7 @@ st_crs(ca_tracts)
 
 This tells us that these data are in some projected coordinate system althought the EPSG code has not been recorded.
 
-Also shown in these examples is a *proj4string* associated with the projection. Sometimes you get both the EPSG code and the proj4string other times (as in the `ca_tracts`) you only get the proj4string. This is actually the command associated with the [PROJ]() program used by almost all geospatial software to handle projections. You don't need to worry about what it all means, but it is good to know such strings exist, and the role they play in defining the projection of a dataset for display in maps or in GIS. When you get used to interpreting them (this should come with time working on geospatial data) you can tell that the `ca_tracts` dataset is in a Lambert Conformal Conic projection (`+proj=lcc`) and that the units are feet (`+units=ft`). 
+Also shown in these examples is a *proj4string* associated with the projection. Sometimes you get both the EPSG code and the proj4string other times (as in the `ca_tracts`) you only get the proj4string. This is actually the command associated with the [PROJ]() program used by almost all geospatial software to handle projections. You don't need to worry about what it all means, but it is good to know the information is available, and the role it plays in defining the projection of a dataset for display in maps or in GIS. This information used to be presented as hard-to-interpret proj codes, but is not presented in a more human-readable form, so you can tell that the `ca_tracts` dataset is in a Lambert Conformal Conic projection, and that the measurement units are feet (those crazy Americans!). 
 
 ## Useful resources on EPSG codes and proj strings
 For more information on EPSG codes and proj strings, you will find the resources below helpful:
@@ -105,13 +105,13 @@ tm_shape(ca_tracts, bbox=st_bbox(abb)) +
 
 Nice!
 
-OK, so we don't lose all this good work, we should save the now reprojected datasets. We will use shapefiles since these reliable record projection information, and we will include some information in the file name about the projection, just so we can keep track of things
+OK, so we don't lose all this good work, we should save the now reprojected datasets. We will use geopackage files since these reliably record projection information in a single file format (unlike shapefiles). We will also include some information in the file name about the projection, just so we can keep track of things
 
 ```{r}
 st_write(abb, 'la-abb-p2770.gpkg', delete_layer=TRUE)
 st_write(ca_tracts, 'ca-tracts-p2770.gpkg', delete_layer=TRUE)
 ```
 
-If you need to reload the data at any point you should use these new shapefiles and not the originals. The new projected coordinates are only made permanent when we write the data out to the file system like this.
+If you need to reload the data at any point you should use these new files and not the originals. The new projected coordinates are only made permanent when we write the data out to the file system like this.
 
 Now [go back to the overview](README.md) or on to [the next page of instructions](spatial-data-manipulation-03-spatial-joins.md).
