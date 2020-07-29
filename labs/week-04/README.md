@@ -13,8 +13,8 @@ You can look at the last page, to get an overview of the assignment requirements
 Again, the instructions this week are in several parts (previews of some pages are also linked below.)
 
 + [Introducing the data](spatial-data-manipulation-01-introducing-the-data.md)
-+ [Dealing with map projections](spatial-data-manipulation-02-map-projections.md) [_preview_](https://southosullivan.com/geog315/labs/spatial-data-manipulation-02-map-projections.html)
-+ [Spatial joins, summarising data, and throwing away spatial information](spatial-data-manipulation-03-spatial-joins.md) [_preview_](https://southosullivan.com/geog315/labs/spatial-data-manipulation-03-spatial-joins.html)
++ [Dealing with map projections](spatial-data-manipulation-02-map-projections.md)
++ [Spatial joins, summarising data, and throwing away spatial information](spatial-data-manipulation-03-spatial-joins.md)
 + [The assignment summarised](spatial-data-manipulation-04-assignment.md)
 
 ## Videos
