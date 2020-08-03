@@ -1,8 +1,3 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: inline
----
 #### Geog 315 T2 2020
 # Other spatial relations in `sf`
 ```{r}
@@ -340,4 +335,3 @@ plot(st_intersection(polys, bbox))
 library(RXKCD)
 getXKCD(627)$img
 ```
-
