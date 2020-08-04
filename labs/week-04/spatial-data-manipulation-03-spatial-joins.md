@@ -54,14 +54,14 @@ Before we get to that:
 #### How would you change the code above to restrict the data to a different county, say Alameda (code `001`, in the Bay Area across from San Francisco). *Demonstrate that you know how to do this, by including a simple map of the census tracts for Alameda County in your answer*. (20%)
 
 ## A spatial filter
-We can narrow things down even more closely just to focus on tracts where there are Airbnb listings, using a spatial filter.
+We can narrow things down even more closely just to focus on tracts where there are Airbnb listings, using a *spatial filter*.
 
 ```{r}
 abb_tracts <- la_tracts %>%
   st_filter(abb)
 ```
 
-This command only really works in the particular situation we are in here because there are no tracts in the area of interest with no listings. If there were, there would be 'holes' in the selection of tracts, which might be a problem. It works for us for now, so we won't worry about it too much, but I have compiled an additional page of material **here** (coming soon!), if you'd like to learn more about handling different kinds of spatial relations using `sf` operations.
+This command only really works in the particular situation we are in here because there are no tracts in the area of interest with no listings. If there were, there would be 'holes' in the selection of tracts, which might be a problem. It works for us for now, so we won't worry about it too much, but I have compiled an additional page of material [here](https://github.com/DOSull/Geog315/blob/master/labs/week-04/spatial-data-manipulation-03B-spatial-relations.md), which we are working through that in class, if you want to learn more about handling different kinds of spatial relations using `sf`.
 
 We've narrowed the tracts down. But there are still a lot of Airbnb listings, and for the analysis we want to do later, we only need the _number_ of listings in each tract. There are various ways we might get that information. One is to spatially join the tracts to the listings, so that for every listing we know the tract that it is in. We'll then be able to count them and join them back to the tracts.
 
@@ -179,7 +179,7 @@ abb_tracts %<>%
 ```
 
 ## Saving our work
-We've accomplished a lot, so best to save the results, although not without some tidying up first
+We've accomplished a lot, so best to save the results, although not without some tidying up first, to remove variables we aren't interested in.
 
 ```{r}
 abb_tracts %<>%

@@ -9,7 +9,7 @@ library(dplyr)
 # Introducing the data
 The data this week are Census geographies at the tract level for a part of Los Angeles, and also data obtained from [Inside AirBnB](http://insideairbnb.com/get-the-data.html) a site dedicated to understanding the impacts of Airbnb on local housing markets using data obtained from the Airbnb website.
 
-Our aim in this assignment is to organise these data so we can do some analysis (in the next lab) of the relationships (if any) between Airbnb rentals in neighbourhoods and the socioeconomic and demographic character of those neighbourhoods. This week we focus on organising the Airbnb side of things. Next week we will add some actual census data (not just the geographies).
+Our aim in this assignment is to organise these data so we can do some analysis (in a later lab) of the relationships (if any) between Airbnb rentals in neighbourhoods and the socioeconomic and demographic character of those neighbourhoods. This week we focus on organising the Airbnb side of things. In a later lab we will add some actual census data (not just the geographies).
 
 You will find the data in this [zip archive file](airbnb.zip?raw=true). As you have done before download and extract these data to a folder **on the H: drive** of your computer. Then open *RStudio* and use **Session - Set working Directory - Choose Working Directory...** to set the session working directory to the folder where you saved the data. It is important to navigate to the directory you put the data in from the **This PC** location in the Explorer, to avoid the `setwd('~/')` error that many of you have encountered.
 

@@ -17,12 +17,12 @@ As we might hope the `sf` package provides the ability to project spatial datase
 
 We can't get into too many details in this class, since projections are a very large topic, but we can at least get a feel for how they work in this environment.
 
-`sf` makes use of standard ways of describing projections, namely the *EPSG codes* and/or *proj strings*. These are also used in *ArcGIS* (well hidden from users) and *QGIS* (not particularly well hidden!). In *R* they are right out in the open.
+`sf` makes use of standard ways of specifying projections, namely the *EPSG codes* and/or *WKT* (well-known text) format infornmation. These are also used in *ArcGIS* (well hidden from users) and *QGIS* (not particularly well hidden!). In *R* they are right out in the open.
 
 EPSG codes are numeric codes that correspond with specific projections. For example
 
-+ **New Zealand Transverse Mercator** is 2193
-+ **New Zealand Map Grid** (which preceded NZTM) is 27200
++ **New Zealand Transverse Mercator** (NZTM) is 2193
++ **New Zealand Map Grid** (NZMG, which preceded NZTM) is 27200
 + Plain **latitude longitude** coordinates (which you might get from a GPS) are 4326
 + **Web Mercator** (the basis of most web maps until recently) is 3857
 
@@ -40,16 +40,17 @@ st_crs(ca_tracts)
 
 This tells us that these data are in some projected coordinate system althought the EPSG code has not been recorded.
 
-Also shown in these examples is a *proj4string* associated with the projection. Sometimes you get both the EPSG code and the proj4string other times (as in the `ca_tracts`) you only get the proj4string. This is actually the command associated with the [PROJ]() program used by almost all geospatial software to handle projections. You don't need to worry about what it all means, but it is good to know the information is available, and the role it plays in defining the projection of a dataset for display in maps or in GIS. This information used to be presented as hard-to-interpret proj codes, but is not presented in a more human-readable form, so you can tell that the `ca_tracts` dataset is in a Lambert Conformal Conic projection, and that the measurement units are feet (those crazy Americans!). 
+Also shown in these examples is the *WKT* information for the projection. This information used to be presented as hard-to-interpret *proj* codes, but the WKT format is a more human-readable form, so you can tell that the `ca_tracts` dataset is in a Lambert Conformal Conic projection, and that the measurement units are feet (those crazy Americans!). 
 
-## Useful resources on EPSG codes and proj strings
-For more information on EPSG codes and proj strings, you will find the resources below helpful:
+## Useful resources on EPSG codes and WKT codes
+For more information on EPSG codes and WKT codes, you will find the resources below helpful:
 
 + [epsg.io](https://epsg.io) from MapTiler has details and information about EPSG codes
 + [Projection Wizard](https://projectionwizard.org) can suggest suitable projections conforming with various properties for specified areas of Earth's surface
 
 ## Different map projections
 To see the problem we are up against, try mapping these two datasets on top of one another.
+
 ```{r}
 tm_shape(ca_tracts) +
   tm_polygons() +
@@ -57,7 +58,7 @@ tm_shape(ca_tracts) +
   tm_dots()
 ```
 
-That worked fine. You should be able to see the dots of the Airbnb listings in roughly the right spot in southern California. But imagine that we want to make our map only across the area covered by the Airbnb dataset. We might try this
+That worked fine. You should be able to make out the dots of the Airbnb listings in roughly the right spot in southern California. But imagine that we want to make our map only across the area covered by the Airbnb dataset. We might try this
 
 ```{r}
 tm_shape(ca_tracts, bbox=st_bbox(abb)) +
