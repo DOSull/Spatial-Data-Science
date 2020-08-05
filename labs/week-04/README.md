@@ -20,4 +20,8 @@ Again, the instructions this week are in several parts (previews of some pages a
 There is an additional page of material on much more of the spatial data manipulation operations available in `sf` [here](spatial-data-manipulation-03B-spatial-relations.md), but this is not required to complete the assignment. It is covered in detail in class.
 
 ## Videos
-**Coming soon...**
+There are three videos this week (I incorrectly say there are two near the start of the first one... FAKE NEWS)
+
++ [Spatial filtering the data](http://southosullivan.com/geog315/video/week-04-lab/geog315-week04-01-spatial-data-manipulation-data-prep.mp4) (6:38 min)
++ [Counting points in polygons with a spatial join](http://southosullivan.com/geog315/video/week-04-lab/geog315-week04-02-spatial-data-manipulation-st_join.mp4) (7:48 min)
++ [Counting points in polygons using a spatial predicate function](http://southosullivan.com/geog315/video/week-04-lab/geog315-week04-03-spatial-data-manipulation-st_contains.mp4) (7:20 min)
