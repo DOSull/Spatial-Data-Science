@@ -69,7 +69,7 @@ The first step then is a spatial join, using the `st_join` function. We'll make 
 
 ```{r}
 abb_counts <- abb %>%
-  st_join(la_tracts)
+  st_join(abb_tracts)
 ```
 
 Inspect what we got
