@@ -40,7 +40,7 @@ st_crs(ca_tracts)
 
 This tells us that these data are in some projected coordinate system althought the EPSG code has not been recorded.
 
-Also shown in these examples is the *WKT* information for the projection. This information used to be presented as hard-to-interpret *proj* codes, but the WKT format is a more human-readable form, so you can tell that the `ca_tracts` dataset is in a Lambert Conformal Conic projection, and that the measurement units are feet (those crazy Americans!). 
+Also shown in these examples is the *WKT* information for the projection. This information used to be presented as hard-to-interpret *proj* codes, but the WKT format is a more human-readable form, so you can tell that the `ca_tracts` dataset is in a Lambert Conformal Conic projection, and that the measurement units are feet (those crazy Americans!).
 
 ## Useful resources on EPSG codes and WKT codes
 For more information on EPSG codes and WKT codes, you will find the resources below helpful:
@@ -54,7 +54,7 @@ To see the problem we are up against, try mapping these two datasets on top of o
 ```{r}
 tm_shape(ca_tracts) +
   tm_polygons() +
-  tm_shape(abb) + 
+  tm_shape(abb) +
   tm_dots()
 ```
 
@@ -63,17 +63,17 @@ That worked fine. You should be able to make out the dots of the Airbnb listings
 ```{r}
 tm_shape(ca_tracts, bbox=st_bbox(abb)) +
   tm_polygons() +
-  tm_shape(abb) + 
+  tm_shape(abb) +
   tm_dots()
 ```
 
 Here, using the `bbox` option when I map the tracts layer, I have tried to restrict the map area to just the bounding box (i.e. the max/min x and y coordinate range) of the Airbnb data, but something seems to have gone wrong. That leads to the first question, which you should answer in your response to this lab:
 
-### **Question 1** 
-#### Explain to the best of your ability what has gone wrong in the mapping that we just attempted. Look back to when you loaded the two datasets at the bounding box information provided when each dataset was loaded. (15%)
+### **Question 1 (IGNORE THIS QUESTION)**
+#### ~Explain to the best of your ability what has gone wrong in the mapping that we just attempted. Look back to when you loaded the two datasets at the bounding box information provided when each dataset was loaded. (15%)~
 
 ## Changing the coordinate reference system by reprojecting
-OK. So, this should make it clear that an important spatial data wrangling task is to get all the data you are working with into the same coordinate reference system (i.e. map projection), preferably one appropriate to the location of interest, and that uses sensible distance units, such as metres (and not loopy ones like feet). 
+OK. So, this should make it clear that an important spatial data wrangling task is to get all the data you are working with into the same coordinate reference system (i.e. map projection), preferably one appropriate to the location of interest, and that uses sensible distance units, such as metres (and not loopy ones like feet).
 
 **Note that if all we wanted to do was make a single map, reprojection wouldn't necessarily be required, we could do temporary workarounds, and get by. But for serious further work it makes sense to reproject all the datasets we are dealing with.**
 
@@ -91,8 +91,8 @@ st_crs(abb)
 st_crs(ca_tracts)
 ```
 
-### **Question 2** 
-#### Explain to the best of your ability what is happening when you use the command above,  `ca_tracts <- st_transform(ca_tracts, st_crs(abb))` with specific reference to how we specify the projection to be used in the transformation, that is the `st_crs(abb)` part. (10%)
+### **Question 2**
+#### Explain to the best of your ability what is happening when you use the command above,  `ca_tracts <- st_transform(ca_tracts, st_crs(abb))` with specific reference to how we specify the projection to be used in the transformation, that is the `st_crs(abb)` part. (~10%~15%)
 
 ## That map again
 To check this has fixed the problem, make that map again:
@@ -100,7 +100,7 @@ To check this has fixed the problem, make that map again:
 ```{r}
 tm_shape(ca_tracts, bbox=st_bbox(abb)) +
   tm_polygons() +
-  tm_shape(abb) + 
+  tm_shape(abb) +
   tm_dots()
 ```
 
