@@ -51,7 +51,7 @@ It's still a lot more information than we need, but it's a start, and we are goi
 Before we get to that:
 
 ### **Question 3**
-#### How would you change the code above to restrict the data to a different county, say Alameda (code `001`, in the Bay Area across from San Francisco). *Demonstrate that you know how to do this, by including a simple map of the census tracts for Alameda County in your answer*. (~20%~25%)
+#### How would you change the code above to restrict the data to a different county, say Alameda (code `001`, in the Bay Area across from San Francisco). *Demonstrate that you know how to do this, by including a simple map of the census tracts for Alameda County in your answer*. (~20%~24%)
 
 ## A spatial filter
 We can narrow things down even more closely just to focus on tracts where there are Airbnb listings, using a *spatial filter*.
@@ -81,7 +81,7 @@ as_tibble(abb_counts)
 Pay particular attention to the 'overflow' variables listed at the end of the tibble display. You know the drill:
 
 ### **Question 4**
-#### Describe in words what has been accomplished in the preceding step. Which TRACT information is now associated with each Airbnb listing, and on what basis? (~20%~25%)
+#### Describe in words what has been accomplished in the preceding step. Which TRACT information is now associated with each Airbnb listing, and on what basis? (~20%~24%)
 
 To give some reassurance that we have made progress, we can try mapping the `TRACT` information now associated with the listings. This is a little bit messy for slightly complicated reasons. The original source of the tract information came from a dataset for all of California, which included several thousand unique tract IDs, or in *R* terms *levels* of the *factor* variable `TRACT`. To save time even as we have whittled down the data, first to just Los Angeles county, and now to only those tracts in which there are Airbnb listings in our data, the information about *all* those levels has been retained. You can confirm this
 
@@ -123,7 +123,7 @@ as_tibble(abb_counts)
 Now for a slightly more challenging question:
 
 ### **Question 5**
-#### Make a simple map from the `abb_counts` dataset using the new count variable `n` to colour the dots associated with the listings. You've already used the `tm_dots` function in previous steps, and it will work here also. You can use all the same options available in the `tm_polygons` function for making choropleth maps that you have seen previously (palettes, styles, etc.). If you are feeling adventurous you could instead use `tm_bubbles` which will let you scale symbols according to a number with a `size` option. Include your map output and a short write up explaining what you think the map shows. (35%)
+#### Make a simple map from the `abb_counts` dataset using the new count variable `n` to colour the dots associated with the listings. You've already used the `tm_dots` function in previous steps, and it will work here also. You can use all the same options available in the `tm_polygons` function for making choropleth maps that you have seen previously (palettes, styles, etc.). If you are feeling adventurous you could instead use `tm_bubbles` which will let you scale symbols according to a number with a `size` option. Include your map output and a short write up explaining what you think the map shows. (~35%~40%)
 
 ## Another join, also, dropping geometries
 Hopefully you had fun making that map, but really, it's kind of a dumb map. The counts it contains are meaningfully associated with the tracts, not with the listings, so we need another join this time of the counts we have worked so hard to create, back on to the tract dataset.
