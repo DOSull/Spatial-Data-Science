@@ -61,8 +61,8 @@ Here's the trimester schedule we will aim to follow. **Bolded labs** have an ass
 1 | 13 Jul | Course introduction | [Lab session to get software setup](labs/week-01/README.md) | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/open/)
 2 | 20 Jul | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02/README.md) | [The myth of tidy data](https://southosullivan.com/geog315/tidy-data/)
 3 | 27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03/README.md) (15%) due 10 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
-4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/week-04/README.md) (15%) due 31 Aug | Clustering I
-5 | 10 Aug | Clustering II | **Geodemographic analysis** (20%) due 10 Sep | Applications of clustering analysis
+4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/week-04/README.md) (15%) due 31 Aug | [Spatial data wrangling (continued)](https://southosullivan.com/geog315/spatial-data-munging/)<br />and [handling tables](https://southosullivan.com/geog315/table-joins-and-dissolves/)
+5 | 10 Aug | Cluster analysis | **Geodemographic analysis** (20%) due 10 Sep | Applications of clustering analysis
 &nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp;
 6 | 31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | Help with assignments | Regression modelling 1
 7 | 7 Sep | Regression modelling 2 |  **Building a simple statistical model** (20%) due 21 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
