@@ -92,7 +92,7 @@ st_crs(ca_tracts)
 ```
 
 ### **Question 2**
-#### Explain to the best of your ability what is happening when you use the command above,  `ca_tracts <- st_transform(ca_tracts, st_crs(abb))` with specific reference to how we specify the projection to be used in the transformation, that is the `st_crs(abb)` part. (~10%~12%)
+#### Explain to the best of your ability what is happening when you use the command above,  `ca_tracts <- st_transform(ca_tracts, st_crs(abb))` with specific reference to how we specify the projection to be used in the transformation, that is the `st_crs(abb)` part. (12%)
 
 ## That map again
 To check this has fixed the problem, make that map again:
