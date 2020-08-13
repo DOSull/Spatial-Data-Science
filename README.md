@@ -4,7 +4,7 @@
 [assessment](#assessment) \~
 [links](#additional-information)
 
-**this page last updated** 12 August 2020
+**this page last updated** 13 August 2020
 
 **NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
 
@@ -62,7 +62,7 @@ Here's the trimester schedule we will aim to follow. **Bolded labs** have an ass
 2 | 20 Jul | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02/README.md) | [The myth of tidy data](https://southosullivan.com/geog315/tidy-data/)
 3 | 27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03/README.md) (15%) due 10 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
 4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/week-04/README.md) (15%) due 31 Aug | [Spatial data wrangling (continued)](https://southosullivan.com/geog315/spatial-data-munging/)<br />and [handling tables](https://southosullivan.com/geog315/table-joins-and-dissolves/)
-5 | 10 Aug | [Clustering analysis](https://southosullivan.com/geog315/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05/README.md) (20%) due 10 Sep | Applications of clustering analysis
+5 | 10 Aug | [Clustering analysis](https://southosullivan.com/geog315/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05/README.md) (20%) due 10 Sep | [Applications of clustering analysis](https://southosullivan.com/geog315/classification-examples/)
 &nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp;
 6 | 31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | Help with assignments | Regression modelling 1
 7 | 7 Sep | Regression modelling 2 |  **Building a simple statistical model** (20%) due 21 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
