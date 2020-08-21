@@ -1,5 +1,6 @@
 #### Geog 315 T2 2020
-These data are for the New Zealand general election held in September 2017, and have been obtained from the Electoral Commission website, particularly [this page](https://www.electionresults.govt.nz/electionresults_2017/statistics/index.html).
+# Aotearoa New Zealand General Election 2017
+These data are for the general election held in September 2017, and have been obtained from the Electoral Commission website, particularly [this page](https://www.electionresults.govt.nz/electionresults_2017/statistics/index.html).
 
 ## Data
 The specific election datasets are as follows
