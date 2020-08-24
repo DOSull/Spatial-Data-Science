@@ -7,7 +7,7 @@ Here are the data
 
 + [homes-data.csv](homes-data.csv?raw=true)
 
-The dataset includes sales prices for many of the houses (although some are listed as 'TBC'), and the number of bedrooms, number of bathrooms, address, listed suburb and locational information (as latitude and longitude). You can see the data on [this map](homes.geojson) (but you'll have to process the data to be able to analyse it spatially.)
+The dataset includes sales prices for many of the houses (although some are listed as 'TBC'), and the number of bedrooms, number of bathrooms, address, listed suburb and locational information (as latitude and longitude). You can see the data on [this map](homes.geojson), but you'll need to do some data tidying to be able to analyse them spatially.
 
 ## Ideas
 TBC
