@@ -6,6 +6,8 @@ Details of the various available datasets and some thoughts on what you might lo
 + [New Zealand election 2017](election-2017)
 + [Aotearoa New Zealand placename origins](anz-placenames)
 + [US police shootings](us-police-shootings)
++ [Landlides in Waitotara](landslides)
++ [Distribution of _tradescantia fluminensis_](tradescantia)
 
 ## General datasets
 Some other general datasets that may be of use, regardless of topic:
