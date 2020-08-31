@@ -58,14 +58,14 @@ Here's the trimester schedule we will aim to follow. **Bolded labs** have an ass
 
  &nbsp; | Date | Tue | Thu (lab) | Fri
  -- | -- | -- | -- | --
-1 | 13 Jul | Course introduction | [Lab session to get software setup](labs/week-01/README.md) | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/open/)
-2 | 20 Jul | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02/README.md) | [The myth of tidy data](https://southosullivan.com/geog315/tidy-data/)
-3 | 27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03/README.md) (15%) due 10 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
-4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/week-04/README.md) (15%) due 31 Aug | [Spatial data wrangling (continued)](https://southosullivan.com/geog315/spatial-data-munging/)<br />and [handling tables](https://southosullivan.com/geog315/table-joins-and-dissolves/)
-5 | 10 Aug | [Clustering analysis](https://southosullivan.com/geog315/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05/README.md) (20%) due 10 Sep | [Applications of clustering analysis](https://southosullivan.com/geog315/classification-examples/)
+1 | 13 Jul | Course introduction | [Lab session to get software setup](labs/week-01) | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/open/)
+2 | 20 Jul | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02) | [The myth of tidy data](https://southosullivan.com/geog315/tidy-data/)
+3 | 27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03) (15%) due 10 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
+4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/week-04) (15%) due 31 Aug | [Spatial data wrangling (continued)](https://southosullivan.com/geog315/spatial-data-munging/)<br />and [handling tables](https://southosullivan.com/geog315/table-joins-and-dissolves/)
+5 | 10 Aug | [Clustering analysis](https://southosullivan.com/geog315/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05) (20%) due 10 Sep | [Applications of clustering analysis](https://southosullivan.com/geog315/classification-examples/)
 &nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp;
 6 | 31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | Help with assignments | Regression modelling 1
-7 | 7 Sep | Regression modelling 2 |  **Building a simple statistical model** (20%) due 21 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
+7 | 7 Sep | Regression modelling 2 |  [**Building a simple statistical model**](labs/week-07) (20%) due 21 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
 8 | 14 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | Help with assignments | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) / guest
 9 | 21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | **Introducing the mini-projects** (30%) due 16 Oct| Literate programming in *RMarkdown*
 10 | 28 Sep | [Network analysis](https://southosullivan.com/geog315/network-analysis/) / guest | Project work | Simulation models, time and dynamics / guest
