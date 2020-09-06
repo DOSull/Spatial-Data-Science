@@ -4,7 +4,7 @@
 [assessment](#assessment) \~
 [links](#additional-information)
 
-**this page last updated** 13 August 2020
+**this page last updated** 4 September 2020
 
 **NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
 
@@ -38,7 +38,7 @@ Withdrawal dates | See [Course additions and  withdrawals](https://www.victoria.
 If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](https://www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
 
 ### Lecture and lab schedule
-Lectures are in **LT102 Murphy** from **1:10-2:00** on **Tuesdays** and **Fridays**.
+Lectures are in ~**LT102 Murphy**~ **304 Cotton** from **1:10-2:00** on **Tuesdays** and **Fridays**.
 
 Lab sessions are in **KK 216** from **10:00-11:50** on **Thursdays**.
 
@@ -64,8 +64,8 @@ Here's the trimester schedule we will aim to follow. **Bolded labs** have an ass
 4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/week-04) (15%) due 31 Aug | [Spatial data wrangling (continued)](https://southosullivan.com/geog315/spatial-data-munging/)<br />and [handling tables](https://southosullivan.com/geog315/table-joins-and-dissolves/)
 5 | 10 Aug | [Clustering analysis](https://southosullivan.com/geog315/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05) (20%) due 10 Sep | [Applications of clustering analysis](https://southosullivan.com/geog315/classification-examples/)
 &nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp;
-6 | 31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | Help with assignments | Regression modelling 1
-7 | 7 Sep | Regression modelling 2 |  [**Building a simple statistical model**](labs/week-07) (20%) due 21 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
+6 | 31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | Help with assignments | [From overlay to regression models](https://southosullivan.com/geog315/from-overlay-to-regression/)
+7 | 7 Sep | Regression models |  [**Building a simple statistical model**](labs/week-07) (20%) due 21 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
 8 | 14 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | Help with assignments | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) / guest
 9 | 21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | **Introducing the mini-projects** (30%) due 16 Oct| Literate programming in *RMarkdown*
 10 | 28 Sep | [Network analysis](https://southosullivan.com/geog315/network-analysis/) / guest | Project work | Simulation models, time and dynamics / guest
