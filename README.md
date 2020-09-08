@@ -4,7 +4,7 @@
 [assessment](#assessment) \~
 [links](#additional-information)
 
-**this page last updated** 4 September 2020
+**this page last updated** 8 September 2020
 
 **NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
 
@@ -13,7 +13,7 @@ This course looks at the more advanced aspects of geographic information systems
 
 It is expected that students will have completed [GEOG 215](https://www.wgtn.ac.nz/courses/geog/215/2020/offering?crn=25033), [GEOG 415](https://www.wgtn.ac.nz/courses/geog/415/2020/offering?crn=25033) or an introductory course in GIS at another institution.
 
-This document is also available as a [PDF](README.pdf?raw=true) (although links may not work in that version).
+This document is also available as a [PDF](README.pdf?raw=true) (although links may not work in that version, and it is also not regularly updated).
 
 ## Note about delivery of this course in T2 2020
 This class is offered face-to-face for both lectures and labs. If you are unable to attend face-to-face, lectures will be recorded and available on Blackboard soon after.
