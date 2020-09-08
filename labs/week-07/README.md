@@ -4,7 +4,7 @@ This week the main focus of the assignment is building a simple statistical (reg
 
 We will also look at the _RMarkdown_ file format which you can use to present results from analysis in this or other assignments (this is not required, but can be a very powerful method for presenting analysis results).
 
-Because the file format comes first and the lab material is presented in this format, we will consider that first, before going on to the assignment.
+Because the lab material is presented in this format, we will consider that first, before going on to the assignment proper.
 
 This means that the procedure this week is slightly different. You should download all the materials for this week's lab [from this link](geog315-t2-week-07-materials.zip?raw=true). You should then uncompress them to a folder on your computer and then open the contained `.Rmd` files in _RStudio_. From there you can read and run the instructions in _RStudio_ as set out in the files
 
