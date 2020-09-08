@@ -12,7 +12,7 @@ This means that the procedure this week is slightly different. You should downlo
 + `building-a-simple-model-02-assignment.Rmd`
 
 ## Submission instructions
-This week's assignment requirement is set out in the file `building-a-simple-model-02-main.Rmd`. You should prepare a document completing the analysis and answering the questions as set out in that document, and submit a short report to the dropbox provided on Blackboard by the end of the day on **21 September**.
+This week's assignment requirement is set out in the file `building-a-simple-model-02-assignment.Rmd` and the questions are compiled in one place for ease of reference in [this document](building-a-simple-model-02-assignment-summary.md). You should prepare a document completing the analysis and answering the questions as set out in that document, and submit a short report to the dropbox provided on Blackboard by the end of the day on **21 September**.
 
 You can prepare your report using _Rmarkdown_ and knitting the report (this is explained in this week's materials), or you can proceed in the more usual way preparing your report in _Word_ and including figures and tables as you usually would. Either is acceptable, but I would encourage you to at least experiment with knitting an _Rmarkdown_ file to understand the possibilities.
 
