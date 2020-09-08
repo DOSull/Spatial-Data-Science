@@ -19,7 +19,7 @@ Now we load the data, and make a data-only copy
 commutes <- st_read("welly-commutes.gpkg")
 commutes.d <- commutes %>%
   st_drop_geometry() %>%
-  select(-name)
+  select(-id)
 ```
 
 These data are a subset of Statistics New Zealand's 2018 commuter data which they recently made available for the [There and back again](https://www.stats.govt.nz/2018-census/there-and-back-again-data-visualisation-competition) visualization challenge. I entered [this web-application](https://dosull.github.io/commute-viewer/commute-viewer-app/) in that contest, and would encourage you to explore it to get a feel for the kind of information contained in these data.
@@ -27,7 +27,7 @@ These data are a subset of Statistics New Zealand's 2018 commuter data which the
 Specifically the variables in this dataset are as follows:
 
 name | meaning
--- | -- 
+-- | --
 `pop` | usually resident population
 `popd` | population density per sq. km
 `work_loc_home` | people working at home
