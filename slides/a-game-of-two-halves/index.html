@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/night.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <link rel="stylesheet" href="../extra-styles.css">
+    <style>
+    .reveal section table {background-color: #ffffff80; color:black;}
+    .reveal section td {border: medium solid black; text-align:center; vertical-align:middle; padding:20px;}
+    </style>
+  </head>
+
+  <body>
+    <div id="header" class="header" style="background-color: rgba(0, 102, 51, 0.75);">
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://github.com/DOSull/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="images/scaffolding.jpg">
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Plans for<br />the remains<br /><span style="position:relative; left:100px;">of se<span style="position:relative; left:-150px; font-size:100px; color:red;">##</span>
+              <span style="position:relative; left:-190px;">trimester</span></span></h1>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Schedule</h1>
+            <table>
+              <tr>
+                <td>Week</td>
+                <td>Tue</td>
+                <td>Thu</td>
+                <td>Fri</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>TODAY</td>
+                <td>Network analysis</td>
+                <td rowspan="6">|<br />|<br />|<br />|<br />Assistance<br />with<br />projects<br />|<br />|<br />|<br />|</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Guest 1 (LINZ)</td>
+                <td>Surface analysis</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Project advice</td>
+                <td>NO CLASS</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td colspan="2">Group<br />presentations</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Group<br />presentations</td>
+                <td>Project advice</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Guest 2</td>
+                <td>Project advice</td>
+              </tr>
+            </table>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Deadlines</h1>
+            <table>
+              <tr>
+                <td>Project<br />presenting</td>
+                <td>24, 26 September, 1 October</td>
+              </tr>
+              <tr>
+                <td>Project writeup</td>
+                <td>18 October</td>
+              </tr>
+            </table>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Presentation dates</h1>
+            <h2>We will finalise this week</h2>
+            <h2>Email me preferences</h2>
+            <h2>Choose a date the whole group can be there</h2>
+            <h2>More detailed instructions to follow</h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Additional support</h1>
+            <h2><a href="https://calendly.com/dosullivan/officehours" target="_blank">
+              calendly.com/dosullivan/officehours</a></h2>
+            <h2>Also Andy Rae in CO110, Mo 2-4PM</h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Project writeups</h1>
+            <h2>Information on the expected format is <a target='_blank' href='https://github.com/DOSull/Geog315/blob/master/projects/project-report.md'>available on the course website</a></h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+        <section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Running a GIS project</h1>
+            <h2 class="fragment"><a href="#/1">Conceptually break apart the problem</a></h2>
+            <h2 class="fragment"><a href="#/2">Identify data needs</a></h2>
+            <h2 class="fragment"><a href="#/3">Solve the challenge</a></h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background-iframe="http://www.gisproblemsolving.com">
+            <div class="translucent fragment fade-out" style="position:relative; left:10%; width:80%;">
+              <h1>Drawing on</h1>
+              <h2>Femke Reitsma&rsquo;s e-book<br /><i>How to Solve GIS Challenges</i><br />which you can purchase at</h2>
+              <h2><a target="_blank" href="http://www.gisproblemsolving.com">www.gisproblemsolving.com</a></h2>
+            </div>
+          </section>
+        </section>
+        <!-- ===================================================================================-->
+        <section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Conceptually break apart the problem</h1>
+            <h2><a href="#/1/1">Research the topic</a></h2>
+            <h2><a href="#/1/2">Sketch the problem</a></h2>
+            <h2><a href="#/1/4">Refine the question</a></h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Research the topic</h1>
+            <h2>Most crucially... define terms</h2>
+            <h2 class="fragment" data-fragment-index="1">e.g.,</h2>
+            <h2 class="fragment" data-fragment-index="1">&lsquo;Accessibility&rsquo;?</h2>
+            <h2 class="fragment" data-fragment-index="2">Do some <i>reading</i></h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Sketch the problem</h1>
+            <img src="images/united_states_map_2x.png">
+            <p class="attribution" style="position:relative; left:72px; bottom:100px; width:250px;">
+              source <a target="_blank" href="https://www.xkcd.com/1653/">xkcd.com</a></p>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/brainstorm-in-word-tag-cloud.jpg">
+            <p class="attribution" style="position:relative; width:350px; top:950px; left:1400px;">
+              source <a target="_blank"
+              href="https://www.freeimages.com/premium/brainstorm-in-word-tag-cloud-655809">
+              freeimages.com</a></p>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h2>based on all that<br /><br /></h2>
+            <h1 style="text-shadow:0px 0px 1500px #fff; color:rgba(153,153,153,0.025); font-size:300px;">Refine the question</h1>
+            <h1 class="fragment fade-in"
+            style="transition:5s; position:relative; bottom:740px; font-size:300px;">Refine the question</h1>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+        <!-- ===================================================================================-->
+        <section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/data.gif">
+            <h1>Identify data needs</h1>
+            <h2><a href="#/2/1">Find data and revisit the question</a></h2>
+            <h2><a href="#/2/4">Check data and metadata</a></h2>
+            <p class="attribution">source <a target="_blank" href="https://giphy.com/gifs/code-ko7twHhomhk8E">giphy.com</a></p>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Find data and revisit the question</h1>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <div class="left" style="width:30%">
+              <img src="images/von-Moltke.jpg" style="width:100%"><br/>
+              <figcaption>
+                Field Marshal <a target="_blank" href="https://en.wikipedia.org/wiki/Helmuth_von_Moltke_the_Elder">von Moltke</a><br />image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Helmuth_Karl_Bernhard_von_Moltke.jpg#mw-jump-to-license">commons.wikimedia.org</a>
+              </figcaption>
+            </div>
+            <div class="left" style="width:70%">
+              <h2>&ldquo;No plan of operations extends with certainty beyond the
+                first encounter with the enemy&rsquo;s main strength&rdquo;</h2>
+                <br />
+                <h2 class="fragment">put another way...</h2>
+                <br />
+                <h2 class="fragment">&ldquo;No plan survives contact with the enemy&rdquo;</h2>
+            </div>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/then-iterate.jpg">
+            <p class="attribution">source <a target="_blank" href="http://todaysdoodle.com/then-iterate/">
+              todaysdoodle.com</a></p>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/hypnoflag-spiral.jpg">
+            <h1>Check data and metadata</h1>
+            <h2>Don&rsquo;t assume the data are useful, <i>check them</i></h2>
+            <h2 class="fragment">This might involve <i>ground truthing</i></h2>
+            <h2 class="fragment">Metadata: data about your data</h2>
+            <p class="attribution">image source <a target="_blank" href="https://twitter.com/Hypnoflag">@Hypnoflag</a></p>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+        <!-- ===================================================================================-->
+        <section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Solve the challenge</h1>
+            <h2><a href="#/3/1">Spatial breakdown of the problem</a></h2>
+            <h2><a href="#/3/2">Spatial breakdown of solution(s)</a></h2>
+            <h2><a href="#/3/3">Experiment and do it!</a></h2>
+            <h2><a href="#/3/4">Circle back</a></h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/jigsaw-puzzle.png">
+            <h1>Spatial breakdown of the problem</h1>
+            <h2>Think about the atomic spatial elements of the problem</h2>
+            <h3>points? lines? polygons? pixels?</h3>
+            <h2>Sketch and brainstorm again, about how to combine and relate these
+              elements to address the problem</h2>
+            <p class="attribution">source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Jigsaw_Puzzle.svg">
+              commons.wikimedia.org</a></p>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <div class="left" style="width:30%">
+              <img src="images/toolbox.png" width=100%>
+            </div>
+            <div class="left" style="width:70%">
+              <h1>Spatial breakdown of solution(s)</h1>
+              <h2>Use what you learned in previous step to guide selection of
+                GIS tools</h2>
+              <h2>Sketch out what a solution might look like</h2>
+            </div>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/then-iterate.jpg">
+            <h1>Experiment and<br />just do it!</h1>
+            <h3>Reitsma calls this stage &lsquo;Connect the problem with the end result&rsquo;</h3>
+              <p class="attribution">source <a target="_blank" href="http://todaysdoodle.com/then-iterate/">
+                todaysdoodle.com</a></p>
+            </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background-transition="none" data-background="images/then-iterate.jpg">
+            <h1>Circle back</h1>
+            <h2>Make sure that what you&rsquo;ve come up with makes sense in terms
+              of the original problem statement</h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+      </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------->
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.min.js"></script>
+    <script src="../config-options.js"></script>
+    <script>Reveal.configure({loop: true});</script>
+  </body>
+</html>
