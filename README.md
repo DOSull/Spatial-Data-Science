@@ -4,7 +4,7 @@
 [assessment](#assessment) \~
 [links](#additional-information)
 
-**this page last updated** 8 September 2020
+**this page last updated** 10 September 2020
 
 **NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
 
@@ -65,7 +65,7 @@ Here's the trimester schedule we will aim to follow. **Bolded labs** have an ass
 5 | 10 Aug | [Clustering analysis](https://southosullivan.com/geog315/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05) (20%) due 10 Sep | [Applications of clustering analysis](https://southosullivan.com/geog315/classification-examples/)
 &nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp;
 6 | 31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | Help with assignments | [From overlay to regression models](https://southosullivan.com/geog315/from-overlay-to-regression/)
-7 | 7 Sep | [Regression models](https://southosullivan.com/geog315/regression/) |  [**Building a simple statistical model**](labs/week-07) (20%) due 21 Sep | [Spatial regressions](https://southosullivan.com/geog315/spatial-regressions/)
+7 | 7 Sep | [Regression models](https://southosullivan.com/geog315/regression/) |  [**Building a simple statistical model**](labs/week-07) (20%) due 21 Sep | [More on regression](https://southosullivan.com/geog315/more-on-regression/)
 8 | 14 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | Help with assignments | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) / guest
 9 | 21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | **Introducing the mini-projects** (30%) due 16 Oct| Literate programming in *RMarkdown*
 10 | 28 Sep | [Network analysis](https://southosullivan.com/geog315/network-analysis/) / guest | Project work | Simulation models, time and dynamics / guest

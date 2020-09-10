@@ -27,7 +27,7 @@ For the example dataset, things have already been prepared so we can focus on th
 
 The example data are a collection of demographic variables for San Francisco, California from the 2010 census. You can explore the dataset interactively [at this website](http://lucguillemot.com/bayareageodemo/) to get a feel for things.
 
-Download the data from [this link](sf_demo.gpkg), and open them in _R_
+Download the data from [this link](sf_demo.gpkg?raw=true), and open them in _R_
 
 ```{r}
 sanfran <- st_read("sf_demo.gpkg")
