@@ -58,7 +58,7 @@ Here's the trimester schedule we will aim to follow. **Bolded labs** have an ass
 
  &nbsp; | Date | Tue | Thu (lab) | Fri
  -- | -- | -- | -- | --
-1 | 13 Jul | Course introduction | [Lab session to get software setup](labs/week-01) | [Open science, open source, and doing GIS in code](https://southosullivan.com/geog315/open/)
+1 | 13 Jul | Course introduction | [Lab session to get software setup](labs/week-01) | [Open science, open source, and doing GIS in code](slides/open/)
 2 | 20 Jul | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02) | [The myth of tidy data](https://southosullivan.com/geog315/tidy-data/)
 3 | 27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03) (15%) due 10 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
 4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/week-04) (15%) due 31 Aug | [Spatial data wrangling (continued)](https://southosullivan.com/geog315/spatial-data-munging/)<br />and [handling tables](https://southosullivan.com/geog315/table-joins-and-dissolves/)
