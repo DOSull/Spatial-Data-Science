@@ -25,6 +25,7 @@ Additionally supplemental video tutorial material will be provided (some made by
 In addition a course Slack channel provides for rapid responses to technical questions about lab materials (please make use of it, and also answer other's questions if you can!). If you have particular difficulties with labs and are working remotely then appointments to meet by zoom can be made from [this link](https://calendly.com/dosullivan).
 
 ### Important dates
+
 Item | Dates
  -- | --
 Trimester | 13 July to 24 October 2020
@@ -38,7 +39,7 @@ Withdrawal dates | See [Course additions and  withdrawals](https://www.victoria.
 If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](https://www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
 
 ### Lecture and lab schedule
-Lectures are in ~**LT102 Murphy**~ **304 Cotton** from **1:10-2:00** on **Tuesdays** and **Fridays**.
+Lectures are in ~~LT102 Murphy~~ **304 Cotton** from **1:10-2:00** on **Tuesdays** and **Fridays**.
 
 Lab sessions are in **KK 216** from **10:00-11:50** on **Thursdays**.
 
@@ -56,21 +57,21 @@ Both David O'Sullivan and Andy Rae will attend the lab sessions, which other tha
 ## Lab and lecture timetable
 Here's the trimester schedule we will aim to follow. **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, when available.
 
- &nbsp; | Date | Tue | Thu (lab) | Fri
- -- | -- | -- | -- | --
-1 | 13 Jul | Course introduction | [Lab session to get software setup](labs/week-01) | [Open science, open source, and doing GIS in code](slides/open/)
-2 | 20 Jul | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02) | [The myth of tidy data](https://southosullivan.com/geog315/tidy-data/)
-3 | 27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03) (15%) due 10 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
-4 | 3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/week-04) (15%) due 31 Aug | [Spatial data wrangling (continued)](https://southosullivan.com/geog315/spatial-data-munging/)<br />and [handling tables](https://southosullivan.com/geog315/table-joins-and-dissolves/)
-5 | 10 Aug | [Clustering analysis](https://southosullivan.com/geog315/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05) (20%) due 10 Sep | [Applications of clustering analysis](https://southosullivan.com/geog315/classification-examples/)
-&nbsp; | &nbsp; | &nbsp; | **BREAK** | &nbsp;
-6 | 31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | Help with assignments | [From overlay to regression models](https://southosullivan.com/geog315/from-overlay-to-regression/)
-7 | 7 Sep | [Regression models](https://southosullivan.com/geog315/regression/) |  [**Building a simple statistical model**](labs/week-07) (20%) due 21 Sep | [More on regression](https://southosullivan.com/geog315/more-on-regression/)
-8 | 14 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | Help with assignments | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) / guest
-9 | 21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | **Introducing the mini-projects** (30%) due 16 Oct| Literate programming in *RMarkdown*
-10 | 28 Sep | [Network analysis](https://southosullivan.com/geog315/network-analysis/) / guest | Project work | Simulation models, time and dynamics / guest
-11 | 5 Oct | Other topics / guest | Project work | Other topics / guest
-12 | 12 Oct | Other topics / guest | Project work | Other topics / guest
+Date | Tue | Thu (lab) | Fri
+-- | -- | -- | --
+13 Jul | Course introduction | [Lab session to get software setup](labs/week-01) | [Open science, open source, and doing GIS in code](slides/open/)
+20 Jul | [Starting *R*](https://southosullivan.com/geog315/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02) | [The myth of tidy data](https://southosullivan.com/geog315/tidy-data/)
+27 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03) (15%) due 10 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
+3 Aug | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/week-04) (15%) due 31 Aug | [Spatial data wrangling (continued)](https://southosullivan.com/geog315/spatial-data-munging/)<br />and [handling tables](https://southosullivan.com/geog315/table-joins-and-dissolves/)
+10 Aug | [Clustering analysis](https://southosullivan.com/geog315/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05) (20%) due 10 Sep | [Applications of clustering analysis](https://southosullivan.com/geog315/classification-examples/)
+&nbsp; | &nbsp; | **BREAK** | &nbsp;
+31 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | Help with assignments | [From overlay to regression models](https://southosullivan.com/geog315/from-overlay-to-regression/)
+7 Sep | [Regression models](https://southosullivan.com/geog315/regression/) |  [**Building a simple statistical model**](labs/week-07) (20%) due 21 Sep | [More on regression](https://southosullivan.com/geog315/more-on-regression/)
+14 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | Help with assignments | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) / guest
+21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | **Introducing the mini-projects** (30%) due 16 Oct| Literate programming in *RMarkdown*
+28 Sep | [Network analysis](https://southosullivan.com/geog315/network-analysis/) / guest | Project work | Simulation models, time and dynamics / guest
+5 Oct | Other topics / guest | Project work | Other topics / guest
+12 Oct | Other topics / guest | Project work | Other topics / guest
 
 ## Lectures
 Lectures will consist of 40 minutes or so of presented material with time for more open-ended discussion and Q&A based on any reading or other materials students have been asked to explore ahead of class.
