@@ -9,7 +9,8 @@ Details of the various available datasets and some thoughts on what you might lo
 + [Landlides in Waitotara](landslides)
 + [Distribution of _tradescantia fluminensis_](tradescantia)
 
-## General datasets
-Some other general datasets that may be of use, regardless of topic:
+## Other datasets
+Some other general datasets that may be of use, depending on your topic:
+### Aotearoa New Zealand datasets
 
-+
+### US datasets

@@ -11,5 +11,15 @@ The specific election datasets are as follows
 
 In case you are interested, I assembled the detailed results from the electorate-by-electorate details, using [this python code](collate-election-2017.ipynb).
 
-## Ideas
-TBC
+## Commentary
+First of all, remember that these are the 2017 election, nothing to do with the forthcoming election,which will happen more or less while you are working on this, but is likely to see a significantly different result.
+
+### Data preparation
+You'll have to do some preliminary work to make any kind of election maps from these data, attaching the voting information to the polling places and/or then aggregating the votes up to electorates. It's important to keep in mind that the results provided are party votes, not local MP votes, so electorates may not be the most relevant way to look at these data.
+
+### Analysis and/or visualization
+In fact, because electorates don't really matter when it comes to party votes, you may want to aggregate to other area units (see generally useful data available [here](../README.md#aotearoa-new-zealand-datasets)).
+
+You may also want to explore the relationship between these voting outcomes and various demographic factors such as age, income, ethnicity, deprivation, etc.
+
+Voting data are famously difficult to map well given widely varying population densities between urban and rural areas. You may want to explore options for cartograms as a way to address this challenge. See for example [ScapeToad](https://scapetoad.choros.place/).
