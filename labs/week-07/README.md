@@ -11,6 +11,9 @@ This means that the procedure this week is slightly different. You should downlo
 + `building-a-simple-model-01-rmarkdown.Rmd`, and
 + `building-a-simple-model-02-assignment.Rmd`
 
+### Problems with **Knit** operation on lab computers
+For complicated reasons to do with permissions and network drives, the **Knit** operation in _RStudio_ does not work on the lab computers. I have figured out a limited workaround, which is explained [here](workaround-for-knitr-problems.md), if you run into problems.
+
 ## Videos
 Videos describing R scripts, markdown formatting and Rmarkdown are provided as listed below. You will find them all in [this folder](https://southosullivan.com/geog315/video/week-07-lab/). The total run time is around 35 minutes.
 
