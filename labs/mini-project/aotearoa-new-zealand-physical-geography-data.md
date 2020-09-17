@@ -25,6 +25,8 @@ Or there are North and South Island datasets at 25m resolution close to 1GB each
 + [North Island LRIS 25m DEM](https://lris.scinfo.org.nz/layer/48131-nzdem-north-island-25-metre/)
 + [South Island LRIS 25m DEM](https://lris.scinfo.org.nz/layer/48127-nzdem-south-island-25-metre/)
 
+Note that these are compressed (`zip`) files containing several tiles of elevation grid, which you may need to stitch together into a single raster. You can do this using `raster::merge` in _R_ but may prefer to use tools in a desktop GIS.
+
 ## Biophysical data
 If you are interested in other biophysical indicators the best bet are the layers that were assembled as inputs to the LENZ project discussed in [clustering applications lecture](https://southosullivan.com/geog315/classification-examples/#/). These are available as individual layers from [here](https://lris.scinfo.org.nz/search/?q=LENZ).
 
