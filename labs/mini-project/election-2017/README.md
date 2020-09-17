@@ -18,7 +18,7 @@ First of all, remember that these are the 2017 election, nothing to do with the 
 You'll have to do some preliminary work to make any kind of election maps from these data, attaching the voting information to the polling places and/or then aggregating the votes up to electorates. It's important to keep in mind that the results provided are party votes, not local MP votes, so electorates may not be the most relevant way to look at these data.
 
 ### Analysis and/or visualization
-In fact, because electorates don't really matter when it comes to party votes, you may want to aggregate to other area units (see generally useful data available [here](../README.md#aotearoa-new-zealand-datasets)).
+In fact, because electorates don't really matter when it comes to party votes, you may want to aggregate to other area units (see generally useful data available [here](aotearoa-new-zealand-census-data.md)).
 
 You may also want to explore the relationship between these voting outcomes and various demographic factors such as age, income, ethnicity, deprivation, etc.
 

@@ -22,4 +22,4 @@ The contrast between the prevalence of Māori placenames in Te Ika-a-Māui and T
 
 You may have some ideas about more interesting ways to visualise the data. You might consider density maps, or additional categories ('mixed' names with some te reo and some other elements for example).
 
-Another direction would be to explore how the relative prevalence of names is related to present day population distributions, using more general data available [here](../README.md#aotearoa-new-zealand-datasets).
+Another direction would be to explore how the relative prevalence of names is related to present day population distributions, using more general data available [here](../aotearoa-new-zealand-census-data.md).

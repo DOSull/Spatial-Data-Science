@@ -15,4 +15,4 @@ You can see the data on [this map](homes.geojson), but you'll need to do some ad
 ### Ideas
 House prices are a clear candidate for applying regression modelling methods.
 
-In this case, in addition to considering bedrooms and bathrooms, and obvious angle is neighbourhood, so you may want to make use of additional demographic data available [here](../README.md#aotearoa-new-zealand-datasets). 
+In this case, in addition to considering bedrooms and bathrooms, and obvious angle is neighbourhood, so you may want to make use of additional demographic data available [here](../aotearoa-new-zealand-census-data.md). 

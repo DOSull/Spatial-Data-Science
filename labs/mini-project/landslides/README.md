@@ -9,10 +9,10 @@ Two project-specific datasets are provided
 + [landslides.gpkg?raw=true](Landslides data) captured as polygons which provides some indication of landslide severity
 + [study-area.gpkg?raw=true][Study area] an area appropriate for restricting the analysis
 
-You will also want supplementary datasets some of them [here](../README.md#aotearoa-new-zealand-datasets). Others may be accessible locally through the university, and you should ask Andrew Rae for more information on this.
+You will also want supplementary datasets some of them [here](../aotearoa-new-zealand-physical-geography-data.md). Others may be accessible locally through the university, and you should ask Andrew Rae for more information on this.
 
 ### Ideas
-Think about the factors that influence landslide incidence, from landform to landcover, soil and geology. These should determine the additional datasets that you draw on in the analysis. Given the relatively small size of the study area you probably don't need to consider meteorological variation. 
+Think about the factors that influence landslide incidence, from landform to landcover, soil and geology. These should determine the additional datasets that you draw on in the analysis. Given the relatively small size of the study area you probably don't need to consider meteorological variation.
 
 Depending on the approach you opt for you may need to convert the landslide polygons to points. This is relatively easy to do in _R_ or any GIS.
 
