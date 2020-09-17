@@ -29,7 +29,7 @@ Or there are North and South Island datasets at 25m resolution close to 1GB each
 If you are interested in other biophysical indicators the best bet are the layers that were assembled as inputs to the LENZ project discussed in [clustering applications lecture](https://southosullivan.com/geog315/classification-examples/#/). These are available as individual layers from [here](https://lris.scinfo.org.nz/search/?q=LENZ).
 
 # Data handling
-A major challenge with any of these datasets is their size, so figuring how to deal with that is an initial challenge. Note that the platforms linked above allow you to crop layers _before_ you download them which can save some headaches dealing with huge file and download sizes.
+A major challenge with any of these datasets is their size, so figuring out how to deal with that is an initial challenge. Note that the platforms linked above allow you to crop layers _before_ you download them which can save some headaches dealing with huge file and download sizes.
 
 In some cases you'll want to clip the data to a more restricted study area. This can be accomplished in _R_ using the `raster::crop` function or in any GIS with 'clip' or similarly named tools.
 
