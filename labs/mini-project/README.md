@@ -11,6 +11,7 @@ Details of the various available datasets and some thoughts on what you might lo
 + [House prices in Wellington](homes)
 + [Landlides in Waitotara](landslides)
 + [Distribution of _tradescantia fluminensis_](tradescantia)
++ [Determinants of water quality](water-quality)
 
 ## Other datasets
 Some other general datasets that may be of use, depending on your topic, are discussed on the pages linked below, which also include advice on usage of theses datasets.
