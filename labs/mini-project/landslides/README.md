@@ -6,8 +6,8 @@ This project is based on data for over 13000 landslides recorded north of Waitot
 ### Datasets
 Two project-specific datasets are provided
 
-+ [landslides.gpkg?raw=true](Landslides data) captured as polygons which provides some indication of landslide severity
-+ [study-area.gpkg?raw=true][Study area] an area appropriate for restricting the analysis
++ [Landslides data](landslides.gpkg?raw=true) captured as polygons which provides some indication of landslide severity
++ [Study area](study-area.gpkg?raw=true) an area appropriate for restricting the analysis
 
 You will also want supplementary datasets some of them [here](../aotearoa-new-zealand-physical-geography-data.md). Others may be accessible locally through the university, and you should ask Andrew Rae for more information on this.
 
