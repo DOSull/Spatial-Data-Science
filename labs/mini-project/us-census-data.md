@@ -15,7 +15,7 @@ An option that is amazingly effective is the `tidycensus` package in _R_. The fo
 
 The only part of this which is tricky is setting up the variables you need with the `variables = c(...)` option, where the variable names, or tables you want have to be specified and the names and information about the variables is quite complex in itself. You can get information about the tables and variables using the `load_variables` function. It's actually easier than it sounds... and once you have figured out how to download one variable, more is not a problem.
 
-Since you will only be working with these data if you are doing the [police shootings](us-police-shootings) project, I suggest adopting a step by step approach:
+Whatever your reason for working with these data, I suggest adopting a step by step approach:
 
 1. think about what the next most likely relevant variable is
 2. figure out how to get that data
