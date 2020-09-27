@@ -13,6 +13,7 @@ Details of the various available datasets and some thoughts on what you might lo
 + [Distribution of _tradescantia fluminensis_](tradescantia)
 + [Determinants of water quality](water-quality)
 + [US COVID 19 pandemic](us-covid19)
++ [US UFO sightings](ufos)
 
 ## Other datasets
 Some other general datasets that may be of use, depending on your topic, are discussed on the pages linked below, which also include advice on usage of theses datasets.
