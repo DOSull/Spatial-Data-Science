@@ -23,4 +23,4 @@ Information about what the various attributes of the data mean can be found at [
 Hopefully you can see potential in these data for interesting explorations. It may be possible to relate outcomes to government responses. Keep in mind that the nature of the COVID-19 pandemic is that outcomes today are a function of what happened weeks or perhaps even months earlier both in terms of disease prevalence as well as measures like school closures, etc.
 
 ### Additional data
-To explore the data with respect to general population patterns, you will need more general demographic and other data available [here](../README.md#us-datasets).
+To explore the data with respect to general population patterns, you will need more general demographic and other data available [here](../us-census-data.md).

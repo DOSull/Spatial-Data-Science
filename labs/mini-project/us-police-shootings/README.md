@@ -14,4 +14,4 @@ These data while they have been tidied up a little (specifically, I made them ma
 ### Explorations
 The most obvious dimension to explore in relation to police shootings in the United States is with respect to the race of victims. Although there are a lot of shootings in these data (over 5000) that doesn't necessarily mean there are very many shootings in any one area (the US is a big place...), and that also means that drawing conclusions about the relative risks to different population groups is tricky. But this is a dimension that could certainly lead to some interesting results.
 
-To explore the data with respect to general population patterns, you will need more general demographic and other data available [here](../README.md#us-datasets).
+To explore the data with respect to general population patterns, you will need more general demographic and other data available [here](../us-census-data.md)
