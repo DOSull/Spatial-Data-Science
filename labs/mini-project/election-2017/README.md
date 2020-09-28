@@ -22,4 +22,4 @@ In fact, because electorates don't really matter when it comes to party votes, y
 
 You may also want to explore the relationship between these voting outcomes and various demographic factors such as age, income, ethnicity, deprivation, etc.
 
-Voting data are famously difficult to map well given widely varying population densities between urban and rural areas. You may want to explore options for cartograms as a way to address this challenge. See for example [ScapeToad](https://scapetoad.choros.place/).
+Voting data are famously difficult to map well given widely varying population densities between urban and rural areas. You may want to explore options for cartograms as a way to address this challenge. See for example [ScapeToad](http://scapetoad.choros.place/).
