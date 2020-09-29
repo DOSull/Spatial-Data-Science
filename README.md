@@ -71,7 +71,7 @@ Date | Tue | Thu (lab) | Fri
 21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | [**Introducing the mini-projects**](labs/mini-project) (30%) due 16 Oct | [Network analysis](https://southosullivan.com/geog315/network-analysis/)
 28 Sep | [Time geography](https://southosullivan.com/geog315/time-geography/) | Project support / guest
 5 Oct | Project support | Project work | [Simulation models](https://southosullivan.com/geog315/simulation-models/)
-12 Oct | Project support | Project work | Other topics / Project support
+12 Oct | Project support | Project work | Project support
 
 ## Lectures
 Lectures will consist of 40 minutes or so of presented material with time for more open-ended discussion and Q&A based on any reading or other materials students have been asked to explore ahead of class.
