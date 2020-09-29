@@ -4,7 +4,7 @@
 [assessment](#assessment) \~
 [links](#additional-information)
 
-**this page last updated** 14 September 2020
+**this page last updated** 29 September 2020
 
 **NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
 
@@ -70,7 +70,7 @@ Date | Tue | Thu (lab) | Fri
 14 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | Help with assignments | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/)
 21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | [**Introducing the mini-projects**](labs/mini-project) (30%) due 16 Oct | [Network analysis](https://southosullivan.com/geog315/network-analysis/)
 28 Sep | [Time geography](https://southosullivan.com/geog315/time-geography/) | Project support / guest
-5 Oct | Project support | Project work | Other topics / [Simulation models](https://southosullivan.com/geog315/simulation-models/)
+5 Oct | Project support | Project work | [Simulation models](https://southosullivan.com/geog315/simulation-models/)
 12 Oct | Project support | Project work | Other topics / Project support
 
 ## Lectures
