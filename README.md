@@ -69,9 +69,9 @@ Date | Tue | Thu (lab) | Fri
 7 Sep | [Regression models](https://southosullivan.com/geog315/regression/) |  [**Building a simple statistical model**](labs/week-07) (20%) due 21 Sep | [More on regression](https://southosullivan.com/geog315/more-on-regression/)
 14 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | Help with assignments | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/)
 21 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | [**Introducing the mini-projects**](labs/mini-project) (30%) due 16 Oct | [Network analysis](https://southosullivan.com/geog315/network-analysis/)
-28 Sep | [Time geography](https://southosullivan.com/geog315/time-geography/) | Project work | Other topics / project support / guest
-5 Oct | Other topics / project support / guest | Project work | Other topics / project support / guest
-12 Oct | Other topics / project support / guest | Project work | Other topics / project support / guest
+28 Sep | [Time geography](https://southosullivan.com/geog315/time-geography/) | Project support / guest
+5 Oct | Project support | Project work | Other topics / [Simulation models](https://southosullivan.com/geog315/simulation-models/)
+12 Oct | Project support | Project work | Other topics / Project support
 
 ## Lectures
 Lectures will consist of 40 minutes or so of presented material with time for more open-ended discussion and Q&A based on any reading or other materials students have been asked to explore ahead of class.
