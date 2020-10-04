@@ -5,7 +5,7 @@ These data were obtained using the _R_ package `COVID19`, which allows download 
 The US data are a different matter, with detailed information available down to the county level.
 
 ## Data
-Here's an [example dataset](usa-covid19-230920.gpkg?raw=true). This was downloaded with essentially one line of code:
+Here's an [example dataset](usa-covid19-220920.gpkg?raw=true). This was downloaded with essentially one line of code:
 
 ```{r}
 library(COVID19)
