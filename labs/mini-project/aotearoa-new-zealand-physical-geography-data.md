@@ -18,7 +18,7 @@ If you want the whole country in one, then a convenient download has been provid
 It's conceivable that you'd want higher resolution if you are doing any of the [Wellington house prices](homes), [landslides](landslides) or [_tradescantia_](tradescantia) projects (although for latter only if you are doing it for a regional extent). Here are useful options (both around 100MB)
 
 + [Wellington region 15m DEM](https://koordinates.com/layer/3743-16-wellington-15m-dem-nzsosdem-v10/)
-+ [South Taranaki district 25m DEM](landslides/taranaki-dem.zip?raw=true) which includes coverage of the Waitotara area.
++ [South Taranaki district 25m DEM](https://southosullivan.com/geog315/data/taranaki-dem.zip) (right-click save as) which includes coverage of the Waitotara area.
 
 Or there are North and South Island datasets at 25m resolution close to 1GB each (the Taranaki one is in the North Island one):
 
