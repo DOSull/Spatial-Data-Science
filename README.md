@@ -39,7 +39,7 @@ Withdrawal dates | See [Course additions and  withdrawals](https://www.victoria.
 If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](https://www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat)
 
 ### Lecture and lab schedule
-Lectures are in ~~LT102 Murphy~~ **304 Cotton** from **1:10-2:00** on **Tuesdays** and **Fridays**.
+Lectures are done for the semester. From **1:10-2:00** on **Fridays** I will be KK217 offering lab support.
 
 Lab sessions are in **KK 216** from **10:00-11:50** on **Thursdays**.
 
