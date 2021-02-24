@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/tomorrow-night-blue.css">
+    <script src="../reveal.js/lib/js/r.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <link rel="stylesheet" href="../extra-styles.css">
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <div id="header" class="header" style="background-color: rgba(0, 102, 51, 0.75);">
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-image="images/r-cran.png">
+          <section>
+            <h1>Getting started with <em>R</em></h1>
+            <h2 class='fragment'><a href="#/1/">Using <em>R</em> in <em>RStudio</em></a></h2>
+            <h2 class='fragment'><a href="#/2/">Basic concepts in <em>R</em></a></h2>
+            <h2 class='fragment'><a href="#/3/">Maps in <em>R</em></a></h2>
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown data-background-image="images/rstudio-icon.png">
+            # Using *R* in *RStudio*
+            ## [*R*](https://www.r-project.org/) is a *platform for statistical computing*
+            ## [*RStudio*](https://www.rstudio.com/) is an environment we run *R* in to make using it easier
+            ## Both are available free (as in beer), but *RStudio* is commercial software
+            ## *R* and its many, many contributed packages are free (as in speech)
+          </section>
+
+          <section data-markdown data-background-image='images/kiwi-laser.png' class='translucent'>
+            # As an aside
+            ## *R* might be Aotearoa New Zealand&rsquo;s [most important contribution to science](https://www.stat.auckland.ac.nz/~ihaka/downloads/R-paper.pdf) since Rutherford split the atom
+          </section>
+
+          <section>
+            <img src='images/rstudio.png'>
+            <h2 class="fragment" style='position:relative; right:400px; bottom:250px; color:#f00;'>Console</h2>
+            <h2 class="fragment" style='position:relative; left:400px; bottom:550px; color:#f00;'>Outputs</h2>
+            <h2 class="fragment" style='position:relative; left:400px; bottom:1200px; color:#f00;'>Environment/<br />history</h2>
+            <h2 class="fragment" style='position:relative; right:400px; bottom:1300px; color:#f00;'>Scripts/<br />other files</h2>
+          </section>
+        </section>
+
+        <section data-background-image='images/lightbulb_led.jpg'>
+          <section class='translucent'>
+            <p class="attribution">image source <a href="https://boingboing.net/2018/01/15/filament-led-bulbs-that-mimic.html">boingboing.net</a>
+            </p>
+            <h1>Basic concepts in <em>R</em></h1>
+            <h2>Variables</h2>
+            <h2>Values, vectors and dataframes</h2>
+            <h2>Plotting</h2>
+            <h2>Packages</h2>
+          </section>
+
+          <section class='translucent'>
+            <h1>Variables</h1>
+            <h2>A variable is a name that we associate data with, by <em>assigning</em> data to a name, using the assignment operator <code><-</code></h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            x <- 4
+            y <- 5.2
+            z <- "This is text"
+            </code></pre>
+            </h2>
+          </section>
+
+          <section class='translucent'>
+            <h1>Values, vectors and dataframes</h1>
+            <h2>If we could only assign individual values, <em>R</em> would not be very useful</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            x <- 3
+            y <- c(1, 45, 27.3, -123) # y is a vector of values
+            z <- data.frame(a=1:100,
+                            b=rep(5,100),
+                            c=runif(100)) # z is a dataframe
+            </code></pre>
+            </h2>
+          </section>
+
+          <section class='translucent'>
+            <h1>Dataframes</h1>
+            <h2>Dataframes are how we manipulate and manage tables of data in <em>R</em></h2>
+            <h2>Each row is a data point, and each column is an attribute</h2>
+            <h2>We can access attributes using the dataframe name and the attribute name joined by a <code>$</code> symbol
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            names(z)
+            z$a
+            </code></pre>
+            </h2>
+          </section>
+
+          <section class='translucent'>
+            <h2>One of the most powerful things about <em>R</em> is that we can apply functions to all the members of a vector or dataframe</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            x ^ 2 # ^ raises to the power
+            y ^ 2
+            z ^ 2
+            z$c ^ 2
+            </code></pre>
+            </h2>
+          </section>
+
+          <section class='translucent'>
+            <h1>Plotting data</h1>
+            <h2><em>R</em> has powerful built in plotting functions for visualizing data</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            plot(x, x^2)
+            plot(z)
+            boxplot(z$c)
+            hist(z$c)
+            </code></pre>
+            </h2>
+          </section>
+
+          <section data-markdown class='translucent'>
+            # *R* is extensible through *packages*
+            ## These are loaded using `library(packagename)`
+            ## There are many packages for handling spatial data
+            ## We will be looking closely at `sf` and `tmap` among others
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown data-background-image='images/welly.png' class='translucent'>
+            # Maps in *R*
+            ## `sf` for handling spatial datasets
+            ## `tmap` for making maps from them
+          </section>
+
+          <section>
+            <h1>A taster</h1>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            library(sf)
+            sf <- st_read("welly.geojson")
+            names(welly)
+            plot(welly)
+
+            library(tmap)
+            tm_shape(welly) + tm_polygons()
+            tm_shape(welly) + tm_polygons(col='PopUR13')
+            </code></pre>
+            </h2>
+            </section>
+        </section>
+
+        <section>
+          <section data-background='#139f5b'>
+            <h1>Summary</h1>
+            <h2>Key concepts are <em>variables</em>, <em>vectors</em>, <em>dataframes</em>, and <em>extensibility</em> through packages</h2>
+            <h2><code>sf</code> and <code>tmap</code> packages will be focus of next couple of weeks on <em>making maps in code</em></h2>
+            <h2>More on this in lab</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+    <script>Reveal.configure({loop: false});</script>
+  </body>
+</html>
