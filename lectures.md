@@ -1,6 +1,4 @@
----
-title: Lectures & readings
----
+# Lectures & readings
 ## Lectures
 Lectures will consist of 40 minutes or so of presented material with time for more open-ended discussion and Q&A based on any reading or other materials students have been asked to explore ahead of class.
 

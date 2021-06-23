@@ -1,6 +1,4 @@
----
-title: Labs
----
+# Labs & project
 Lab sessions follow the lecture sessions and will cover practical topics related to the lecture materials.
 
 Only four sessions have an associated assessed assignment, but you should attend all labs and participate fully to broaden your knowledge of GIScience methods and tools as any of the approaches covered may prove useful for you in other parts of this course and your studies more generally.

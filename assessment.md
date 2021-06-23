@@ -1,6 +1,4 @@
----
-title: Assessment
----
+# Assessment
 This course is 100% internally assessed.  Assessment is based on the various items listed below.
 
 Assessment item | Credit | Due date | CLOs

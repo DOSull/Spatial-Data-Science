@@ -1,6 +1,4 @@
----
-title: Logistics
----
+# Logistics
 ## Delivery
 This class is offered face-to-face for both lectures and labs. Lectures will be recorded and available on Blackboard soon after.
 

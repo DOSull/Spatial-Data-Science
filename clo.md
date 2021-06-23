@@ -1,7 +1,4 @@
----
-title: CLOs
----
-## Course learning objectives
+# Course learning objectives
 1. Appreciate and describe the scope, limitations and challenges of geospatial methods in real world applications;
 2. Record, enter, manipulate and analyse geographic data;
 3. Critically assess and communicate geospatial information and the outcome ofgeospatial projects in terms of relevancy to project aims and against more general constraints, e.g. ethical and time constraints;

@@ -1,7 +1,4 @@
----
-title: Software
----
-## Software
+# Software
 Most of the guided lab work will be completed in the [*R*](https://www.r-project.org/) programming language for statistical computing, using various packages tailored to geospatial work. *R*
 
 We will use *R* from the [*RStudio*](https://www.rstudio.com/) environment which makes managing work more straightforward.

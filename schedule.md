@@ -1,6 +1,4 @@
----
-title: Schedule
----
+# Schedule
 ## Important times
 **Lectures** are in **AM 105** from **1:10-2:00 Tuesdays** and **Fridays**.
 

@@ -1,6 +1,4 @@
----
-title: Overview
----
+# Overview
 
 **NOTE** *materials are often updated. For lab instructions in particular, check that any page you are working from has the heading* **Geog 315 T2 2021** *before working on it!*
 

@@ -3,16 +3,6 @@ description: 'SGEES VUW T2 2021'
 theme: jekyll-theme-minimal
 site.baseurl: ''
 site.url: 'https://dosull.github.io/Geog315'
-header_pages:
-  - README.md
-  - logistics.md
-  - schedule.md
-  - lectures.md
-  - videos.md
-  - labs.md
-  - assessments.md
-  - clo.md
-  - resources.md
 author: "David O'Sullivan"
 github_username: 'DOSull'
 kramdown:
