@@ -15,3 +15,5 @@ header_pages:
   - resources.md
 author: "David O'Sullivan"
 github_username: 'DOSull'
+kramdown:
+  auto_ids: true  
