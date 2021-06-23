@@ -211,11 +211,14 @@ footer {
 }
 
 .btn {
-  background-color:#000;
-  padding:5px;
-  margin:5px;
+  border:2px solid #267CB9;
+  margin:4px;
   width:auto;
   text-align:right;
+}
+
+.btn a:hover {
+  background-color: rgba(38,124,185,0.1);
 }
 
 .btns {
