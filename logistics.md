@@ -1,4 +1,16 @@
 # Logistics
+## Important dates
+
+Item | Dates
+ -- | --
+Trimester | 5 July to 16 October 2021
+Teaching period | 5 July to 8 October 2021
+Mid-trimester break | 16 August to 29 August 2021
+Last assessment item due | 8 October 2021
+Study period | NA
+Examination period | NA
+Withdrawal dates | See [Course additions and  withdrawals](https://www.victoria.ac.nz/home/admisenrol/payments/withdrawalsrefunds)
+
 ## Delivery
 This class is offered face-to-face for both lectures and labs. Lectures will be recorded and available on Blackboard soon after.
 

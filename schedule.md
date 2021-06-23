@@ -4,18 +4,6 @@
 
 **Labs** are in **KK 216** from **11:00-1:00** on **Thursdays**.
 
-## Important dates
-
-Item | Dates
- -- | --
-Trimester | 5 July to 16 October 2021
-Teaching period | 5 July to 8 October 2021
-Mid-trimester break | 16 August to 29 August 2021
-Last assessment item due | 8 October 2021
-Study period | NA
-Examination period | NA
-Withdrawal dates | See [Course additions and  withdrawals](https://www.victoria.ac.nz/home/admisenrol/payments/withdrawalsrefunds)
-
 ## Timetable
 Here's the trimester schedule we will aim to follow. **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, when available.
 
