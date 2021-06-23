@@ -12,7 +12,7 @@ Item | Dates
  -- | --
 Trimester | 5 July to 16 October 2021
 Teaching period | 5 July to 8 October 2021
-Mid-trimester break | 9 August to 22 August 2021
+Mid-trimester break | 16 August to 29 August 2021
 Last assessment item due | 8 October 2021
 Study period | NA
 Examination period | NA

@@ -1,7 +1,6 @@
 ---
-title: Contacts
+title: Communications
 ---
-## Communications
 The primary mode of communication for course announcements will be via Blackboard, so please ensure that your contact details there are up to date and are regularly checked (note that Blackboard defaults to your myvuw email address).
 
 Blackboard is also where you will find lecture video recordings, assignment dropboxes and information about your grades.
