@@ -5,8 +5,7 @@ site.baseurl: ''
 site.url: 'https://dosull.github.io/Geog315'
 header_pages:
   - index.md
-  - comms.md
-  - mode.md
+  - logistics.md
   - schedule.md
   - lectures.md
   - videos.md
