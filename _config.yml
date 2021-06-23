@@ -8,8 +8,9 @@ header_pages:
   - index.md
   - contacts.md
   - schedule.md
+  - lectures.md
   - videos.md
   - labs.md
   - assessments.md
-  - projects.md
-  - other.md
+  - clo.md
+  - links.md
