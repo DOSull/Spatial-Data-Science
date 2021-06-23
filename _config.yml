@@ -4,7 +4,7 @@ theme: minima
 site.baseurl: ''
 site.url: 'https://dosull.github.io/Geog315'
 header_pages:
-  - index.md
+  - README.md
   - logistics.md
   - schedule.md
   - lectures.md
@@ -16,4 +16,4 @@ header_pages:
 author: "David O'Sullivan"
 github_username: 'DOSull'
 kramdown:
-  auto_ids: true  
+  auto_ids: true

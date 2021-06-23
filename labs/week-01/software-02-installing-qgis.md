@@ -1,4 +1,5 @@
 **Geog 315 T2 2021**
+
 # Installing _QGIS_
 _QGIS_ is a fully functional and completely free alternative to _ArcGIS_. It's not required for this course (nor is _ArcGIS_), but it can be very useful and is unencumbered by the complicated licensing of _Arc_, so you might find it a worthwhile thing to install.
 

@@ -1,4 +1,5 @@
 **Geog 315 T2 2021**
+
 # Software setup for this course
 ## Download and install _R_
 ### Windows and Mac
