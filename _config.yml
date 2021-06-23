@@ -2,11 +2,11 @@ title: Geog 315 Course website
 description: T2 2021
 theme: minima
 header_pages:
-  - about.md
-  - assessments.md
+  - index.md
   - contacts.md
-  - labs.md
-  - other.md
-  - projects.md
   - schedule.md
   - videos.md
+  - labs.md
+  - assessments.md
+  - projects.md
+  - other.md
