@@ -1,5 +1,5 @@
 ---
-title: Links
+title: Resources
 ---
 The links below may be useful if you need help, advice, or any other more general information about relevant university policies and resources.
 + [Academic Integrity and Plagiarism](https://www.wgtn.ac.nz/home/study/plagiarism)
