@@ -1,35 +1,35 @@
 {% for entry in site.data.navigation %}
-    {% if entry.url contains "https" %}
-        {% capture fullurl %}{{ entry.url }}{% endcapture %}
-    {% else %}
-        {% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
-    {% endif}
+  {% if entry.url contains "https" %}
+    {% capture fullurl %}{{ entry.url }}{% endcapture %}
+  {% else %}
+    {% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+  {% endif %}
 {% endfor %}
 
 <!-- Then we build the nav bar. -->
 <nav>
   <div class="btns">
     {% for entry in site.data.navigation %}
-        {% if entry.url == current_page %}
-            {% assign current = ' style="color:#000; title:{{ entry.title }};"' %}
-        {% else %}
-            <!-- We have to declare it 'null' to ensure it doesn't propagate. -->
-            {% assign current = ' style="title:{{ entry.title }};"' %}
-        {% endif %}
-        <h3{{ current }} class="btn"><a href="{{ fullurl }}">{{ entry.label }}</a></h3>
-        <!-- {% assign sublinks = entry.sublinks %} -->
-        <!-- {% if sublinks %} -->
-        <!-- <li{{ current }}>
-            <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
-            <ul>
-                {% for sublink in sublinks %}
-                <li><a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </li>
-        {% else %}
-        <li{{ current }}><a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a></li>
-        {% endif %} -->
+      {% if entry.url == current_page %}
+        {% capture current %}' style="color:#000; title:{{ entry.title }};"'{% endcapture %}
+      {% else %}
+        <!-- We have to declare it 'null' to ensure it doesn't propagate. -->
+        {% capture current %}' style="title:{{ entry.title }};"'{% endcapture %}
+      {% endif %}
+      <h3{{ current }} class="btn"><a href="{{ fullurl }}">{{ entry.label }}</a></h3>
+      <!-- {% assign sublinks = entry.sublinks %} -->
+      <!-- {% if sublinks %} -->
+      <!-- <li{{ current }}>
+          <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+          <ul>
+              {% for sublink in sublinks %}
+              <li><a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a></li>
+              {% endfor %}
+          </ul>
+      </li>
+      {% else %}
+      <li{{ current }}><a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a></li>
+      {% endif %} -->
     {% endfor %}
   </div>
 </nav>
