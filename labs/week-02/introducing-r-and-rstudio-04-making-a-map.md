@@ -1,4 +1,5 @@
-#### Geog 315 T2 2020
+**Geog 315 T2 2021**
+
 Reload the data, if you happen to have restarted.
 ```{r}
 quakes <- read.csv('earthquakes.csv')

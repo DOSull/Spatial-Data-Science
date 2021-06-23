@@ -1,4 +1,5 @@
-#### Geog 315 T2 2020
+**Geog 315 T2 2021**
+
 # Meet the command line...
 The key thing to understand about *R* is that it is mostly a command line interface (CLI) driven tool. That means you issue typed commands to tell *R* to do things (this was a normal way to interact with a computer and get work done before the early 1990s, and is making a comeback, like vinyl, but even geekier). There are some menus and dialog boxes in *RStudio* to help you manage things, but mostly you interact with *R* by typing commands at the `>` prompt in the console window. To begin, we'll load up a dataset, just so you can see how things work and to help you get comfortable. As with most computer related stuff, you should experiment: you will learn a lot more that way.
 

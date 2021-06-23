@@ -1,6 +1,6 @@
-#### Geog 315 T2 2020
+**Geog 315 T2 2021**
 # Installing the course software
-This class focuses&mdash;at least in the first half&mdash;on learning how to do geospatial things in _R_ and _RStudio_, so an important task if you want to work on materials on your own computer is to install these pieces of software. These instructions help you through the process.
+This class focuses on learning how to do geospatial things in _R_ and _RStudio_, so an important task if you want to work on materials on your own computer is to install these pieces of software. These instructions help you through the process.
 
 The steps involved are
 
@@ -12,7 +12,7 @@ followed optionally by
 + Download and install _ArcGIS_
 
 ## If you already have _R_ and _RStudio_
-Well... that's great! However, you need to check that your version is the same or close to the one we are using in the labs, which is 3.6.3. To check type
+Well... that's great! However, you need to check that your version is the same or close to the one we are using in the labs, which is 4.0.2. To check type
 
     > version
 

@@ -1,4 +1,5 @@
-#### Geog 315 T2 2020
+**Geog 315 T2 2021**
+
 # Introducing *R* and *RStudio*
 The data for this lab are in [this file](data.zip?raw=true). This is a *zip* file and must be unpacked into a folder you have access to on the machine you are using. If you are working on a lab machine, it needs to be a folder on the **H: drive**. If you are unsure how to do this, ask for help, as if you get it wrong, you will inevitably run into problems later in the session.
 

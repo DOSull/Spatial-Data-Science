@@ -1,4 +1,5 @@
-#### Geog 315 T2 2020
+**Geog 315 T2 2021**
+
 # US COVID-19
 These data were obtained using the _R_ package `COVID19`, which allows download of publicly available COVID-19 data from a large number of countries. New Zealand data on this subject are not very interesting for our purposes because no detailed spatial breakdown of the numbers is available (also... the numbers are thankfully not very large).
 

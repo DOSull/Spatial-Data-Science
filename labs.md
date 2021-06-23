@@ -1,7 +1,18 @@
 ---
 title: Labs
 ---
-Lab sessions follow the lecture sessions and will cover related practical topics. Lab materials will generally be found [here](labs/README.md). Only four sessions have an associated assessed assignment, but you should attend all labs and particpate fully to broaden your knowledge of GIScience methods and tools as any of the approaches covered may prove useful for you in other parts of the program. (Note also that a portion of the course credit is for participation in all aspects of the course.)
+Lab sessions follow the lecture sessions and will cover practical topics related to the lecture materials.
+
+Only four sessions have an associated assessed assignment, but you should attend all labs and participate fully to broaden your knowledge of GIScience methods and tools as any of the approaches covered may prove useful for you in other parts of this course and your studies more generally.
+
+## Links to each lab (when available)
++ **Week 1** [Setting up your computer](labs/week-01)
++ **Week 2** [Introduction to *R* and *RStudio*](labs/week-02)
++ **Week 3** [Making maps](labs/week-03)
++ **Week 4** Spatial data wrangling
++ **Week 5** Geographic cluster analysis
++ **Week 7** Regression analysis in *R*
++ **Week 9** [The mini-projects](labs/mini-project)
 
 ### Non-assessed lab work
 Note that there are also non-assessed lab sessions. In particular lab sessions in the second half of trimester (and some lecture sessions too) are intended to provide an environment in which it is easy to get assistance and advice from the course instructors. You are strongly advised to make the most of these sessions!

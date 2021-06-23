@@ -1,4 +1,5 @@
-#### Geog 315 T2 2020
+**Geog 315 T2 2021**
+
 # Wellington house sales, July 2020
 These data are from [homes.co.nz](https://homes.co.nz) scraped from their website on or around 16 June 2020, using the script at [this page](web-scrape-homes.co.nz.ipynb). You don't need to grab any more data for the purposes of this project.
 
@@ -15,4 +16,4 @@ You can see the data on [this map](homes.geojson), but you'll need to do some ad
 ### Ideas
 House prices are a clear candidate for applying regression modelling methods.
 
-In this case, in addition to considering bedrooms and bathrooms, and obvious angle is neighbourhood, so you may want to make use of additional demographic data available [here](../aotearoa-new-zealand-census-data.md). 
+In this case, in addition to considering bedrooms and bathrooms, and obvious angle is neighbourhood, so you may want to make use of additional demographic data available [here](../aotearoa-new-zealand-census-data.md).

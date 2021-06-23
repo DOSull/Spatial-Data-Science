@@ -1,4 +1,5 @@
-#### Geog 315 T2 2020
+**Geog 315 T2 2021**
+
 # Review
 The aim of this week has been just to get a feel for things. Don't panic if you don't completely understand what is happening. The important thing is to realize
 

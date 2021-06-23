@@ -1,4 +1,5 @@
-#### Geog 315 T2 2020
+**Geog 315 T2 2021**
+
 # Aoteroa New Zealand physical geography data
 The two major categories of data likely to be of interest for the mini-projects are elevation and various biophysical indicators.
 

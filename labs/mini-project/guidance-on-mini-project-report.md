@@ -1,4 +1,5 @@
-#### Geog 315 T2 2020
+**Geog 315 T2 2021**
+
 # Guidance on the mini-project report
 The first thing to note is that this should be an individually written and assessed piece of work. You are free to discuss project ideas and appropriate approaches and analysis with class mates, but whatever you finally submit should be wholly your own work.
 
