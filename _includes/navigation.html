@@ -11,10 +11,10 @@
   <div class="btns">
     {% for entry in site.data.navigation %}
         {% if entry.url == current_page %}
-            {% assign current = ' style="color:#000; title:{{entry.title}};"' %}
+            {% assign current = ' style="color:#000; title:{{ entry.title }};"' %}
         {% else %}
             <!-- We have to declare it 'null' to ensure it doesn't propagate. -->
-            {% assign current = ' style="title:{{entry.title}};"' %}
+            {% assign current = ' style="title:{{ entry.title }};"' %}
         {% endif %}
         <h3{{ current }} class="btn"><a href="{{ fullurl }}">{{ entry.label }}</a></h3>
         <!-- {% assign sublinks = entry.sublinks %} -->
