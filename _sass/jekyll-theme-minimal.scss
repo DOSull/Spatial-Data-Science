@@ -35,12 +35,12 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#2b7;
+  color:#174;
   text-decoration:none;
 }
 
 a:hover, a:focus {
-  color:#096;
+  color:#063;
   font-weight: bold;
 }
 
@@ -211,7 +211,7 @@ footer {
 }
 
 .btn {
-  border:1px solid #2b7;
+  border:1px solid #063;
   margin:3px;
   padding:2px;
   width:auto;
@@ -219,7 +219,7 @@ footer {
 }
 
 .btn a:hover {
-  background-color: rgba(32,176,112,0.1);
+  background-color: rgba(0,96,48,0.1);
 }
 
 .btns {
