@@ -22,7 +22,8 @@
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        <div class="btns">
+        {% include navigation.html %}
+        <!-- <div class="btns">
           <h3 class="btn"><a href="{{site.baseurl}}/index.html" title="A brief overview of the course">Overview</a></h3>
           <h3 class="btn"><a href="https://blackboard.vuw.ac.nz" title="Go to the course's blackboard pages">Blackboard</a></h3>
           <h3 class="btn"><a href="{{site.baseurl}}/logistics.html" title="Semester dates, mode of delivery, contacts">Logistics</a></h3>
@@ -33,7 +34,7 @@
           <h3 class="btn"><a href="{{site.baseurl}}/assessment.html" title="Summary of course assessments">Assessment</a></h3>
           <h3 class="btn"><a href="{{site.baseurl}}/clo.html" title="Course learning objectives">Learning objectives</a></h3>
           <h3 class="btn"><a href="{{site.baseurl}}/resources.html" title="Links to additional university resources and support">Resources</a></h3>
-        </div>
+        </div> -->
 
         {% if site.github.is_user_page %}
         <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>

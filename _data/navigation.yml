@@ -1,0 +1,30 @@
+- title: Overview
+  url: /
+- title: Blackboard
+  url: https://blackboard.vuw.ac.nz
+- title: Logistics
+  url: /logistics
+- title: Schedule
+  url: /schedule
+- title: Lectures & reading
+  url: /lectures
+- title: Videos
+  url: /videos
+- title: Labs & project
+  url: /labs
+- title: Assessment
+  url: /assessment
+- title: Learning objectives
+  url: /clo
+- title: Resources
+  url: /resources
+
+# - title: Group of Things
+#   url: /group/
+#   sublinks:
+#     - title: Sub-item 1
+#       url: /group/si1
+#     - title: Sub-item 2
+#       url: /group/si2
+#     - title: Sub-item 3
+#       url: /group/si3
