@@ -1,6 +1,6 @@
 title: 'Geog 315 Advanced GIS'
 description: 'SGEES VUW T2 2021'
-theme: jekyll-theme-minimal
+theme: academic
 site.baseurl: ''
 site.url: 'https://dosull.github.io/Geog315'
 header_pages:
