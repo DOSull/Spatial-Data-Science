@@ -1,0 +1,12 @@
+title: Geog 315 Course website
+description: T2 2021
+theme: minima
+header_pages:
+  - about.md
+  - assessments.md
+  - contacts.md
+  - labs.md
+  - other.md
+  - projects.md
+  - schedule.md
+  - videos.md

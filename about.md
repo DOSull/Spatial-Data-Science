@@ -1,9 +1,6 @@
-[timetable](#lab-and-lecture-timetable) \~
-[lectures](#lectures) \~
-[labs](#labs) \~
-[assessment](#assessment) \~
-[links](#additional-information)
-
+---
+title: Overview
+---
 **this page last updated** 9 October 2020
 
 **NOTE: materials are constantly being updated. For lab instructions in particular, check that any page you are working from has the heading Geog 315 T2 2020 at the top before working on it!**
