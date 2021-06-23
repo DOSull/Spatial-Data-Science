@@ -1,9 +1,8 @@
 title: Geog 315 Course website
 description: T2 2021
 theme: minima
-baseurl: ''
-site.url: 'https://dosull.github.io/Geog315'
 site.baseurl: ''
+site.url: 'https://dosull.github.io/Geog315'
 header_pages:
   - index.md
   - contacts.md
