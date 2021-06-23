@@ -119,7 +119,7 @@ kbd {
 }
 
 header {
-  width:240px;
+  width:200px;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
@@ -186,7 +186,7 @@ strong {
 }
 
 section {
-  width:640px;
+  width:760px;
   float:right;
   padding-bottom:50px;
 }
@@ -203,7 +203,7 @@ hr {
 }
 
 footer {
-  width:240px;
+  width:200px;
   float:left;
   position:fixed;
   bottom:50px;
@@ -261,7 +261,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 1080px) {
+@media print, screen and (max-width: 960px) {
   body {
     word-wrap:break-word;
   }
