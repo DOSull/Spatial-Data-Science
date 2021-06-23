@@ -5,7 +5,7 @@ This class focuses on learning how to do geospatial things in _R_ and _RStudio_,
 
 The steps involved are
 
-+ [Download and install _R_ and _RStudio](software-01-installing-R-and-RStudio.md)
++ [Download and install _R_ and _RStudio_](software-01-installing-R-and-RStudio.md)
 
 followed optionally by
 
