@@ -6,10 +6,10 @@
       {% else %}
         {% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
       {% endif %}
-      {% if entry.url == current_page %}
-        {% assign sty = 'color:#99c;' %}
+      {% if fullurl == current_page %}
+        {% assign sty = 'style="color:#99c;"' %}
       {% endif %}
-      <h3 style="{{ sty }}" class="btn"><a href="{{ fullurl }}" title="{{ entry.title }}">{{ entry.label }}</a></h3>
+      <h3 {{ sty }} class="btn"><a href="{{ fullurl }}" title="{{ entry.title }}">{{ entry.label }}</a></h3>
     {% endfor %}
   </div>
 </nav>
