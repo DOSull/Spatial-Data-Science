@@ -6,8 +6,8 @@ This course is 100% internally assessed.  Assessment is based on the various ite
 Assessment item | Credit | Due date | CLOs
  -- | -- | -- | --
 Making maps | 15% | 2 Aug | 2
-Spatial data manipulation | 15% | 23 Aug | 2 4
-Geodemographic analysis | 20% | 2 Sep | 6
+Spatial data manipulation | 15% | 13 Aug | 2 4
+Geodemographic analysis | 20% | 30 Aug | 6
 Building a simple statistical model | 20% | 13 Sep | 6
 Mini-project | 30% | 8 Oct | 1 3 5 6 7
 
