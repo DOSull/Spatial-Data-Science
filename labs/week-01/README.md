@@ -1,3 +1,6 @@
+---
+title: Installing the course software
+---
 **Geog 315 T2 2021**
 
 # Installing the course software
