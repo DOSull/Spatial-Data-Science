@@ -1,12 +1,15 @@
+{% for entry in site.data.navigation %}
+    {% if entry.url contains "https" %}
+        {% capture fullurl %}{{ entry.url }}{% endcapture %}
+    {% else %}
+        {% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+    {% endif}
+{% endfor %}
+
 <!-- Then we build the nav bar. -->
 <nav>
   <div class="btns">
     {% for entry in site.data.navigation %}
-        {% if entry.url contains "https" %}
-            {% capture fullurl %}{{ entry.url }}{% endcapture %}
-        {% else %}
-            {% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
-        {% endif}
         {% if entry.url == current_page %}
             {% assign current = ' style="color:#000; title:{{entry.title}};"' %}
         {% else %}
