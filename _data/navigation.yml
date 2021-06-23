@@ -1,23 +1,33 @@
-- title: Overview
+- label: Overview
   url: /
-- title: Blackboard
+  title: A brief overview of the course
+- label: Blackboard
   url: https://blackboard.vuw.ac.nz
-- title: Logistics
+  title: Go to the course blackboard pages
+- label: Logistics
   url: /logistics
-- title: Schedule
+  title: Semester dates, mode of delivery, contacts
+- label: Schedule
   url: /schedule
-- title: Lectures & reading
+  title: Schedule of lectures and labs linked to the materials
+- label: Lectures & reading
   url: /lectures
-- title: Videos
+  title: About lectures and additional readings
+- label: Videos
   url: /videos
-- title: Labs & project
+  title: Supporting videos all linked from one place
+- label: Labs & project
   url: /labs
-- title: Assessment
+  title: Details of the weekly lab assignments and the mini-project
+- label: Assessment
   url: /assessment
-- title: Learning objectives
+  title: Summary of course assessments
+- label: Learning objectives
   url: /clo
-- title: Resources
+  title: Course learning objectives
+- label: Resources
   url: /resources
+  title: Links to additional university resources and support
 
 # - title: Group of Things
 #   url: /group/

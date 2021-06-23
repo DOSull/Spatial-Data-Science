@@ -1,5 +1,9 @@
 {% for entry in site.data.navigation %}
-{% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+    {% if entry.url contains "https" %}
+        {% capture fullurl %}{{ entry.url }}{% endcapture %}
+    {% else %}
+        {% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+    {% endif}
     {% if fullurl == page.url %}
         {% assign current_page = fullurl %}
         {% break %}
@@ -13,10 +17,10 @@
   <div class="btns">
     {% for entry in site.data.navigation %}
         {% if entry.url == current_page %}
-            {% assign current = ' style="color: #000"' %}
+            {% assign current = ' style="color:#000; title:{{entry.title}};"' %}
         {% else %}
             <!-- We have to declare it 'null' to ensure it doesn't propagate. -->
-            {% assign current = null %}
+            {% assign current = ' style="title:{{entry.title}};"' %}
         {% endif %}
         <h3{{ current }} class="btn"><a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a></h3>
         <!-- {% assign sublinks = entry.sublinks %} -->
