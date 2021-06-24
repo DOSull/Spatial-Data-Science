@@ -28,11 +28,11 @@ In addition a [course Slack channel](https://vuwgeog315t22021.slack.com/ "Course
 If you have particular difficulties with labs and are working remotely then appointments to meet by Zoom can be made from [this link](https://calendly.com/dosullivan "Schedule an office hours appointment").
 
 ## Communications
-The primary mode of communication for course announcements will be via Blackboard, so please ensure that your contact details there are up to date and are regularly checked (note that Blackboard defaults to your myvuw email address).
+### Blackboard
+The primary mode of communication for course announcements will be via Blackboard, so please ensure that your contact details there are up to date and are regularly checked (note that Blackboard defaults to your myvuw email address). Blackboard is also where you will find lecture video recordings, assignment dropboxes and information about your grades. What I am saying is: **check in regularly on Blackboard!**
 
-Blackboard is also where you will find lecture video recordings, assignment dropboxes and information about your grades. What I am saying is: **check in regularly on Blackboard!**
-
-All other course information (links to lecture slides, lab materials, additional video content) will be posted to this website, where you will find the [schedule](schedule.md) and [labs](labs.md) areas particularly useful.
+### This website
+All other course information (links to lecture slides, lab materials, additional video content) will be posted to this website (the one you are looking at right now) at [dosull.github.io/Geog315](https://dosull.github.io/Geog315). You will likely find the [schedule](schedule.md "Course chedule") and [labs](labs.md "Lab materials") areas particularly useful.
 
 ### Lecturer/coordinator
 **Prof. [David O'Sullivan](mailto:david.osullivan@vuw.ac.nz)**
@@ -41,6 +41,9 @@ All other course information (links to lecture slides, lab materials, additional
 ### GIS Technician
 **Anh Dang Nguyet (email to follow)**
 **Office** TBC **Office hours** TBC in CO110
+
+### The course slack channel
+A link to join the [course slack channel](https://vuwgeog315t22021.slack.com/ "Course slack channel") will be sent via Blackboard. This should be used for technical support questions on the labs.
 
 ### Class representatives
 Class representatives provide a way to communicate feedback to the teaching staff during the course. Class representatives will be selected in the first week or two of class, and details of how to contact them will be provided as soon as they are available. Anyone interested in taking on this role, just let me know, so we can resolve any competition! Once we've agreed who is doing it, they can [sign up here](https://www.vuwsa.org.nz/class-representatives "VUWSA class representatives signup").
