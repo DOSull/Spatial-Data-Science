@@ -34,15 +34,14 @@ The primary mode of communication for course announcements will be via Blackboar
 ### This website
 All other course information (links to lecture slides, lab materials, additional video content) will be posted to this website (the one you are looking at right now) at [dosull.github.io/Geog315](https://dosull.github.io/Geog315). You will likely find the [schedule](schedule.md "Course chedule") and [labs](labs.md "Lab materials") areas particularly useful.
 
-### Lecturer/coordinator
-**Prof. [David O'Sullivan](mailto:david.osullivan@vuw.ac.nz)**
-**Office** CO227 **Extn.** 6492 **Office hours by appointment** [click here](https://calendly.com/dosullivan "Schedule an office hours appointment")
+### People
 
-### GIS Technician
-**Anh Dang Nguyet (email to follow)**
-**Office** TBC **Office hours** TBC in CO110
+| Lecture/coordinator | GIS technician |
+| -- | -- |
+|Prof. [David O'Sullivan](mailto:david.osullivan@vuw.ac.nz "email")| Anh Dang Nguyet (email to follow)|
+|**Office** CO227 **Extn.** 6492 **Office hours by appointment** [click here](https://calendly.com/dosullivan "Schedule an office hours appointment")| **Office** TBC **Extn.** **Office hours** TBC in CO110|
 
-### The course slack channel
+### Slack channel
 A link to join the [course slack channel](https://vuwgeog315t22021.slack.com/ "Course slack channel") will be sent via Blackboard. This should be used for technical support questions on the labs.
 
 ### Class representatives
