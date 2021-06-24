@@ -1,11 +1,7 @@
 # Schedule
-## Important times
-**Lectures** are in **AM 105** from **1:10-2:00 Tuesdays** and **Fridays**.
+Below is the trimester schedule we will aim to follow. **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, as they become available.
 
-**Labs** are in **KK 216** from **11:00-1:00** on **Thursdays**.
-
-## Timetable
-Here's the trimester schedule we will aim to follow. **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, when available.
+Any time before a lecture has been presented it is subject to change. Lab instructions should not be deemed current for 2021 unless they are clearly marked **Geog 315 T2 2021** at the top.
 
 Date | Tue | Thu (lab) | Fri
 -- | -- | -- | --
