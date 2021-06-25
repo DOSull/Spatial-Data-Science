@@ -22,9 +22,9 @@
 - label: Assessment
   url: /assessment
   title: Summary of course assessments
-- label: Learning objectives
-  url: /clo
-  title: Course learning objectives
+- label: COVID
+  url: /covid
+  title: What will happen if COVID alert levels change
 - label: Resources
   url: /resources
   title: Links to additional university resources and support
