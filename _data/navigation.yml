@@ -2,7 +2,7 @@
   url: /
   title: A brief overview of the course
 - label: Blackboard
-  url: https://blackboard.vuw.ac.nz/webapps/blackboard/execute/launcher?type=Course&id=_111517_1&url=
+  url: https://blackboard.vuw.ac.nz
   title: Go to the course blackboard pages
 - label: Logistics
   url: /logistics
