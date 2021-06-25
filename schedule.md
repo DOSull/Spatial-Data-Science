@@ -1,7 +1,7 @@
 # Schedule
-Below is the trimester schedule we will aim to follow. **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, as they become available.
+Below is the schedule we will aim to follow. The lecture schedule for the second half of trimester is *not set in stone*. Topics to be covered will be determined based on project needs and student preferences, and I will also aim to secure a couple of guest lectures, from industry and/or government practitioners. Any time before a lecture has been presented it is subject to change.
 
-Any time before a lecture has been presented it is subject to change. Lab instructions should not be deemed current for 2021 unless they are clearly marked **Geog 315 T2 2021** at the top.
+**Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, as they become available. Lab instructions should not be considered current for 2021 unless they are clearly marked **Geog 315 T2 2021** at the top.
 
 Date | Tue | Thu (lab) | Fri
 -- | -- | -- | --

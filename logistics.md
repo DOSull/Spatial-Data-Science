@@ -29,7 +29,7 @@ If you have particular difficulties with labs and are working remotely then appo
 
 ## Communications
 ### Blackboard
-The primary mode of communication for course announcements will be via Blackboard, so please ensure that your contact details there are up to date and are regularly checked (note that Blackboard defaults to your myvuw email address). Blackboard is also where you will find lecture video recordings, assignment dropboxes and information about your grades. What I am saying is: **check in regularly on Blackboard!**
+The primary mode of communication for course announcements will be via [Blackboard](https://blackboard.vuw.ac.nz/webapps/blackboard/execute/launcher?type=Course&id=_111517_1&url= "Course Blackboard link"), so please ensure that your contact details there are up to date and are regularly checked (note that Blackboard defaults to your myvuw email address). Blackboard is also where you will find lecture video recordings, assignment dropboxes and information about your grades. What I am saying is: **check in regularly on Blackboard!**
 
 ### This website
 All other course information (links to lecture slides, lab materials, additional video content) will be posted to this website (the one you are looking at right now) at [dosull.github.io/Geog315](https://dosull.github.io/Geog315). You will likely find the [schedule](schedule.md "Course chedule") and [labs](labs.md "Lab materials") areas particularly useful.

@@ -1,5 +1,5 @@
 # Videos
-This page provides a 'one-stop shop' for all the additional video material for the course. Videos of lecture material are on [Blackboard](https://blackboard.vuw.ac.nz/).
+This page provides a 'one-stop shop' for all the additional video material for the course. Videos of lecture material are on [Blackboard](https://blackboard.vuw.ac.nz/webapps/blackboard/content/launchLink.jsp?course_id=_111517_1&tool_id=_3281_1&tool_type=TOOL&mode=cpview&mode=reset "Blackboard lecture videos").
 
 ## Week 1
 ### Installing _R_ and _RStudio_

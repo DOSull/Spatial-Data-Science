@@ -2,23 +2,23 @@
   url: /
   title: A brief overview of the course
 - label: Blackboard
-  url: https://blackboard.vuw.ac.nz
+  url: https://blackboard.vuw.ac.nz/webapps/blackboard/execute/launcher?type=Course&id=_111517_1&url=
   title: Go to the course blackboard pages
 - label: Logistics
   url: /logistics
   title: Semester dates, mode of delivery, contacts
 - label: Schedule
   url: /schedule
-  title: Schedule of lectures and labs linked to the materials
-- label: Lectures & reading
-  url: /lectures
-  title: About lectures and additional readings
-- label: Videos
-  url: /videos
-  title: Supporting videos all linked from one place
+  title: Schedule of lectures and labs with link to the materials
+- label: Readings
+  url: /readings
+  title: Links to additional readings
 - label: Labs & project
   url: /labs
   title: Details of the weekly lab assignments and the mini-project
+- label: Videos
+  url: /videos
+  title: Supporting videos all linked from one place
 - label: Assessment
   url: /assessment
   title: Summary of course assessments
