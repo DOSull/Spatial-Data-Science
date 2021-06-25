@@ -1,7 +1,7 @@
 # Assessment
 This course is 100% internally assessed.  Assessment is based on the various items listed below.
 
-Assessment item | Credit | Due date | [CLOs](clo.md "Course learning objectives")
+Assessment item | Credit | Due date | Learning objectives
  -- | -- | -- | --
 [Making maps](labs/week-03/ "lab materials") | 15% | 2 Aug | 2
 Spatial data manipulation | 15% | 13 Aug | 2 4
@@ -9,7 +9,7 @@ Geodemographic analysis | 20% | 30 Aug | 6
 Building a simple statistical model | 20% | 13 Sep | 6
 [Mini-project](labs/mini-project "More on the mini-project") | 30% | 8 Oct | 1 3 5 6 7
 
-### Submission
+## Submission
 Assessments are to be submitted electronically via dropbox on [Blackboard](https://blackboard.vuw.ac.nz "VUW Blackboard"). I will aim to return coursework within 3 weeks. Extensions should be requested from the SGEES administration office. If you anticipate problems come and talk to me.
 
 ### Late submission penalties
@@ -18,3 +18,15 @@ All assignments must be handed in by their due dates. Non-submission  by the req
 Computer crash or similar excuses are not acceptable. Save your material and make sure you have something to submit by the due date.
 
 If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](https://www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat "About aegrotats")
+
+## Course learning objectives
+1. Appreciate and describe the scope, limitations and challenges of geospatial methods in real world applications;
+2. Record, enter, manipulate and analyse geographic data;
+3. Critically assess and communicate geospatial information and the outcome ofgeospatial projects in terms of relevancy to project aims and against more general constraints, e.g. ethical and time constraints;
+4. Understand the complexity of data issues concerning the acquisition, creation, quality assurance, management and appropriate analysis and visualisation of spatial and attribute data;
+5. Communicate geospatial knowledge effectively;
+6. Demonstrate an understanding of spatial information by identifying and applying appropriate geospatial techniques to the solution of a practical project; and
+7. The course has three primary aims:
+    + To give you a more detailed and critical understanding of geospatial methods and how they are used;
+    + To expand your knowledge of geospatial software through guided practicals and a project undertaken in geospatial tools of your choice and through data cleaning and preparation; and
+    + To enrich your written and verbal communication skills which are vital in any use of geospatial methods.
