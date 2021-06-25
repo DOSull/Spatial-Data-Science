@@ -14,7 +14,7 @@ This is the complicated one, which requires the most care and attention.
 You do not need to wear a mask, but I strongly recommend that you consider it since lab sessions often involve close proximity where it is difficult to remain in compliance with physical distance recommendations.
 
 ## Levels 3 and 4
-Class and labs will be solely over zoom with recordings available later for review.
+Class and labs will be solely over zoom (links will be posted on [Blackboard](https://blackboard.vuw.ac.nz "Course Blackboard link")) with recordings available later for review.
 
 ## Additional information
 + [The government's COVID information pages](https://covid19.govt.nz/ "NZ government's COVID information pages")
