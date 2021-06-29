@@ -1,5 +1,5 @@
-#### Geog 315 T2 2020
-# Other spatial relations in `sf`
+#### Geog 315 T2 2021
+# Spatial data wrangling in `sf`
 ```{r}
 library(sf)
 library(tmap)

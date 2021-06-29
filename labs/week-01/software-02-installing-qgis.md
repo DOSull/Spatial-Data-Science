@@ -9,8 +9,8 @@ This is straightforward to do, although figuring out exactly which version you w
 
 The specific downloads I recommend are
 
-**Windows** [https://qgis.org/downloads/QGIS-OSGeo4W-3.20.0-2.msi)
+**Windows** [QGIS-OSGeo4W-3.20.0-2.msi](https://qgis.org/downloads/QGIS-OSGeo4W-3.20.0-2.msi)
 
-**Mac** [https://www.kyngchaos.com/files/software/qgis/QGIS-macOS-3.18.3-2.dmg)
+**Mac** [QGIS-macOS-3.18.3-2.dmg](https://www.kyngchaos.com/files/software/qgis/QGIS-macOS-3.18.3-2.dmg)
 
 **Linux** There are several flavours here and the links are clearly indicated on the downloads page.
