@@ -69,13 +69,13 @@ Saving a dataset is easy. Just as there is a `st_read` function, there is an `st
 The only complication is that if the file already exists, then we also have to tell it that it is OK to delete the existing file, using a `delete_layer` parameter. So here goes with `delete_layer` set to `TRUE` just in case you end up running this command again later.
 
 ```{r}
-st_write(lower48, 'lower48.gpkg', delete_layer = TRUE)
+st_write(lower48, 'lower48.gpkg', delete_dsn = TRUE)
 ```
 
 That's it. You should find that there is now a new geopackage file in the folder you are working in. We can also save to other data formats. For example
 
 ```{r}
-st_write(lower48, 'lower48.geojson', driver = 'GeoJSON', delete_layer = TRUE)
+st_write(lower48, 'lower48.geojson', driver = 'GeoJSON', delete_dsn = TRUE)
 ```
 
 will save a GeoJSON file.
@@ -86,10 +86,10 @@ The `lower48` dataset includes an attribute `state` which tells us the US state 
 ```{r}
 states <- lower48 %>%
   group_by(state) %>%
-  summarise_if(is.numeric, sum)
+  summarise(across(where(is.numeric), sum))
 ```
 
-Here we pass the `lower48` dataset to the `group_by` function, which will use the `state` attribute to group counties. The second pipe sends this result to the `summarise_if` function, which checks if attributes are numeric (the `is.numeric` parameter), and if they are combines values by using a `sum` operation.
+Here we pass the `lower48` dataset to the `group_by` function, which will use the `state` attribute to group counties. The second pipe sends this result to the `summarise` function, which uses `across` with a `where` clause to check if attributes are numeric (the `is.numeric` parameter), and if they are combines values by using a `sum` operation.
 
 ```{r}
 tm_shape(states) +
