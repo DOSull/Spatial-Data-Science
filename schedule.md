@@ -15,6 +15,6 @@ Date | Tue | Thu (lab) | Fri
 30 Aug | [Regression models](https://southosullivan.com/geog315/regression/) |  **Building a simple statistical model** (20%) due 13 Sep | [More on regression](https://southosullivan.com/geog315/more-on-regression/)
 6 Sep | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/) | Help with assignments | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/)
 13 Sep | Project topics overview and [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) | [**Introducing the mini-projects**](labs/mini-project) (30%) due 8 Oct | [Network analysis](https://southosullivan.com/geog315/network-analysis/)
-21 Sep | [Time geography](https://southosullivan.com/geog315/time-geography/) | Project support / guest | Project support
-28 Sep | [Simulation models](https://southosullivan.com/geog315/simulation-models/) | Project work | Project support
-4 Oct | Project support | Project work | Project support
+21 Sep | [Time geography](https://southosullivan.com/geog315/time-geography/) | Project work | Project support / guest
+28 Sep | [Simulation models](https://southosullivan.com/geog315/simulation-models/) | Project work | Project support / guest
+4 Oct | Project support / guest | Project work | Project support

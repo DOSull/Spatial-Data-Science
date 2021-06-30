@@ -2,7 +2,7 @@
 If COVID alert levels change, the class will continue uninterrrupted, as detailed in the sections below. The golden rule at all levels is **stay home if you feel unwell**.
 
 ## Level 1
-Class as normal. Attendance in person _much_(!) preferred. Lectures will be recorded and available at the link posted on [Blackboard]https://blackboard.vuw.ac.nz "VUW Blackboard"), but there *will be no livestream*.
+Class as normal. Attendance in person _much_(!) preferred. Lectures will be recorded and available at the link posted on [Blackboard](https://blackboard.vuw.ac.nz "VUW Blackboard"), but there *will be no livestream*.
 
 ## Level 2
 This is the complicated one, which requires the most care and attention.
