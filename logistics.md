@@ -38,9 +38,9 @@ All other course information (links to lecture slides, lab materials, additional
 
 | Lecture/coordinator | GIS technician |
 | -- | -- |
-| Prof. [David O'Sullivan](mailto:david.osullivan@vuw.ac.nz "email") | Anh Dang Nguyet (email to follow) |
-| **Office** CO227 **Extn.** 6492 | **Office** TBC **Extn.** |
-| **Office hours by appointment** [click here](https://calendly.com/dosullivan "Schedule an office hours appointment") | **Office hours** TBC in CO110 |
+| Prof. [David O'Sullivan](mailto:david.osullivan@vuw.ac.nz "email David") | [Anh Dang Nguyet](mailto:anh.dang@vuw.ac.nz "email Anh") |
+| **Office** CO227 **Extn.** 6492 | **Office** CO110 |
+| **Office hours by appointment** [click here](https://calendly.com/dosullivan "Schedule an office hours appointment") | **Office hours** 1-3PM Thu |
 
 ### Slack channel
 A link to join the [course slack channel](https://vuwgeog315t22021.slack.com/ "Course slack channel") will be sent via Blackboard. This should be used for technical support questions on the labs.
