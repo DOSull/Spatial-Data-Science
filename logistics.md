@@ -47,3 +47,6 @@ A link to join the [course slack channel](https://vuwgeog315t22021.slack.com/ "C
 
 ### Class representatives
 Class representatives provide a way to communicate feedback to the teaching staff during the course. Class representatives will be selected in the first week or two of class, and details of how to contact them will be provided as soon as they are available. Anyone interested in taking on this role, just let me know, so we can resolve any competition! Once we've agreed who is doing it, they can [sign up here](https://www.vuwsa.org.nz/class-representatives "VUWSA class representatives signup").
+
+### Māori engagement advisor for Science and Health
+Raukura Chadwick (Ngāti Kahungungu and Ngāti Maniapoto) is available to support tauri Māori studying in sciences and health. You can make an appointment with her at [this link](https://outlook.office365.com/owa/calendar/Awhina1@vuw.onmicrosoft.com/bookings/).
