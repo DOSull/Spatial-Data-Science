@@ -14,7 +14,7 @@ abb_2193 <- st_read('abb-2193.gpkg')
 sa2_2193 <- st_read('sa2-2193.gpkg')
 ```
 
-# Spatial joins, summarising data, and throwing away spatial information
+# Filtering data by attribute and spatially
 There's a lot to get through in this section.
 
 ## Narrowing things down with a `filter` operation
