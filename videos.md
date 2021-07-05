@@ -1,5 +1,7 @@
 # Videos
-This page provides a 'one-stop shop' for the additional video material for the course. Lectures videos are on [Blackboard](https://blackboard.vuw.ac.nz "VUW Blackboard").
+This page provides a 'one-stop shop' for the additional video material for the course. Note that these are a mixture of external resources, and videos I have recorded, dating from as early as 2020, so example datasets may not match this year's materials in all cases.
+
+Lecture recordings are on [Blackboard](https://blackboard.vuw.ac.nz "VUW Blackboard").
 
 ## Week 1
 ### Installing _R_ and _RStudio_
