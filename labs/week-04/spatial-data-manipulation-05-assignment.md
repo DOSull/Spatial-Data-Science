@@ -20,3 +20,5 @@ Here are the questions from the lab all in one place for ease of reference. The 
 
 ## Submission instructions
 Prepare a PDF document that includes answers to the above questions. There are are a couple of maps requested, but the whole document should only need to be 2-3 pages (maximum). Submit the PDF file to the dropbox provided on Blackboard. The due date is end of the day on **13 August**. Remember that you can easily export maps to PNG format images for inclusion in a Word document from *RStudio*.
+
+[Go back to the overview](README.md)

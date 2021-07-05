@@ -137,4 +137,4 @@ st_write(sa2_2193, 'sa2-2193.gpkg', delete_dsn = TRUE)
 
 If you need to reload the data at any point you should **use these new files** and not the originals. The new projected coordinates are only made permanent when we write the data out to the file system like this.
 
-Now [go back to the overview](README.md) or on to [the next page of instructions](spatial-data-manipulation-03-spatial-joins.md).
+Now [go back to the overview](README.md) or on to [the next page of instructions](spatial-data-manipulation-03-spatial-filters.md).
