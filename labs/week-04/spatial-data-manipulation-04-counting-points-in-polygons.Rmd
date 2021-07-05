@@ -52,4 +52,4 @@ sa2_abb_counts %>%
   st_write("sa2-abb-2193.gpkg", delete_dsn = TRUE)
 ```
 
-Now [go back to the overview](README.md) or on to [the next page](spatial-data-manipulation-05-counting-points-in-polygons.md).
+Now [go back to the overview](README.md) or on to [the next page](spatial-data-manipulation-05-assignment.md).
