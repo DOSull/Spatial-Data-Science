@@ -6,8 +6,6 @@ This week we focus more on typical kinds of data wrangling that are required *be
 
 This time there are questions through the different sections so that you have a better idea when you should be paying close attention, and also so that it is easier to see where you can get credit for completing tasks and answering questions.
 
-I have also made the ability to answer the questions less dependent on totally *getting* the details of the code.
-
 You can look at the last page, to get an overview of the assignment requirements.
 
 Again, the instructions this week are in several parts (previews of some pages are also linked below.)
