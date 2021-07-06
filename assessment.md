@@ -3,8 +3,8 @@ This course is 100% internally assessed.  Assessment is based on the various ite
 
 Assessment item | Credit | Due date | Learning objectives
  -- | -- | -- | --
-[Making maps](labs/week-03/ "lab materials") | 15% | 2 Aug | 2
-Spatial data manipulation | 15% | 13 Aug | 2 4
+[Making maps](labs/week-03 "lab materials") | 15% | 2 Aug | 2
+[Spatial data manipulation](labs/week-04 "lab materials") | 15% | 13 Aug | 2 4
 Geodemographic analysis | 20% | 30 Aug | 6
 Building a simple statistical model | 20% | 13 Sep | 6
 [Mini-project](labs/mini-project "More on the mini-project") | 30% | 8 Oct | 1 3 5 6 7
