@@ -8,7 +8,7 @@ Only four lab sessions have an associated assessed assignment, but you should at
 + **Week 2** [Introduction to *R* and *RStudio*](labs/week-02 "lab materials")
 + **Week 3** [Making maps](labs/week-03 "lab materials")
 + **Week 4** [Spatial data wrangling](labs/week-04 "lab materials")
-+ **Week 5** Geographic cluster analysis
++ **Week 5** [Geographic cluster analysis](labs/week-05 "lab materials")
 + **Week 7** Regression analysis in *R*
 + **Week 9** [The mini-projects](labs/mini-project "more on the mini-project")
 
