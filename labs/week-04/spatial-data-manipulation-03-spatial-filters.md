@@ -51,7 +51,7 @@ tm_shape(sa2_welly) +
   tm_shape(abb_2193) +
   tm_dots()
 ```
-It's still not right, because... well... because the Airbnb listings extent to Upper Hutt, Porirua, and Kapiti Coast also. So...
+It's still not right, because... well... because the Airbnb listings extend to Upper Hutt, Porirua, and Kapiti Coast also. So...
 
 ### **Question 2**
 #### Change the code above to extend the selection to all the territorial authorities mentioned, and show you succeeded *by including a simple map illustrating your answer*. (20%)
@@ -74,11 +74,11 @@ It seems clear we need to be a bit cleverer about the selection of areas of inte
 For now here is a possible approach using the convex hull
 
 ```{r}
-hull <- abb_2193 %>% 
+hull <- abb_2193 %>%
   st_union() %>%
   st_convex_hull()
 
-sa2_abb <- sa2_2193 %>% 
+sa2_abb <- sa2_2193 %>%
   st_filter(hull)
 ```
 
