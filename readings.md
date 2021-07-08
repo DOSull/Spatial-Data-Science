@@ -9,11 +9,13 @@ is likely to be useful for anyone who wants to extend their *R* knowledge. Also 
 + Lovelace R, J Nowosad and J Münchow. 2019. [*Geocomputation with R*](https://geocompr.robinlovelace.net/ "Lovelace et al. Geocomputation with R book"). Boca Raton: Taylor & Francis
 
 ## Week 1 General background
-+ This paper
++ These papers
 
-    Harris R, D O’Sullivan, M Gahegan, M Charlton, L Comber, P Longley, C Brunsdon, N Malleson, A Heppenstall, A Singleton, D Arribas-Bel, and A Evans. 2017. [More bark than bytes? Reflections on 21+ years of geocomputation](https://dx.doi.org/10.1177/2399808317710132). Environment and Planning B: Urban Analytics and City Science 44(4) 598-617.
+  Harris R, D O’Sullivan, M Gahegan, M Charlton, L Comber, P Longley, C Brunsdon, N Malleson, A Heppenstall, A Singleton, D Arribas-Bel, and A Evans. 2017. [More bark than bytes? Reflections on 21+ years of geocomputation](https://dx.doi.org/10.1177/2399808317710132). *Environment and Planning B: Urban Analytics and City Science* **44**(4) 598-617.
 
-    gives some sense of the current state of GIS in relation to broader trends in data science
+  Brunsdon C and A Comber. 2020. [Opening practice: supporting reproducibility and critical spatial data science](http://link.springer.com/10.1007/s10109-020-00334-2). *Journal of Geographical Systems*.
+
+  give a sense of the current state of GIS in relation to broader trends in open data science
 
 + [R spatial resources](https://www.r-spatial.org/projects/ "R spatial stuff")
 
