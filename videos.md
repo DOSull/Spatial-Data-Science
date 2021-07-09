@@ -9,6 +9,7 @@ In person lecture recordings are on [Blackboard](https://blackboard.vuw.ac.nz "V
 + [For Mac users](https://www.youtube.com/watch?v=by5HyJX6H1I)
 
 ### Zoom lecture on open geographical data science
+I had to stay home for this one as I was feeling a bit unwell, so here is the zoom recording in manageable chunks:
 + [Introduction](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-1.mp4) (3:11)
 + [Reproducibility](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-2.mp4) (3:57)
 + [Open data and open publishing](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-3.mp4) (6:45; there's a brief interruption near the end of this - just ignore!)
