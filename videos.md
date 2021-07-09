@@ -1,12 +1,22 @@
 # Videos
 This page provides a 'one-stop shop' for the additional video material for the course. Note that these are a mixture of external resources, and videos I have recorded, dating from as early as 2020, so example datasets may not match this year's materials in all cases.
 
-Lecture recordings are on [Blackboard](https://blackboard.vuw.ac.nz "VUW Blackboard").
+In person lecture recordings are on [Blackboard](https://blackboard.vuw.ac.nz "VUW Blackboard").
 
 ## Week 1
 ### Installing _R_ and _RStudio_
 + [For Windows users](https://www.youtube.com/watch?v=gx7A7C_wdyE)
 + [For Mac users](https://www.youtube.com/watch?v=by5HyJX6H1I)
+
+### Zoom lecture on open geographical data science
++ [Introduction](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-1.mp4) (3:11)
++ [Reproducibility](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-2.mp4) (3:57)
++ [Open data and open publishing](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-3.mp4) (6:45; there's a brief interruption near the end of this - just ignore!)
++ [Free and open-source software](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-4.mp4) (6:22)
++ [FOSS vs proprietary](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-5.mp4) (3:53)
++ [Two examples](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-6.mp4) (10:10)
++ [FOSS for geo](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-7.mp4) (5:27)
++ [Wrapping up](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-8.mp4) (2:13)
 
 ## Week 2
 ### Using *R* and *RStudio*
