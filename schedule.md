@@ -6,7 +6,7 @@ Below is the schedule we will aim to follow. The lecture schedule for the second
 Date | Tue | Thu (lab) | Fri
 -- | -- | -- | --
 5 Jul | Course introduction<br>[covid-demo.R](scripts/covid-demo.R) | [Lab session to get software setup](labs/week-01) | [Open science, open source, and doing GIS in code](slides/open/)
-12 Jul | [Starting *R*](slides/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02) | [The myth of tidy data](https://southosullivan.com/geog315/tidy-data/)
+12 Jul | [Starting *R*](slides/starting-r/) | [Introducing *R* and *RStudio*](labs/week-02) | [The myth of tidy data](slides/tidy-data/)
 19 Jul | [Choropleth map design](https://southosullivan.com/geog315/choropleth-maps/) | [**Making maps**](labs/week-03) (15%) due 2 Aug | [Data wrangling](https://southosullivan.com/geog315/data-munging/)
 26 Jul | [Spatial data wrangling](https://southosullivan.com/geog315/spatial-data-munging/) | [**Spatial data manipulation**](labs/week-04) (15%) due 13 Aug | [Spatial data wrangling (continued)](https://southosullivan.com/geog315/spatial-data-munging/)<br>and [handling tables](https://southosullivan.com/geog315/table-joins-and-dissolves/)
 2 Aug | [Clustering analysis](https://southosullivan.com/geog315/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05) (20%) due 30 Aug | [Applications of clustering analysis](https://southosullivan.com/geog315/classification-examples/)

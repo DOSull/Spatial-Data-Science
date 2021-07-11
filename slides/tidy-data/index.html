@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <link rel="stylesheet" href="../extra-styles.css">
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+  </head>
+
+  <body>
+    <div id="header" class="header" style="background-color: rgba(0,102,51,0.75);">
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <section data-background="images/data-star-trek.png">
+            <p class="attribution"><i>Star Trek TNG</i>&rsquo;s <a target="_blank" href="https://en.wikipedia.org/wiki/Data_(Star_Trek)">Data</a></p>
+            <div>
+              <h1 class="fragment">Dealing with data</h1>
+              <h2 class="fragment">Data and its discontents</h2>
+              <h2 class="fragment">(Too) tidy data</h2>
+              <h2 class="fragment">Spatial data</h2>
+            </div>
+          </section>
+        </section>
+
+
+
+        <section>
+          <section data-background="images/the-thinker.jpg">
+            <p class="attribution">image of Rodin&rsquo;s <i>Le Penseur</i> cropped from<br /><a href="https://commons.wikimedia.org/wiki/File:Le_Penseur_in_the_Jardin_du_Mus%C3%A9e_Rodin,_Paris_14_June_2015.jpg">commons.wikimedia.org</a> by <a target="_blank" href="https://www.flickr.com/people/95969344@N00"></a>Douglas O'Brien</p>
+            <h1>What is/are data?</h1>
+            <h2 class="fragment">Not &lsquo;given&rsquo; facts</h2>
+            <h2 class="fragment">Not information</h2>
+            <h2 class="fragment">Not knowledge</h2>
+            <h2 class="fragment">Not wisdom</h2>
+          </section>
+
+          <section data-background="images/lightbulb_led.jpg" style="background-color: rgba(51, 51, 102, 0.75);">
+            <p class="attribution">image source <a href="https://boingboing.net/2018/01/15/filament-led-bulbs-that-mimic.html">boingboing.net</a>
+            </p>
+            <h1>One way to think about data</h1>
+            <h2>Data <span class="fragment" data-fragment-index="1">&rarr; Information</span> <span class="fragment" data-fragment-index="2"> &rarr; Knowledge</span></h2>
+            <h1 class="fragment" data-fragment-index="3">but this ignores</h1>
+            <h2 class="fragment" data-fragment-index="3"><span class="fragment" data-fragment-index="5">Data &larr;</span> <span class="fragment" data-fragment-index="4">Information &larr;</span> Knowledge</h2>
+          </section>
+
+          <section data-background="images/data-feminism-splash.png" class="translucent">
+            <p class="attribution">image at <a href="https://mitpressonpubpub.mitpress.mit.edu/data-feminism">mitpress.mit.edu</a></p>
+            <h1>Better ways to think about data</h1>
+            <h2>D&rsquo;Ignazio and Klein&rsquo;s <a target="_blank" href="https://mitpressonpubpub.mitpress.mit.edu/data-feminism"><i>Data Feminism</i></a> is persuasive</h2>
+            <h2>Lauren Klein suggests <a target="_blank" href="https://feedmagazine.tv/genius-interviews/lauren-klein-theres-no-such-thing-as-raw-data/">in this interview</a>
+              <blockquote>&ldquo;data is pretty much anything that has been systematically collected&rdquo;</blockquote>
+            </h2>
+            <h2>Systematicity implies <a target="_blank" href="https://mitpressonpubpub.mitpress.mit.edu/pub/7ruegkt6/release/4">the wielding of power</a></h2>
+          </section>
+
+          <section data-background="images/data.gif">
+            <h2>Anyhoo...</h2>
+            <h1>Enter data <i>science</i></h1>
+            <h2><a target="_blank" href="https://mitpressonpubpub.mitpress.mit.edu/pub/8tjbs2x5/release/2">Reinforces (false) notions of neutrality</a></h2>
+            <h2><a target="_blank" href="https://mitpressonpubpub.mitpress.mit.edu/pub/rykaknh1/release/4">What gets counted counts</a></h2>
+          </section>
+
+          <section data-background="images/earth-at-night.jpg">
+            <p class="attribution">image source <a target="_blank" href="https://www.earthobservatory.nasa.gov/images/90008/night-light-maps-open-up-new-applications">nasa.gov</a></p>
+            <h1>From a geographical perspective</h1>
+            <h2>The &ldquo;the god trick&rdquo; (Haraway)</h2>
+            <h2>Official statistics, e.g. census</h2>
+          </section>
+
+          <section data-background="images/random-walks.png" class="translucent">
+            <h1>In sum:</h1>
+            <h2>Data are messy, complicated, power-laden, inherently biased</h2>
+            <h1>No matter what anyone tries to tell you</h1>
+          </section>
+        </section>
+
+
+
+        <section>
+          <section data-markdown>
+            # About half (possibly way more) of all data science
+            ## is tidying and organising data
+          </section>
+
+          <section data-markdown>
+            # Proof 1
+            ## &ldquo;It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data.&rdquo; ([Wickham 2016](http://dx.doi.org/10.18637/jss.v059.i10), page 1, citing Dasu & Johnson 2003)
+          </section>
+
+          <section>
+            <h1>Proof 2</h1>
+            <div style="position: relative; padding-bottom: 65%; height: 0; overflow: hidden;">
+              <iframe src="http://www.bomus.org/" allowfullscreen="" style="position: absolute; top:0; left: 10%; width: 80%; height: 100%;"></iframe>
+            </div>
+          </section>
+
+          <section data-markdown>
+            # One way or another...
+            # It&rsquo;s a lot
+            ## So learning how to do it effectively is important
+            ## A large part of the draw of the *R* `tidyverse` is the promise of making these tasks easier
+          </section>
+
+          <section>
+            <h1>Tidy data</h1>
+            <div class="left">
+              <h2>&ldquo;In tidy data:</h2>
+              <h2>
+                <ol>
+                  <li>Each variable forms a column.</li>
+                  <li>Each observation forms a row.</li>
+                  <li>Each type of observational unit forms a table.&rdquo;</li>
+                </ol>
+              </h2>
+              <p><a target="_blank" href="https://dx.doi.org/10.18637/jss.v059.i10">Wickham 2016</a>, page 4</p>
+            </div>
+            <div class="left">
+              <table style="background-color:#cccccc80; color:#333; font-size:70px;">
+                <tr>
+                  <td></td><td>Var<sub>1</sub></td><td>Var<sub>2</sub></td><td>...</td><td>Var<sub>p</sub></td>
+                </tr>
+                <tr>
+                  <td>Obs<sub>1</sub></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>Obs<sub>2</sub></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>...</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>...</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>...</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>Obs<sub>n</sub></td><td></td><td></td><td></td><td></td>
+                </tr>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section data-background-image='images/snow-map.jpg'>
+            <h1>Spatial data</h1>
+            <h2>More made up statistics, but... almost all spatial data are tidy</h2>
+            <h2>So... many <code>tidyverse</code> tools can be applied to spatial data</h2>
+            <p class="attribution" style='width:600px; position:relative; top:50px;'>image source <a target='_blank' href='https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg'>commons.wikimedia.org</a> from Snow, John. On the Mode of Communication of Cholera, 2nd Ed, John Churchill, New Burlington Street, London, England, 1855.</p>
+          </section>
+
+          <section data-background="images/atari-battlezone.gif">
+            <p class="attribution">screenshot from Atari Battlezone game (1981)<br />
+            see a <a target="_blank" href="https://www.youtube.com/watch?feature=player_embedded&v=Ctr54kopo8I">
+            video of the game here</a></p>
+            <h1>How this works (1)</h1>
+            <h2 class="fragment"><em>Entity-attribute</em> model</h2>
+            <h3 class="fragment">Representation by a geometric object, often called a &lsquo;geometry&rsquo;</h3>
+            <h3 class="fragment">Each entity in the world is stored as object with associated attributes</h3>
+          </section>
+
+          <section data-background="images/minecraft-hills.jpg">
+            <p class="attribution">the rural idyll in the Minecraft universe</p>
+            <h1>How this works (2)</h1>
+            <h2 class="fragment"><em>Raster</em> model</h2>
+            <h3 class="fragment">The world is a grid of cells</h3>
+            <h3 class="fragment">Each phenomenon is stored as a measurement in each cell</h3>
+          </section>
+        </section>
+
+        <section data-background='#bdd3b5'>
+          <section data-markdown>
+            # Summary
+            ## The world is complicated&mdash;data are not
+            ## &lsquo;Tidy&rsquo; data are easier to work with
+            ## Spatial data are tidy if we consider a world made of objects or of cells
+          </section>
+        </section>
+
+      </div>
+    </div>
+    <script>
+      let tds = document.getElementsByTagName("td");
+      for (let i = 0; i < tds.length; i++) {
+        tds[i].style.cssText += "border:5px solid #999;";
+      }
+    </script>
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.min.js"></script>
+    <script src="../config-options.js"></script>
+    <script>Reveal.configure({loop: false});</script>
+  </body>
+</html>
