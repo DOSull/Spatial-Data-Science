@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/league.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <link rel="stylesheet" href="../extra-styles.css">
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <div id="header" class="header" style="background-color: rgba(0, 102, 51, 0.75);">
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+        <!-- ===================================================================================-->
+        <section data-markdown data-background-image='images/code.jpg'>
+          # [Open (data) science](#/1/)
+          # [(free and) open-source software](#/2/)
+          # and
+          # [doing GIS in code](#/3/)
+        </section>
+        <!-- ===================================================================================-->
+        <section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-markdown data-background-image='images/data.gif' class='translucent'>
+            # Open (data) science
+
+            ## &ldquo;A large proportion of practical quantitative work in geography relies on the analysis of data or on the running of simulation models. That analysis, and the results it generates, are the outcome of a process involving data verification, re-formatting, computer programming, modelling, data analysis and visualisation.&rdquo; (page 607)
+
+            (from Harris R, D. O&rsquo;Sullivan, M Gahegan, M Charlton, L Comber, P Longley, C Brunsdon, N Malleson, A Heppenstall, A Singleton, D Arribas-Bel and A Evans. 2017. [More bark than bytes? Reflections on 21+ years of geocomputation](https://journals.sagepub.com/doi/abs/10.1177/2399808317710132). *Environment and Planning B: Urban Analytics and City Science* **44**(4):598–617.)
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-markdown data-background-image='images/data1.jpg'>
+            ## Data verification
+            ## Reformatting
+            ## Computer programming
+            ## Modelling
+            ## Data analysis
+            ## Visualisation
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-markdown data-background-image='images/data2.jpg'>
+            # Reproducible research
+            ## Requires that *all* of these stages be reproducible by others
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-markdown data-background-image='images/data3.jpg' class='translucent'>
+            ## Why not also in &lsquo;real-world&rsquo; settings?
+            ## Perhaps even *especially* in public policy contexts?
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-markdown data-background='images/data4.jpg' class='translucent'>
+            # What is required?
+            ## Open data
+            ## Open publication
+            ## *Open software*
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+        <!-- ===================================================================================-->
+        <section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-markdown>
+            # (Free and)<br />open-source software
+            ## (F)OSS
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Free as in speech vs free as in beer</h1>
+            <p>
+              <img src="images/free-software.png" height=800px>
+            </p>
+            <caption>source <a target="_blank" href="https://www.gnu.org/philosophy/categories.en.html">gnu.org</a></caption>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        <section data-background-image="images/coins.jpg">
+          <p class="attribution">image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Assorted_United_States_coins.jpg">
+          commons.wikimedia.org
+          </a></p>
+            <h1>Isn&rsquo;t proprietary better?</h1>
+            <h2>Cost? NO</h2>
+            <h2>Support? MAYBE</h2>
+            <h2>Reproducibility? NO</h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Recent examples I</h1>
+            <p>
+              <img src='images/slope-client.png' style='width:32%;'>
+              <img src='images/slope-developer.png' style='width:32%;'>
+              <img src='images/slope-difference.png' style='width:32%;'>
+            </p>
+            <caption>Images provided by <a href="https://lucitools.org/contact/" target="_blank">Rubianca Benavidez from the LUCI project</a></caption>
+            <h3>Changes are due to <em>something</em> different between Arc 10.3 and 10.5</h3>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Recent examples II</h1>
+            <p>
+              <a target="_blank" href="https://github.com/tomchadwin/qgis2web/issues/559"><img src='images/github-qgis2web.png'></a>
+            </p>
+            <caption>An example of a rapidly resolved issue with open source software</caption>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background-image='images/infinity-mirrored-room-yayoi-kusama-3.jpg' class='translucent'>
+            <p class="attribution">Yayo Kusama infinity mirrored room<br />image source <a target="_blank" href="https://www.boredpanda.com/infinity-room-mirrors-yayoi-kusama/">
+            boredpanda.com
+            </a></p>
+            <h1>Reproducibility</h1>
+            <h2>Can look at the code</h2>
+            <h2>Know <em>exactly</em> what it does</h2>
+            <h2>Can also potentially contribute over time</h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+        <!-- ===================================================================================-->
+        <section data-background-image='images/code.jpg'>
+        <!-- -------------------------------------------------------------------------------------->
+          <section class="translucent">
+            <h1><em>QGIS</em> as an alternative to <em>ArcGIS</em></h1>
+            <h2>Essentially can do everything <em>ArcGIS</em> can do</h2>
+            <img src='images/qgis.png' style='width:48%;'>
+            <img src='images/arcgis.jpg' style='width:48%;'>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section class="translucent">
+            <h1>Doing GIS in code</h1>
+            <div class='left' style='text-align:right; margin:30px; width:45%;'>
+              <h2>Python</h2>
+              <h3><tt>geopandas</tt></h3>
+              <h3><tt>pysal</tt></h3>
+            </div>
+            <div class='left' style='margin:30px; width:45%;'>
+              <h2>R</h2>
+              <h3><tt>sp</tt> and <tt>maptools</tt></h3>
+              <h3>More recently <tt>sf</tt> and <tt>tmap</tt></h3>
+            </div>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-markdown class="translucent">
+            # Advantages
+            ## Completely flexible and open-ended
+            ## Repeatable
+            ## Often quicker
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-markdown class="translucent">
+            # Resources
+            ## [Spatial Data Science with R](https://rspatial.org/) website
+            ## [R-spatial](https://www.r-spatial.org/projects/) list of resources
+            ## Lovelace R, J Nowosad and J Münchow. 2019. [*Geocomputation with R*](https://geocompr.robinlovelace.net/). Boca Raton: Taylor & Francis.
+            ## Brunsdon C and L Comber. 2015. [*An introduction to R for spatial analysis & mapping*](https://au.sagepub.com/en-gb/oce/an-introduction-to-r-for-spatial-analysis-and-mapping/book241031). Los Angeles: SAGE.
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+        <!-- ===================================================================================-->
+        <section data-background-image="images/foss4g.png">
+        </section>
+        <!-- ===================================================================================-->
+      </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------->
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+    <script>Reveal.configure({loop: true});</script>
+  </body>
+</html>
