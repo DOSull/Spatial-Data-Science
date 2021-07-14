@@ -55,7 +55,7 @@ quakes.s <- quakes %>%
   st_as_sf(coords = c('NZMGE', 'NZMGN'), crs = st_crs(nz))
 ```
 
-What's happening here? `st_as_sf` is the function that does the conversion. The *parameters* in parentheses tell the function what to work on. First is the input dataframe `quakes`. Next the `coords` parameter tells the function which variables in the dataframe are the *x* and *y* coordinates in the dataframe. the `c()` structure concatenates the two variable names into a single *vector* which is required by `st_as_sf`. Finally, we also specify the *coordinate reference system* or map projection of the data. These data are in New Zealand Map Grid, which I made sure the `nz` data layer is also in. We use `st_crs(nz)` to retrieve this information from the `nz` dataset and apply it to the new spatial `quakes.s` layer we are making.
+What's happening here? `st_as_sf` is the function that does the conversion. The *parameters* in parentheses tell the function what to work on. First is the input dataframe `quakes` which is piped into the function with the `%>%` or *pipe* operator. Next the `coords` parameter tells the function which variables in the dataframe are the *x* and *y* coordinates in the dataframe. the `c()` structure concatenates the two variable names into a single *vector* which is required by `st_as_sf`. Finally, we also specify the *coordinate reference system* or map projection of the data. These data are in New Zealand Map Grid, which I made sure the `nz` data layer is also in. We use `st_crs(nz)` to retrieve this information from the `nz` dataset and apply it to the new spatial `quakes.s` layer we are making.
 
 Now we have two datasets we can make a layered map including both of them.
 ```{r}
@@ -110,7 +110,7 @@ tm_shape(nz, bbox = st_bbox(bigq)) +
   tm_polygons(col = 'white', lwd = 0) +
   tm_layout(bg.color = 'powderblue') +
   tm_shape(bigq) +
-  tm_bubbles(size = 'MAG', col = 'MAG', palette = 'Reds', alpha = 0.5) +
+  tm_bubbles(col = 'MAG', palette = 'Reds', alpha = 0.5) +
   tm_scale_bar()
 ```
 
