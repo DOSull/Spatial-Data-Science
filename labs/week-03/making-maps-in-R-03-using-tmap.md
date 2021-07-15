@@ -130,7 +130,7 @@ tm_shape(lower48) +
 
 Two options that are good to know about both used here are that the line thickness in plots is controlled by a `lwd` setting, and opacity of colours by an `alpha` setting.
 
-This is not a perfect map by any means. You may see duplicate labels on the states because some states have more than one polygon (for example California and Texas have offshore islands) and `tmap` may labelling each island (the `remove.overlap` option helps a bit). There are ways to fix this kind of problem, but we won't worry about that for now.
+This is not a perfect map by any means. You may see duplicate labels on the states because some states have more than one polygon (for example California and Texas have offshore islands) and `tmap` may label each island (the `remove.overlap` option helps a bit). There are ways to fix this kind of problem, but we won't worry about that for now.
 
 The best way to figure out all these options is to either ask for help in the lab sessions, or to use the help available, by prefixing the command you want to know more about with a `?` mark, such as
 
