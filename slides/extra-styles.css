@@ -1,11 +1,11 @@
 .translucent{
-  background-color: #003366; /* fall-back */
-  background-color: rgba(0,51,102,0.5);
+  background-color: #003300; /* fall-back */
+  background-color: rgba(0,51,0,0.65);
 }
 
 .caption{
-  background-color: #003366; /* fall-back */
-  background-color: rgba(0,51,102,0.5);
+  background-color: #003300; /* fall-back */
+  background-color: rgba(0,51,0,0.65);
   font-size: 30%;
   text-align: right;
 }
@@ -17,8 +17,8 @@
 }
 
 .reveal p.attribution{
-  background-color: #003366; /* fall-back */
-  background-color: rgba(0,51,102,0.5);
+  background-color: #003300; /* fall-back */
+  background-color: rgba(0,51,0,0.5);
 /*  position: absolute;
   bottom: -100px;
   left: -50px; */
