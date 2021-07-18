@@ -16,7 +16,7 @@ Some particular questions to consider:
 + Are the numbers of votes more relevant than the relative vote shares of each party (keeping in mind the very large differences in county populations)?
 + For reasons mostly to do with television rather than politics, the colour conventions in US politics are Democrats (`dem`) = blue, Republicans (`gop`) = red. Consider this when choosing a colour palette to work with.
 + Consider adding the state boundaries as a layer on top of the county results(if you are even showing the county results) (how to do this is [covered in the tutorial materials](making-maps-in-R-03-using-tmap.md#adding-more-layers))
-+ If you really feel you need to include context information (like, for example, Mexico and Canada!) one approach is to make a web map (`tmap_mode('view')`), and export it as an image. Be careful about this option however, as it may mean using a strange projection.
++ If you really feel you need to include context information (like, for example, Mexico and Canada) one approach is to make a web map (`tmap_mode('view')`), and export it as an image. Be careful about this option however, as it may mean using a strange projection. Export from the web map view is not very predictable, and may work better if you export **Export - Save as Web Page...** first then screen shot from the web page in a browser.
 
 Below is an example map
 

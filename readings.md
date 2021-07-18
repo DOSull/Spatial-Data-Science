@@ -24,7 +24,16 @@ is likely to be useful for anyone who wants to extend their *R* knowledge. Also 
 + Podcast with  the [authors discussing data feminism](https://newbooksnetwork.com/catherine-dignazio-and-lauren-klein-data-feminism-mit-press-2020/ "data feminism on the new books network podcast")
 + Hadley Wickham's article on ['Tidy data'](https://dx.doi.org/10.18637/jss.v059.i10)
 
-## Week 3 More on data
+## Week 3
+### The grammar of graphics
+Hadley Wickham's article about a [layered grammar of graphics](https://vita.had.co.nz/papers/layered-grammar.pdf)
+
+### Some resources on choropleth maps
+Here are some reasonably useful resources on choropleth mapping
++ [What to consider when creating choropleth maps](https://blog.datawrapper.de/choroplethmaps/)
++ [Choropleth maps in `tmap`](https://michaelgastner.com/DAVisR2021/choropleth-world-maps-and-the-tmap-package.html)
+
+### Data measurement scales
 + Stevens' 1946 [article on scales of measurement](https://www.jstor.org/stable/1675368 "On the theory of scales of measurement") (nominal, ordinal, interval etc.)
 + Velleman and Wilkinson's 1993 article suggesting that [the typology is limiting and misleading](https://www.jstor.org/stable/2684788 "Nominal, ordinal, interval and ratio typologies are misleading")
 + Nick Chrisman's 1998 article [relating all this to geographical data](https://dx.doi.org/10.1559/152304098782383043 "Rethinking Levels of Measurement for Cartography")

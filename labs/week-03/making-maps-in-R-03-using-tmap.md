@@ -51,7 +51,7 @@ tm_shape(lower48) +
 ```
 
 ## Specifying the colour palette
-Just like *ArcGIS* `tmap` has a mysterious preference for a kind of muddy orange colour as the default. Just like *ArcGIS* it allows you specify a very wide range of alternative colour palettes, and you should consider the choice of these carefully in making your map. We specify the colour palette by name. You reverse the direction of the palette by prefixing its name with a `-` sign.
+Just like *ArcGIS* `tmap` has a mysterious preference for a kind of muddy orange colour as the default. Just like *ArcGIS* it also allows you to specify a very wide range of alternative colour palettes, and you should consider the choice of these carefully in making your map. We specify the colour palette by name. You reverse the direction of the palette by prefixing its name with a `-` sign.
 
 ```{r}
 tm_shape(lower48) +
@@ -65,7 +65,16 @@ library(tmaptools)
 palette_explorer()
 ```
 
-If `palette_explorer()` doesn't work, then you can inspect many of the available palettes at [this website](http://colorbrewer2.org).
+You can get a feel for what many of the available palettes will look like in an actual map at [this website](http://colorbrewer2.org).
+
+Specifying your own palette is much trickier, and involves supplying the palette option of `tm_polygons` with a vector of colours that you want it to interpolate along.
+
+```{r}
+tm_shape(lower48) +
+  tm_polygons(col = "votes", palette = c("orange", "purple"))
+```
+
+It is difficult to control the behaviour of this option precisely, so **I recommend you stick with the built-in named palettes to begin with**. They provide a lot of options, without trying to get too clever. It may still be interesting to explore this option, however.
 
 ## Specifying the classification scheme
 Specifying the colours and the attribute is only half the choropleth map design problem. The other aspect is to specify both the number of colours to use, and more importantly how to divide the values of the mapped attribute into classes for colouring. This aspect of the design is determined by the `style` and `n` parameters. For example
