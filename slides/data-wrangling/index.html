@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <link rel="stylesheet" href="../extra-styles.css">
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <div id="header" class="header" style="background-color: rgba(0, 102, 51, 0.75);">
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-image="images/tech_support_cheat_sheet.png">
+          <section>
+            <p class='attribution'>image source <a target="_blank" href="https://xkcd.com/2054/">xkcd.com</a></p>
+            <div style='background-color:#3333ffc0;'>
+              <h1>Data wrangling</h1>
+              <h2><a href="#/1">Processing pipelines using <code>%>%</code></a></h2>
+              <h2>Tidy data operations in <code>dplyr</code></h2>
+              <h3><a href="#/2"><code>filter</code></a></h3>
+              <h3><a href="#/3"><code>select</code></a></h3>
+              <h3><a href="#/4"><code>mutate</code></a></h3>
+            </div>
+          </section>
+
+          <section>
+            <p class="attribution">from <a target="_blank" href="https://xkcd.com/627/">xkcd.com</a></p>
+          </section>
+        </section>
+
+
+        <section>
+          <section class='translucent'>
+            <h1>Are you ready for the <code style='text-transform:lowercase;'>tidyverse</code> data munging operations?</h1>
+            <h2>Filtering with <code>filter</code></h2>
+            <h2>Selection with <code>select</code></h2>
+            <h2>Mutating data with <code>mutate</code></h2>
+          </section>
+
+          <section data-background-image='images/pipes.jpg' data-transition='none'>
+            <p class="attribution">image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Large_dusty_black_plastic_pipes_side_view.jpg">commons.wikimedia.org</a> by <a target="_blank" href="https://commons.wikimedia.org/wiki/User:W.carter">W.carter</a></p>
+            <h3>Actually, no... you&rsquo;re not</h3>
+            <h1>Before we go any further...</h1>
+            <h2>Meet the pipe</h2>
+          </section>
+
+          <section class='translucent' data-background-image='images/pipes.jpg' data-transition='none'>
+            <h1 style='font-size:700px;'><code>%>%</code></h1>
+          </section>
+
+          <section class='translucent' data-background-image='images/pipes.jpg' data-transition='none'>
+            <h1>What the pipe is for</h1>
+            <h2>Imagine a series of operations we want to apply to some dataset</h2>
+            <h2>We&rsquo;ll call the dataset <code>ds</code></h2>
+            <h2>And the operations <code>op_a</code>, <code>op_b</code> and <code>op_c</code></h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            # apply op_a
+            ds1 <- op_a(ds)
+            # then apply op_b
+            ds2 <- op_b(ds1)
+            # then apply op_c
+            ds3 <- op_c(ds2)
+            </code></pre>
+            </h2>
+          </section>
+
+          <section class='translucent' data-background-image='images/pipes.jpg' data-transition='none'>
+            <h1>Chaining them together</h1>
+            <h2>Gets messy very quickly</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            # do it all in one line
+            ds3 <- op_c(op_b(op_a(ds)))
+            </code></pre>
+            </h2>
+            <h2>And because of how functions are written,<br />sequence of execution is reversed</h2>
+          </section>
+
+          <section class='translucent' data-background-image='images/pipes.jpg' data-transition='none'>
+            <h1>And if there are additional parameters...</h1>
+            <h2>It&rsquo;s even worse:</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            ds3 <- op_c(op_b(op_a(ds, op_a_param=...), op_b_param=...), op_c_param=...)
+            </code></pre>
+            </h2>
+          </section>
+
+          <section class='translucent' data-background-image='images/pipes.jpg' data-transition='none'>
+            <h1>Using pipes instead</h1>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            ds3 <- ds %>%
+              op_a() %>%
+              op_b() %>%
+              op_c()
+            </code></pre>
+            </h2>
+            <h2>This reads something like</h2>
+            <h2>&ldquo;Take <code>ds</code>, then apply <code>op_a</code>, then apply <code>op_b</code>, then apply <code>op_c</code>&rdquo;</h2>
+          </section>
+
+          <section data-markdown class='translucent' data-background-image='images/pipes.jpg' data-transition='none'>
+            # For workflow type situations
+            ## The pipeline idea is a natural fit
+            ## It is easier to read
+            ## Easier to switch steps in or out
+            ## (Apparently) it&rsquo;s also more obvious to beginners... :-)
+          </section>
+
+          <section class='translucent' data-transition='none'>
+            <h1><em>Now</em> you&rsquo;re ready for the <code style='text-transform:lowercase;'>tidyverse</code> data wrangling operations</h1>
+            <h2>Filtering rows with <code>filter</code></h2>
+            <h2>Selecting columns with <code>select</code></h2>
+            <h2>Mutating variables with <code>mutate</code></h2>
+          </section>
+        </section>
+
+
+        <section data-background='#9c0245ef'>
+          <section>
+            <h1 style='text-transform:lowercase;'><code>filter</code></h1>
+            <h2>Filters a dataset down to keep only rows of interest</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            result <- input %>%
+              filter(*condition*)
+            </code></pre>
+            For example
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            welly_land <- welly %>%
+              filter(LandAreaSQ > 0)
+            </code></pre>
+            </h2>
+          </section>
+
+          <section>
+            <h1>Conditions</h1>
+            <h2>Specify that a variable must be in some range,<br />or equal, or not equal to some value</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            # equal is '=='
+            welly_water <- welly %>%
+              filter(LandAreaSQ == 0)
+
+            # not equal is '!='
+            welly_land <- welly %>%
+              filter(LandAreaSQ != 0)
+
+            # here's another example
+            welly_populated <- welly %>%
+              filter(pop > 0)
+            </code></pre>
+            </h2>
+          </section>
+
+          <section>
+            <h1>Combining conditions</h1>
+            <h2>Can combine more than one condition using pipes,<br />or <code>&</code> (and) and <code>|</code> (or) operations</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            # using &
+            welly_aquanauts <- welly %>%
+                filter(LandAreaSQ == 0 & pop > 0)
+
+            # filter applies all , separated operations
+            welly_aquanauts <- welly %>%
+                filter(LandAreaSQ == 0, pop > 0)
+
+            # or you can pipe things
+            welly_aquanauts <- welly %>%
+                filter(LandAreaSQ == 0) %>%
+                filter(pop > 0)
+            </code></pre>
+            </h2>
+          </section>
+        </section>
+
+        <section data-background='#679a05df'>
+          <section>
+            <h1 style='text-transform:lowercase;'><code>select</code></h1>
+            <h2>Selects columns (i.e. variables) to retain or remove</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            welly_reduced <- welly %>%
+                select(MeshblockN)
+
+            welly_reduced <- welly %>%
+                select(MeshblockN:UrbanAreaN)
+
+            welly_reduced <- welly %>%
+                select(1:3, UrbanAreaN, 7:11))
+            </code></pre>
+            </h2>
+          </section>
+
+          <section>
+            <h2>You can also do clever things like <code>starts_with()</code>,
+              <code>ends_with()</code>, <code>contains()</code></h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            welly_reduced <- welly %>%
+                select(-starts_with("urban"))
+                # also ends_with(), contains(), matches()
+            </code></pre>
+            </h2>
+          </section>
+
+          <section>
+            <h2>You can also prefix any selector with a <code>-</code> sign<br />
+              so they <em>remove</em> that selection</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            welly_reduced <- welly %>%
+                select(-MeshblockN)
+
+            welly_reduced <- welly %>%
+                select(-(MeshblockN:UrbanAreaN))
+
+            welly_reduced <- welly %>%
+                select(-(1:3), UrbanAreaN, 7:11))
+
+            welly_reduced <- welly %>%
+                select(-starts_with("urban"))
+                # also ends_with(), contains(), matches()
+            </code></pre>
+            </h2>
+          </section>
+        </section>
+
+        <section data-background='#02679acd'>
+          <section>
+            <h1 style='text-transform:lowercase;'><code>mutate</code></h1>
+            <h2>Adds new variables based on results of various calculations</h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            result <- input %>%
+                mutate(sum_xy = x + y,
+                       diff_xy = x - y,
+                       pc_diff = diff_xy / sum_xy * 100)
+            </code></pre>
+            </h2>
+          </section>
+
+          <section>
+            <h2>You can also use the <code>across()</code> function to apply
+              a calculation only to selected columns
+            </h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            # to change the type of variables
+            result <- input %>%
+                mutate(across(where(is.integer), as.character))
+
+            result <- input %>%
+                mutate(across(matches("MeshblockN"), as.factor))
+
+            result <- input %>%
+                mutate(across(where(is.numeric), ~ . / total * 100))
+            </code></pre>
+            </h2>
+            <h2>This gets complicated&mdash;ask about if you think you need it later...
+          </section>
+        </section>
+
+
+        <section data-background='#bdd3b58c'>
+          <section data-markdown>
+            # A key takeaway
+            ## Use the help!
+            ## `?mutate` (or whatever)
+            ## Almost anything is possible
+            ## Use google, stackoverflow, etc.
+            ## Once you have a feel for things, if you get stuck, post questions!
+          </section>
+
+          <section data-background-image="images/tech_support_cheat_sheet.png">
+            <p class="attribution">from <a target="_blank" href="https://xkcd.com/627/">xkcd.com</a></p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------->
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+    <script>Reveal.configure({loop: true});</script>
+  </body>
+</html>
