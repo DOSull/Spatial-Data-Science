@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <link rel="stylesheet" href="../extra-styles.css">
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+  </head>
+
+  <body>
+    <div id="header" class="header" style="background-color: rgba(0,102,51,0.75);">
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+        <section class="translucent" data-background-image="images/landcover.jpg">
+          <p class="attribution">image source <a target="_blank" href="https://phys.org/news/2019-05-satellites-yield-insight-permanent-permafrost.html">phys.org</a></p>
+          <h1>Clustering examples</h1>
+          <h2><a href="#/1">Land Environments of New Zealand (LENZ)</a></h2>
+          <h2><a href="#/2">Geodemographics</a></h2>
+        </section>
+
+
+        <section data-background-image="images/lcdb.png">
+          <section>
+            <h1>Land Environments of New Zealand (LENZ)</h1>
+            <h2>All the details are online see in particular</h2>
+            <h3><a target="_blank" href="https://www.landcareresearch.co.nz/uploads/public/Tools-And-Resources/Maps/LENZ/LENZ_Technical_Guide.pdf">Technical Guide</a></h3>
+            <h3><a target="_blank" href="https://lris.scinfo.org.nz/search/?q=lenz">Data</a></h3>
+          </section>
+
+          <section>
+            <h1>Input data</h1>
+            <h2>Fifteen data layers for all of Aotearoa New Zealand</h2>
+            <h2>Layers relating to each of climate (7 layers), landform (1 layer) and soils (7 layers)</h2>
+            <h2>Layers recorded on a common 100m grid for the whole country</h2>
+            <h2>2.7 million data points</h2>
+          </section>
+
+          <section>
+            <h1>Clustering procedure</h1>
+            <h2>Even today, clustering 2.7 million objects is a a lot</h2>
+            <h2>Two stage process:</h2>
+            <ul style="width: 50%;">
+              <li>Separate clustering of the North and South Islands, using a procedure something like DBSCAN</li>
+              <li>Hierarchical clustering of the resulting 772 clusters</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Output</h1>
+            <h2>A hierarchy of clusters at different levels</h2>
+            <img src="images/lenz-levels.png">
+          </section>
+
+          <section>
+            <img src="images/lenz-decisions.png">
+          </section>
+
+          <section>
+            <img src="images/threatened-environments.png" style="width:100vw;">
+            <figcaption>
+              <a target="_blank" href="https://ourenvironment.scinfo.org.nz/maps-and-tools/app/">The threatened environments classification</a>
+            </figcaption>
+          </section>
+        </section>
+
+
+        <section data-background="images/tiles.jpg">
+          <section>
+            <h1>Geodemographics</h1>
+          </section>
+
+          <section>
+            <iframe src="http://lucguillemot.github.io/bayareageodemo/" width=1440px height=900px> </iframe>
+            <figcaption>source <a target="_blank" href="http://lucguillemot.github.io/bayareageodemo/">lucguillemot.com/bayareageodemo/</a></figcaption>
+          </section>
+
+          <section data-background-image="images/dollar.jpg">
+            <p class="attribution">image source <a target="_blank" href="https://www.newsweek.com/would-raising-taxes-rich-make-america-more-equal-380492">
+            newsweek.com</a><br />by Kacper Pempel/Reuters</p>
+            <div class="translucent">
+              <h1>Commercial examples</h1>
+              <h2>Approach outlined is used by a number of
+              marketing companies, such as</h2>
+              <h2>Experian offer <em>Mosaic</em> in many countries</h2>
+              <h2>Claritas offer <em>Nielsen PRIZM</em></h2>
+              <p>See Singleton AD and SE Spielman. 2013. <a target="_blank"
+              href="https://dx.doi.org/10.1080/00330124.2013.848764">
+              The past, present, and future of geodemographic research in the United States and United Kingdom</a>.
+              <i>The Professional Geographer</i> <b>66</b>(4):558-567.</p>
+            </div>
+          </section>
+
+          <section>
+            <iframe src="images/mosaic-brochure-october-2014.pdf"
+            width="1080" height="1000"> </iframe>
+            <p>source <a target="_blank" href="https://www.experian.com/marketing-services/consumer-segmentation.html">
+            Experian</a></p>
+          </section>
+
+          <section>
+            <div class="left" style="width:640px;">
+            <img src="images/targeting.jpg" style="width:600px;">
+            </div>
+            <div class="left" style="width:800px;">
+            <h1>Applications</h1>
+            <h2>&lsquo;Targeting&rsquo; of:</h2>
+            <h3>Marketing by mail</h3>
+            <h3>Retail location decisions</h3>
+            <h3>Election campaign materials</h3>
+            <br />
+            <h2>Ironically, such methods may be more important in countries with
+            stronger privacy protections</h2>
+            </div>
+          </section>
+
+          <section>
+            <h1>More open approaches</h1>
+            <h2>In <em>UK particularly</em>, interest in geodemographic methods for
+            targeting public services</h2>
+            <h2><em>Open</em> systems of classification developed using
+            census data alone</h2>
+            <h2>Early example <em>Open Area Classification (OAC)</em> from 2001 Census,
+            since enhanced and updated</h2>
+            <h2>Similar effort in US, see e.g.,
+            <a target="_blank" href="https://mangomap.com/franchise/maps/117451/a-new-american-atlas-an-open-geodemographic-classification-of-the-us#">mangomap.com</a></h2>
+            <h3>Again, see <a target="_blank"
+            href="https://dx.doi.org/10.1080/00330124.2013.848764">Singleton and Spielman, 2013</a></h3>
+          </section>
+
+          <section>
+            <iframe src="https://loac.datashine.org.uk/" width=1440 height=900> </iframe>
+            <p>source <a target="_blank" href="https://loac.datashine.org.uk">loac.datashine.org.uk</a></p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+  </body>
+</html>
