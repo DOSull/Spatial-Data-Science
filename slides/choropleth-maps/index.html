@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <link rel="stylesheet" href="../extra-styles.css">
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <div id="header" class="header" style="background-color: rgba(0, 102, 51, 0.75);">
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section data-background-image='images/nyt-election-map.png'>
+            <p class="attribution" style="width:550px;">
+              screenshot from <a target="_blank" href="https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html">An Extremely Detailed Map of the 2016 Presidential Election</a>by Matthew Bloch, Larry Buchanan, Josh Katz and Kevin Quealy</a></p>
+            <div class="translucent fragment">
+              <h1>Choropleth map design: a refresher</h1>
+              <h2 class="fragment"><a href="#/1">The &lsquo;grammar of graphics&rsquo; or <i>semiologie graphique</i></a></h2>
+              <h2 class="fragment"><a href="#/2">Data scales</h2>
+              <h2 class="fragment"><a href="#/3">Choropleth colours and classifications</a></h2>
+            </div>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background-image='images/bertin-wilkinson.jpg'>
+            <div class='translucent fragment'>
+              <h1>Grammar of graphics and the <em>semiologie graphique</em></h1>
+              <h2>Bertin J. 1983. <i>Semiology of graphics</i>. Madison, WI: University of Wisconsin Press.</h2>
+              <h2>Wilkinson L. 2005. <i>The Grammar of Graphics</i>. 2nd ed. New York: Springer.</h2>
+            </div>
+          </section>
+
+          <section>
+            <div class="left" style='width:450px;'>
+              <img src='images/hadley-obama.png'>
+              <figcaption>image source <a target="_blank" href="https://www.datasciencecentral.com/profiles/blogs/hadley-wickham-the-man-who-revolutionized-r">datasciencecentral.com</a> based on the <a target="_blank" href="https://en.wikipedia.org/wiki/Barack_Obama_%22Hope%22_poster">Barack Obama 'Hope' poster by Shepard Fairey</a></figcaption>
+            </div>
+            <div class="left" style='width:1150px;'>
+              <h1>More recently refined in</h1>
+              <h2>Wickham H. 2010. <a target="_blank" href="http://vita.had.co.nz/papers/layered-grammar.pdf">A Layered Grammar of Graphics</a>. <i>Journal of Computational and Graphical Statistics</i> <b>19</b>(1):3–28.<br /></h2>
+              <h2>Significantly, this has been implemented in <i>R</i> in the <code>ggplot2</code> package (and related others), which... inspired <code>tmap</code></h2>
+            </div>
+          </section>
+
+          <section data-background-image='images/lightbulb_led.jpg' class='translucent'>
+            <p class="attribution">
+              image source <a href="https://boingboing.net/2018/01/15/filament-led-bulbs-that-mimic.html">boingboing.net</a>
+            </p>
+            <h1>The idea</h1>
+            <h2>Graphical display = data + &lsquo;aesthetic mappings&rsquo;</h2>
+            <h2>An aesthetic mapping is a <em>relation</em></h2>
+            <h3>data variable &harr; graphic variable</h3>
+            <h2>For example</h2>
+            <h3>quantity &harr; colour</h3>
+          </section>
+
+          <section>
+            <p class='attribution'>image source <a target="_blank" href="https://medium.com/tdebeus/think-about-the-grammar-of-graphics-when-improving-your-graphs-18e3744d8d18">medium.com/tdebeus</a> by <a target="_blank" href="https://medium.com/@TdeBeus">Thomas de Beus</a></p>
+            <img src='images/gg-layers.gif'>
+          </section>
+
+          <section>
+            <p class='attribution'>image source <a target="_blank" href="https://medium.com/tdebeus/think-about-the-grammar-of-graphics-when-improving-your-graphs-18e3744d8d18">medium.com/tdebeus</a> by <a target="_blank" href="https://medium.com/@TdeBeus">Thomas de Beus</a></p>
+            <img src='images/gg-layers.png'>
+          </section>
+
+          <section data-markdown data-transition="none" data-background-transition="none">
+            ## So the detailed version is
+            ### graphic =
+            ### data +
+            ### aesthetics +
+            ### shapes +
+            ### facets +
+            ### statistics +
+            ### coordinates +
+            ### themes
+          </section>
+
+          <section data-markdown data-transition="none" data-background-transition="none">
+            ## In mapping we lose some control and are left with
+            ### map =
+            ### data +
+            ### aesthetics +
+            ### ~~shapes +~~
+            ### facets +
+            ### statistics +
+            ### ~~coordinates +~~
+            ### themes
+          </section>
+
+          <section data-markdown data-transition="none" data-background-transition="none">
+            ## For our purposes for now, we work with
+            ### map =
+            ### data +
+            ### aesthetics +
+            ### ~~shapes +~~
+            ### ~~facets +~~
+            ### ~~statistics +~~
+            ### ~~coordinates +~~
+            ### ~~themes~~
+          </section>
+
+          <section data-markdown>
+            # Finally then...
+            ## In choropleth maps we focus on *how we translate from data to colour*
+            ### What is the nature of our data?
+            ### What kinds of translations are possible?
+            ### What colour choices are available?
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background-image="images/tape-measure.jpg" class='translucent'>
+            <p class="attribution">image source<br />
+            <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Tape_measure_colored.jpeg">commons.wikimedia.org</a><br />
+            by <a target="_blank" href="https://commons.wikimedia.org/wiki/User:LivingShadow">Simon Eugster</a>
+            </p>
+            <h1>Data scales</h1>
+            <h2>Different kinds of data are on different scales</h2>
+            <h2>Roughly speaking</h2>
+            <h3>Numeric</h3>
+            <h3>Ordinal</h3>
+            <h3>Categorical (or nominal)</h3>
+          </section>
+
+          <section>
+            <div class='left' style='width:1100px;'>
+              <h1>Numeric</h1>
+              <h2>Values are numeric and differences and ratios are meaningful and comparable</h2>
+              <h2>In many situations a distinction is made between <em>ratio</em> and <em>interval</em> scales</h2>
+              <h2>These are the types of data we are most often concerned with in thematic mapping</h2>
+            </div>
+            <div class='left' style='width:500px;'>
+              <img src='images/thermometer.png'>
+              <figcaption>image source<br /><a target="_blank" href="https://commons.wikimedia.org/wiki/File:CelsiusKelvin.svg">commons.wikimedia.org</a><br />by <a target="_blank" href="https://commons.wikimedia.org/wiki/User:Homo_logos">Homo logos</a>
+              </figcaption>
+            </div>
+          </section>
+
+          <section data-background-image='images/small-tall-grande-venti.jpg' class='translucent'>
+            <p class="attribution">image source <a target='_blank' href='https://starbuckssecretmenu.net/starbucks-secret-size-the-short/'>starbuckssecretmenu.net</a></p>
+            <h1>Ordinal</h1>
+            <h2>Data can be ordered, but not meaningfully compared in other ways</h2>
+            <h3>(small) < tall < grande < venti</h3>
+            <h3>XXS < XS < S < M < L < XL < XXL</h3>
+          </section>
+
+          <section data-background-image='images/apple-and-orange.jpg' class='translucent'>
+            <p class="attribution">image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Apple_and_Orange_-_they_do_not_compare.jpg">commons.wikimedia.org</a><br />by <a target="_blank" href="https://www.flickr.com/photos/26176646@N04">Michael Johnson</a></p>
+            <h1>Categorical (or nominal)</h1>
+            <h2>Difference in type, but no more than that</h2>
+            <h3>Land cover classes, ecosystem types, countries in a political map, etc.</h3>
+          </section>
+
+          <section>
+            <iframe src="dulux-colours.html" style="width:100%; height:100vh;">
+            </iframe><br>
+            <caption>I made this using the <a target="_blank" href="https://www.dulux.co.nz/colour/colours-of-new-zealand">Dulux colours</a> website...</caption>
+          </section>
+
+          <section data-background-image='images/reading.jpg' class='translucent'>
+            <p class="attribution">image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Census-reading-hi.jpg">commons.wikimedia.org</a> by US federal government</p>
+            <h1>An over-simplification...</h1>
+            <h2>So here&rsquo;s some reading:</h2>
+            <h2>
+              <ul>
+                <li>Stevens SS. 1946. <a target="_blank" href="https://www.jstor.org/stable/1675368">On the theory of scales of measurements</a>. <i>Science</i> <b>103</b>:677–680.</li>
+                <li>Velleman PF and L Wilkinson. 1993. <a target="_blank" href="https://www.jstor.org/stable/2684788">Nominal, ordinal, interval, and ratio typologies are misleading</a>. <i>The American Statistician</i> <b>47</b>(1):65–72.</li>
+                <li>Chrisman NR. 1998. <a target="_blank" href="http://dx.doi.org/10.1559/152304098782383043">Rethinking Levels of Measurement for Cartography</a>. <i>Cartography and Geographic Information Systems</i> <b>25</b>(4):231–242.</li>
+              </ul>
+            </h2>
+          </section>
+
+          <section data-background-image='images/fig1-2r_DataTypesMap.gif'>
+            <p class="attribution">image from O&rsquo;Sullivan D &amp; DJ Unwin. 2010.<br>
+              <a href="https://dx.doi.org/10.1002/9780470549094" target="_blank">
+                <i>Geographic Information Analysis</i>
+              </a>, Chapter 1.
+            </p>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-markdown data-background-image='images/nyt-election-map.png' class='translucent'>
+            # Choropleth maps
+            ## A map of areas with values shown by _colour_ or _shading_
+            ## The aesthetic mapping is
+            ### value &harr; colour
+            ## Dependent on
+            ### Data
+            ### Colour palette
+            ### Classification method or style
+          </section>
+
+          <section data-background-image='images/swatches.jpg'>
+            <div class="translucent">
+              <h1>Colour</h1>
+              <h2>It&rsquo;s complicated</h2>
+            </div>
+          </section>
+
+          <section data-background-image='images/cie-1931-color-space.png' data-transition='none'>
+            <p class='attribution'>
+              image source<br />
+              <a target="_blank" href="https://commons.wikimedia.org/wiki/File:CIE-1931_diagram_in_LAB_space.svg">commons.wikimedia.org</a><br />
+              by <a target="_blank" href="https://en.wikipedia.org/wiki/User:Fuzzypeg">Fuzzypeg</a>
+            </p>
+          </section>
+
+          <section>
+            <h1>Pre-cooked palettes</h1>
+            <h2>Cindy Brewer&rsquo;s path-breaking work</h2>
+            <a target="_blank" href="https://colorbrewer2.org"><img src="images/colorbrewer.png" height="600"></a>
+            <!-- <iframe src="http://colorbrewer2.org" width="60%" height="720" allowfullscreen></iframe> -->
+            <h3>See this <a target="_blank" href="https://www.wired.com/2015/02/cindy-brewer-maps/">brief item</a> for the background</h3>
+            <h2 class="fragment">The <a target="_blank" href="https://www.youtube.com/watch?v=xAoljeRJ3lU">viridis palettes</a> have also become popular</h2>
+          </section>
+
+          <section>
+            <h1>Brewer palettes</h1>
+            <h2>Sequential</h2>
+            <img src='images/brewer-palettes-seq.png'>
+          </section>
+
+          <section>
+            <h1>Brewer palettes</h1>
+            <h2>Diverging</h2>
+            <img src='images/brewer-palettes-div.png'>
+            <h2>Categorical</h2>
+            <img src='images/brewer-palettes-cat.png'>
+          </section>
+
+          <section>
+            <h1>Viridis palettes</h1>
+            <img src='images/viridis-palettes.png'>
+          </section>
+
+          <section data-markdown data-background-image='images/code.jpg' class='translucent'>
+            # Classification methods
+            ## `style="equal"`
+            ## `style="sd"`
+            ## `style="quantile"`
+            ## `style="cat"`
+            ## `style="cont"`
+            ## `breaks=c(...)`
+          </section>
+
+          <section>
+            <h1>Much more on this in the assignment</h1>
+            <h2>If there is now time... a demo</h2>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-markdown data-background="#16f9d1a4">
+            # Summary
+            ## Choropleth maps an exemplar of grammar of graphics in practice
+            ## Aesthetic mapping is value &harr; colour
+            ## Many standard colour `palette`s available in `tmap`
+            ## Also many classification `style`s
+            ## Key is to pay attention to data distribution and message of the map
+          </section>
+        </section>
+
+      </div>
+    </div>
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+    <script>Reveal.configure({loop: true});</script>
+  </body>
+</html>

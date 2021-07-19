@@ -37,3 +37,12 @@ Here are some reasonably useful resources on choropleth mapping
 + Stevens' 1946 [article on scales of measurement](https://www.jstor.org/stable/1675368 "On the theory of scales of measurement") (nominal, ordinal, interval etc.)
 + Velleman and Wilkinson's 1993 article suggesting that [the typology is limiting and misleading](https://www.jstor.org/stable/2684788 "Nominal, ordinal, interval and ratio typologies are misleading")
 + Nick Chrisman's 1998 article [relating all this to geographical data](https://dx.doi.org/10.1559/152304098782383043 "Rethinking Levels of Measurement for Cartography")
+
+### Colour
++ The [ColorBrewer](https://colorbrewer2.org) website is a nice way to get familiar with different colour palettes
++ This [colour blindness simulator]
+(https://www.color-blindness.com/coblis-color-blindness-simulator/) is really useful for getting an idea of how your maps will look with various kinds of colour blindness
+
+#### Colour science
++ This [video about the viridis colour palette](https://www.youtube.com/watch?v=xAoljeRJ3lU) project is a great primer about how incredibly complicated colour is
++ and if you think that's complicated, [look at what happens when you take colour blindness seriously](https://dx.doi.org/10.1371/journal.pone.0199239) (which you should)
