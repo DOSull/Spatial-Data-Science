@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <link rel="stylesheet" href="../extra-styles.css">
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+  </head>
+
+  <body>
+    <div id="header" class="translucent header">
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="images/mosaic-south-america.jpg">
+          <p class="attribution">
+          part of a huge mosaic map of the world by<br />
+          Chris Chamberlain, see
+          <a target="_blank" href="https://www.odditycentral.com/pics/computer-programmer-spent-two-years-creating-awe-inspiring-world-map-mosaic-from-330000-tiny-glass-shards.html">
+          this article</a> for more
+          </p>
+          <div class="translucent">
+          <h1>Classification and clustering</h1>
+          <h2><a href="#/1">Classification and mapping</a></h2>
+          <h2><a href="#/2">The motivation</a></h2>
+          <h2><a href="#/3">How it works</a></h2>
+          <h2><a href="#/4">Summary</a></h2>
+          </div>
+        </section>
+
+
+        <section>
+          <section data-background="images/choropleth.png">
+            <div class="translucent ">
+            <h1>Think of thematic mapping</h1>
+            <h2>We <em>classify</em> values into groups for mapping</h2>
+            <h2>We do this one attribute at a time</h2>
+            </div>
+          </section>
+
+          <section data-background="images/nz-elev.png" data-transition="none">
+            <div class="translucent ">
+            <h1>Think of thematic mapping</h1>
+            <h2>We <em>classify</em> values into groups for mapping</h2>
+            <h2>We do this one attribute at a time</h2>
+            </div>
+          </section>
+
+          <section data-background="images/buckets.jpg">
+            <div class="translucent ">
+            <h1>Classification or symbolization</h1>
+            <h2>Cases are <em>classified</em> into a small number
+            of <em>bins</em> or <em>buckets</em></h2>
+            </div>
+          </section>
+
+          <section data-markdown>
+            # Some classification options
+            ## Equal interval
+            ## Quantiles
+            ## Fisher (also others)
+          </section>
+
+          <section data-background="#eee"; data-transition="fade-out">
+            <img src="images/equal.svg"
+              style="position:relative; left:-20vw; bottom:25px;
+              box-shadow:10px 10px 5px grey;">
+            <img class="fragment" src="images/quantile.svg"
+              style="position:relative; bottom:305px;
+              box-shadow:10px 10px 5px grey;">
+            <img class="fragment" src="images/fisher.svg"
+              style="position:relative; left:20vw; bottom:585px;
+              box-shadow:10px 10px 5px grey;">
+          </section>
+
+          <section data-background="#eee" data-transition="fade-in">
+            <img src="images/stripcharts.png" style="height:100vh;
+              box-shadow:10px 10px 5px grey;">
+          </section>
+        </section>
+
+
+        <section>
+          <section class="translucent" data-background-image="images/animal-kingdom.png">
+            <p class="attribution">image from <i>The World in Infographics:<br />Animal Kingdom</i> by Jon Richards</p>
+            <h1>Classification is fundamental to knowledge</h1>
+            <h2>Things are complicated and multidimensional</h2>
+            <h2>Classification can make things easier to grasp</h2>
+            <h2>Classification (grouping) simplifies</h2>
+          </section>
+
+          <section>
+            <h1>Another way to think about it</h1>
+            <div class="left">
+              <img src="images/monopoly-board.gif" height="750px" style="width:100vw; margin:0px;">
+              <figcaption>source <a target="_blank" href="https://play-k.kaserver5.org/Monopoly/Editions.html">
+              &lsquo;Monopoly editions&rsquo;</a> web page</figcaption>
+            </div>
+            <div class="right">
+              <iframe height="750px" style="width:100vw;"
+              frameborder="0" scrolling="no"
+              src="https://maps.google.com/maps/ms?msa=0&amp;msid=209455612176344671112.0004ae1799faa7e23d1d7&amp;ie=UTF8&amp;t=m&amp;source=embed&amp;ll=39.365492,-74.427309&amp;spn=0.023225,0.036478&amp;output=embed">
+              </iframe>
+              <figcaption>
+                source <a target="_blank" href="https://www.howderfamily.com/blog/monopoly/">Twelve Mile Circle blog</a>
+              </figcaption>
+            </div>
+          </section>
+
+          <section>
+            <img src="images/brown-properties-wellington-monopoly.jpg" height=500px>
+            <img src="images/green-properties-wellington-monopoly.jpg" height=500px>
+            <h2>Wellington Monopoly is weird</h2>
+            <p>see <a target="_blank" href="https://www.stuff.co.nz/business/98364534/oriental-bay-lambton-quay-come-out-on-top-as-monopoly-wellington-unveiled">stuff.co.nz</a></p>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-markdown class="translucent" data-background-image="images/lightbulb_led.jpg">
+            # Key idea:
+            # Classification
+            # (can be) based on
+            # data values
+          </section>
+
+          <section>
+            <div class="left" style="width:60%;">
+              <h1>How it works</h1>
+              <img src="images/stripcharts.png" width="100%">
+            </div>
+            <div class="left" style="width:40%;">
+              <h2 class="">Classification is about putting things in <em>buckets</em></h2>
+              <h2 class="">For one variable all we do is decide <em>break points</em></h2>
+              <h2 class="">Think of this as <em>segmenting</em> a one-dimensional space in
+              which polygons are located by numbers attached to them</h2>
+            </div>
+          </section>
+
+          <section>
+            <h1>Add a variable</h1>
+            <img src="images/abb-1835-scatter.png" style="width:700px;">
+            <img src="images/grid-abb-1835.png" style="width:700px;">
+          </section>
+
+          <section>
+            <h1>This idea on a map</h1>
+            <h2>Bivariate choropleths</h2>
+            <img src="images/bivariate-map.png" width="100%">
+            <figcaption>image from <a target="_blank" href="https://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/">joshuastevens.net</a>, see that page for more</figcaption>
+          </section>
+
+          <section data-background="images/bucket.jpg">
+            <p class="attribution">source <a target="_blank" href="https://kendrakinnison.com">kendrakinnison.com</a></p>
+            <div class="translucent ">
+              <h1>&lsquo;Letting the data speak&rsquo;</h1>
+              <h2>Segmenting each variable separately not satisfactory</h2>
+              <h2 class="">Misses <em>interdepencies among variables</em></h2>
+              <h2 class="">Better to use <em>statistical clustering</em> methods</h2>
+              <h2 class="">These work off differences and similarities among
+              data points to find &lsquo;natural&rsquo; clusters in data</h2>
+            </div>
+          </section>
+
+          <section>
+            <h1>K-means clustering</h1>
+            <a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/" target="_blank">
+              <img src="images/k-means-demo.png">
+            </a>
+            <figcaption>image source <a target="_blank" href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/">naftaliharris.com</a></figcaption>
+            <h2>Another nice demo is <a target="_blank" href="http://kkevsterrr.github.io/K-Means/">here</a> at <a target="_blank" href="https://kkevsterrr.github.io/K-Means/">
+            kkevsterrr.github.io</a> by Kevin Bock</h2>
+          </section>
+
+          <section data-markdown>
+            # Features of k-means
+            ## It is non-deterministic
+            ## You specify the number of classes (_k_) ahead of time
+            ## It will _always_ find clusters
+            ## Taken together: this means analyst interpretation is critical
+          </section>
+
+          <section data-background-image="images/dendrogram.png" class="translucent">
+            <p class="attribution">image source <a target="_blank" href="https://stackoverflow.com/questions/55824002/d3-dendrogram-straight-edges">stackoverflow.com</a></p>
+            <h1>Alternatives to k-means</h1>
+            <h2>Hierarchical clustering</h2>
+            <h2><a target="_blank" href="https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/">DBScan family</a> of methods</h2>
+            <h2>These are all <em>unsupervised</em> methods and primitive examples of machine-learning</h2>
+          </section>
+        </section>
+
+
+        <section data-background="images/tiles.jpg">
+          <p class="attribution">source <a target="_blank" href="https://houzz.com">houzz.com</a></p>
+          <h1>Summary</h1>
+          <h2>Single variable choropleth maps limited for understanding combined factors</h2>
+          <h2><em>Clustering</em> offers a different approach</h2>
+          <h2><em>Interpretation</em> of clusters found is critical</h2>
+          <h2>We&rsquo;ll look at two practical examples in the next lecture</h2>
+        </section>
+      </div>
+    </div>
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+  </body>
+</html>
