@@ -83,7 +83,7 @@ tm_shape(sa2, bbox = st_bbox(abb)) +
 
 So what's the problem? `tmap` seems to cope completely fine with the two layers in different projections. This is pretty common in many geospatial tools today. They will happily layer differently projected data on top of one another. This is great, until ... it's not. Eventually we are going to want to whittle things down to just the tracts where there are listings and start doing things like checking where listings locations and tracts intersect. We might do this kind of thing, for example (try it) to find out which tracts intersect with which listings:
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 st_intersects(sa2, abb)
 ```
 
