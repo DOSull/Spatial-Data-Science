@@ -21,7 +21,7 @@ We can't get into too many details in this class, since projections are a very l
 
 `sf` makes use of standard ways of specifying projections, namely *WKT* (well-known text) formatted information, or *EPSG codes*. These are also used in *ArcGIS* (well hidden from users) and *QGIS* (less well hidden!). In *R* they are right out in the open. This can be a bit intimidating, but has some advantages when it comes to quickly projecting and reprojecting data, as we often need to do early in a project.
 
-## EPSG codes 
+## EPSG codes
 EPSG codes are the easier of the two options to get a handle on. These are numeric codes that correspond with specific projections. For example
 
 + **New Zealand Transverse Mercator** (NZTM) is 2193
@@ -43,7 +43,7 @@ This tells us that the `abb` dataset is in plain lat lon coordinates.
 st_crs(sa2)$epsg
 ```
 
-This tells us that these data are (for some reason) in the Web pseudo-Mercator projection. 
+This tells us that these data are (for some reason) in the Web pseudo-Mercator projection.
 
 ## WKT projection information
 We can find out more about the projection using `st_crs()`:
@@ -52,7 +52,7 @@ We can find out more about the projection using `st_crs()`:
 st_crs(sa2)
 ```
 
-This is the *WKT* information for the projection, which is much more verbose, and (supposedly!) more human readable. If you get deep in the weeds of dealing with mismatched coordinate reference systems then you may find yourself dealing with this kind of thing a lot, but for now, it's just good to know that this information exists. 
+This is the *WKT* information for the projection, which is much more verbose, and (supposedly!) more human readable. If you get deep in the weeds of dealing with mismatched coordinate reference systems then you may find yourself dealing with this kind of thing a lot, but for now, it's just good to know that this information exists.
 
 ## Useful resources on EPSG codes and WKT codes
 For more information on EPSG codes and WKT codes, you may find the resources below helpful:
@@ -86,6 +86,7 @@ So what's the problem? `tmap` seems to cope completely fine with the two layers 
 ```{r eval = FALSE}
 st_intersects(sa2, abb)
 ```
+
 That will produce an error. Look closely and you will see that the key phrase is `st_crs(x) == st_crs(y) is not TRUE` which is _R_'s not-very-friendly way of telling us that the two projections are not matched.
 
 Fortunately we can fix that...
