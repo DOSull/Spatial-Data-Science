@@ -10,7 +10,7 @@ Only four lab sessions have an associated assessed assignment, but you should at
 + **Week 4** [Spatial data wrangling](labs/week-04 "lab materials")
 + **Week 5** [Geographic cluster analysis](labs/week-05 "lab materials")
 + **Week 7** Regression analysis in *R*
-+ **Week 9** [The mini-projects](labs/mini-project "more on the mini-project")
++ **Week 8** [The mini-projects](labs/mini-project "more on the mini-project")
 
 ### Non-assessed lab work
 Note that there are also non-assessed lab sessions. In particular lab sessions in the second half of trimester (and some lecture sessions too) are intended to provide an environment in which it is easy to get assistance and advice from the course instructors. You are strongly advised to make the most of these sessions!
