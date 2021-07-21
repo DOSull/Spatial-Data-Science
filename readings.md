@@ -40,8 +40,7 @@ Here are some reasonably useful resources on choropleth mapping
 
 ### Colour
 + The [ColorBrewer](https://colorbrewer2.org) website is a nice way to get familiar with different colour palettes
-+ This [colour blindness simulator]
-(https://www.color-blindness.com/coblis-color-blindness-simulator/) is really useful for getting an idea of how your maps will look with various kinds of colour blindness
++ This [colour blindness simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) is really useful for getting an idea of how your maps will look with various kinds of colour blindness
 
 #### Colour science
 + This [video about the viridis colour palette](https://www.youtube.com/watch?v=xAoljeRJ3lU) project is a great primer about how incredibly complicated colour is
