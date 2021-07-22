@@ -118,10 +118,10 @@ To add an additional layer to a map, you add another `tm_shape` function call. I
 tm_shape(lower48) +
   tm_fill(col = 'population', palette = 'Reds', style = 'quantile', n = 9) +
   tm_shape(states) +
-  tm_polygons(alpha = 0, border.col = 'black')
+  tm_borders(col = 'black')
 ```
 
-In this example, I have used `alpha = 0` to make the states transparent, so we only see their borders, and I have ensured that there are no county boundaries by using `tm_fill` instead of `tm_polygons` for the `lower48` layer of the map. notice that the order of adding layers is important. The `tm_fill` function applies to the most recently added data layer (`lower48`), then the `states` data layer is added, and so the `tm_polygons` function which follows applies to it.
+In this example, I have used `tm_borders` because I am only interested in the state boundaries, and have ensured that there are no county boundaries by using `tm_fill` instead of `tm_polygons` for the `lower48` layer of the map. notice that the order of adding layers is important. The `tm_fill` function applies to the most recently added data layer (`lower48`), then the `states` data layer is added, and so the `tm_borders` function which follows applies to it.
 
 ## Other stuff
 There are many other map elements that can be controlled using `tmap` functions. We can add a north arrow and scale bar using `tm_compass()` and `tm_scale_bar()`. We can move the position of the legend around using `tm_legend()` options. We can add text using `tm_text()`. Here's an example with many options.
@@ -131,7 +131,7 @@ tm_shape(lower48) +
   tm_fill(col = 'population', palette = 'Reds', style = 'quantile', n = 9, alpha = 0.75) +
   tm_legend(outside = TRUE, outside.position = 'right') +
   tm_shape(states) +
-  tm_polygons(alpha = 0, border.col = 'black', lwd = 2) +
+  tm_borders(col = 'black', lwd = 2) +
   tm_text(text = 'state', shadow = TRUE, remove.overlap = TRUE) +
   tm_compass() +
   tm_scale_bar(position = 'left')

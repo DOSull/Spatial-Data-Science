@@ -86,8 +86,12 @@ The `lower48` dataset includes an attribute `state` which tells us the US state 
 ```{r}
 states <- lower48 %>%
   group_by(state) %>%
-  summarise(across(where(is.numeric), sum))
+  summarise(across(where(is.numeric), sum)) %>%
+  as.data.frame() %>%
+  st_as_sf()
 ```
+
+The last two lines here are a workaround for a problem reported on some combinations of package versions that seems to be affecting the lab computers.
 
 Here we pass the `lower48` dataset to the `group_by` function, which will use the `state` attribute to group counties. The second pipe sends this result to the `summarise` function, which uses `across` with a `where` clause to check if attributes are numeric (the `is.numeric` parameter), and if they are combines values by using a `sum` operation.
 
