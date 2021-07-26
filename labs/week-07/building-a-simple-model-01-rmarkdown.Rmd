@@ -1,4 +1,4 @@
-#### Geog 315 T2 2020
+#### Geog 315 T2 2021
 # Rmarkdown files
 Rmarkdown files are a format that allow you to run code inside a document, and to combine the results of running that code into an output file in formats like HTML (for web pages) or Word documents and PDFs (for more conventional documents).
 

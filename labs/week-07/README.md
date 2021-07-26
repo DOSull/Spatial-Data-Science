@@ -6,13 +6,10 @@ We will also look at the _RMarkdown_ file format which you can use to present re
 
 Because the lab material is presented in this format, we will consider that first, before going on to the assignment proper.
 
-This means that the procedure this week is slightly different. You should download all the materials for this week's lab [from this link](geog315-t2-week-07-materials.zip?raw=true). You should then uncompress them to a folder on your computer and then open the contained `.Rmd` files in _RStudio_. From there you can read and run the instructions in _RStudio_ as set out in the files
+This means that the procedure this week is slightly different. You should download all the materials for this week's lab [from this link](week-07.zip?raw=true). You should then uncompress them to a folder on your computer and then open the contained `.Rmd` files in _RStudio_. From there you can read and run the instructions in _RStudio_ as set out in the files
 
 + `building-a-simple-model-01-rmarkdown.Rmd`, and
-+ `building-a-simple-model-02-assignment.Rmd`
-
-### Problems with **Knit** operation on lab computers
-For complicated reasons to do with permissions and network drives, the **Knit** operation in _RStudio_ does not work on the lab computers. I have figured out a limited workaround, which is explained [here](workaround-for-knitr-problems.md), if you run into problems.
++ `building-a-simple-model-02-the-data-and-the-process.Rmd`
 
 ## Videos
 Videos describing R scripts, markdown formatting and Rmarkdown are provided as listed below. You will find them all in [this folder](https://southosullivan.com/geog315/video/week-07-lab/). The total run time is around 35 minutes.
