@@ -22,9 +22,6 @@ Videos describing R scripts, markdown formatting and Rmarkdown are provided as l
 + [concluding remarks](https://southosullivan.com/geog315/video/week-07-lab/geog315-week07-06-wrapup.mp4) (2:53 min)
 
 ## Submission instructions
-This week's assignment requirement is set out in the file `building-a-simple-model-02-assignment.Rmd` and the questions are compiled in one place for ease of reference in [this document](building-a-simple-model-02-assignment-summary.md). You should prepare a document completing the analysis and answering the questions as set out in that document, and submit a short report to the dropbox provided on Blackboard by the end of the day on **21 September**.
+This week's assignment requirement is set out in the materials linked above and the questions are compiled in one place for ease of reference in [this document](building-a-simple-model-02-assignment-summary.md). You should prepare a document completing the analysis and answering the questions as set out in that document, and submit a short report to the dropbox provided on Blackboard by the end of the day on **13 September**.
 
 You can prepare your report using _Rmarkdown_ and knitting the report (this is explained in this week's materials), or you can proceed in the more usual way preparing your report in _Word_ and including figures and tables as you usually would. Either is acceptable, but I would encourage you to at least experiment with knitting an _Rmarkdown_ file to understand the possibilities.
-
-### PS
-In case you are interested, the code and datasets used to make this week's assignment data can be found in [this folder](data-prep).
