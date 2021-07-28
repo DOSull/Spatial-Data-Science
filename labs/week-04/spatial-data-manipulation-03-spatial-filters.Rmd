@@ -7,7 +7,7 @@ library(tmap)
 library(dplyr)
 ```
 
-In what follows, I assume that you have processed the datasets as described in [the previous page]((spatial-data-manipulation-02-map-projections.md)), and that they are called `abb_2770` (for the Airbnb data) and `tracts__la_2770` (for the census tracts). In case that's not the case, reload the data:
+In what follows, I assume that you have processed the datasets as described in [the previous page](spatial-data-manipulation-02-map-projections.md), and that they are called `abb_2770` (for the Airbnb data) and `tracts__la_2770` (for the census tracts). In case that's not the case, reload the data:
 
 ```{r}
 abb_2193 <- st_read('abb-2193.gpkg')
@@ -74,11 +74,11 @@ It seems clear we need to be a bit cleverer about the selection of areas of inte
 For now here is a possible approach using the convex hull
 
 ```{r}
-hull <- abb_2193 %>% 
+hull <- abb_2193 %>%
   st_union() %>%
   st_convex_hull()
 
-sa2_abb <- sa2_2193 %>% 
+sa2_abb <- sa2_2193 %>%
   st_filter(hull)
 ```
 

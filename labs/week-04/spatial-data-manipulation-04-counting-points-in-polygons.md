@@ -7,7 +7,7 @@ library(tmap)
 library(dplyr)
 ```
 
-In what follows, I assume that you have processed the datasets as described in [the previous page]((spatial-data-manipulation-03-spatial-filters.md)), and that they are called `abb_2770` (for the Airbnb data) and `tracts__la_2770` (for the census tracts). In case that's not the case, reload the data:
+In what follows, I assume that you have processed the datasets as described in [the previous page](spatial-data-manipulation-03-spatial-filters.md), and that they are called `abb_2770` (for the Airbnb data) and `tracts__la_2770` (for the census tracts). In case that's not the case, reload the data:
 
 ```{r}
 abb_2193 <- st_read('abb-2193.gpkg')
