@@ -18,6 +18,7 @@ is likely to be useful for anyone who wants to extend their *R* knowledge. Also 
   give a sense of the current state of GIS in relation to broader trends in open data science
 
 + [R spatial resources](https://www.r-spatial.org/projects/ "R spatial stuff")
++ [A short article on the history of _R_](https://doi.org/10.1111/j.1740-9713.2018.01169.x)
 
 ## Week 2 Data
 + Online material for [_Data Feminism_](https://mitpressonpubpub.mitpress.mit.edu/data-feminism "Data feminism stuff")
