@@ -16,7 +16,4 @@ Again, the instructions this week are in several parts (previews of some pages a
 + [Counting points in polygons](spatial-data-manipulation-04-counting-points-in-polygons.md)
 + [The assignment summarised](spatial-data-manipulation-05-assignment.md)
 
-There is an additional page of material on much more of the spatial data manipulation operations available in `sf` [here](spatial-data-manipulation-03B-spatial-relations.md), but this is not required to complete the assignment. It is covered in detail in class.
-
-## Videos
-To follow...
+There is an additional page of material on much more of the spatial data manipulation operations available in `sf` [here](https://dosull.github.io/Geog315/slides/spatial-data-wrangling), but this is not required to complete the assignment. It is covered in detail in class.
