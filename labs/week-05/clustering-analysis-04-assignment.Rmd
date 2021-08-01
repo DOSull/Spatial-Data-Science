@@ -14,7 +14,7 @@ Here are a few things to be thinking about while working on this assignment.
 + Consider if it is appropriate to rescale variables so they are expressed as proportions or percentages (you don't have to do this to get a good mark, but you should still _think_ about it and explain your choice with respect to this option.)
 
 #### Assessment
-Assessment will be based on the maps and any diagrams included, and an overall evaluation of your explanation of the analysis carried out and the discussion of what it shows. Pay equal attention to the quality of any maps or figures you include, and to the written discussion. 
+Assessment will be based on the maps and any diagrams included, and an overall evaluation of your explanation of the analysis carried out and the discussion of what it shows. Pay equal attention to the quality of any maps or figures you include, and to the written discussion.
 
 #### Submission
 Prepare a PDF document that meets the requirements set out above. The whole document should only need to be 2-3 pages (maximum). Submit the PDF file to the dropbox provided on Blackboard. The due date is end of the day on **30 August**. Remember that you can export maps to PNG format images for inclusion in a Word document from RStudio.

@@ -4,7 +4,7 @@ OK... you will be relieved to know that the assignment is based on a dataset you
 
 Before loading those data and examining them, make sure you have necessary libraries loaded
 
-```{r message = FALSE}
+```{r}
 library(sf)
 library(tmap)
 library(dplyr)

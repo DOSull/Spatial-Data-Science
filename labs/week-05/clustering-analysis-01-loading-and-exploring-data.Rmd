@@ -2,7 +2,8 @@
 # Loading and exploring data
 ## Load some libraries
 First just make sure we have all libraries we need.
-```{r message = FALSE}
+
+```{r}
 library(sf)
 library(tmap)
 library(dplyr)
@@ -14,7 +15,7 @@ Clustering methods segment the observations in dataset into _clusters_ or _class
 
 Unfortunately, there is no easy way to define clusters beyond recognising that clusters are the groups of observations identified by a clustering method! Clustering analysis depends a great deal on the interpretation of an analyst to give it meaning.
 
-What do we mean by 'similar' and 'different'? We extend the basic idea of distance in (two dimensional) space where the distance between observation _i_ and observation _j_ is given by 
+What do we mean by 'similar' and 'different'? We extend the basic idea of distance in (two dimensional) space where the distance between observation _i_ and observation _j_ is given by
 
 <img src="pythagoras.png" style="height:30px;">
 
@@ -36,6 +37,7 @@ Download the data from [this link](sf_demo.gpkg?raw=true), and open them in _R_
 ```{r}
 sanfran <- st_read("sf_demo.gpkg")
 ```
+
 If you run `summary(sanfran)` you'll see that all these variables have been scaled so that the values range from 0 to 1. We won't worry for the sake of the example exactly how this has been done for this dataset, but it's something we need to pay attention to for the assignment dataset.
 
 ### Make a data only copy

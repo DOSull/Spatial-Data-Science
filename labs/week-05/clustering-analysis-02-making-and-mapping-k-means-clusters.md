@@ -3,7 +3,7 @@
 ## Loading libraries and data
 In case you are starting here not continuing on from the previous instructions, reload libraries and data:
 
-```{r message = FALSE}
+```{r}
 library(sf)
 library(tmap)
 library(dplyr)
@@ -35,7 +35,7 @@ Here's an [illustration of this working](https://kkevsterrr.github.io/K-Means/) 
 
 It's important to realise that k-means clustering is _non-deterministic_, as the choice of intial cluster centres is usually random, and can affect the final assignment arrived at.
 
-## 
+##
 So here is how we accomplish this in _R_.
 ```{r}
 km <- kmeans(sanfran.d, 5)
@@ -65,7 +65,7 @@ tm_shape(sanfran) +
 I have set the map style to `"cat"` for categorical so that it treats the clusters as qualitatively different, not as numbers on an interval or ordinal scale.
 
 ### Notes
-You can run the above code again and you will probably end up with a different (if similar) map. You can also run it specifying a different number of clusters in the `kmeans()` function. 
+You can run the above code again and you will probably end up with a different (if similar) map. You can also run it specifying a different number of clusters in the `kmeans()` function.
 
 If you do this you should make sure you give the new variable in the `mutate` operation a different name, reflecting the number of clusters.
 
@@ -86,7 +86,7 @@ You have to use this code one variable at a time. You can get an overview of whi
 km$centers
 ```
 
-This is quite difficult to interpret (all those numbers) but scanning the information should enable you to spot which cluster has particularly high or low values of particular variables. 
+This is quite difficult to interpret (all those numbers) but scanning the information should enable you to spot which cluster has particularly high or low values of particular variables.
 
 For a more visual presentation of all the information we can use some more complicated plotting code, as shown below.
 
