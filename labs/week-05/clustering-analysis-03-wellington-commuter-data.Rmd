@@ -1,10 +1,10 @@
-#### Geog 315 T2 2020
+#### Geog 315 T2 2021
 # The assignment data: Wellington region commutes, 2018
-OK... you will be relieved to know that the assignment is based on a dataset you probably know a bit more about (and which is actually pretty relevant to the regional lockdown times), namely data from the 2018 census concerning travel to work and travel to education.
+OK... you will be relieved to know that the assignment is based on a dataset you probably know a bit more about (and which is actually pretty relevant to thinking about geographies of lockdowns), namely data from the 2018 census concerning travel to work and travel to education.
 
 Before loading those data and examining them, make sure you have necessary libraries loaded
 
-```{r}
+```{r message = FALSE}
 library(sf)
 library(tmap)
 library(dplyr)
@@ -22,23 +22,23 @@ commutes.d <- commutes %>%
   select(-id)
 ```
 
-These data are a subset of Statistics New Zealand's 2018 commuter data which they recently made available for the [There and back again](https://www.stats.govt.nz/2018-census/there-and-back-again-data-visualisation-competition) visualization challenge. I entered [this web-application](https://dosull.github.io/commute-viewer/commute-viewer-app/) in that contest, and would encourage you to explore it to get a feel for the kind of information contained in these data.
+These data are a subset of Statistics New Zealand's 2018 commuter data which they recently made available for the [There and back again](https://www.stats.govt.nz/2018-census/there-and-back-again-data-visualisation-competition) visualization challenge. I entered [this web-application](https://dosull.github.io/commute-viewer/commute-viewer-app/) in that contest, and would encourage you to explore it to get a feel for the kind of information contained in these data. I like my visualization even though I didn't win the contest. Here is [the winning entry](https://commuter.waka.app/).
 
 Specifically the variables in this dataset are as follows:
 
 name | meaning
 -- | --
 `pop` | usually resident population
-`popd` | population density per sq. km
-`work_loc_home` | people working at home
-`work_lot_total` | people working and living in the area (including working at home)
-`work_loc_car` | people travelling to work by car in the local area
-`work_loc_pt` | people travelling to work by public transport in the local area
-`work_loc_active` | people travelling to work by an active mode (walking, biking etc)
+`work` | total number working in the area (whether they live there or not)
+`study` | total number studying in the area (whether they live there or not)
+`w_home` | people working at home
+`w_loc_car` | people travelling to work by car within the area (i.e. they live and work in the area)
+`w_loc_pt` | people travelling to work by public transport within the area
+`w_loc_active` | people travelling to work by an active mode (walking, biking etc) within the area
 
-The other variables are similar, but with `study_` indicating the total refers to study not work (this includes school age children); `_in_` indicating the trip is from some other local are into this one, and `_out_` indicating the trip is from this local area to some other local area.
+The other variables are similar, but with `s_` indicating the total refers to study not work (this includes school age children); `_in_` indicating the trip is from some other area into this one, and `_out_` indicating the trip is from this local area to some other local area.
 
-So, for example an area like Wellington CBD which has many inbound work trips will have a high value of `work_in_` variables while Kelburn around the university will have a high value for `study_in_` variables. An area with not much employment where most people commute elsewhere to work will have a high values of the `work_out_` variables.
+So, for example an area like Wellington CBD which has many inbound work trips will have high values of `w_in_` variables while Kelburn around the university will have a high value for `s_in_` variables. An area with not much employment where most people commute elsewhere to work will have a high values of the `w_out_` variables.
 
 If you are unsure about any of this then ask.
 

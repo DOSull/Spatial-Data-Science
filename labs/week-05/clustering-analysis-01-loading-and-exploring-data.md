@@ -1,8 +1,8 @@
-#### Geog 315 T2 2020
+#### Geog 315 T2 2021
 # Loading and exploring data
 ## Load some libraries
 First just make sure we have all libraries we need.
-```{r}
+```{r message = FALSE}
 library(sf)
 library(tmap)
 library(dplyr)
@@ -14,13 +14,17 @@ Clustering methods segment the observations in dataset into _clusters_ or _class
 
 Unfortunately, there is no easy way to define clusters beyond recognising that clusters are the groups of observations identified by a clustering method! Clustering analysis depends a great deal on the interpretation of an analyst to give it meaning.
 
-What do we mean by 'similar' and 'different'? We extend the basic idea of distance in (two dimensional) space where the distance between observation _i_ and observation _j_ is given by <img src="https://render.githubusercontent.com/render/math?math=d_{ij}=\sqrt{(x_i-x_j)^2+(y_i-y_j)^2}">, that is the square root of the sum of the squared differences in each coordinate but apply it to many data dimensions. So if we have a dataset with (say) 15 attributes, we are in a 15 dimensional data space, and we take the sum of the squared differences in each of the 15 dimensions (i.e. on each variable) between every pair of observations, add them together and take the square root.
+What do we mean by 'similar' and 'different'? We extend the basic idea of distance in (two dimensional) space where the distance between observation _i_ and observation _j_ is given by 
+
+<img src="pythagoras.png" style="height:30px;">
+
+that is the square root of the sum of the squared differences in each coordinate but apply it to many data dimensions. So if we have a dataset with (say) 15 attributes, we are in a 15 dimensional data space, and we take the sum of the squared differences in each of the 15 dimensions (i.e. on each variable) between every pair of observations, add them together and take the square root.
 
 Other versions of the basic idea of 'total difference' in attribute values are possible.
 
 An important consideration is that all the attributes be rescaled so that the differences in one particular attribute which happens to have large values associated with it don't 'drown out' differences in other variables. For example if one variable is mean income in dollars and has values like 25000 or 50000, while another variable is proportion of children under 5 and has values like 0.04 or 0.05, then if do not rescale things, the differences in income will swamp any differences in the demographic mix.
 
-A similar concern is that we take care not to include lots of strongly correlated variables in the analysis but we will not concern ourselves with that here.
+A similar concern is that we try not to include lots of strongly correlated variables in the analysis.
 
 ## Example data
 For the example dataset, things have already been prepared so we can focus on the clustering itself. For the dataset in the assignment, you will are asked to consider doing some data preparation to rescale data values before applying cluster analysis.
@@ -83,7 +87,7 @@ sanfran %>%
 With 24 variables a full scatterplot matrix is impractical. But we can easily do subsets
 
 ```{r}
-plot(select(sanfran.d, 1:6))
+plot(select(sanfran.d, 1:6)) # columns 1 to 6, change as required
 ```
 
 Here, since we are only using this dataset to illustrate how to perform clustering analysis and aren't interested in its structure as such, we will not spend any more time on this data exploration. In a more realistic situation you would probably want to do so.

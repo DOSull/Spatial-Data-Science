@@ -1,9 +1,9 @@
-#### Geog 315 T2 2020
+#### Geog 315 T2 2021
 # Making and mapping k-means clusters
 ## Loading libraries and data
 In case you are starting here not continuing on from the previous instructions, reload libraries and data:
 
-```{r}
+```{r message = FALSE}
 library(sf)
 library(tmap)
 library(dplyr)
@@ -16,6 +16,7 @@ And the data:
 
 ```{r}
 sanfran <- st_read("sf_demo.gpkg")
+# don't forget the data-only copy
 sanfran.d <- sanfran %>%
   st_drop_geometry() %>%
   select(-id)
@@ -61,7 +62,7 @@ tm_shape(sanfran) +
   tm_legend(legend.outside = TRUE)
 ```
 
-I have set the map style to `"cat"` for categorical so that it treats the clusters as qualitatively different, not as a number on an interval or ordinal scale.
+I have set the map style to `"cat"` for categorical so that it treats the clusters as qualitatively different, not as numbers on an interval or ordinal scale.
 
 ### Notes
 You can run the above code again and you will probably end up with a different (if similar) map. You can also run it specifying a different number of clusters in the `kmeans()` function. 
@@ -78,6 +79,7 @@ Here is some code you can use to compare a specific variable across clusters
 ```{r}
 boxplot(PCwithKids ~ k5, data = sanfran)
 ```
+
 You have to use this code one variable at a time. You can get an overview of which variables are particularly high or low in each cluster from the `centers` component of the `kmeans()` results:
 
 ```{r}
