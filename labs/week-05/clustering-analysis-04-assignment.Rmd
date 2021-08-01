@@ -1,5 +1,5 @@
 #### Geog 315 T2 2021
-# Week 5 - Lab Assignment 3 Cluster analysis of commuting data
+# Assignment 3 Cluster analysis of commuting data
 This assignment is quite open-ended. Here is the description:
 
 ** Run a cluster analysis of the provided Wellington commuter data and map the resulting clusters. Provide a short write up explaining how you did the analysis (not the commands used, focus instead on the number of clusters, variables included or excluded). Explain what you think the results tell us about the overall geographical structure of the Wellington Region. The overall write up should not be more than 2-3 pages (with this length *including* maps and diagrams if any).**

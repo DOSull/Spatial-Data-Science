@@ -35,8 +35,8 @@ Here's an [illustration of this working](https://kkevsterrr.github.io/K-Means/) 
 
 It's important to realise that k-means clustering is _non-deterministic_, as the choice of intial cluster centres is usually random, and can affect the final assignment arrived at.
 
-##
-So here is how we accomplish this in _R_.
+## So here is how we accomplish this in _R_.
+
 ```{r}
 km <- kmeans(sanfran.d, 5)
 ```
