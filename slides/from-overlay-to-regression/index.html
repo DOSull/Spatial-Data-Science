@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../extra-styles.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+    <script>
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    </script>
+  </head>
+
+  <body>
+    <div id="header" class="translucent header">
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="images/klee-polyphony.jpg">
+          <p class="attribution">
+            Paul Klee&rsquo;s <i>Polyphony</i> 1932, Kunstmuseum, Basel<br />
+            image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Polyphony.JPG">commons.wikimedia.org</a>
+          </p>
+          <div class="translucent fragment">
+            <h1>From overlay to regression</h1>
+            <h2><a href="#/1">Overlay in GIS</a></h2>
+            <h2><a href="#/2">A general perspective on overlay</a></h2>
+            <h2><a href="#/3">The basics of regression models</a></h2>
+          </div>
+        </section>
+
+        <section>
+          <section data-background="images/layer-cake.jpg" class="translucent">
+            <p class="attribution">Orange cranberry cake by<br />
+              <a target="_blank" href="https://www.flickr.com/photos/95316165@N03/">Helen Fletcher</a> on
+            <a target="_blank" href="https://flic.kr/p/ih8kfS">flickr.com</a></p>
+            <h1>GIS layers</h1>
+            <h2>One layer per phenomenon</h2>
+            <h2>Much practical GIS concerned with the totality of relationships between layers</h2>
+            <h2>Particularly the question: <em>&ldquo;What are all the factors present at this location?&rdquo;</em></h2>
+            <h2>Most often expressed through <em>overlay analysis</em></h2>
+          </section>
+
+          <section data-background="images/mcharg-staten-island.jpg">
+            <p class="attribution" style="position: relative; top:550px; left:64%; width:36%;">
+              image <a target="_blank" href="https://www.wiley.com/en-nz/Design+with+Nature,+25th+Anniversary+Edition-p-9780471114604">Ian McHarg's <i>Design with Nature</i></a> 1969<br />
+              source <a target="_blank" href="https://suzanneodonovan.wordpress.com/research-theory/2012-relational-space-_-m-arch-year-2-elective/">suzanneodonovan.wordpress.com</a>
+            </p>
+            <h3 class="translucent fragment fade-in">Overlay has a long history, see: Steinitz C, P Parker and L Jordan. 1976. Hand-drawn overlays: Their history and prospective uses. <i>Landscape Architecture</i> (September):444–455.
+            </h3>
+          </section>
+
+          <section data-background="images/makara-turbines.jpg">
+            <p class="attribution">
+              Makara turbines from Hawkins Hill
+            </p>
+            <h1>Applications</h1>
+            <h2 class="fragment">Site suitability analysis (development, habitat, facility location)</h2>
+            <h2 class="fragment">Risk assessment (fire, landslide, earthquake, flood)</h2>
+            <h2 class="fragment">Resource evaluation (solar energy, wind energy, agriculture)</h2>
+            <h2 class="fragment">...and so on...</h2>
+          </section>
+
+          <section data-background="images/poly_on_poly.gif">
+            <p class="attribution">
+              image source <a target="_blank" href="http://www.gitta.info/Suitability/en/html/BoolOverlay_learningObject1.html">gitta.info</a>
+            </p>
+            <div class="translucent">
+              <h1>Overlay two ways</h1>
+            </div>
+          </section>
+
+          <section data-background="images/richmond-overlay.png">
+            <div class="translucent fragment">
+              <h1>Polygon overlay</h1>
+              <h2>Create new layer by intersecting all input layers</h2>
+              <h2>New polygons &lsquo;inherit&rsquo; all attributes of input polygons</h2>
+              <h2>Use all attributes to identify regions of interest</h2>
+            </div>
+            <p class="attribution" style="width:550px; position:relative; top:50px;">
+              Overlay of factors indicative of low quality
+              housing Richmond, Virginia, 1934, in
+              <a target="_blank" href="https://dx.doi.org/10.1016/B978-008044910-4.00487-9"><i>Overlay (in GIS)</i></a> article by Ola Ahqvist
+              in <i>International Encyclopedia of Human Geography</i></a>
+            </p>
+          </section>
+
+          <section>
+            <h1>Raster overlay</h1>
+            <div class="left">
+            <img src="images/ss-raster-layers.png">
+            <figcaption>image source Figure 6.4 in O'Sullivan D and Perry GLW, 2013
+            <a target="_blank" href="https://www.wiley.com/WileyCDA/WileyTitle/productCd-1119970792.html">
+            <i>Spatial Simulation: Exploring Pattern and Process</i></a> Wiley.</figcaption>
+            </div>
+            <div class="left">
+            <h2>Overlay becomes a calculation at each cell</h2>
+            <h2>Using values at that location
+            across all input layers</h2>
+            <h2>An example of <em>map algebra</em></h2>
+            </div>
+          </section>
+
+          <section data-background="images/sliver.png">
+            <p class="attribution">
+              image source <a target="_blank" href="https://gis.stackexchange.com/questions/3165/how-to-merge-two-incompatible-polygon-layers-in-arcgis">
+              gis.stackexchange.com</a>
+            </p>
+            <div class="translucent fragment fade-out">
+              <h1>Points to note</h1>
+              <h2>Ensuring all layers are <em>projected correctly</em> is critical</h2>
+              <h2>Raster overlay limited to <em>lowest resolution input</em></h2>
+              <h2><em>Slivers</em> issue for polygon method</h2>
+              <h2>Polygon method best with <em>small number of layers</em></h2>
+              <h2>Raster / grid method <em>scales better</em> to large number of layers</h2>
+            </div>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background="images/arc-de-triomphe.jpg" class="translucent">
+            <p class="attribution">aerial view of the Arc de Triomphe, Paris<br />
+              image source <a target="_blank" href="https://www.yatzer.com/daily-overview">yatzer.com</a>
+            </p>
+            <h1>Many ways to<br />combine layers</h2>
+          </section>
+
+          <section data-background="images/black-and-white.png">
+            <h1><span style="color: #888;">Binary<br /></span style="color: #fff;">black</span> <span style="color:#888; text-transform:lowercase;">and</span> <span style="color: #000;">white</span></h1>
+            <h2 style="color: #888;">Input layers are yes/no, true/false, good/bad</h2>
+            <h2 style="color: #888;">Outcome of interest usually <em>all true</em> or
+            <em>all false</em></h2>
+          </section>
+
+          <section data-background="images/gradient.png">
+            <h1>Summation&mdash;shades of grey</h1>
+            <h2>Input layers are scores from
+            low to high values in some fixed range</h2>
+            <h2>Outcome is <em>sum of all inputs</em>, from low to high</h2>
+            <h2>Layers effectively considered of <em>equal importance</em></h2>
+          </section>
+
+          <section data-background="images/weights.jpg">
+            <p class="attribution">
+              image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Bascula_9.jpg">commons.wikimedia.org</a>
+            </p>
+            <h1>Weighted overlay</h1>
+            <h2>Each layer on <em>a different scale</em> reflecting relative importance, or</h2>
+            <h2>All layers on same scale, <em>weights set to reflect relative importance</em></h2>
+            <h2>Outcome is <em>weighted sum</em></h2>
+            <h2>Important to investigate impact of <em>changing weights</em></h2>
+          </section>
+
+          <section class='translucent' data-background="images/scales-of-justice.jpg">
+            <p class="attribution">image source <a target="_blank" href="https://www.flickr.com/photos/hisgett/6266059533/">
+            flickr</a> by <a href="https://www.flickr.com/photos/hisgett/">Tony Hisgett</a>
+            </p>
+            <h1>Making overlay more<br />evidence-based</h1>
+            <h2>In overlay we need weights to associate<br />
+              with each layer; where to get them?</h2>
+            <h2>
+              <ul>
+                <li>Inexpert opinion (gut feel?<br /><a target="_blank" href="http://www.cc.com/video-clips/63ite2/the-colbert-report-the-word---truthiness">truthiness</a>? &lsquo;seems about right&rsquo;?)</li>
+                <li>Expert opinion</li>
+              </ul>
+            </h2>
+          </section>
+
+          <section data-markdown data-background-transition='none' class='translucent' data-background="images/scales-of-justice.jpg">
+            # Weights-of-evidence overlay
+            ## A principled approach to determining relative importance of factors
+            ## No convenient one-stop tool, but easy enough to calculate
+            ## Weights tell us relative probability of occurrence in each cover type or region
+            ## Weights are converted to log form and summed
+          </section>
+
+          <section data-background-transition='none' class='translucent' data-background="images/scales-of-justice.jpg">
+            <h1>Calculating the weights</h1>
+            <h2>For each factor, weight is events per unit area <em>inside</em>
+            versus <em>outside</em> area where factor applies</h2>
+            <h2>For each factor weight is events per unit area<br />
+              <em>inside</em> vs. <em>outside</em> area where factor applies</h2>
+            <h2>\[
+            w_X = \frac{(n_{\mathrm{in}\,X}/{\mathrm{Area}}_{\;X})}{(n_{\mathrm{not\,in}\,X}/{\mathrm{Area}}_{\;\mathrm{not}\,X})}
+            \]
+            </h2>
+          </section>
+
+          <section data-background-color='#000'>
+            <img src='images/weighted-overlay.png'>
+            <div class="fragment" style="position:relative; bottom:95px;">
+              <h2>
+                <pre class="stretch">
+                  <code data-trim data-noescape contenteditable class="r" style='background:#00000060;'>
+                    # A tibble: 4 x 6
+                      label     area     n  in_density out_density    weight
+                      <fct>    <dbl> <int>       <dbl>       <dbl>     <dbl>
+                    1 A     3036.407    26 0.008562751 0.009328677 0.9178956
+                    2 B     1636.249     6 0.003666925 0.010098657 0.3631101
+                    3 C     2720.565    20 0.007351414 0.009713904 0.7567930
+                    4 D     3254.127    45 0.013828595 0.007033471 1.9661126
+                  </code>
+                </pre>
+              </h2>
+            </div>
+          </section>
+
+          <section data-markdown>
+            # Overlay in overview
+            ## Overlay involves deriving some output layer $y$ as a function $f$ of a collection of input layers $X=\{x_i\}$
+            ## Mathematically: $y=f(X)$
+            ## For weighted overlay: $y=w_0+w_1x_1+w_2x_2+\ldots+w_nx_n$
+          </section>
+        </section>
+
+
+        <section data-background-color='#0985d0'>
+          <section data-background="images/galton.jpg">
+            <p class="attribution" style="width:410px;">
+              Francis Galton&rsquo;s illustration of correlation, 1875
+              image source <a target="_blank" href="http://commons.wikimedia.org/wiki/File:Galton%27s_correlation_diagram_1875.jpg">
+              commons.wikimedia.org
+              </a>
+            </p>
+            <div class="translucent">
+            <h1>Regression &amp; friends</h1>
+            <h2>Regression is a standard statistical approach to relating variables
+            to one another</h2>
+            <h2>Based on a <em>statistical model</em></h2>
+            <h2>We can use regression to determine \(f(\mathbf{X})\) in overlay</h2>
+            </div>
+          </section>
+
+          <section>
+            <h1>Structure of regression</h1>
+            <h2><em>Dependent variable</em> (the phenomenon we are modelling)</h2>
+            <h2><em>Independent variables</em> (the explanatory factors)</h2>
+            <h2>There are various preferences for the distribution of the variables (normal, no outliers, etc.), which makes <em>exploring data first</em> really important, especially for outlier detection</h2>
+          </section>
+
+          <section>
+            <h1>The result</h1>
+            <h2>
+              \[ y=b_0+b_1x_1+\ldots+b_ix_i+\ldots+b_px_p+\epsilon \]
+            </h2>
+            <h2>
+              where \(y\) is the dependent variable, \(x_i\) are the independent variables, \(b_i\) are the regression coefficients, and \(\epsilon\) is the model error
+            </h2>
+            <h2>This is essentially the same as overlay&rsquo;s<br />
+              \[ y=w_0+w_1x_1+w_2x_2+\ldots+w_nx_n \]
+            </h2>
+          </section>
+
+          <!-- <section>
+            <h1>Some wrinkles</h1>
+            <h2>Where independent variables are non-numeric use <em>dummy variables</em></h2>
+            <h2>Where dependent variable is binary (yes/no, presence/absence), use <em>logistic regression</em></h2>
+            <h2>Choice of which variables to consider and which to include/exclude is key: be wary about including many closely interrelated variables</h2>
+          </section> -->
+        </section>
+
+
+        <section data-background="#936">
+          <h1>Summary</h1>
+          <h2>Overlay is the most characteristic GIS method</h2>
+          <h2>Vector and raster approaches are possible</h2>
+          <h2>Can be rather subjective</h2>
+          <h2>Regression relates a dependent variable, \(y\), to a collection of independent variables, \(X=\{x_i\}\)</h2>
+          <h2>Regression coefficients \(b_i\) are an evidence-based way to think about overlay</h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+  </body>
+</html>

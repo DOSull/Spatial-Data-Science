@@ -10,7 +10,7 @@ Date | Tue | Thu (lab) | Fri
 19 Jul | [Choropleth map design](slides/choropleth-maps/) | [**Making maps**](labs/week-03) (15%) due 2 Aug | [Data wrangling](slides/data-wrangling/)
 26 Jul | [Handling tables](slides/table-joins-and-dissolves/) and<br>[Spatial data wrangling](slides/spatial-data-wrangling/) | [**Spatial data manipulation**](labs/week-04) (15%) due 13 Aug | [Spatial data wrangling (continued)](slides/spatial-data-wrangling/)
 2 Aug | [Clustering analysis](slides/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05) (20%) due 30 Aug | [Applications of clustering analysis](slides/classification-examples/)
-9 Aug | [Statistics and geography](https://southosullivan.com/geog315/statistics-and-space/) | Help with assignments | [From overlay to regression models](https://southosullivan.com/geog315/from-overlay-to-regression/)
+9 Aug | [Statistics and geography](slides/statistics-and-space/) | Help with assignments | [From overlay to regression models](slides/from-overlay-to-regression/)
 &nbsp; | &nbsp; | **BREAK** | &nbsp;
 30 Aug | [Regression models](https://southosullivan.com/geog315/regression/) |  [**Building a simple statistical model**](labs/week-07) (20%) due 13 Sep | [More on regression](https://southosullivan.com/geog315/more-on-regression/)
 6 Sep | [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) and [**Introducing the mini-projects**](labs/mini-project) (30%) due 8 Oct | Help with assignments / project work | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/)
