@@ -8,6 +8,8 @@ There is no course text, but this one:
 is likely to be useful for anyone who wants to extend their *R* knowledge. Also very useful (and freely available online) is
 + Lovelace R, J Nowosad and J Münchow. 2019. [*Geocomputation with R*](https://geocompr.robinlovelace.net/ "Lovelace et al. Geocomputation with R book"). Boca Raton: Taylor & Francis
 
+---
+
 ## Week 1 General background
 + These papers
 
@@ -20,10 +22,14 @@ is likely to be useful for anyone who wants to extend their *R* knowledge. Also 
 + [R spatial resources](https://www.r-spatial.org/projects/ "R spatial stuff")
 + [A short article on the history of _R_](https://doi.org/10.1111/j.1740-9713.2018.01169.x)
 
+---
+
 ## Week 2 Data
 + Online material for [_Data Feminism_](https://mitpressonpubpub.mitpress.mit.edu/data-feminism "Data feminism stuff")
 + Podcast with  the [authors discussing data feminism](https://newbooksnetwork.com/catherine-dignazio-and-lauren-klein-data-feminism-mit-press-2020/ "data feminism on the new books network podcast")
 + Hadley Wickham's article on ['Tidy data'](https://dx.doi.org/10.18637/jss.v059.i10)
+
+---
 
 ## Week 3
 ### Colour and map design
@@ -46,7 +52,7 @@ Here are some reasonably useful resources on choropleth mapping
 + This [video about the viridis colour palette](https://www.youtube.com/watch?v=xAoljeRJ3lU) project is a great primer about how incredibly complicated colour is
 + and if you think that's complicated, [look at what happens when you take colour blindness seriously](https://dx.doi.org/10.1371/journal.pone.0199239) (which you should)
 
-###
+---
 
 ## Week 4
 ### Table joins
@@ -56,3 +62,28 @@ Here are some reasonably useful resources on choropleth mapping
 ### Spatial operations
 + [A more complete (also more technical) take on `sf`'s geometry operations](https://keen-swartz-3146c4.netlify.app/geometries.html#opgeom) in Pebesma and Bivand's _Spatial Data Science_
 + [A more 'GIS-y' take on spatial joins](https://gisgeography.com/spatial-join/)
+
+---
+## Week 5
+### Visualizing clustering
+It is well worth playing with these clustering visualizations:
++ [K-means](https://www.naftaliharris.com/blog/visualizing-k-means-clustering)
++ [DBscan](https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/)
+
+The important thing to keep in mind is that the space in which the points are displayed is not a map, it's a 'data-space', and also, that it is not two-dimensional, it is as-many-dimensional as there are attributes in your dataset (which might be a lot).
+
+### LENZ
+The LENZ project data are available to download from [here](https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/). If you are really interested in the technical details, you can find it all [here](https://www.landcareresearch.co.nz/uploads/public/Tools-And-Resources/Maps/LENZ/LENZ_Technical_Guide.pdf).
+
+### Geodemographics
+On the history from the perspective of some enthusiasts:
+
++ Spielman SE and A Singleton. 2015. [Studying Neighborhoods Using Uncertain Data from the American Community Survey: A Contextual Approach](https://www.tandfonline.com/doi/full/10.1080/00045608.2015.1052335). *Annals of the Association of American Geographers* **105**(5) 1003–1025.
+
+And a critical perspective from an innocent time when geodemographics seemed like the most appalling invasion of privacy (things have got a lot worse since those innocent days):
+
++ Goss, J. 1995. ["We Know Who You Are and We Know Where You Live": The Instrumental Rationality of Geodemographic Systems](https://www.jstor.org/stable/10.2307/144357). *Economic Geography* **71**(2) 171–198.
+
+
+### Monopoly
+Not exactly relevant, but the history of the boardgame Monopoly is pretty wild, if you haven't heard it. This [podcast](https://99percentinvisible.org/episode/the-landlords-game/) and [this one](https://www.wnycstudios.org/podcasts/anthropocene-reviewed/episodes/anthropocene-reviewed-monopoly-academic-decathlon) both have nice overviews (they're also generally great podcasts...)
