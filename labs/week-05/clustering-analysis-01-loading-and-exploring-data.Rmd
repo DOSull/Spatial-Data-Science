@@ -69,8 +69,6 @@ To run the code in this section you need to install and load the `ggplot2` packa
 ```{r}
 require(ggplot2)
 require(tidyr)
-library(ggplot2)
-library(tidyr)
 ```
 
 We can use the scatter plot and boxplot functionality in this package to get an overview of all the variables in a single graphic. It's unfortunately quite a complicated procedure because it involves transforming the data to a 'long' format, where every row is the observation id, a variable name, and a value. The code below will show each variable as row of dots. To change to boxplots change the `geom_point` to `geom_boxplot` and run it again. It's best just to copy and paste this code and run it to see the result. If you'd like to understand better how it works, just ask me!
