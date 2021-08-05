@@ -7,7 +7,7 @@ library(tmap)
 library(dplyr)
 ```
 
-In what follows, I assume that you have processed the datasets as described in [the previous page](spatial-data-manipulation-03-spatial-filters.md), and that they are called `abb_2770` (for the Airbnb data) and `tracts__la_2770` (for the census tracts). In case that's not the case, reload the data:
+In what follows, I assume that you have processed the datasets as described in [the previous page](spatial-data-manipulation-03-spatial-filters.md), and that they are called `abb_2193` (for the Airbnb data) and `tsa2_2193` (for the census tracts). In case that's not the case, reload the data:
 
 ```{r}
 abb_2193 <- st_read('abb-2193.gpkg')
@@ -41,7 +41,7 @@ There are other possible approaches to this, but this is by far the cleanest. Al
 
 So anyway...
 
-### **Question 4**
+### **Question 5**
 #### Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each? Include a short write up explaining what the map shows. (30%)
 
 ## Saving our work
