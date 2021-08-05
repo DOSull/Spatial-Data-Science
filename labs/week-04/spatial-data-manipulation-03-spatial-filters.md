@@ -51,6 +51,7 @@ tm_shape(sa2_welly) +
   tm_shape(abb_2193) +
   tm_dots()
 ```
+
 It's still not right, because... well... because the Airbnb listings extend to Upper Hutt, Porirua, and Kapiti Coast also. So...
 
 ### **Question 2**
