@@ -7,11 +7,11 @@ library(tmap)
 library(dplyr)
 ```
 
-In what follows, I assume that you have processed the datasets as described in [the previous page](spatial-data-manipulation-03-spatial-filters.md), and that they are called `abb_2193` (for the Airbnb data) and `tsa2_2193` (for the census tracts). In case that's not the case, reload the data:
+In what follows, I assume that you have processed the datasets as described in [the previous page](spatial-data-manipulation-03-spatial-filters.md), and that they are called `abb_2193` (for the Airbnb data) and `sa2_abb` (for the census tracts). In case that's not the case, reload the data:
 
 ```{r}
 abb_2193 <- st_read('abb-2193.gpkg')
-sa2_2193 <- st_read('sa2-abb-2193.gpkg')
+sa2_abb <- st_read('sa2-abb-2193.gpkg')
 ```
 
 ## Counting points in polygons
@@ -20,20 +20,20 @@ We've narrowed the census area down. But there are still a lot of Airbnb listing
 In this case, we want to count how many Airbnb listings are contained in each SA2 polygon. The spatial predicate of interest is therefore `st_contains`. We run the function like this
 
 ```{r}
-st_contains(sa2_2193, abb_2193)
+st_contains(sa2_abb, abb_2193)
 ```
 
 This gives us a list of lists where each list is for the corresponding polygon, a list of the Airbnb listings contained by it. To count these, we use the `lengths()` function
 
 ```{r}
-lengths(st_contains(sa2_2193, abb_2193))
+lengths(st_contains(sa2_abb, abb_2193))
 ```
 
 That's great, but to save this in the SA2 dataframe, we need to assign the result to a variable. The end result is
 
 ```{r}
-num_listings <- lengths(st_contains(sa2_2193, abb_2193))
-sa2_abb_counts <- sa2_2193 %>%
+num_listings <- lengths(st_contains(sa2_abb, abb_2193))
+sa2_abb_counts <- sa2_abb %>%
   mutate(n = num_listings)
 ```
 
