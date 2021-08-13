@@ -30,9 +30,9 @@
 
   <body>
     <div id="header" class="translucent header">
-      <a target="_blank" href="https://www.victoria.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
       <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
-      <a target="_blank" href="https://www.victoria.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
       <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
     </div>
 
@@ -64,11 +64,13 @@
           </section>
 
           <section data-background="images/mcharg-staten-island.jpg">
-            <p class="attribution" style="position: relative; top:550px; left:64%; width:36%;">
+            <p class="attribution">
               image <a target="_blank" href="https://www.wiley.com/en-nz/Design+with+Nature,+25th+Anniversary+Edition-p-9780471114604">Ian McHarg's <i>Design with Nature</i></a> 1969<br />
               source <a target="_blank" href="https://suzanneodonovan.wordpress.com/research-theory/2012-relational-space-_-m-arch-year-2-elective/">suzanneodonovan.wordpress.com</a>
             </p>
-            <h3 class="translucent fragment fade-in">Overlay has a long history, see: Steinitz C, P Parker and L Jordan. 1976. Hand-drawn overlays: Their history and prospective uses. <i>Landscape Architecture</i> (September):444–455.
+            <h3 class="translucent fragment fade-in">Overlay has a long history, see: Steinitz C, P Parker and L Jordan. 1976.
+              <a target="_blank" href="https://www.jstor.org/stable/4466423">Hand-drawn overlays: Their history and prospective uses</a>.
+              <i>Landscape Architecture</i> (September) 444–455.
             </h3>
           </section>
 
@@ -98,12 +100,14 @@
               <h2>Create new layer by intersecting all input layers</h2>
               <h2>New polygons &lsquo;inherit&rsquo; all attributes of input polygons</h2>
               <h2>Use all attributes to identify regions of interest</h2>
+              <h2>Use <code>st_join</code> in <i>R</i><h2>
             </div>
-            <p class="attribution" style="width:550px; position:relative; top:50px;">
-              Overlay of factors indicative of low quality
-              housing Richmond, Virginia, 1934, in
-              <a target="_blank" href="https://dx.doi.org/10.1016/B978-008044910-4.00487-9"><i>Overlay (in GIS)</i></a> article by Ola Ahqvist
-              in <i>International Encyclopedia of Human Geography</i></a>
+            <p class="attribution">
+              Overlay of factors indicative of low<br>
+              quality housing Richmond, Virginia, 1934,<br>
+              in <a target="_blank" href="https://dx.doi.org/10.1016/B978-008044910-4.00487-9"><i>Overlay (in GIS)</i></a> article by Ola Ahqvist<br>
+              in <i>International Encyclopedia of Human<br>
+              Geography</i></a>
             </p>
           </section>
 
@@ -120,6 +124,7 @@
             <h2>Using values at that location
             across all input layers</h2>
             <h2>An example of <em>map algebra</em></h2>
+            <h2>Use <code>r3 &lt;- r1 + r2</code> in <i>R</i></h2>
             </div>
           </section>
 
@@ -218,10 +223,10 @@
                     # A tibble: 4 x 6
                       label     area     n  in_density out_density    weight
                       <fct>    <dbl> <int>       <dbl>       <dbl>     <dbl>
-                    1 A     3036.407    26 0.008562751 0.009328677 0.9178956
-                    2 B     1636.249     6 0.003666925 0.010098657 0.3631101
-                    3 C     2720.565    20 0.007351414 0.009713904 0.7567930
-                    4 D     3254.127    45 0.013828595 0.007033471 1.9661126
+                    1 A     3036.407    26    8.562751    9.328677 0.9178956
+                    2 B     1636.249     6    3.666925   10.098657 0.3631101
+                    3 C     2720.565    20    7.351414    9.713904 0.7567930
+                    4 D     3254.127    45   13.828593    7.033471 1.9661126
                   </code>
                 </pre>
               </h2>
