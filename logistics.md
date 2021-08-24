@@ -16,6 +16,9 @@ Withdrawal dates | See [Course additions and  withdrawals](https://www.wgtn.ac.n
 
 **Labs** are in **KK 216** from **11:00-1:00** on **Thursdays**.
 
+## August COVID outbreak update
+Links for zoom lecture and lab sessions have been posted to the [course Blackboard pages](https://blackboard.vuw.ac.nz "VUW Blackboard").
+
 ## Delivery
 This class is offered face-to-face for both lectures and labs. Lectures will be recorded and available on Blackboard soon after.
 
