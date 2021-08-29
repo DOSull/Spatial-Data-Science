@@ -12,7 +12,7 @@ Date | Tue | Thu (lab) | Fri
 2 Aug | [Clustering analysis](slides/classification-clustering/) | [**Geographic cluster analysis**](labs/week-05) (20%) due ~30 Aug~ 3 Sep | [Applications of clustering analysis](slides/classification-examples/)
 9 Aug | [Statistics and geography](slides/statistics-and-space/) | Help with assignments | [From overlay to regression models](slides/from-overlay-to-regression/)
 &nbsp; | &nbsp; | **BREAK** | &nbsp;
-30 Aug | [Regression models](https://southosullivan.com/geog315/regression/) |  [**Building a simple statistical model**](labs/week-07) (20%) due 13 Sep | [More on regression](https://southosullivan.com/geog315/more-on-regression/)
+30 Aug | [Regression models](slides/regression/) | [**Building a simple statistical model**](labs/week-07) (20%) due 13 Sep | [More on regression](https://southosullivan.com/geog315/more-on-regression/)
 6 Sep | [Running a GIS project](https://southosullivan.com/geog315/running-a-gis-project/) and [**Introducing the mini-projects**](labs/mini-project) (30%) due 8 Oct | Help with assignments / project work | [Other spatial analysis methods](https://southosullivan.com/geog315/spatial-analysis-methods/)
 13 Sep | [Surface analysis](https://southosullivan.com/geog315/surface-analysis/) | Help with assignments / project work | [Network analysis](https://southosullivan.com/geog315/network-analysis/)
 21 Sep | [Time geography](https://southosullivan.com/geog315/time-geography/) | Project work | Project support / guest

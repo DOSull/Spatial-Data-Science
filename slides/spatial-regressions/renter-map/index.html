@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <style>
+        #map {
+            width: 1440px;
+            height: 900px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="../js/qgis2web_expressions.js"></script>
+        <script src="../js/leaflet.js"></script>
+        <script src="../js/leaflet.rotatedMarker.js"></script>
+        <script src="../js/leaflet.pattern.js"></script>
+        <script src="../js/leaflet-hash.js"></script>
+        <script src="../js/Autolinker.min.js"></script>
+        <script src="../js/rbush.min.js"></script>
+        <script src="../js/labelgun.min.js"></script>
+        <script src="../js/labels.js"></script>
+        <script src="data/agesex20to29renterblack_0.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:15, minZoom:10
+        }).fitBounds([[37.357,-122.452],[38.197,-121.446]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+        var bounds_group = new L.featureGroup([]);
+        var basemap0 = L.tileLayer('http://stamen-tiles-a.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}.png', {
+            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+            maxZoom: 19
+        });
+        basemap0.addTo(map);
+        function setBounds() {
+        }
+        function pop_agesex20to29renterblack_0(feature, layer) {
+            var popupContent = '<table>\
+                    <tr style="font-size: x-large;">\
+                        <th scope="row">%renters</th>\
+                        <td>' + (feature.properties['pc_renter'] !== null ? Autolinker.link(String(feature.properties['pc_renter'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_agesex20to29renterblack_0_0(feature) {
+            if (feature.properties['pc_renter'] >= 0.000000 && feature.properties['pc_renter'] <= 20.000000 ) {
+                return {
+                pane: 'pane_agesex20to29renterblack_0',
+                opacity: 0.6,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 0.5,
+                fillOpacity: 0.75,
+                fillColor: 'rgba(237,248,251,1.0)',
+            }
+            }
+            if (feature.properties['pc_renter'] >= 20.000000 && feature.properties['pc_renter'] <= 40.000000 ) {
+                return {
+                pane: 'pane_agesex20to29renterblack_0',
+                opacity: 0.6,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 0.5,
+                fillOpacity: 0.75,
+                fillColor: 'rgba(178,226,226,1.0)',
+            }
+            }
+            if (feature.properties['pc_renter'] >= 40.000000 && feature.properties['pc_renter'] <= 60.000000 ) {
+                return {
+                pane: 'pane_agesex20to29renterblack_0',
+                opacity: 0.6,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 0.5,
+                fillOpacity: 0.75,
+                fillColor: 'rgba(102,194,164,1.0)',
+            }
+            }
+            if (feature.properties['pc_renter'] >= 60.000000 && feature.properties['pc_renter'] <= 80.000000 ) {
+                return {
+                pane: 'pane_agesex20to29renterblack_0',
+                opacity: 0.6,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 0.5,
+                fillOpacity: 0.75,
+                fillColor: 'rgba(44,162,95,1.0)',
+            }
+            }
+            if (feature.properties['pc_renter'] >= 80.000000 && feature.properties['pc_renter'] <= 100.000000 ) {
+                return {
+                pane: 'pane_agesex20to29renterblack_0',
+                opacity: 0.6,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 0.6,
+                fillOpacity: 0.75,
+                fillColor: 'rgba(0,109,44,1.0)',
+            }
+            }
+        }
+        map.createPane('pane_agesex20to29renterblack_0');
+        map.getPane('pane_agesex20to29renterblack_0').style.zIndex = 400;
+        map.getPane('pane_agesex20to29renterblack_0').style['mix-blend-mode'] = 'normal';
+        var layer_agesex20to29renterblack_0 = new L.geoJson(json_agesex20to29renterblack_0, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_agesex20to29renterblack_0',
+            onEachFeature: pop_agesex20to29renterblack_0,
+            style: style_agesex20to29renterblack_0_0,
+        });
+        bounds_group.addLayer(layer_agesex20to29renterblack_0);
+        map.addLayer(layer_agesex20to29renterblack_0);
+        setBounds();
+        </script>
+    </body>
+</html>

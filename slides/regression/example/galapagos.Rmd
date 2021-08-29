@@ -1,0 +1,178 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Simple regression models of Galapagos Islands biodiversity
+
+This regression modelling exercise draws directly on the example in Chapter 7 of *Statistical Methods for Geography* by Peter A. Rogerson (2001, Sage: London). The data in this document are largely the same as those in that work, although a couple of missing elevation values estimated by Rogerson (for Baltra and Seymour islands) have been included here from OSM or other sources.
+
+## Load some needed libraries
+
+```{r message = FALSE}
+library(sf)
+library(tmap)
+library(dplyr)
+library(GGally) # for scatter plot matrices
+
+# set the tmap mode to web maps
+tmap_mode("view")
+```
+
+## Read and inspect the data
+
+```{r}
+galapagos.data <- read.csv('galapagos.csv', sep=',')
+```
+
+Now inspect the data.
+
+```{r}
+as_tibble(galapagos.data)
+```
+
+Two of these variables `NUM_SPEC` and `NATIVE` are potential dependent variables to be 'explained', while the others are potential independent explanatory variables, drawing on ideas from [island biogeography](https://en.wikipedia.org/wiki/Insular_biogeography). The variables are as followw:
+
+-   **ISLAND** the island name
+-   **NUM_SPEC** and **NATIVE** the total number of species (including native) and native (only) species\
+-   **AREA** island area in square km
+-   **ELEV** maximum elevation of the island in m
+-   **NEAREST** distance in km to the nearest other island in the archipelago
+-   **S_CRUZ** distance in km to Isla Santa Cruz
+-   **AREA_ADJ** area in square km of the nearest other island
+
+We use `GGally::ggpairs` to examine all the variables in a single display. Note that we don't examine the island names in this display.
+
+```{r, message = FALSE}
+ggpairs(galapagos.data, columns = 2:8)
+```
+
+Of note here is that as we might expect the strongest correlation is between `NUM_SPEC` and `NATIVE`. Since we will build models to explain each of these separately, and not include either as explanatory variables, this is OK. `AREA` and `ELEV` are correlated which is a potential problem from a technical perspective (note that each might be expected to account for some biodiversity). No other variables are strongly correlated with either of the biodiversity indicators. Based on this plot we might have a hunch that a model for `NUM_SPEC` based on `AREA` and `ELEV` will work well.
+
+## Model building
+
+### A kitchen sink model
+
+Rogerson starts with a 'kitchen sink' model including all variables, although he recommends against this approach. But, hey! --- let's give it a go.
+
+```{r}
+m1 <- lm(NUM_SPEC ~ AREA + ELEV + NEAREST + S_CRUZ + AREA_ADJ, data = galapagos.data)
+summary(m1)
+```
+
+The results provided by the `summary` function point to `ELEV` and `AREA_ADJ` as the two most significant explanatory variables. Although our results are different in detail from the Rogerson book (because of minor differences in the data), this result matches well qualitatively with Rogerson's, which is encouraging. The regression equation corresponding with this model summary can be assembled using the estimated coefficients. These suggest that each additional metre of maximum elevation on an island accounts for 0.319 additional species, while each additional square km of the nearest other island *reduces* the number of species by 0.075. The first of these seems reasonable, the second might require more complicated explanation. Perhaps if the nearest other island is large, fewer species are present on this island because they end up 'over there'.
+
+More to the point, the standard error of the model is 60.18, which given that the median number of species on all islands is 42 is rather high! The other surprising feature of the model is that the coefficient associated with the `AREA` variable is negative, meaning that the larger the island, the fewer species we expect. This is a consequence of the fact that the model also includes elevation `ELEV` and this 'masks out' the effect of larger areas.
+
+### Another model
+
+The unexpected negative coefficient associated with the `AREA` variable suggests we should remove it from consideration, so let's try that, while also removing the other non-signficant variables from the kitchen sink model.
+
+```{r}
+m2 <- lm(NUM_SPEC ~ ELEV + AREA_ADJ, data = galapagos.data)
+summary(m2)
+```
+
+The notable feature of this model is that its overall characteristics in terms of overall variance accounted for (the R-squared statistics) and the standard error are very similar to those of the kitchen sink model, but based on only two independent variables not 5. This means the model is more *parsimonious* in that it does a lot with a little, and we might stop here if we are satisfied that we can provide an account of this model that is in accordance with the theoretical ideas about island biodiversity.
+
+We might also examine very stripped down models, perhaps `NUM_SPEC ~ ELEV` or `NUM_SPEC ~ AREA`, to see how well these work (it turns out surprisingly badly...). For example:
+
+```{r}
+m3 <- lm(NUM_SPEC ~ AREA, data = galapagos.data)
+summary(m3)
+```
+
+The technical problem of `ELEV` and `AREA` being strongly correlated, which makes it problematic to include both in a model, may in this case also be a real effect. Many of these small islands are effectively single peaks so that elevation and area are direct proxies for one another. Thus, it may be that `ELEV` is more important than `AREA` as an indicator of the variety of habitat niches provided by an island.
+
+A significant issue with the variables in this dataset is that they are highly skewed in most cases, mainly because the largest island is so much larger than all the others. This would suggest that it may make sense to perform various transformations on the variables to make their distributions more 'normal'. A more contemporary approach would be to use machine-learning methods to fit non-linear models to these data. Those methods are beyond our present scope, but if you are interested you might explore them (and we can help out!) in the mini-project exercises.
+
+## Spatial characteristics of the models
+
+Rather than spend too much time worrying about the exact details of the model, here we focus on mapping the models we have built. To do that we need to read in a spatial dataset.
+
+```{r}
+galapagos.s <- st_read('galapagos.gpkg')
+```
+
+This dataset is missing a few of the islands (they weren't present in OSM data...) but enough are present to get an idea of the distribution of the model variables.
+
+First make some additional columns in the data table based on the models' fitted and residual (error) values.
+
+```{r}
+galapagos.results <- galapagos.data %>%
+  mutate(m1fit = m1$fitted.values, m1error = -m1$residuals,
+         m2fit = m2$fitted.values, m2error = -m2$residuals)
+```
+
+Then join these to the spatial data for mapping (both datasets have an `ISLAND` variable which the join will be based on).
+
+```{r}
+galapagos.s <- galapagos.s %>%
+  inner_join(galapagos.results)
+```
+
+## Map the predicted values
+
+Now we can map the actual and predicted number of species. We will use `tmap_arrange` to do this for side-by-side comparisons.
+
+```{r}
+m1map <- tm_shape(galapagos.s) + tm_polygons(col = "m1fit", style = "cont", palette = "Greens", title="model 1")
+m2map <- tm_shape(galapagos.s) + tm_polygons(col = "m2fit", style = "cont", palette = "Greens", title="model 2")
+actual <- tm_shape(galapagos.s) + tm_polygons(col = "NUM_SPEC", style = "cont", palette = "Greens", title="actual")
+tmap_arrange(m1map, m2map, actual, sync = TRUE)
+```
+
+It is clear from this that both models substantiall overpredict the number of species present on the largest island Isla Isabela, and underpredicts diversity on Isla Santa Cruz. Reading up on the complex histories (both human and natural) of the islands, suggests many reasons why our simplistic models might not do a particularly great job.
+
+Perhaps an easier way to visualise the model performance is mapping model errors (the residuals).
+
+```{r, message=FALSE}
+m1err <- tm_shape(galapagos.s) + tm_polygons(col = "m1error", style = "cont", palette = "RdBu", title="m1 error")
+m2err <- tm_shape(galapagos.s) + tm_polygons(col = "m2error", style = "cont", palette = "RdBu", title="m2 error")
+actual <- tm_shape(galapagos.s) + tm_polygons(col = "NUM_SPEC", style = "cont", palette = "Greens", title="actual")
+tmap_arrange(m1err, m2err, actual, sync = TRUE)
+```
+
+It is worth noticing that I have mapped the negative of the model residuals, as this is maybe a bit easier to think about as an 'error'. The residual is the difference actual - model, so a positive residual is when the model predicts a lower value than the actual, meaning that the model error is negative. This can get a little bit confusing, so it is important to be clear in your head about the signs of model errors, and I find it helpful to take this approach.
+
+Overall, it is difficult to draw many firm conclusions from this exercise, although the interpretive nature of regression modelling as a way to explore the complexities of data is hopefully apparent.
+
+From a geographical perspective, of particular note is that we are especially interested in where a model performs well and where it performs badly as this may provide clues to more nuanced explanations of what is happening. In this case, Santa Cruz is the most human-affected of the islands, and conservation activity is most focused on Isabela, and it seems clear that these would have to be accounted for in any more substantial modelling exercise.
+
+## Automating searching all the possible models
+
+It's possible to make many many different models for these data. There are 5 variables (`AREA`, `ELEV`, `NEAREST`, `S_CRUZ`, `AREA_ADJ`) that might be included or not. That allows for up to 31 different models! (Each variable can be included or not, so 2 x 2 x 2 x 2 x 2 = 32 possibilities, one of which is no variables, so we exclude that from our count). If we had more variables, there would be even more possibilities.
+
+In this situation it can make sense to get *R* to search the possibilities. There are many ways that this can be done. The most basic is called *stepwise regression* where we allow the computer to iteratively include or drop variables one at a time, only continuing on if the model improves based on some measure.
+
+The easiest way to understand this is to try it. The function required is called `step()` and it takes as its argument a starting model. Since we made a kitchen-sink model (`m1`) let's use that and see what we get.
+
+```{r}
+step(m1, direction = "both")
+```
+
+This rather complicated output shows us starting from `m1` what happens if we try dropping each of the possible variables. In doing so it ranks the models that result based on a measure [AIC (Akaike Information Criterion)](https://en.wikipedia.org/wiki/Akaike_information_criterion). The lower this value, the better the model, relative to others under consideration. So in 'round 1' `m1` we start with AIC = 251.14 and the step that makes the best new model is to remove the variable `NEAREST`. In the next round the same process causes us to drop `AREA`.
+
+This process continues until we end up with a model that can't be improved (based on the AIC measure), given by the function `NUM_SPEC ~ ELEV + S_CRUZ + AREA_ADJ`. We can then build that model (provided we find it plausible and can explain it in a reasonable way!)
+
+```{r}
+m4 <- lm(NUM_SPEC ~ ELEV + S_CRUZ + AREA_ADJ, data = galapagos.data)
+summary(m4)
+```
+
+What may be questionable about this model is the inclusion of a variable that appears to not be signficant (`S_CRUZ`), and we would need to weigh up the value of retaining this variable or not.
+
+Note that it is also possible to start with a simple model and build to a more complicated one:
+
+```{r}
+step(m3, NUM_SPEC ~ AREA + ELEV + NEAREST + S_CRUZ + AREA_ADJ, direction = "both")
+```
+
+We actually end up with the same model, but this is not true in general and will depend on the details of a particular dataset.
+
+The most important thing is that the model you end up with is based not just on allowing the computer to do its thing, but an assessment of the scientific relevance of the results: in short, can you explain your model in a way that makes sense to you and others?
+
+## A further exercise
+
+Further exploration of this material perhaps modelling `NATIVE` as the dependent variable can be explored by downloading the materials in [this zip file](galapagos.zip).

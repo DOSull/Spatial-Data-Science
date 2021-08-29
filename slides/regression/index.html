@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../extra-styles.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+  </head>
+
+  <body>
+    <div id="header" class="translucent header">
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <section data-background-image='images/galapagos-iguana.jpg'>
+            <p class='attribution'>image source <a target='_blank' href='https://commons.wikimedia.org/wiki/File:Galapagos_iguana1.jpg'>commons.wikimedia.org</a></p>
+            <div class='translucent fragment'>
+              <h1>Regression models</h1>
+              <h2><a href='#/1'>Overview</a></h2>
+              <h2><a href='#/2'>How it works</a></h2>
+              <h2><a href='#/3'>A worked example</a></h2>
+              <h2><a href='#/4'>Some wrinkles and variations</a></h2>
+            </div>
+          </section>
+        </section>
+
+
+        <section data-background-color='#0985d0'>
+          <section data-background="images/galton.jpg">
+            <p class="attribution" style="width:410px;">
+              Francis Galton&rsquo;s illustration of correlation, 1875
+              image source <a target="_blank" href="http://commons.wikimedia.org/wiki/File:Galton%27s_correlation_diagram_1875.jpg">
+              commons.wikimedia.org
+              </a>
+            </p>
+            <div class="translucent">
+            <h1>Regression &amp; friends</h1>
+            <h2>Regression is a standard statistical approach to relating variables
+            to one another</h2>
+            <h2>Based on a <em>statistical model</em></h2>
+            <h2>We can use regression to determine \(f(\mathbf{X})\) in overlay</h2>
+            </div>
+          </section>
+
+          <section>
+            <h1>Structure of regression</h1>
+            <h2><em>Dependent variable</em> (the phenomenon we are modelling)</h2>
+            <h2><em>Independent variables</em> (the explanatory factors)</h2>
+            <h2>There are various preferences for the distribution of the variables (normal, no outliers, etc.), which makes <em>exploring data first</em> really important, especially for outlier detection</h2>
+          </section>
+
+          <section>
+            <h1>The result</h1>
+            <h2>
+              \[ y=b_0+b_1x_1+\ldots+b_ix_i+\ldots+b_px_p+\epsilon \]
+            </h2>
+            <h2>
+              where \(y\) is the dependent variable, \(x_i\) are the independent variables, \(b_i\) are the regression coefficients, and \(\epsilon\) is the model error
+            </h2>
+            <h2>This is essentially the same as overlay&rsquo;s<br />
+              \[ y=w_0+w_1x_1+w_2x_2+\ldots+w_nx_n \]
+            </h2>
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+            <div class="left" style="width: 65%;">
+              <iframe width="100%" height="800" src="example/lapse-rate.html"></iframe>
+            </div>
+            <div class="left" style="width: 35%;">
+              <h1>How it works</h1>
+              <h2>A simple example</h2>
+              <p>Data from <code>raster</code> package<br />
+                <code>getData("worldclim")</code> and
+                <code>getData("SRTM")</code>
+              </p>
+              <p><code>extract</code> the raster data values to the points</p>
+            </div>
+          </section>
+
+          <section>
+            <h1>Lapse rate</h1>
+            <h2>How quickly does temperature fall with altitude?</h2>
+            <img src="images/lapse-rate-scatterplot.png">
+          </section>
+
+          <section>
+            <h1>Building a regression model</h1>
+            <h2>Use the linear model function <code>lm()</code> in <i>R</i></h2>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            model <- lm(t_min_july ~ elevation, data = df)
+            > model
+
+            Call:
+            lm(formula = t_min_july ~ elevation, data = df)
+
+            Coefficients:
+            (Intercept)    elevation
+               4.449734    -0.004898
+            </code></pre>
+            </h2>
+          </section>
+
+          <section>
+            <img src="images/lapse-rate-scatter-with-model.png">
+          </section>
+
+          <section>
+            <h1>More information</h1>
+            <h2>
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            > summary(model)
+
+            Call:
+            lm(formula = t_min_july ~ elevation, data = df)
+
+            Residuals:
+                 Min       1Q   Median       3Q      Max
+            -0.89072 -0.13481 -0.01928  0.12767  0.78203
+
+            Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)
+            (Intercept)  4.450e+00  2.928e-02  151.98   <2e-16 ***
+            elevation   -4.898e-03  5.627e-05  -87.05   <2e-16 ***
+            ---
+            Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+            Residual standard error: 0.2139 on 439 degrees of freedom
+            Multiple R-squared:  0.9452,	Adjusted R-squared:  0.9451
+            F-statistic:  7578 on 1 and 439 DF,  p-value: < 2.2e-16
+            </code></pre>
+            </h2>
+          </section>
+
+          <section>
+            <h1>More variables</h1>
+            <h2>We might consider including <code>lat</code> as an additional explanatory variable</h2>
+            <img src="images/lapse-rate-scatter-with-lat.png">
+          </section>
+
+          <section>
+            <h2>It is easy to add variables to the model specification
+            <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+            > summary(model2)
+
+            Call:
+            lm(formula = t_min_july ~ elevation + lat, data = df)
+
+            Residuals:
+                 Min       1Q   Median       3Q      Max
+            -0.81647 -0.11906 -0.00257  0.09144  0.72292
+
+            Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)
+            (Intercept)  2.002e+01  1.432e+00   13.98   <2e-16 ***
+            elevation   -4.466e-03  6.295e-05  -70.95   <2e-16 ***
+            lat          4.098e-01  3.763e-02   10.89   <2e-16 ***
+            ---
+            Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+            Residual standard error: 0.1966 on 438 degrees of freedom
+            Multiple R-squared:  0.9533,	Adjusted R-squared:  0.9531
+            F-statistic:  4467 on 2 and 438 DF,  p-value: < 2.2e-16
+            </code></pre>
+            </h2>
+          </section>
+
+          <section>
+            <h1>Reflection</h1>
+            <h2>The basics of building a model are simple</h2>
+            <h2>There is much devil in the details</h2>
+            <h2>Focusing on <i>understanding what&rsquo;s going on</i>, not on the model as an end in itself is key</h2>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-markdown data-background-color='#09f43950'>
+            # Another example
+            ## Drawing on data from Chapter 7 in Peter Rogerson&rsquo;s *Statistical Methods for Geography*, 2001 (1st edn)
+            ## Biodiversity in the Galapagos
+          </section>
+
+          <section>
+            <iframe width="100%" height="960" src="example/galapagos.html"></iframe>
+            <h3><a target="_blank" href="example/galapagos.html">View this notebook in a separate window</a></h3>
+          </section>
+        </section>
+
+
+        <section data-background-image="images/leather-texture.jpg">
+          <section>
+            <p class="attribution">
+              image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:LeatherTexture.jpg">commons.wikimedia.org</a> by
+              <a target="_blank" href="https://commons.wikimedia.org/wiki/User:Bitplane"> Gaz Davidson</a>
+            </p>
+            <h1>Wrinkles</h1>
+            <h2>Multicollinearity, outliers, distributions</h2>
+            <h2>Dummy variables</h2>
+            <h2>Variants depending on nature of the dependent variable</h2>
+            <h2>Approach as an exploration</h2>
+          </section>
+
+          <section data-markdown>
+            # Preferred data characteristics
+            ## Independent variables: should be independent (avoid multicollinearity)
+            ## Outliers: be careful of these as they may strongly influence results
+            ## Distributions: strictly, normally distributed variables are preferred
+          </section>
+
+          <section>
+            <h1>Dummy variables</h1>
+            <h2>Where independent variables are non-numeric use <em>dummy variables</em></h2>
+            <div class="left" style="width:40%;">
+              <h3>A categorical variable with \(k\) levels, becomes...
+              <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+                   id landuse
+                <int> <fct>
+              1     1 urban
+              2     2 urban
+              3     3 rural
+              4     4 commercial
+              5     5 industrial
+            </code></pre></h3>
+            </div>
+            <div class="left fragment" style="width:60%;">
+              <h3><br />\(k-1\) dummy variables
+              <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+                   id landuse    urban rural commercial
+                <int> <fct>      <int> <int>      <int>
+              1     1 urban          1     0          0
+              2     2 urban          1     0          0
+              3     3 rural          0     1          0
+              4     4 commercial     0     0          1
+              5     5 industrial     0     0          0
+            </code></pre></h3>
+            </div>
+          </section>
+
+          <section data-markdown>
+            # Non-numeric dependent variables
+            ## Binary (yes/no, present/absent) data: calls for _logistic regression_
+            ## Count data: may call for _Poisson regression_
+            ### As needed we can explore these options depending on projects
+          </section>
+
+          <section data-markdown>
+            # Variable selection
+            ## Which variables are included or not is critical
+            ## Automated methods are available, but should be approached with caution!
+            ## Newer automated methods focus on the journey not the destination
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background="images/tools-by-Matt-Harrop.jpg" class="translucent">
+          <p class="attribution">image source
+            <a target="_blank" href="https://www.geograph.org.uk/photo/5093309">geograph.org.uk</a>
+            by <a target="_blank" href="https://www.geograph.org.uk/profile/18894">Matt Harrop</a>
+            <a target="_blank" href="http://creativecommons.org/licenses/by-sa/2.0/">CC2.0 license</a>
+          </p>
+            <h1>Summary</h1>
+            <h2>Statistical modelling is a <i>huge toolbox of options</i></h2>
+            <h2>All the methods are worlds unto themselves, <i>including regression and linear models</i></h2>
+            <h2>Probably most useful when regarded as <i>exploratory</i> not an end in itself</h2>
+            <h2>From a geographical perspective we are often interested in <i>local not global</i> effects</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+  </body>
+</html>
