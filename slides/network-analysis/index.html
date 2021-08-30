@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+<!--    <script type="text/javascript" async
+      src="../MathJax.js">
+    </script>
+  -->
+    <link rel="stylesheet" href="../extra-styles.css">
+    <style>
+    table {background-color: rgba(255,153,255,0.15)}
+    </style>
+  </head>
+
+  <body>
+    <div id="header" class="translucent header">
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+        <section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/open-flights-2.png">
+            <div class='translucent fragment'>
+              <h1>Network Analysis</h1>
+              <h2><a href="#/1">Key ideas in network analysis</a></h2>
+              <h2><a href="#/2">What is a network?</a></h2>
+              <h2><a href="#/3">Practicalities of network analysis</a></h2>
+              <h2><a href="#/4">Thinking outside the map with networks</a></h2>
+            </div>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+        <!-- -------------------------------------------------------------------------------------->
+        <section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/space-syntax-london.gif">
+            <h1>Key ideas in network analysis</h1>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <img src="images/sna-wasserman-cover.jpg" height=960px>
+            <img src="images/networks-an-introduction-cover.jpg" height=960px>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/facebook-network.jpg">
+            <img src="images/linked-cover.jpg" height=720px class="fragment" data-fragment-index="1">
+            <img src="images/six-degrees-cover.jpg" height=720px class="fragment" data-fragment-index="1">
+            <img src="images/connected-cover.jpg" height=720px class="fragment" data-fragment-index="1">
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <img src="images/barthelemy.png">
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/mike-batty.jpg">
+            <img src="images/new-science-cities-cover.jpg" data-fragment-index="1"
+            height=720px class="fragment" style="position:relative; left:455px; transform:rotate(3.5deg);">
+            <h2 class="fragment" data-fragment-index="2">&ldquo;In short, our argument for a new science is based on the notion
+              that to understand place, we must understand flows, and to understand
+              flows we must understand networks.&rdquo;</h2>
+            <h3 class="fragment" data-fragment-index="2">
+            Batty 2013, <i>The New Science of Cities</i>, 2-3</h3>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/welly-network.png">
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Graph measures</h1>
+            <img src="images/graph-measures.png">
+            <figcaption>(i) path length centrality, (ii) betweenness centrality, (iii) communities (or clusters).
+            <br />Source: O&rsquo;Sullivan D. 2014. Spatial Network Analysis. In <i>Handbook
+            of Regional Science</i> eds. MM Fischer &amp; P Nijkamp, 1253-73. Berlin, Heidelberg: Springer.</figcaption>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <img src="images/welly-betweenness-centrality.png" width="100%">
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/space-syntax-london.gif">
+            <h1 class="fragment fade-out">Centrality using a space syntax axial graph</h1>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <img src="images/welly-community-detection.png" width="100%">
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/regions-rae-nelson.png">
+            <div class="translucent fragment fade-out">
+            <h1>Community detection regionalization of the U.S. based on ACS commuter flows</h1>
+            <h3>Source: Dash Nelson G and A Rae. 2016. An Economic Geography of the United States:
+            From Commutes to Megaregions. <i>PLOS ONE</i> <b>11</b>(11):e0166083.</h3>
+            </div>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+        <!-- -------------------------------------------------------------------------------------->
+        <section data-background="images/substrate.jpg">
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <p class="attribution" style="position:relative; top:900px; width:480px;">
+              image source
+              <a target="_blank" href="http://www.complexification.net/gallery/machines/substrate/index.php">
+              complexification.net</a><br />by Jared Tarbell
+            </p>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background=rgba(0,0,0,0.5)>
+            <h1>Defining networks</h1>
+            <h2>Mathematicians consider <em>graphs</em>
+              $$G=\{V,E\}$$
+              where \(V\) is a collection of <em>vertices</em>, and<br />
+              \(E\) is a collection of <em>edges</em>
+            </h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background=rgba(0,0,0,0.5)>
+            <h1>Vertices</h1>
+            <h2>Vertices (or nodes), can be anything of interest</h2>
+            <h2>Bus stops, airports, cities, people, buildings, firms, proteins, etc.</h2>
+            <h2>A lot of early work was done with social networks where each vertex represents a person</h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background=rgba(0,0,0,0.5)>
+            <h1>Edges</h1>
+            <h2>Edges are pairs of vertices, \(E=\{e_{ij}\}\) that exist where there is some relation
+              between vertex \(v_i\) and vertex \(v_j\)
+            </h2>
+            <h2>Again, what edges represent is quite open: the existence of a connection, friendship, regular
+              scheduled flight, trade flow, immigration flow, communications link, etc.
+            </h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background=rgba(0,0,0,0.5)>
+            <h1>Refinements are possible</h1>
+            <h2>Edges may be <em>directed</em> (\(e_{ij}\ne e_{ji}\)), or <em>undirected</em> (\(e_{ij}\equiv e_{ji}\))
+            </h2>
+            <h2>Edges may be <em>weighted</em>, in which case some weight \(w_{ij}\) is associated with each edge,
+              denoting its strength, or length, or capacity, or some other attribute of interest
+            </h2>
+            <h2><em>Self-loops</em> \(e_{ii}\) may be permitted or not depending on context</h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background=rgba(0,0,0,0.5)>
+            <h1>Formats</h1>
+            <h2>Graphs show up in all kinds of data formats</h2>
+            <h2>Dense networks may be stored as an <em>adjacency matrix</em>
+              $$
+              \left[\begin{array}{rrrrr}
+                                1 & 2 & 7 & 23 \\
+                                3 & 2 & 3 & 9 \\
+                                4 & 0 & 2 & 13 \\
+                                1 & 7 & 7 & 0
+              \end{array}\right]
+              $$
+            </h2>
+            <h2>Most networks are <em>sparse</em> so that lots of matrix entries would be zeros, when it
+              is more efficient to store an <em>edge list</em>
+            </h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+        <!-- -------------------------------------------------------------------------------------->
+        <section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Network analysis in GIS</h1>
+            <h2>Essentially all operations on networks provided in GIS are based on <em>shortest paths</em>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Dijkstra&rsquo;s algorithm</h1>
+            <div class="left" style="width:28%">
+              <img src="images/dijkstra.jpg">
+              <figcaption>Edsger W. Dijkstra, 2002
+                <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Edsger_Wybe_Dijkstra.jpg">
+                commons.wikimedia.org</a> by Hamilton Richards
+            </div>
+            <div class="left" style="text-align:left; width:72%">
+              <h3>Set distance to <i>source</i> to 0 and mark it <i>known</i></h3>
+              <h3>Set distance to other nodes to \(\infty\) and mark them <i>unknown</i></h3>
+              <h3>While there any nodes still <i>unknown</i>:</h3>
+              <h3 style="padding-left:100px;">Get the <i>unknown</i> node \(u\) with lowest distance</h3>
+              <h3 style="padding-left:100px;">Mark it <i>known</i>, then:</h3>
+              <h3 style="padding-left:100px;">For each <i>unknown</i> node \(v\) connected to \(u\):</h3>
+              <h3 style="padding-left:200px;">If (current distance to \(u\) + distance from \(u\) to \(v\)) is
+                less than (current distance to \(v\)) then update distance to \(v\) to this value</h3>
+            </div>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <iframe src="dijkstra.html" width=1080 height=1080 style="background:#fff;"></iframe>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Extras</h1>
+            <div class="left" style="width:75%;">
+              <h2>Storing the &lsquo;previous&rsquo; node from which shortest path connection
+                was made to allows back-tracing of any required shortest path
+              </h2>
+              <h2 class="fragment" data-fragment-index="1">Often, heuristics are applied to narrow the search, for example
+                not allowing the shortest path to deviate too far from a straight line connecting source
+                and target nodes
+              </h2>
+              <h2 class="fragment" data-fragment-index="2">A popular alternative algorithm is called A*</h2>
+            </div>
+            <div class="fragment left" data-fragment-index="2" style="width:25%;">
+              <img src="images/dijkstra.gif" width=420px>
+              <img src="images/a-star.gif" width=420px>
+            </div>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Armed with shortest path...</h1>
+            <h2>Driving routes</h2>
+            <h2>Allocation of customers to facilities</h2>
+            <h2>Service area calculation</h2>
+            <img src="images/na-toolbox.png">
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Most of the work...</h1>
+            <h2 class="fragment" data-fragment-index="1">... is in building and maintaining datasets</h2>
+            <h2 class="fragment" data-fragment-index="2">In a street network: nodes=intersections, edges=street segments</h2>
+            <h2 class="fragment" data-fragment-index="2">You get these from a line layer</h2>
+            <h2 class="fragment" data-fragment-index="3">Although... it&rsquo;s not really that simple...</h2>
+            <h2 class="fragment" data-fragment-index="4">What about: lanes? one-ways? turn restrictions? speed limits? traffic lights?
+              crossings? bridges? etc.</h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+        <!-- -------------------------------------------------------------------------------------->
+        <section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section>
+            <h1>Finally, some food for thought</h1>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/open-flights-clipped.png">
+            <h1>From this</h1>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/open-flights-2.png">
+            <h1 class="fragment fade-out">To this</h1>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+          <section data-background="images/open-flights-2.png">
+            <h1>For more on these lines see</h1>
+            <h2>Bergmann LR and D O’Sullivan. 2018. Reimagining GIScience for relational spaces.
+              <i>The Canadian Geographer / Le Géographe canadien</i>. <b>62</b>(1) 7-14.
+              <a target="_blank" href="https://dx.doi.org/10.1111/cag.12405">doi:10.1111/cag.12405</a></h2>
+            <h2>O’Sullivan D, LR Bergmann, and JE Thatcher. 2018. Spatiality, maps, and mathematics
+              in critical human geography: toward a repetition with difference. <i>The Professional
+              Geographer</i> <b>70</b>(1) 129-139. <a target="_blank"
+              href="https://dx.doi.org/10.1080/00330124.2017.1326081">doi:10.1080/00330124.2017.1326081</a></h2>
+          </section>
+        <!-- -------------------------------------------------------------------------------------->
+        </section>
+      </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------->
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+  </body>
+</html>
