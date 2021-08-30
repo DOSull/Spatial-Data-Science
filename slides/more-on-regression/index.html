@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../extra-styles.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+  </head>
+
+  <body>
+    <div id="header" class="translucent header">
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <section data-background-image='images/galapagos-iguana-2.jpg'>
+            <p class='attribution'>
+              image source <a target='_blank' href='https://commons.wikimedia.org/wiki/File:Gal%C3%A1pagos_land_iguana_(4202533950).jpg'>commons.wikimedia.org</a> by
+              <a target="_blank" href="https://commons.wikimedia.org/wiki/User:Magnus_Manske">Magnus Manske</a>
+            </p>
+            <div class='translucent fragment'>
+              <h1>More on regression</h1>
+              <h2><a href='#/1'>The wrinkles again</a></h2>
+              <h2><a href='#/2'>Spatial aspects</a></h2>
+              <h2><a href='#/3'>Geographically weighted regression</a></h2>
+            </div>
+          </section>
+        </section>
+
+
+        <section data-background-image="images/wrinkled-paper.jpg">
+          <section>
+            <h1>Wrinkles</h1>
+            <h2>Multicollinearity, outliers, distributions</h2>
+            <h2>Dummy variables</h2>
+            <h2>Variants depending on nature of the dependent variable</h2>
+            <h2>Approach as an exploration</h2>
+          </section>
+
+          <section data-markdown>
+            # Preferred data characteristics
+            ## Independent variables: should be independent (avoid multicollinearity)
+            ## Outliers: be careful of these as they may strongly influence results
+            ## Distributions: strictly, normally distributed variables are preferred
+            ### It&rsquo;s usually impossible to satisfy all of these, the important thing is to _pay attention to your data and their characteristics_
+          </section>
+
+          <section>
+            <h1>Dummy variables</h1>
+            <h2>Where independent variables are non-numeric use <em>dummy variables</em></h2>
+            <div class="left" style="width:40%;">
+              <h3>A categorical variable with \(k\) levels, becomes...
+              <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+                   id landuse
+                <int> <fct>
+              1     1 urban
+              2     2 urban
+              3     3 rural
+              4     4 commercial
+              5     5 industrial
+            </code></pre></h3>
+            </div>
+            <div class="left fragment" style="width:60%;">
+              <h3><br>\(k-1\) dummy variables
+              <pre class="stretch"><code data-trim data-noescape contenteditable class="r">
+                   id landuse    urban rural commercial
+                <int> <fct>      <int> <int>      <int>
+              1     1 urban          1     0          0
+              2     2 urban          1     0          0
+              3     3 rural          0     1          0
+              4     4 commercial     0     0          1
+              5     5 industrial     0     0          0
+            </code></pre></h3>
+            </div>
+          </section>
+
+          <section data-markdown>
+            # Non-numeric dependent variables
+            ## Binary (yes/no, present/absent) &rarr; _logistic regression_
+            ## Counts &rarr; _Poisson regression_
+            ### As needed we can explore these options depending on projects
+          </section>
+
+          <section>
+            <h1><span style="text-transform:lowercase;">e.g.,</span> Logistic regression</h1>
+            <h2>Use this to model true/false or probability variables</h2>
+            <img src="images/logistic-vs-linear-model.png">
+            <h2><pre><code class="r">model <- glm(y ~ x, family = "binomial")</code></pre></h2>
+          </section>
+
+          <section data-markdown>
+            # Variable selection
+            ## Which variables are included or not is critical
+            ## Automated methods such as `step()` are available, but should be approached with caution!
+            ## Newer automated methods focus on the journey not the destination
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background-image='images/space.jpg' class="translucent">
+            <h1>Spatial aspects</h1>
+            <h2>Including spatial measures as variables (e.g., distance to a park)</h2>
+            <h2>Trend surface analysis (spatial coordinates as variables)</h2>
+            <h2>Mapping regression model errors (the <em>residuals</em>)</h2>
+            <h3>... because we may be more interested in local than global effects</h3>
+          </section>
+
+          <section data-background="images/pa-settlement-dates.png" data-transition="none">
+            <h2 class="translucent" style="position:relative; left:960px; top:-100px; width:40%;">Trend surface analysis</h2>
+            <p class="attribution" style="position:relative; bottom:-700px; width:450px;">
+            source Abler, Adams &amp; Gould 1971<br />
+            <a target="_blank" href="https://tewaharoa.victoria.ac.nz/discovery/fulldisplay?docid=alma99154804002386&context=L&vid=64VUW_INST:VUWNUI&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=all&query=any,contains,Spatial%20Organization%20gould&offset=0">
+            <i>Spatial Organization</i></a> Prentice-Hall<br />
+            drawing on an unpublished<br />
+            Masters thesis by John Florin</p>
+          </section>
+
+          <section data-background="images/pa-linear-trend.png" data-transition="none">
+            <h2 class="translucent" style="position:relative; left:960px; top:-524px; width:40%;">Trend surface analysis</h2>
+          </section>
+
+          <section data-background="images/pa-residuals.png" data-transition="none">
+            <h2 class="translucent" style="position:relative; left:960px; top:-524px; width:40%;">Trend surface analysis</h2>
+          </section>
+
+          <section data-background="images/lake-hillier-australia.jpg">
+            <p class="attribution"><a target="_blank" href="https://goo.gl/maps/DPXdr">
+              Lake Hillier, Australia</a> apparently it really is pink...<br >
+              image source <a target="_blank"
+              href="http://culturauniversale.blogspot.com/2013/09/paesaggi-bellissimi.html">
+              culturauniversale.blogspot.com</a>
+            </p>
+            <div class="translucent fragment">
+              <h1>Residual mapping</h1>
+              <h2>Often outliers are more interesting than the model!</h2>
+              <h2>Point to <em>where interesting things may be happening</em></h2>
+              <h2>Perhaps a <em>clue to missing factors</em></h2>
+            </div>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background-image='images/space.jpg'>
+            <h1>Geographically<br />weighted regression<br />(GWR)</h1>
+            <h2>An alternative approach that recognises geographical variation</h2>
+          </section>
+
+          <section data-background="images/london-houses.jpg">
+          <p class="attribution">houses in London Fields<br />
+          image source <a target="_blank" href="http://flic.kr/p/5pp4io">flickr.com</a>
+          by <a target="_blank" href="https://www.flickr.com/photos/rutlo/">Matthew Rutledge</a></p>
+            <h1>Example</h1>
+            <h2>Regression model based on floor area, parcel area,
+            number of bedrooms, etc.</h2>
+            <h3>From Chapter 2 of<br />
+            Fotheringham AS, C Brunsdon, and M Charlton. 2002.
+            <a target="_blank" href="https://tewaharoa.victoria.ac.nz/discovery/fulldisplay?docid=alma9910552324002386&context=L&vid=64VUW_INST:VUWNUI&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=all&query=any,contains,geographically%20weighted%20regression%20fotheringham">
+            <i>Geographically Weighted Regression: The Analysis of Spatially
+            Varying Relationships</i></a> Wiley: Chichester, UK.</h3>
+          </section>
+
+          <section data-background="images/london-house-prices.png">
+          </section>
+
+          <section data-background="images/london-average-house-prices.png">
+          </section>
+
+          <section>
+            <img src="images/london-house-prices-model.png"
+            style="position:relative; left:-100px; top:20px">
+            <img src="images/london-house-prices-model-estimates.png"
+            class="fragment" style="position:relative; left:100px; bottom:420px;">
+          </section>
+
+          <section data-background="images/london-house-prices-global-residuals.png">
+          </section>
+
+          <section data-background="images/london-house-prices-garage.png">
+          </section>
+
+        </section>
+
+        <section>
+
+          <section data-background="images/tools-by-Matt-Harrop.jpg" class="translucent">
+          <p class="attribution">image source
+            <a target="_blank" href="https://www.geograph.org.uk/photo/5093309">geograph.org.uk</a>
+            by <a target="_blank" href="https://www.geograph.org.uk/profile/18894">Matt Harrop</a>
+            <a target="_blank" href="http://creativecommons.org/licenses/by-sa/2.0/">CC2.0 license</a>
+          </p>
+            <h1>Conclusions</h1>
+            <h2>For serious regression work, you need a statistics platform, and should look beyond desktop GIS</h2>
+            <h2><i>R</i> is preferred, but <i>SPSS</i>, <i>SAS</i> might also be used</h2>
+            <h2>There are standalone tools for <i>GWR</i>, but also an <i>R</i> package</h2>
+            <h2>Some of the <i>Arc</i> toolboxes can get you started but may be limited</h2>
+          </section>
+
+        </section>
+
+      </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+  </body>
+</html>
