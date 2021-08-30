@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <link rel="stylesheet" href="../extra-styles.css">
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <div id="header" class="translucent header">
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="images/kerbals.png">
+          <p class="attribution">
+          Kerbals on the Mun<br />
+          image <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Kerbal_Space_Program_-_Landed_on_Mun.png">wikimedia.commons</a>
+          </p>
+          <div class="translucent fragment right-alone">
+          <h1>Simulation models</h1>
+          <h2 class="right-alone"><a href="#/1">Time, process, dynamics</a></h2>
+          <h2 class="right-alone"><a href="#/2">Simple simulations</a></h2>
+          <h2 class="right-alone"><a href="#/3">Complicated simulations</a></h2>
+          </div>
+        </section>
+
+
+        <section>
+          <section data-background="images/safety-last.jpg">
+            <p class="attribution">
+            image from Harold Lloyd's classic silent comedy<br />
+            <i>Safety Last!</i> 1923 from the book
+            <a target="_blank" href="https://www.amazon.com/An-American-Comedy-Harold-Lloyd/dp/0486226840">
+            <i>An American Comedy</i></a>
+            </p>
+            <h1>Time</h1>
+            <h2>Time geography poses many questions about how well we deal with time</h2>
+            <h3>(spoilers: not very)</h3>
+            <h2>Most map-oriented methods are <em>&#8216;snapshot-based&#8217;</em></h2>
+          </section>
+
+          <section>
+            <h1>Comics</h1>
+            <img src="images/1hz.gif" width="960" height="720" style="background-color:white;">
+            <p><a target="_blank" href="http://www.esa.int/Science_Exploration/Space_Science/Rosetta">ESA Rosetta mission</a> comet landing as rendered by
+            <a target="_blank" href="https://xkcd.com">xkcd.com</a><br />
+            and archived by <a target="_blank" href="https://github.com/MagicalTux/xkcd1446">MagicalTux</a></p>
+          </section>
+
+          <section>
+            <img src="images/time-in-comics-1.png">
+            <figcaption>McCloud S. 1993. <a target="_blank" href="https://www.scottmccloud.com/2-print/1-uc/index.html">
+            <i>Understanding Comics: The Invisible Art</i></a><br />
+            William Morrow, NY, page 94.</figcaption>
+          </section>
+
+          <section>
+            <img src="images/time-in-comics-2.png"
+            style="transform:rotate(-2deg);">
+            <img class="fragment" src="images/time-in-comics-3.png"
+            style="position:relative; bottom:400px; right:40px; transform:rotate(3deg);">
+            <img class="fragment" src="images/time-in-comics-4.png"
+            style="position:relative; bottom:800px; left:40px; transform:rotate(-1deg);">
+            <img class="fragment" src="images/time-in-comics-5.png"
+            style="position:relative; bottom:1200px; transform:rotate(2deg);">
+            <figcaption
+            style="position:relative; bottom:1200px;">
+            McCloud S. 1993. <a target="_blank" href="https://www.scottmccloud.com/2-print/1-uc/index.html">
+            <i>Understanding Comics: The Invisible Art</i></a><br />
+            William Morrow, NY, pages 100-101.</figcaption>
+          </section>
+
+          <section>
+            <h2>Reading animated maps remains challenging</h2>
+            <iframe width="100%" height="960" frameborder="0" src="loi.html"></iframe>
+            <figcaption><a href="loi.html" target="_blank">my map</a>
+              of locations of interest in the August 2021 COVID-delta outbreak
+            </figcaption>
+            <!-- <a href="https://southosullivan.com/builder/3549918c-6941-11e4-871f-0e018d66dc29/embed" target="_blank">
+              <img src="images/90-days-policing-data.jpg" height=720></a>
+           <iframe width="100%" height="960" frameborder="0"
+            src="https://dos.carto.com/builder/3549918c-6941-11e4-871f-0e018d66dc29/embed"
+            allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            <figcaption>data source <a target="_blank" href="https://codeforoakland.org/">Code for Oakland</a>
+            and <a target="_blank" href="https://data.oaklandnet.com">Oakland, CA crimewatch data for a 90 day period in 2018</a>
+            </figcaption> -->
+          </section>
+
+          <section>
+            <h1>Another example</h1>
+            <img src="images/shootings-animation.gif" width="60%">
+            <figcaption>Animation from the <a target="_blank" href="https://southosullivan.com/geog315/tree/master/labs/mini-project/us-police-shootings">police-shootings data</a> made<br />
+              using <code>tm_facets</code> and <code>tm_animation</code>
+            </figcaption>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background="images/horse.jpg">
+            <p class="attribution">
+            Eadweard [<i>sic</i>] Muybridge's <i>Horse in Motion</i><br />
+            image source <a target="_blank" href="https://www.loc.gov/resource/cph.3a45870/">Library of Congress</a><br />
+            see also <a target="_blank" href="https://www.youtube.com/watch?v=5Awo-P3t4Ho">
+            this extraordinary documentary</a>
+            </p>
+            <h2 style="text-shadow:4px 4px 8px black;">So... for now, <em>time and process</em> are &#8216;hidden&#8217; by maps</h2>
+            <h1 style="text-shadow:4px 4px 8px black;">Let's try <em>simulations</em> instead</h1>
+          </section>
+
+          <section data-background="images/flock.jpg">
+            <p class="attribution">
+            source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Auklet_flock_Shumagins_1986.jpg">
+            wikimedia.commons</a>
+            </p>
+            <h1 style="text-shadow:4px 4px 8px black;">Simple simulations</h1>
+            <h2 style="text-shadow:4px 4px 8px black;">Entities in a simulation have <em>behaviour</em> not just <em>state</em></h2>
+            <h2 style="text-shadow:4px 4px 8px black;">Behaviour, leads to state changes, and often depends on the state of neighbouring entities</h2>
+          </section>
+
+          <section>
+            <h1>&#8216;Game of Life&#8217;</h1>
+            <div class="left">
+              <!-- <a href="life-v6.0.2.html" target="_blank"><img src="images/life.png" width=100%></a> -->
+             <iframe src="life-v6.0.2.html" width=710 height=572 style="background-color: white;"> </iframe>
+              <p>To play more and see the code, go <a href="life-v6.0.2.html">here</a>.<br>
+                See <a target="_blank" href="https://patternandprocess.org">here</a> for more details.</p>
+            </div>
+            <div class="left">
+              <h3>Devised by John Conway in the 1970s</h3>
+              <h3 class="fragment" data-fragment-index="1">A <em>cellular automaton</em></h3>
+              <h3 class="fragment" data-fragment-index="1"><em>Lattice</em> of cells, each  alive (black) or dead (white)</h3>
+              <h3 class="fragment" data-fragment-index="2">3 live neighbours &rarr; birth</h3>
+              <h3 class="fragment" data-fragment-index="2">2 or 3 live neighbours &rarr; survival</h3>
+            </div>
+          </section>
+
+          <section>
+            <h1>Voter model</h1>
+            <div class="left">
+              <!-- <a href="voter-v6.0.2.html" target="_blank"><img src="images/voter.png" width=100%></a> -->
+             <iframe src="voter-v6.0.2.html" width=100% height=575 style="background-color: white;"> </iframe>
+              <p>To play more and see the code, go <a href="voter-v6.0.2.html">here</a>.<br>
+                See <a target="_blank" href="https://patternandprocess.org">here</a> for more details.</p>
+            </div>
+            <div class="left">
+              <h3>Simple model of ecological patch dynamics</h3>
+              <h3 class="fragment">Each <em>generation</em> every cell changes to match one of its
+              four neighbors picked at random</h3>
+              <h3 class="fragment">Competition playing out in space over time</h3>
+            </div>
+          </section>
+
+          <section>
+            <h1>Growth model</h1>
+            <div class="left">
+              <!-- <a href="eden-v6.0.2.html" target="_blank"><img src="images/eden-growth.png" width=100%></a> -->
+             <iframe src="eden-v6.0.2.html" width=100% height=575 style="background-color: white;"> </iframe>
+              <p>To play more and see the code, go <a href="eden-v6.0.2.html">here</a>.<br>
+                See <a target="_blank" href="https://patternandprocess.org">here</a> for more details.</p>
+            </div>
+            <div class="left">
+              <h3>Simple simulation of spatial spread</h3>
+              <h3 class="fragment">Each step an already occupied cell causes one of its
+              four neighbors to become occupied</h3>
+              <h3 class="fragment">Intricate structures are apparent when we colour cells by time occupied</h3>
+              <h3 class="fragment">Simple simulations of disease spread, urban growth use this mechanism</h3>
+            </div>
+          </section>
+
+          <section data-background="images/rothko.jpg">
+            <p class="attribution">
+            Mark Rothko's <i>Black on Maroon</i> 1958, 2667 x 3812 mm<br />
+            Tate Gallery, image source <a target="_blank" href="https://www.tate.org.uk/art/artworks/rothko-black-on-maroon-t01031">
+            tate.org.uk
+            </a>
+            </p>
+            <h1>Simple but complex</h1>
+            <h2 class="fragment">Even simple models show systems may be unpredictable in detail...</h2>
+            <h2 class="fragment"><em>Even if</em> we know <em>fully</em> how they work!</h2>
+            <br />
+            <h3 class="fragment">Such simulations are useful for theory,
+            but for real world applications
+            we usually need something more complicated</h3>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background="images/bay-model.jpg">
+            <h1>Complicated simulations</h1>
+            <p class="attribution">
+            <a target="_blank" href="https://www.spn.usace.army.mil/Missions/Recreation/BayModelVisitorCenter.aspx">
+            Army Corps of Engineers San Francisco Bay model</a><br />
+            in Sausalito, image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Bay_model_1.JPG">
+            wikimedia.commons</a>
+            </p>
+          </section>
+
+          <section>
+            <h1>Complicated simulations</h1>
+            <a href="https://www.synthicity.com/urbansim" target="_blank">
+              <!-- <img src="images/urbansim.png" width=1280></a> -->
+           <iframe src="https://www.synthicity.com/urbansim" width=1280 height=640> </iframe>
+            <p>An example: the <a href="https://www.synthicity.com/urbansim">UrbanSim</a> platform</p>
+          </section>
+
+          <section data-background="images/phillips-moniac.jpg">
+            <p class="attribution">
+              Bill Phillips's MONIAC (Monetary National Income<br />
+              Analogue Computer) hydraulic model of the economy<br />
+              developed at LSE in the 1950s, image source
+              <a target="_blank" href="https://archives.lse.ac.uk/record.aspx?src=CalmView.Catalog&id=IMAGELIBRARY%2f6">
+              LSE Library archives.</a><br>
+              They also have one <a target="_blank" href="https://nzier.org.nz/about/monia-machine/">at the Reserve Bank</a>!
+            </a>
+            </p>
+            <div class="translucent fragment">
+            <h1>Other examples</h1>
+            <h2>Models of the macro-economy</h2>
+            <h2 class="fragment">Global circulation models of climate system</h2>
+            <h2 class="fragment">Meteorological models</h2>
+            <h2 class="fragment">Simulations of traffic, crowds, evacuations, etc.</h2>
+            <h2 class="fragment">Building and street design</h2>
+            </div>
+          </section>
+
+          <section>
+            <h1>Serious play?</h1>
+            <!-- <a href="PalExtBarbirdseye2.ogg" target="_blank"><img src="images/redfish-animation-preview.jpg" width=800></a> -->
+           <video id="fire" width="800" height="600" controls>
+              <source src="PalExtBarbirdseye2.mov" />
+              <source src="PalExtBarbirdseye2.ogg" />
+            </video>
+            <p>source <a target="_blank" href="http://www.redfish.com/">redfish.com</a></p>
+            <p>Broader context for this example is in <a target="_blank" href="http://www.redfish.com/projects/SFWildfire/RedfishGroup_Thorp_ABMofWildfireEvacuations_v002.pdf">
+            this report</a></p>
+          </section>
+
+          <section>
+            <h1>Seriously, play</h1>
+            <a href="https://www.ea.com/games/simcity" target="_blank">
+              <img src="images/simcity.jpg" width=1280></a>
+           <!-- <iframe src="https://www.ea.com/games/simcity"
+            width="1280" height="720"> </iframe> -->
+            <p>source <a target="_blank" href="https://www.ea.com/games/simcity">simcity.com</a></p>
+          </section>
+        </section>
+
+
+        <section data-background="#131456">
+          <p class="attribution">
+          </p>
+          <h1>Summary</h1>
+          <h2>Even digital maps are a <em>static medium</em></h2>
+          <h2><em>Process hidden</em>, must be inferred</h2>
+          <h2><em>Simulation</em> is an alternative approach</h2>
+          <h2><em>Simple simulations can be useful</em> for developing theory</h2>
+          <h2>More complicated (realistic?) simulations preferred for <em>decision support</em></h2>
+        </section>
+      </div>
+    </div>
+<!-- -------------------------------------------------------------------------------------->
+        <!-- with video>
+
+          <section>
+            <div id='video' style="float:right; margin-right:20px;">
+              <video autoplay loop>
+                <source src="../video/mp4/uniformDiffusion.mp4" type='video/mp4'>
+              </video>
+            </div>
+          </section>
+<!-- -------------------------------------------------------------------------------------->
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+  </body>
+</html>

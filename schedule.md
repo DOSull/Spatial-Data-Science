@@ -16,5 +16,5 @@ Date | Tue | Thu (lab) | Fri
 6 Sep | [Running a GIS project](slides/running-a-gis-project/) and [**Introducing the mini-projects**](labs/mini-project) (30%) due 8 Oct | Help with assignments / project work | [Other spatial analysis methods](slides/spatial-analysis-methods/)
 13 Sep | [Surface analysis](slides/surface-analysis/) | Help with assignments / project work | [Network analysis](slides/network-analysis/)
 21 Sep | [Time geography](slides/time-geography/) | Project work | Project support / guest
-28 Sep | [Simulation models](https://southosullivan.com/geog315/simulation-models/) | Project work | Project support / guest
+28 Sep | [Simulation models](slides/simulation-models/) | Project work | Project support / guest
 4 Oct | Project support / guest | Project work | Project support
