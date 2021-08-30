@@ -119,3 +119,17 @@ a:not(.image), .reveal a:not(.image) {
   top: 0%;
   right: 0%;
 }
+
+.focus {
+  animation: bringintofocus 7.5s 1, windupalpha 7.5s 1;
+}
+
+@keyframes bringintofocus {
+  from {text-shadow:0px 0px 800px;}
+  to {text-shadow:0px 0px 0px;}
+}
+
+@keyframes windupalpha {
+  from {opacity:0;}
+  to {opacity:1;}
+}
