@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    <meta name="author" content="David O'Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../extra-styles.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/zenburn.css">
+    <!-- Include the appropriate print stylesheet -->
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    </script>
+    <!-- [if lt IE 9] >
+      <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <! [endif] -->
+  </head>
+
+  <body>
+    <div id="header" class="translucent header">
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+    </div>
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <section data-background="images/50000-ft.jpg">
+            <p class="attribution" style="width:400px;">Thunderstorms over South Carolina seen from NASA&rsquo;s ER-2 aircraft at 19,800 metres
+              during the Integrated Precipitation and Hydrology Experiment. source
+              <a target="_blank" href="https://commons.wikimedia.org/wiki/File:NASA%27s_Global_Precipitation_Measurement_Mission.jpg">
+              commons.wikimedia.org</a> by <a target="_blank" href="https://www.flickr.com/photos/44494372@N05/14721231729/">
+              NASA on the commons</a>
+            </p>
+            <h1 style="text-align:right;">Spatial analysis methods</h1>
+            <h3 style="text-align:right;">(from 50,000 feet)</h3>
+            <div class="left fragment translucent" style="width:600px; position:relative; left:385px;">
+              <h2>Multiple attributes methods</h2>
+              <h3>Overlay and friends</h3>
+              <h3>Regression and friends</h3>
+              <h3>Clustering</h3>
+            </div>
+            <div class="left fragment translucent" style="width:600px; position:relative; left:410px;">
+              <h2>Single attribute methods</h2>
+              <h3><a href="#/2">Characterizing patterns</a></h3>
+              <h3><a href="#/3">Interpolation</a></h3>
+              <h3><a href="#/4">Spatial relations</a></h3>
+            </div>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background-image='images/mcharg-staten-island.jpg'>
+            <p class="attribution">image <a target=_top href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-047111460X.html">Ian McHarg's <i>Design with Nature</i> 1969</a><br /> source <a target=_top href="https://suzanneodonovan.wordpress.com/research-theory/2012-relational-space-_-m-arch-year-2-elective/">suzanneodonovan.wordpress.com</a>
+            </p>
+            <div class='translucent'>
+              <h1>Multiattribute methods</h1>
+              <h4>[ones we&rsquo;ve already looked at]</h4>
+              <h2>Overlay and regression</h2>
+              <h2>Various (spatial) regressions</h2>
+              <h2>Clustering</h2>
+            </div>
+          </section>
+
+          <section>
+            <div class="left" style="width:42%">
+              <img src="images/layer-cake-campbell-fig01_012.jpg">
+              <figcaption>source <a target="_blank"
+                href="http://catalog.flatworldknowledge.com/catalog/editions/campbell-essentials-of-geographic-information-systems-1-0">
+                <i>Essentials of Geographic Information Science</i>
+                </a> by Jonathan Campbell and Michael Shin, online textbook
+              </figcaption>
+            </div>
+            <div class="left" style="width:58%">
+              <h1>Single attribute methods</h1>
+              <h2>For many people, multiple layers are the heart of GIS</h2>
+              <h2 class="fragment">But we can also learn a lot <em>within</em> layers</h2>
+              <div class="fragment">
+                <h2>Specifically</h2>
+                <h3>&bull; Characterizing <em>patterns</em></h3>
+                <h3>&bull; <em>Inferring</em> unknowns</h3>
+                <h3>&bull; Exploring <em>relationships</em></h3>
+              </div>
+            </div>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background="images/libyan-sahara-dunes.jpg">
+            <h1>Characterizing patterns</h1>
+            <h2><i>In the hope of<br />getting at processes</i></h2>
+            <p class="attribution" style="width:400px;">
+            Libyan Sahara dune fields, image
+            <a target="_blank" href="http://commons.wikimedia.org/wiki/File:The_Libyan_Sahara_%285282881117%29.jpg">
+            wikimedia.commons</a> by <a target="_blank" href="https://www.flickr.com/people/79721788@N00">David Stanley</a>
+            </p>
+          </section>
+
+          <section data-background="images/geoda.png">
+            <div class="translucent fragment fade-out">
+              <h1>Spatial autocorrelation</h1>
+              <h2>We can measure the extent to which
+                &ldquo;near things are more related than distant things&rdquo;
+              </h2>
+              <h2>Tools: <i>GeoDa</i> &#8811; <i>R</i> (<code>spdep</code>) &gt; <i>ArcGIS</i></h2>
+            </div>
+          </section>
+
+          <section data-background-image='images/centroids-blurred.png'>
+            <h1>Point pattern analysis</h1>
+            <h2>A wide ranging set of approaches to characterizing spatial structure in point patterns
+            </h2>
+            <img src="images/PCF-envelopes-999.png">
+            <h2>Tools: <i>R</i> (<code>spatstat</code>) &#8811; <i>ArcGIS</i></h2>
+          </section>
+
+          <section data-background="images/treeline.jpg">
+            <p class="attribution" style="position:relative; width:500px; top:1000px; left:65%;">
+              image source<a target="_blank"
+              href="http://commons.wikimedia.org/wiki/File:Engelmann_Spruce_trees_near_tree_line_along_the_Wheeler_Peak_Summit_Trail_on_July_14th_2013.JPG">
+              commons.wikimedia.org</a> by <a target="_blank" href="http://commons.wikimedia.org/wiki/User:Famartin">Famartin</a>
+            </p>
+            <div class="translucent fragment fade-out" data-fragment-index="2">
+              <h1>First order trends</h1>
+              <h2>Patterns follow a trend, e.g., in plant ecology</h2>
+            </div>
+            <div class="left fragment fade-out" data-fragment-index="2" style="width:60%;">
+              <img src="images/first-order-points.png" width="100%">
+              <img src="images/first-order-points-density.png" width="100%" style="position:relative; bottom:830px;" class="fragment" data-fragment-index="1">
+            </div>
+            <div class="left fragment fade-out translucent" data-fragment-index="2" style="width:40%;">
+              <h3><em>Environmental gradients</em> lead to increasing prevalence</h3>
+            </div>
+          </section>
+
+          <section data-background="images/shinjuku.jpg">
+            <div class="translucent">
+              <h1>...or in urban settings</h1>
+              <h2>Population density drives many things</h2>
+              <h3>Incidence of crime</h3>
+              <h3>Cases of disease in an epidemic</h3>
+              <h3>Presence of cafes, dairies, etc.</h3>
+            </div>
+          </section>
+
+          <section data-background="images/penguins.jpg">
+            <div class="fragment fade-out translucent">
+              <h1>Second order interactions</h1>
+              <h2><em>Competition</em> or <em>&lsquo;mutualism&rsquo;</em></h2>
+              <h2>Competition suppresses close neighbours, leads to <em>even spacing</em></h2>
+              <h2>Mutualism leads to <em>clusters</em></h2>
+            </div>
+            <p class="attribution">
+            image source
+            <a target="_blank"
+            href="https://commons.wikimedia.org/wiki/File:Colony_of_Adelie_Penguin_at_Cape_Royds.jpg">
+            commons.wikimedia.org</a><br />
+            Adelie penguin colony, Cape Royds<br />
+            Ross Island, Antarctica
+            </p>
+          </section>
+
+          <section data-background="images/savannah.jpg">
+            <p class="attribution" style="position:relative; top:1000px; width:300px;">
+            image source <a target=""_blank"" href="https://i.warosu.org/data/tg/img/0375/95/1422144400443.jpg">
+            i.warosu.org</a><br />
+            Namibian savannah
+            </p>
+            <div class="fragment fade-out" data-fragment-index="2">
+              <div class="left">
+                <img src="images/SSI-points.png" width="100%">
+                <h3>Competition</h3>
+                <img src="images/SSI-points-density.png" width="100%"
+                style="position:relative; bottom:764px;" class="fragment"
+                data-fragment-index="1">
+              </div>
+              <div class="left">
+                <img src="images/thomas-points.png" width="100%;">
+                <h3>Mutualism</h3>
+                <img src="images/thomas-points-density.png" width="100%;"
+                style="position:relative; bottom:764px;" class="fragment"
+                data-fragment-index="1">
+              </div>
+            </div>
+          </section>
+
+          <section data-background="images/vinyl-junkies.jpg">
+            <p class="attribution" style="position:relative; top:400px; width:450px;">
+            image source
+            <a target="_blank"
+            href="http://www.independent.co.uk/arts-entertainment/music/features/record-store-day-2014-coming-to-a-uk-independent-record-shop-near-you-the-best-exclusive-releases-9262790.html">
+            independent.co.uk</a><br />
+            Vinyl Junkies record store<br />
+            Soho, London</p>
+          </section>
+
+          <section data-background="images/growth-pattern-19.jpg">
+          <p class="attribution"><i>Growth Pattern 19</i> by <a target="_blank" href="http://paulmerrymanart.com/Home.html">
+          Paul Merryman</a></p>
+            <h1>Also</h1>
+            <h2>Network analysis methods</h2>
+            <h2>Measurement of segregation</h2>
+            <h2>A wide range of surface measures</h2>
+            <h2>Fragmentation statistics</h2>
+            <h2>...</h2>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background="images/3d-Maungawhau.png">
+            <h1>Inferring patterns</h1>
+            <h2>Commonly known as (spatial) <em>interpolation</em></h2>
+            <h2>We have <i>control points</i>, but not at all locations</h2>
+            <h2>Interpolation methods fill in the gaps</h2>
+          </section>
+
+          <section data-background-image='images/symap.jpg'>
+            <p class="attribution">Output from the SYMAP system
+              <br />source <a target="_blank" href="https://krygier.owu.edu/krygier_html/geog_353/geog_353_lo/geog_353_lo04_gr/symap.jpg">krygier.owu.edu</a>
+            </p>
+            <h1>Simple methods</h1>
+            <div class="left">
+              <img src="images/natural-neighbors.png">
+              <figcaption>
+                image source <a target="_blank"
+                 href="http://commons.wikimedia.org/wiki/File:Natural-neighbors-coefficients-example.png">
+                commons.wikimedia.org</a>
+              </figcaption>
+            </div>
+            <div class="left">
+              <h2>Use the &lsquo;first law&rsquo; in combination with weighted means</h2>
+              <h2>
+                <ul>
+                  <li>Inverse-distance weighting,</li>
+                  <li>natural neighbors,</li>
+                  <li>Voronoi polygons</li>
+                </ul>
+              </h2>
+              <h2>Tools: <i>ArcGIS</i> &asymp; <i>R</i> (various libraries)</h2>
+            </div>
+          </section>
+
+          <section>
+            <h1>Geostatistics</h1>
+            <h2><span style="font-variant:small-caps;">aka</span> kriging</h2>
+            <h2>Use a mathematical/statistical model of spatial<br />
+              structure found in the control points to enhance results</h2>
+            <img src="images/idw-davis.png">&nbsp;<img src="images/kriging-davis.png">
+            <h3>source Figure 10.16 in
+              <a target=_top href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-0470288574.html">
+              O&rsquo;Sullivan &amp; Unwin</a>
+            </h3>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background-image='images/open-flights-clipped.png' class='translucent'>
+            <p class="attribution">image source<br />
+              <a target=_blank href="https://openflights.org/data.html">openflights.org</a>
+            </p>
+            <h1>Spatial relations</h1>
+            <h2>All of the above is concerned with spatial relations of
+              <ul>
+                <li>distance,</li>
+                <li>adjacency,</li>
+                <li>connectivity,</li>
+                <li>interaction,</li>
+                <li>etc.</li>
+              </ul>
+            </h2>
+            <h2>These <i>per se</i> may be our focus
+          </section>
+
+          <section data-background="images/bunge-seattle-isochrones.png">
+            <p class="attribution" style="position:relative; top:400px; width:250px;">
+              source: Bunge W. 1962. <i>Theoretical Geography</i>. Gleerup, Lund, Sweden.
+            </p>
+          </section>
+
+          <section>
+            <iframe width=100% height=960px
+            src="https://www.mapnificent.net/wellington/#12/-41.29/174.78/900/-41.29/174.78">
+            </iframe>
+            <figcaption><a target="_blank" href="https://www.mapnificent.net">mapnificent.net</a></figcaption>
+            <h3>Tools: recently, <i>Arc</i> <a target="_blank" href="http://esri.github.io/public-transit-tools/TransitNetworkAnalysisTools.html">may have become quite good at this</a></h3>
+          </section>
+
+          <section data-background="images/tube-map.png">
+            <p class="attribution">image source <a target="_blank"
+            href="http://diagrams.org/images/png/large/f00022.html">diagrams.org</a><br />
+            &copy; Transport for London</p>
+            <div class="translucent">
+              <h2>This space is <i>wide open</i> with scope for interesting maps and other visualizations</h2>
+              <h2>Tools: check out <i>Scapetoad</i> (plus the usual suspects)</h2>
+            </div>
+          </section>
+
+          <section data-background="images/open-flights-2.png">
+            <div class="translucent" style="position:relative; left:33%; width:34%;">
+              <h2>We&rsquo;ll look at<br>aspects of this<br>under the topic of<br>network analysis<br>in a <a target="_blank" href="../network-analysis/">later lecture</a></h2>
+            </div>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background="images/layer-cake.jpg">
+            <p class="attribution">Orange cranberry cake by <a target="_blank"
+              href="https://www.flickr.com/photos/95316165@N03/">Helen Fletcher</a> on
+              <a target="_blank" href="http://flic.kr/p/ih8kfS">flickr.com</a>
+            </p>
+            <div class="translucent">
+              <h1>Summary</h1>
+              <h2>There&rsquo;s just as much happening <i>within</i> layers as <i>between</i> them</h2>
+              <h2>Any of these approaches might be of interest in the mini-projects (<i>just ask!</i>)</h2>
+              <h2>These topics are central to one of the core courses in postgrad (<i>in case you are interested!</i>)</h2>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../config-options.js"></script>
+    <script>Reveal.configure({loop: false});</script>
+  </body>
+</html>
