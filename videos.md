@@ -46,10 +46,6 @@ Videos supporting each section are linked below. These use a different data set 
 + [The classification style](https://southosullivan.com/geog315/video/week-03-lab/geog315-week03-09-making-maps-tmap-classification-styles.mp4) (7:24 min)
 + [Other map frills](https://southosullivan.com/geog315/video/week-03-lab/geog315-week03-10-making-maps-tmap-frills.mp4) (2:50 min)
 
-## Week 4
-
-## Week 5
-
 ## Week 7
 ### Regression lecture
 #### Introduction
