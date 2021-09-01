@@ -6,7 +6,7 @@ Datasets for the mini-project are linked below with project-specific datasets in
 ## Specific datasets
 Details of the various available datasets and some thoughts on what you might look at for each are linked below.
 
-+ [New Zealand election 2017](anz-elections)
++ [New Zealand elections 2017 and 2020](anz-elections)
 + [Aotearoa New Zealand placename origins](anz-placenames)
 + [US police shootings](us-police-shootings)
 + [House prices in Wellington](homes)
