@@ -16,11 +16,11 @@ The key columns in the data table are:
 + `maybe` the number of elements in the placename consider possibly to be te reo
 + `other` the number of elements in the placename considered not likely to be te reo
 
-These results were assigned using the code available on [this repository](https://github.com/TeHikuMedia/nga-kupu).
+These results were assigned using the code available from [this repository](https://github.com/TeHikuMedia/nga-kupu).
 
 ## Commentary
 The contrast between the prevalence of Māori placenames in Te Ika-a-Māui and Te Waipounamu is immediately apparent in the visualisations linked above. As a first step you should make sure you can replicate these maps. Figure out how to do it for yourself, rather than just grabbing code from the sources linked!
 
-You may have some ideas about more interesting ways to visualise the data. You might consider density maps, or additional categories ('mixed' names with some te reo and some other elements for example).
+You may have some ideas about more interesting ways to visualise the data. You might consider density maps, or hexbins (see the package ) or additional categories ('mixed' names with some te reo and some other elements for example).
 
 Another direction would be to explore how the relative prevalence of names is related to present day population distributions, using more general data available [here](../aotearoa-new-zealand-census-data.md).
