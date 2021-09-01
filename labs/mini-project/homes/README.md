@@ -6,7 +6,9 @@ These data are from [homes.co.nz](https://homes.co.nz) scraped from their websit
 ## Dataset
 Here are the data: [homes-2021.gpkg](homes-2021.gpkg?raw=true)
 
-The dataset includes sales prices for the houses (the `price` attribute) along with the number of bedrooms, number of bathrooms, listed suburb and some other bits and pieces. Some attributes which you might expect to be numeric are stored as text and might need additional processing to clean them up.
+The dataset includes sales prices for the houses (the `price` attribute) along with the number of bedrooms, number of bathrooms, listed suburb and many other attributes, some of which may be useful (many will not...).
+
+Some attributes which you might expect to be numeric are stored as text and might need additional processing to clean them up. You will probably want to get rid of a lot attributes that are just clogging up the data table (homes.co.nz have a use for them, you probably don't).
 
 ### Ideas
 House prices are a clear candidate for applying regression modelling methods.
