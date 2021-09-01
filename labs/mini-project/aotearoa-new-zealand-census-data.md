@@ -6,7 +6,7 @@ The primary data source for social data is the census of population.
 ## Some pre-packaged Census data cleaned up by me
 I can't vouch entirely for the quality of these datasets, but they are reasonably convenient, and ready to go:
 + [Statistical Area 1 units for the 2006-18 censuses many variables](datasets/sa1.gpkg.zip?raw=true) - I sourced these data from [this link](https://datafinder.stats.govt.nz/data/category/census/2018/sa1-dataset/sa1/), and have done some tidying to remove inlets and lakes etc.
-+ [Statistical Area 2 units, built from the above](datasets/sa1.gpkg.zip?raw=true) summing counts where possible, and dropping other variables
++ [Statistical Area 2 units, built from the above](datasets/sa2.gpkg.zip?raw=true) summing counts where possible, and dropping other variables
 
 Building other units from SA1 (or SA2) data by dissolving polygons with the `group_by() %>% summarise()` operation requires you to join concordance data to the source layer. SA1 and higher level concordance data are [available here](datasets/sa1_concordance.zip?raw=true) in a CSV file.
 
