@@ -55,4 +55,4 @@ One problem with this kind of file is that there is a temptation to jump ahead a
 So... it pays to work through the document chunk by chunk, in sequence, reading the accompanying information so you understand what is happening. If things go haywire, it often pays to go back a few chunks and re-run them, in order. Avoid the temptation to jump around at random in documents!
 
 ## On to the assignment
-OK. Now you are ready for the next file `building-a-simple-model-02-assignment.Rmd`. Open it now!
+OK. Now you are ready for the next file `building-a-simple-model-02-the-data-and-the-process.Rmd`. Open it now!

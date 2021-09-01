@@ -27,9 +27,11 @@ The base data are in [this file](data/wellington-base-data.gpkg?raw=true). Open 
 welly <- st_read("data/wellington-base-data.gpkg")
 plot(welly, lwd = 0.5)
 ```
+
 Remember that the high values in this colour scheme are at the yellow end of the colour ramp. If you want to get a better feel for the distribution of different variables, then I recommend you make some `tmap` maps.
 
 The variables in the base data are
+
 + `sa2_id` and `sa2_name` are the Statistical Area 2 identifier and name respectively.
 + `ta_name` is the Territorial Authority name, limited to just Wellington City and Lower Hutt City (this is a smaller area than we originally looked at, to allow slightly easier mapping).
 + `pop` is the total population of each Statistical Area 2 from the 2018 Census.
@@ -67,7 +69,7 @@ tm_shape(shops) +
 In this dataset the type of shop is recorded in the `shop` attribute. YOu'll see there are a wide array of types of shop including some surprising classifications such as military_surplus.
 
 ### **Question 1**
-#### Based on making and exploring some maps, which variables the `welly` base dataset, and which point locations in the `amenities` and `shops` datasets do you think are most likely to help account for the number of Airbnb listings across the region? There is no strictly correct answer to this question. The idea is to think about what you are doing before just making a statistical model without thinking!. (**20%**)
+#### Based on making and exploring some maps, which variables in the `welly` base dataset, and which point locations in the `amenities` and `shops` datasets do you think are most likely to help account for the number of Airbnb listings across the region? There is no strictly correct answer to this question. The idea is to think about what you are doing before just making a statistical model without thinking!. (**20%**)
 
 You will probably find it helpful to make other maps using `tmap` to answer this question.
 
@@ -136,7 +138,9 @@ tm_shape(welly) +
   tm_polygons(col = 'residual', palette = 'RdBu', alpha = 0.65)
 ```
 
-Where the residuals are high (i.e., positive), the model is *underestimating* the number of listings, that is there are _more_ listings than we might reasonably expect. Where the residuals are low (i.e., negative) the model is *overestimating* the number of listings, that is there are fewer listings than might be expected. Across most of the area, the model is not doing terribly but there are a couple of places where it is badly out. The next question asks you to examine these places a bit more closely, using the web map view, for contextual information that might explain the weakness of the model in these places. The best web map for that contextual information is probably the OpenStreetMap layer.
+Where the residuals are high (i.e., positive), the model is *underestimating* the number of listings, that is there are _more_ listings than we might reasonably expect. Where the residuals are low (i.e., negative) the model is *overestimating* the number of listings, that is there are fewer listings than might be expected. You might find it easier to store the residual as `-m.ages$residuals` and call it `m.ages.error` so that a negative value means the model is _underestimating_ and a positive value means it is _overestimating_. 
+
+Across most of the area, the model is not doing terribly but there are a couple of places where it is badly out. The next question asks you to examine these places a bit more closely, using the web map view, for contextual information that might explain the weakness of the model in these places. The best web map for that contextual information is probably the OpenStreetMap layer.
 
 ### **Question 3**
 #### Where does the model do particularly badly? Briefly speculate on what other factors missing from this particular model (which uses only age data) might explain this. (**25%**)
@@ -157,6 +161,8 @@ This demonstrates how complicated the interrelationships among many attributes i
 With the data available, and based on all you have seen so far, make your own model. 
 
 You should consider including any of the other variables provided such as total population (`pop`), the distance to centre, and (after filtering and counting them) any of the various amenity types or shop types.
+
+You can also experiment with the `step()` function discussed in lecture [here](https://southosullivan.com/geog315/video/week-07-lecture/regression-10.mp4).
 
 When you have made a model you are happy with answer the following question.
 
