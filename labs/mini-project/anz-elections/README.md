@@ -16,13 +16,15 @@ The specific election datasets are as follows
 
 ### Electorate boundaries
 You won't necessarily need these, since party votes are proportional and unrelated to electorates, but here is where to find them:
-+ [2014 Māori electorates as used in 2017](https://datafinder.stats.govt.nz/layer/104063-maori-electoral-district-2014/])
++ [2014 Māori electorates as used in 2017](https://datafinder.stats.govt.nz/layer/104063-maori-electoral-district-2014/)
 + [2014 General electorates as used in 2017](https://datafinder.stats.govt.nz/layer/104062-general-electoral-district-2014/)
 + [2020 Māori electorates](https://datafinder.stats.govt.nz/layer/104579-maori-electorates-2020/)
 + [2020 General electorates](https://datafinder.stats.govt.nz/layer/104580-general-electorates-2020/)
 
 ## How I made these
 In case you are interested, I assembled the detailed results from the electorate-by-electorate details, using <a target="_blank" href="https://github.com/DOSull/Geog315/blob/master/labs/mini-project/anz-elections/pull-elections-data.ipynb">this python notebook</a>.
+
+If you'd like even more election data, try the Electoral Commission website, or for compiled data from earlier elections, use the [`nzelect` package](https://cran.r-project.org/web/packages/nzelect/vignettes/README.html).
 
 ## Commentary
 ### Data preparation
