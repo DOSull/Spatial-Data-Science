@@ -10,13 +10,13 @@ I can't vouch entirely for the quality of these datasets, but they are reasonabl
 
 Building other units from SA1 (or SA2) data by dissolving polygons with the `group_by() %>% summarise()` operation requires you to join concordance data to the source layer. SA1 and higher level concordance data are [available here](datasets/sa1_concordance.zip?raw=true) in a CSV file.
 
-+ The SA1 and SA2 layers above are very detailed geographically, perhaps more so than you need depending on the scale you are working at. A generalised SA2 dataset which is much more manageable to work with (but has almost no attribute, so you'll have to join those from the SA2 dataset above) is [available here](datasets/sa2-generalised.gpkg?raw=true).
++ The SA1 and SA2 layers above are very detailed geographically, perhaps more so than you need depending on the scale you are working at. A generalised SA2 dataset which is much more manageable to work with (but has almost no attributes, so you'll have to join those from the SA2 dataset above) is [available here](datasets/sa2-generalised.gpkg?raw=true).
 
 ## If you need more...
 You can find raw source data here at [datafinder.stats.govt.nz/data/category/census/](https://datafinder.stats.govt.nz/data/category/census/).
 
 ## Lower or higher levels of detail
-For lower levels of detail at Statistical Area 2 (SA2) level or Electorate or whatever, you should be able to aggregate up by spatially joining the SA1 data to boundaries data for the larger units.
+For lower levels of detail at Electorate level or Territorial Authority or whatever, you should be able to aggregate up by spatially joining the SA1 or SA2 data to boundaries data for the larger units (which you can make from the SA1 or SA2 dataset and the concordance table provided above).
 
 For more detailed data, you may be out of luck. You can get meshblock boundaries (i.e. the polygons) level [here](https://datafinder.stats.govt.nz/layer/92197-meshblock-2018-generalised/) but the data to populate the meshblocks with are trickier to get hold of and due to small numbers many entries in meshblock data tables are suppressed.
 
