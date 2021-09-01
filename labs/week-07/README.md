@@ -17,7 +17,7 @@ This week's assignment requirement is set out in the materials linked above and 
 You can prepare your report using _Rmarkdown_ and knitting the report (this is explained in this week's materials), or you can proceed as usual preparing your report in _Word_ and including figures and tables as you usually would. Either is acceptable, but I would encourage you to  experiment with knitting an _Rmarkdown_ file to understand the possibilities.
 
 ## Videos
-Videos describing R scripts, markdown formatting and Rmarkdown are provided as listed below. You will find them all in [this folder](https://southosullivan.com/geog315/video/week-07-lab/). The total run time is around 35 minutes.
+Videos describing R scripts, markdown formatting and Rmarkdown are provided as listed below.
 
 + [Introduction and R scripts](https://southosullivan.com/geog315/video/week-07-lab/geog315-week07-01-intro-and-R-scripts.mp4) (12:17 min)
 + [R script comments](https://southosullivan.com/geog315/video/week-07-lab/geog315-week07-02-R-script-comments.mp4) (1:38 min)
