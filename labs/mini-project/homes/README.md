@@ -11,4 +11,4 @@ The dataset includes sales prices for the houses (the `price` attribute) along w
 ### Ideas
 House prices are a clear candidate for applying regression modelling methods.
 
-In this case, in addition to considering bedrooms and bathrooms, and obvious angle is neighbourhood, so you may want to make use of additional demographic data available [here](../aotearoa-new-zealand-census-data.md).
+In this case, in addition to considering bedrooms and bathrooms, an obvious angle are neighbourhoods, and their characteristics and amenities so you may want to make use of additional demographic data available [here](../aotearoa-new-zealand-census-data.md).
