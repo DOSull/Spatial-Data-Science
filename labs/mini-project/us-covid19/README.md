@@ -1,7 +1,7 @@
 **Geog 315 T2 2021**
 
 # US COVID-19
-These data were obtained using the _R_ package `COVID19`, which allows download of publicly available COVID-19 data from a large number of countries. New Zealand data on this subject are not very interesting for our purposes because no detailed spatial breakdown of the numbers is available (also... the numbers are thankfully not very large).
+These data were obtained using the _R_ package `COVID19`, which allows download of publicly available COVID-19 data from a large number of countries. New Zealand data on this subject are not very interesting for our purposes because no detailed spatial breakdown of the numbers is available (also... the numbers have thankfully not been very large so far... he said, on 2 September 2021, fingers-crossed).
 
 The US data are a different matter, with detailed information available down to the county level.
 
@@ -10,10 +10,10 @@ Here's an [example dataset](usa-covid19-220920.gpkg?raw=true). This was download
 
 ```{r}
 library(COVID19)
-usa <- covid19("USA", start = "2020-09-23", level = 3, raw = TRUE)
+usa <- covid19("USA", start = "2020-09-23", end = "2020-09-23", level = 3, raw = TRUE)
 ```
 
-Some additional processing was needed to get the data into the spatial `gpkg` format with Alaska and Hawaii excluded, although none of that was very difficult. You also need to change the `start` date setting (there's also an `end` option) to get different dates, or even data for multiple days.
+Some additional processing was needed to get the data into the spatial `gpkg` format, although none of that was very difficult (using the `st_as_sf()` function). You also need to change the `start` and `end` date settings to get different dates, or even data for multiple days.
 
 The COVID19 project is impressive and you can find out more about it at their website [https://covid19datahub.io](https://covid19datahub.io/index.html).
 
