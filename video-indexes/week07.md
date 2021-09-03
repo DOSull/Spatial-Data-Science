@@ -28,22 +28,22 @@
 ---
 
 ## More on regression lecture
-+ [Preamble](https://southosullivan.com/geog315/video/week-07-lecture/more-on-regression-01.mp4) (1:25 min)
++ [Preamble](https://southosullivan.com/geog315/video/week-07-lecture-02/more-on-regression-01.mp4) (1:25 min)
 
 ### Wrinkles in regression
-+ [Multicollinearity, outliers, distributions](https://southosullivan.com/geog315/video/week-07-lecture/more-on-regression-02.mp4) (6:52 min)
-+ [Non-numeric independent variables](https://southosullivan.com/geog315/video/week-07-lecture/more-on-regression-03.mp4) (2:22 min)
-+ [Other kinds of regression for non-numeric dependent variables](https://southosullivan.com/geog315/video/week-07-lecture/more-on-regression-04.mp4) (3:32 min)
-+ [Variable selection](https://southosullivan.com/geog315/video/week-07-lecture/more-on-regression-05.mp4) (3:08 min)
++ [Multicollinearity, outliers, distributions](https://southosullivan.com/geog315/video/week-07-lecture-02/more-on-regression-02.mp4) (6:52 min)
++ [Non-numeric independent variables](https://southosullivan.com/geog315/video/week-07-lecture-02/more-on-regression-03.mp4) (2:22 min)
++ [Other kinds of regression for non-numeric dependent variables](https://southosullivan.com/geog315/video/week-07-lecture-02/more-on-regression-04.mp4) (3:32 min)
++ [Variable selection](https://southosullivan.com/geog315/video/week-07-lecture-02/more-on-regression-05.mp4) (3:08 min)
 
 ### Spatial takes on regression
-+ [Including spatial variables in regression](https://southosullivan.com/geog315/video/week-07-lecture/more-on-regression-06.mp4) (3:06 min)
-+ [Trend surface analysis](https://southosullivan.com/geog315/video/week-07-lecture/more-on-regression-07.mp4) (6:23 min)
-+ [Residual mapping](https://southosullivan.com/geog315/video/week-07-lecture/more-on-regression-08.mp4) (4:46 min)
++ [Including spatial variables in regression](https://southosullivan.com/geog315/video/week-07-lecture-02/more-on-regression-06.mp4) (3:06 min)
++ [Trend surface analysis](https://southosullivan.com/geog315/video/week-07-lecture-02/more-on-regression-07.mp4) (6:23 min)
++ [Residual mapping](https://southosullivan.com/geog315/video/week-07-lecture-02/more-on-regression-08.mp4) (4:46 min)
 
 ### Geographically weighted regression
-+ [Geographically weighted regression](https://southosullivan.com/geog315/video/week-07-lecture/more-on-regression-09.mp4) (12:34 min)
-+ [Summary](https://southosullivan.com/geog315/video/week-07-lecture/more-on-regression-10.mp4) ()
++ [Geographically weighted regression](https://southosullivan.com/geog315/video/week-07-lecture-02/more-on-regression-09.mp4) (12:34 min)
++ [Summary](https://southosullivan.com/geog315/video/week-07-lecture-02/more-on-regression-10.mp4) ()
 
 ---
 
