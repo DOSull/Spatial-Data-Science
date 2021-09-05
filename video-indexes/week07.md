@@ -23,7 +23,7 @@
 
 ## Regression lecture supplemental materials
 + [A script to do the lapse rate example](../scripts/lapse-rate.R) (you will need to install some packages to make this work)
-+ [Materials for the Galapagos regression model example](../slides/example/galapagos.zip)
++ [Materials for the Galapagos regression model example](../slides/regression/example/galapagos.zip)
 
 ---
 
