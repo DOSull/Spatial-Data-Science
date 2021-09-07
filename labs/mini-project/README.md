@@ -12,7 +12,7 @@ Details of the various available datasets and some thoughts on what you might lo
 + [House prices in Wellington](homes)
 + [Landlides in Waitotara](landslides)
 + [Distribution of _tradescantia fluminensis_](tradescantia)
-<!-- + [Determinants of water quality](water-quality) -->
++ [Mouse trapping at Zealandia, 2003-14](zealandia)
 + [US COVID 19 pandemic](us-covid19)
 + [US UFO sightings](ufos)
 
