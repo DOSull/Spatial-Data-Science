@@ -7,7 +7,7 @@ This project uses observational data on the occurrence of [_tradescantia flumine
 ### Datasets
 The primary dataset for this project is
 
-+ [tradescantia.gpkg?raw=true](Confirmed locations of _tradescantia_)
++ [Confirmed locations of _tradescantia_](tradescantia.gpkg?raw=true)
 
 You will also want supplementary datasets some of them [here](../aotearoa-new-zealand-physical-geography-data.md). Others may be accessible locally through the university, and you should ask for more information on this if needed.
 
