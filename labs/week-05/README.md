@@ -13,6 +13,3 @@ And the datasets are available here:
 
 + [San Francisco demonstration data](sf_demo.gpkg?raw=true)
 + [Wellington commuter data](welly-commutes.gpkg?raw=true)
-
-## Videos
-None this week, at least not yet...

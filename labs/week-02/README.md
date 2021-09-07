@@ -24,7 +24,7 @@ This lab introduces *R* by just asking you to get on with it, without stopping t
 Ask questions, confer with your fellow students, consult Google (this [cartoon](https://xkcd.com/627/) is good advice).
 
 ### Videos supporting this week's lab material
-These are linked [here](../../videos.md#using-r-and-rstudio).
+These are linked [here](../../video-indexes/week02.md).
 
 View them at any time for additional help.
 

@@ -13,4 +13,4 @@ The instructions this week are in several parts, to make it a bit easier to foll
 You may want to take a quick look at the last of these so you know what is expected of you, then come back to this document and work through the first three to learn the various tools you can use to accomplish what is asked of you.
 
 ## Videos
-Video support for this week's lab is [here](../../videos.md#making-maps-in-r)
+Video support for this week's lab is [here](../../video-indexes/week03.md)
