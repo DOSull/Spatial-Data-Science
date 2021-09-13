@@ -12,7 +12,7 @@ Using _R_ and _RStudio_
 ## [Week 3](video-indexes/week03.md)
 Practical material on making maps in _R_
 
-And then lockdown and lots of video from lockdown...
+And then lockdown and lots more video...
 
 ## [Week 7](video-indexes/week07.md)
 Two lectures and a bunch of practical stuff about using _RStudio_ with scripts and _Rmarkdown_
