@@ -15,6 +15,6 @@ Date | Tue | Thu (lab) | Fri
 30 Aug | [Regression models](slides/regression/) | [**Building a simple statistical model**](labs/week-07) (20%) due 13 Sep | [More on regression](slides/more-on-regression/)
 6 Sep | [Running a GIS project](slides/running-a-gis-project/) and [**Introducing the mini-projects**](labs/mini-project) (30%) due 8 Oct | Help with assignments / project work | [Other spatial analysis methods](slides/spatial-analysis-methods/)
 13 Sep | [Surface analysis](slides/surface-analysis/) | Help with assignments / project work | [Network analysis](slides/network-analysis/)
-21 Sep | [Time geography](slides/time-geography/) | Project work | Project support / guest
-28 Sep | [Simulation models](slides/simulation-models/) | Project work | Project support / guest
-4 Oct | Project support / guest | Project work | Project support
+20 Sep | [Time geography](slides/time-geography/) | Project work | [Simulation models](slides/simulation-models/)
+27 Sep | Project support | Project work | Project support
+4 Oct | Project support | Project work | Project support

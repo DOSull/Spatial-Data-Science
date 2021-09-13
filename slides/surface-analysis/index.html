@@ -1,4 +1,4 @@
-h1<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -7,8 +7,9 @@ h1<!doctype html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../reveal.js/css/reveal.css">
     <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../extra-styles.css">
     <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/zenburn.css">
     <!-- Include the appropriate print stylesheet -->
     <script>
       if (window.location.search.match(/print-pdf/gi)) {
@@ -22,22 +23,14 @@ h1<!doctype html>
     <!-- [if lt IE 9] >
       <script src="reveal.js/lib/js/html5shiv.js"></script>
     <! [endif] -->
-<!--    <script type="text/javascript" async
-      src="../MathJax.js">
-    </script>
-  -->
-    <link rel="stylesheet" href="../extra-styles.css">
-    <style>
-    table {background-color: rgba(255,153,255,0.15)}
-    </style>
   </head>
 
   <body>
     <div id="header" class="translucent header">
-      <a target="_blank" href="https://www.wgtn.ac.nz/sgees">VUW SGEES</a> |
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees">VUW SGEES</a> |
       <a target="_blank" href="https://dosull.github.io/Geog315/">GEOG 315</a> |
-      <a target="_blank" href="https://www.wgtn.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
-      <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
+      <a target="_blank" href="https://www.victoria.ac.nz/sgees/about/staff/david-osullivan">O&rsquo;Sullivan</a>
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="vertical-align: -15%" src="../cc-license.png"/></a>
     </div>
 
     <div class="reveal">
@@ -46,51 +39,56 @@ h1<!doctype html>
           <section data-background="images/minecraft-hills.jpg">
             <p class="attribution">the rural idyll in the Minecraft universe</p>
             <h1>Surface Analysis</h1>
-            <h2><a href="#/2">More than elevation models</a></h2>
-            <h2><a href="#/3">What is a surface?</a></h2>
-            <h2><a href="#/4">Key ideas in surface analysis</a></h2>
+            <h2><a href="#/1">More than elevation models</a></h2>
+            <h2><a href="#/2">What is a surface?</a></h2>
+            <h2><a href="#/3">Key ideas in surface analysis</a></h2>
           </section>
         </section>
 
 
         <section>
           <section data-background="images/tea-fields.jpg">
-          <p class="attribution">tea fields in <a target="_blank" href="https://goo.gl/maps/vgrIQ">Cameron Highlands, Malaysia</a><br />
-          image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Tea_fields_%28Will_Ellis%29.jpg">
-          commons.wikimedia.org
-          </a> by <a target="_blank" href="https://www.flickr.com/photos/wills/">Will Ellis</a></p>
+            <p class="attribution">
+              tea fields in <a target="_blank" href="https://goo.gl/maps/vgrIQ">Cameron Highlands, Malaysia</a><br>
+              image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Tea_fields_%28Will_Ellis%29.jpg">commons.wikimedia.org</a>
+              by <a target="_blank" href="https://www.flickr.com/photos/wills/">Will Ellis</a>
+            </p>
             <h1>More than elevation</h1>
-            <h2 class="fragment">A <em>mathematical representation</em> that assumes some phenomenon can be
-            <em>measured or recorded everywhere</em></h2>
+            <h2 class="fragment">
+              A <em>mathematical representation</em> that assumes some phenomenon can be
+              <em>measured or recorded everywhere</em>
+            </h2>
           </section>
 
           <section>
             <div class="left">
-            <img src="images/cotopaxi.jpg">
-            <figcaption>DEM of <a target="_blank" href="https://en.wikipedia.org/wiki/Cotopaxi">Cotopaxi volcano</a><br />
-            image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Cotopaxi_Volcano_dem.jpg">
-            commons.wikimedia.org</a><br />
-            source <a target="_blank" href="https://www.nasa.gov/multimedia/imagegallery/image_feature_300.html">NASA Earth Observatory</a>
-            </figcaption>
+              <img src="images/cotopaxi.jpg">
+              <figcaption>
+                DEM of <a target="_blank" href="https://en.wikipedia.org/wiki/Cotopaxi">Cotopaxi volcano</a><br>
+                image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Cotopaxi_Volcano_dem.jpg">commons.wikimedia.org</a><br>
+                source <a target="_blank" href="https://www.nasa.gov/multimedia/imagegallery/image_feature_300.html">NASA Earth Observatory</a>
+              </figcaption>
             </div>
             <div class="left">
-            <h1>Scalar fields</h1>
-            <h2 class="fragment"><em>Numeric value</em> at each location</h2>
-            <h2 class="fragment">Most often <em>physical</em> data</h2>
-            <h2 class="fragment">Density surfaces an exception</h2>
+              <h1>Scalar fields</h1>
+              <h2 class="fragment"><em>Numeric value</em> at each location</h2>
+              <h2 class="fragment">Most often <em>physical</em> data</h2>
+              <h2 class="fragment">Density surfaces an exception</h2>
             </div>
           </section>
 
           <section data-background="images/china_popdens_labels_crop.png">
-            <p class="attribution">source
-            <a target="_blank" href="https://www.undertheraedar.com/2012/06/population-of-china.html">
-            Alasdair Rae,<br>University of Sheffield
-            </a></p>
+            <p class="attribution">
+              source <a target="_blank" href="https://www.undertheraedar.com/2012/06/population-of-china.html">
+                Alasdair Rae,<br>University of Sheffield
+              </a>
+            </p>
           </section>
 
           <section>
             <img src="images/london-pop-surface-wood-et-al-1999.png">
-            <figcaption>London population density visualised as a density surface in Wood JD, PF Fisher,
+            <figcaption>
+              London population density visualised as a density surface in Wood JD, PF Fisher,
               JA Dykes, DJ Unwin and K Stynes. 1999. <a target="_blank" href="https://dx.doi.org/10.1068/b4122">
               The Use of the Landscape Metaphor in Understanding Population Data</a> <i>Environment and Planning B:
               Planning and Design</i> <b>26</b>(2) 281–295.
@@ -99,20 +97,21 @@ h1<!doctype html>
 
           <section>
             <img src="images/population-potential.png">
-            <figcaption>from Stewart JQ. 1947. <a target="_blank" href="https://www.jstor.org/stable/211132">
-            Empirical mathematical rules concerning the distribution and equilibrium of population</a>.
-            <i>Geographical Review</i> <b>37</b>(3), 461-485.</figcaption>
+            <figcaption>
+              from Stewart JQ. 1947. <a target="_blank" href="https://www.jstor.org/stable/211132">
+              Empirical mathematical rules concerning the distribution and equilibrium of population</a>.
+              <i>Geographical Review</i> <b>37</b>(3), 461-485.
+            </figcaption>
           </section>
 
           <section>
-            <div class="left" style="width:1200px;">
-              <iframe src="https://earth.nullschool.net/" width=1200px height=1000px>
-              </iframe>
-              <figcaption>source <a target="_blank" href="https://earth.nullschool.net/">
-                earth.nullschool.net</a>
+            <div class="left" style="width:75%;">
+              <iframe src="https://earth.nullschool.net/" width=1200px height=1000px></iframe>
+              <figcaption>
+                source <a target="_blank" href="https://earth.nullschool.net/">earth.nullschool.net</a>
               </figcaption>
             </div>
-            <div class="left" style="width:400px;">
+            <div class="left" style="width:25%;">
               <h1>Vector fields</h1>
               <h2>Not strictly a surface</h2>
             </div>
@@ -120,89 +119,95 @@ h1<!doctype html>
 
           <section>
             <div class="left">
-            <img src="images/migration-flow.png">
+              <figcaption>from Tobler WR. 1987. <a target="_blank" href="http://www.tandfonline.com/doi/abs/10.1559/152304087783875273">
+              Experiments In Migration Mapping By Computer</a>.
+              <i>The American Cartographer</i> <b>14</b>(2), 155-163.</figcaption>
             </div>
-            <div class="left" style="position:relative; top:800px;">
-            <figcaption>from Tobler WR. 1987. <a target="_blank" href="http://www.tandfonline.com/doi/abs/10.1559/152304087783875273">
-            Experiments In Migration Mapping By Computer</a>.
-            <i>The American Cartographer</i> <b>14</b>(2), 155-163.</figcaption>
+            <div class="left">
+              <img src="images/migration-flow.png">
             </div>
-          </section>
-        </section>
-
-
-        <section>
-          <section>
-            <h1>Defining surfaces</h1>
-            <h2>In geospatial, a surface is effectively, some &lsquo;third value&rsquo;, $z$, defined at every $(x,y)$ location
-              \[z=f(x,y)\]
-            </h2>
-          </section>
-
-          <section data-background="images/segway-polo.jpg">
-          <p class="attribution">Segway polo
-          image source<br /><a target="_blank" href="https://commons.wikimedia.org/wiki/File:Segway_polo%282959051218_a887a9becd_o%29.jpg">
-          commons.wikimedia.org
-          </a><br />by <a target="_blank" href="https://www.flickr.com/photos/kowitz/">Braden Kowitz</a></p>
-            <h3 class="fragment fade-out" data-fragment-index="1">So...</h3>
-            <h1 class="fragment fade-out" data-fragment-index="1">A nice idea</h1>
-            <h1 class="fragment" data-fragment-index="1"
-            style="font-size:640px; position:relative; bottom:100px;">But</h1>
-            <p class="fragment" data-fragment-index="1"
-            style="position:relative; bottom:100px;">&copy;Stan Openshaw</p>
-          </section>
-
-          <section>
-            <h2>conceptual ideal gets captured many different ways...</h2>
-            <img src="images/surface-models.gif" height=900px>
-            <figcaption>Figure 9.1 from O&rsquo;Sullivan &amp; Unwin</figcaption>
-          </section>
-
-          <section data-background="images/TIN.png">
-            <p class="attribution">image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Digitales_Gel%C3%A4ndemodell.png">
-            commons.wikimedia.org
-            </a></p>
-            <h1>Triangulated irregular networks (TIN)</h1>
-            <div class="right">
-              <h3>Effectively a kind of interpolation</h3>
-              <h3>Efficient way to store surfaces</h3>
-              <h3>Popular for visualization purposes</h3>
-            </div>
-            <div style="position:relative; left:150px;">
-            </section>
-
-            <section>
-              <div style="position:relative; left:150px;">
-                <img src="images/bay-dem.png">
-                <h2 style="position:relative; bottom:250px; left:280px; width:480px; text-align:left;">
-                A digital elevation model (59.8MB)</h2>
-              </div>
-              <div style="position:relative; left:50px; top:-980px;" class="fragment">
-                <img src="images/bay-dem-plus-TIN.png">
-                <h2 style="position:relative; bottom:165px; left:280px; width:480px; text-align:left;">
-                TIN edges extracted</h2>
-              </div>
-              <div style="position:relative; left:-50px; top:-1880px;" class="fragment">
-                <img src="images/bay-TIN.png">
-                <h2 style="position:relative; bottom:165px; left:280px; width:480px; text-align:left;">
-                TIN edges on their own</h2>
-              </div>
-              <div style="position:relative; left:-150px; top:-2780px;" class="fragment">
-                <img src="images/bay-TIN-surface.png">
-                <h2 style="position:relative; bottom:330px; left:280px; width:480px; text-align:left;">
-                TIN faces colored by elevation (10.7MB)</h2>
-              </div>
-            </section>
           </section>
         </section>
 
 
         <section>
           <section data-markdown>
-            # Some key methods
-            ## Most of these are most easily performed on a raster grid of values
-            ## So before all other methods, comes _interpolation_ to create a surface
-            ## Assuming we have such a surface, many methods are available...
+            # Defining surfaces
+            ## In geospatial, a surface is effectively, some &lsquo;third value&rsquo;, $z$, defined at every $(x,y)$ location
+            ## $z=f(x,y)$
+          </section>
+
+          <section data-background="images/segway-polo.jpg">
+            <p class="attribution">
+              Segway polo image source<br>
+              <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Segway_polo%282959051218_a887a9becd_o%29.jpg">
+                commons.wikimedia.org
+              </a><br>
+              by <a target="_blank" href="https://www.flickr.com/photos/kowitz/">Braden Kowitz</a>
+            </p>
+            <h3 class="fragment fade-out" data-fragment-index="1">So...</h3>
+            <h1 class="fragment fade-out" data-fragment-index="1">A nice idea</h1>
+            <h1 class="fragment" data-fragment-index="1" style="font-size:600px; position:relative; bottom:100px;">But...</h1>
+            <p class="fragment" data-fragment-index="1" style="position:relative; bottom:100px;">&copy;Stan Openshaw</p>
+          </section>
+
+          <section>
+            <h2>Conceptual ideal gets captured many different ways...</h2>
+            <img src="images/surface-models.gif" height=900px>
+            <figcaption>Figure 9.1 from O&rsquo;Sullivan &amp; Unwin</figcaption>
+          </section>
+
+          <section data-background="images/TIN.png">
+            <p class="attribution">
+              image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Digitales_Gel%C3%A4ndemodell.png">
+                commons.wikimedia.org
+              </a>
+            </p>
+            <h1>Triangulated irregular networks (TIN)</h1>
+            <div class="right" style="width:40%">
+              <h3>Effectively a kind of interpolation</h3>
+              <h3>Efficient way to store surfaces</h3>
+              <h3>Popular for visualization purposes</h3>
+            </div>
+          </section>
+
+          <section>
+            <div style="position:relative; left:150px;">
+              <img src="images/bay-dem.png">
+              <h2 style="position:relative; bottom:270px; left:280px; width:480px; text-align:left;">
+              A digital elevation model (59.8MB)</h2>
+            </div>
+            <div style="position:relative; left:50px; top:-980px;" class="fragment">
+              <img src="images/bay-dem-plus-TIN.png">
+              <h2 style="position:relative; bottom:185px; left:280px; width:480px; text-align:left;">
+              TIN edges extracted</h2>
+            </div>
+            <div style="position:relative; left:-50px; top:-1880px;" class="fragment">
+              <img src="images/bay-TIN.png">
+              <h2 style="position:relative; bottom:185px; left:280px; width:480px; text-align:left;">
+              TIN edges on their own</h2>
+            </div>
+            <div style="position:relative; left:-150px; top:-2780px;" class="fragment">
+              <img src="images/bay-TIN-surface.png">
+              <h2 style="position:relative; bottom:350px; left:280px; width:480px; text-align:left;">
+              TIN faces colored by elevation (10.7MB)</h2>
+            </div>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background="images/mt-ruapehu-hillshade.png">
+            <p class="attribution">
+              Mt Ruapehu hillshade made<br>
+              using <code>terra::shade</code> function
+            </p>
+            <div class="translucent fragment">
+              <h1>Some key methods</h1>
+              <h2>Most of these are most easily performed on a raster grid of values</h2>
+              <h2>So before all other methods, comes <em>interpolation</em> to create a surface</h2>
+              <h2>Assuming we have such a surface, many methods are available...</h2>
+            </div>
           </section>
 
           <section>
@@ -246,22 +251,16 @@ h1<!doctype html>
         </section>
 
 
-        <section data-markdown data-background="images/minecraft-hills.jpg">
-          # Summary
-          ## Surface representations are an idealisation
-          ## Important to note they may be used in social geography contexts too
-          ## Often require a lot of work, particularly _interpolation_ to create
-          ## Once built many analytical options are available
-          ## Tools: `raster` package, Spatial Analyst in Arc, various geoprocessing tools in QGIS
-        </section>
-
-
-        <!-- <section>
-          <section>
-            <h1>Surfaces as networks</h1>
-            <iframe style="background:white;" src="distanceSteps_v6.html" width=900 height=900></iframe>
+        <section>
+          <section data-markdown data-background="images/minecraft-hills.jpg">
+            # Summary
+            ## Surface representations are an idealisation
+            ## Important to note they may be used in social geography contexts too
+            ## Often require a lot of work, particularly _interpolation_ to create
+            ## Once built many analytical options are available
+            ## Tools: `raster` or `terra` package, Spatial Analyst in Arc, various geoprocessing tools in QGIS
           </section>
-        </section> -->
+        </section>
       </div>
     </div>
 
