@@ -22,7 +22,7 @@
 + [The rest of semester](https://southosullivan.com/geog315/video/week-08-lecture-02/spatial-analysis-methods-01.mp4) (1:38 min)
 
 ### Introduction
-+ [Overview of spatial analysis ideas](https://southosullivan.com/geog315/video/week-08-lecture-02/spatial-analysis-methods-01.mp4) (2:24 min)
++ [Overview of spatial analysis ideas](https://southosullivan.com/geog315/video/week-08-lecture-02/spatial-analysis-methods-02.mp4) (2:24 min)
 + [How spatial analysis moves beyond simple location](https://southosullivan.com/geog315/video/week-08-lecture-02/spatial-analysis-methods-03.mp4) (1:53 min)
 
 ### Characterising patterns
