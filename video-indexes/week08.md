@@ -32,7 +32,7 @@
 
 ### Inferring pattern (interpolation)
 + [Simple methods](https://southosullivan.com/geog315/video/week-08-lecture-02/spatial-analysis-methods-07.mp4) (7:47 min)
-+ [Geostatistical methods](https://southosullivan.com/geog315/video/week-08-lecture-07/spatial-analysis-methods-08.mp4) (2:11 min)
++ [Geostatistical methods](https://southosullivan.com/geog315/video/week-08-lecture-02/spatial-analysis-methods-08.mp4) (2:11 min)
 
 ### Spatial relations and conclusion
 + [Relational geographies and GIS](https://southosullivan.com/geog315/video/week-08-lecture-02/spatial-analysis-methods-09.mp4) (11:15 min)
