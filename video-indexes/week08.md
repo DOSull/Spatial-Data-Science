@@ -1,5 +1,5 @@
 # Week 8 Videos
-## Introduction to mini-projects lectures
+## Introduction to mini-projects
 ### Preamble
 + [Lockdown level stuff](https://southosullivan.com/geog315/video/week-08-lecture-01/intro-to-mini-projects-1.m4v) (2:11 min)
 
