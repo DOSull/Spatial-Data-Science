@@ -34,7 +34,7 @@ If you are interested in other biophysical indicators the best bet are the layer
 Another resource here is the Landcover Database for New Zealand (LCDB5) available from [here](https://lris.scinfo.org.nz/layer/104400-lcdb-v50-land-cover-database-version-50-mainland-new-zealand/data/). Note that different from the other examples on this page, this is a vector dataset of polygons.
 
 ## Another useful source
-The [`disdat`](https://rdrr.io/cran/disdat/man/disdat-package.html) package provides some nicely packaged data layers relating to New Zealand which are particularly useful for plant species distribution modelling, but might find other uses too.
+The [`disdat`](https://rdrr.io/cran/disdat/man/disdat-package.html) package provides some nicely packaged data layers relating to New Zealand which are particularly useful for plant species distribution modelling, but might find other uses too. These are collated (but only for the Wellington region) in this [data archive](datasets/rasters.zip?raw=true). 
 
 # Data handling
 A major challenge with any of these datasets is their size, so figuring out how to deal with that is an initial challenge. Note that the platforms linked above allow you to crop layers _before_ you download them which can save some headaches dealing with huge file and download sizes.
