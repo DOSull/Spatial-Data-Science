@@ -26,6 +26,6 @@ Some other general datasets that may be of use, depending on your topic, are dis
 **In all cases, I strongly advise that you anticipate difficulties and challenges working with any of these and don't leave downloading them until the last minute! Please plan ahead!**
 
 ## Submission requirements
-You should submit a document (PDF preferred) conforming with the requirements set out in [this document](guidance-on-mini-project-report.md) to the dropbox provided on Blackboard by the end of the day on **16 October**.
+You should submit a document (PDF preferred) conforming with the requirements set out in [this document](guidance-on-mini-project-report.md) to the dropbox provided on Blackboard by the end of the day on **8 October**.
 
 Note that if you compile your report using _Rmarkdown_ you should still submit it in PDF format (Knit to Word, then convert to PDF).
