@@ -3,11 +3,11 @@ This course is 100% internally assessed.  Assessment is based on the various ite
 
 Assessment item | Credit | Due date | Learning objectives
  -- | -- | -- | --
-[Making maps](labs/week-03 "lab materials") | 15% | {{ site.dates.assignment_1 }} | 2
-[Spatial data manipulation](labs/week-04 "lab materials") | 15% | 13 Aug | 2 4
-[Geographic cluster analysis](labs/week-05 "lab materials") | 20% | 3 Sep | 6
-[Building a simple statistical model](labs/week-07 "lab materials") | 20% | 13 Sep | 6
-[Mini-project](labs/mini-project "More on the mini-project") | 30% | 8 Oct | 1 3 5 6 7
+[Making maps](labs/week-03 "lab materials") | 15% | {{ site.data.dates.assignment_1 }} | 2
+[Spatial data manipulation](labs/week-04 "lab materials") | 15% | {{ site.data.dates.assignment_2 }} | 2 4
+[Geographic cluster analysis](labs/week-05 "lab materials") | 20% | {{ site.data.dates.assignment_3 }} | 6
+[Building a simple statistical model](labs/week-07 "lab materials") | 20% | {{ site.data.dates.assignment_4 }} | 6
+[Mini-project](labs/mini-project "More on the mini-project") | 30% | {{ site.data.dates.assignment_5 }} | 1 3 5 6 7
 
 ## Submission
 Assessments are to be submitted electronically via dropbox on [Blackboard](https://blackboard.vuw.ac.nz "VUW Blackboard"). I will aim to return coursework within 3 weeks. Extensions should be requested from the SGEES administration office. If you anticipate problems come and talk to me.

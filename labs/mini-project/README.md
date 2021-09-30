@@ -26,7 +26,7 @@ Some other general datasets that may be of use, depending on your topic, are dis
 **In all cases, I strongly advise that you anticipate difficulties and challenges working with any of these and don't leave downloading them until the last minute! Please plan ahead!**
 
 ## Submission requirements
-You should submit a document (PDF preferred) conforming with the requirements set out in [this document](guidance-on-mini-project-report.md) to the dropbox provided on Blackboard by the end of the day on **8 October**.
+You should submit a document (PDF preferred) conforming with the requirements set out in [this document](guidance-on-mini-project-report.md) to the dropbox provided on Blackboard by the end of the day on **{{ site.data.dates.assignment_5 }}**.
 
 <!-- delete submission date from this page, or make sure it matches the schedule! -->
 

@@ -17,8 +17,8 @@ Here are a few things to be thinking about while working on this assignment.
 Assessment will be based on the maps and any diagrams included, and an overall evaluation of your explanation of the analysis carried out and the discussion of what it shows. Pay equal attention to the quality of any maps or figures you include, and to the written discussion.
 
 #### Submission
-**Note this assignment is now due 3 September.**
+**Note this assignment is now due {{ site.data.dates.assignment_3 }}.**
 
-Prepare a PDF document that meets the requirements set out above. The whole document should only need to be 2-3 pages (maximum). Submit the PDF file to the dropbox provided on Blackboard. The due date is end of the day on **30 August**. Remember that you can export maps to PNG format images for inclusion in a Word document from RStudio.
+Prepare a PDF document that meets the requirements set out above. The whole document should only need to be 2-3 pages (maximum). Submit the PDF file to the dropbox provided on Blackboard. The due date is end of the day on **{{ site.data.dates.assignment_3 }}**. Remember that you can export maps to PNG format images for inclusion in a Word document from RStudio.
 
 Go [back to the overview page](README.md)
