@@ -3,12 +3,12 @@ setwd("~/Documents/teaching/Geog315/labs/mini-project/anz-elections")
 library(readr)
 library(zoo)
 
-year <- 2017
-party_cols <- 18
-special_rows <- 5
-# year <- 2020
-# party_cols <- 19
-# special_rows <- 6
+# year <- 2017
+# party_cols <- 18
+# special_rows <- 5
+year <- 2020
+party_cols <- 19
+special_rows <- 6
 
 baseURL <- paste("https://www.electionresults.govt.nz/electionresults_",
                  year, "/statistics/csv/party-votes-by-voting-place-", sep = "")
