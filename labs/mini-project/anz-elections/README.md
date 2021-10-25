@@ -11,8 +11,8 @@ The specific election datasets are as follows
 + [General electorate party vote results](non-maori-electorate-detailed-party-results-2017.csv?raw=true) and [Māori electorate party vote results](maori-electorate-detailed-party-results-2017.csv?raw=true) detailed by polling places. These do not include special and postal votes (e.g. votes from serving military or others overseas).
 
 ### 2020
-+ [Locations of polling places](voting-places-2020.gpkg?raw=true). These are direct from the Electoral Commission website, so any errors and omissions are per their data.
-+ [General electorate party vote results](non-maori-electorate-detailed-party-results-2020.csv?raw=true) and [Māori electorate party vote results](maori-electorate-detailed-party-results-2020.csv?raw=true) detailed by polling places. These do not include special and postal votes (e.g. votes from serving military or others overseas).
++ [Locations of polling places](voting-places-2020.gpkg?raw=true). These are direct from the Electoral Commission website, so any errors and omissions are per their data
++ [General electorate party vote results](non-maori-electorate-detailed-party-results-2020.csv?raw=true) and [Māori electorate party vote results](maori-electorate-detailed-party-results-2020.csv?raw=true) detailed by polling places. These include regular, advance, and special votes, designated as such in the `Type` column.
 
 ### Electorate boundaries
 You won't necessarily need these, since party votes are proportional and unrelated to electorates, but here is where to find them:
@@ -22,7 +22,7 @@ You won't necessarily need these, since party votes are proportional and unrelat
 + [2020 General electorates](https://datafinder.stats.govt.nz/layer/104580-general-electorates-2020/)
 
 ## How I made these
-In case you are interested, I assembled the detailed results from the electorate-by-electorate details, using <a target="_blank" href="https://github.com/DOSull/Geog315/blob/master/labs/mini-project/anz-elections/pull-elections-data.ipynb">this python notebook</a>.
+In case you are interested, I assembled the detailed results from the electorate-by-electorate details, using this [R script](pull-elections-data.R?raw=true).
 
 If you'd like even more election data, try the Electoral Commission website, or for compiled data from earlier elections, use the [`nzelect` package](https://cran.r-project.org/web/packages/nzelect/vignettes/README.html).
 
