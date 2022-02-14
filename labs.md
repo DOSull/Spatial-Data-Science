@@ -6,15 +6,15 @@ Only four lab sessions have an associated assessed assignment, but you should at
 ## Links to lab materials
 You can get an idea of what's coming from the links below.
 
-**HOWEVER**, materials are _not current for 2022_, until the pages are marked with the heading **Geog 315 T1 2022** (and not an earlier year). You are advised not to work on any lab materials until the heading is updated (since the assessment items may change) to 2022. You can still get an idea of what to expect in most cases, before then.
+**HOWEVER**, materials _are not current for 2022 until the pages are marked with the heading **Geog 315 T1 2022**_ (and not an earlier year). You are advised not to work on any lab materials until the heading is updated (since the assessment items may change) to 2022. You can still get an idea of what to expect in most cases, before then.
 
 + **Week 1** [Setting up your computer](labs/week-01 "lab materials")
 + **Week 2** [Introduction to *R* and *RStudio*](labs/week-02 "lab materials")
 + **Week 3** [Making maps](labs/week-03 "lab materials")
-+ **Week 4** [Spatial data wrangling](labs/week-04 "lab materials")
-+ **Week 5** [Geographic cluster analysis](labs/week-05 "lab materials")
-+ **Week 7** [Regression analysis in *R*](labs/week-07 "lab materials")
-+ **Week 9** [The mini-projects](labs/mini-project "more on the mini-project")
++ **Week 4** [Spatial data wrangling](labs/week-04 "lab materials") (this one may change a little)
++ **Week 5** Geographic cluster analysis
++ **Week 7** Regression analysis in *R*
++ **Week 9** [The mini-projects](labs/mini-project "more on the mini-project") (more projects will be added, but the ones already there will remain available this year)
 
 ### Non-assessed lab work
 Note that there are also non-assessed lab sessions. In particular lab sessions in the second half of trimester (and some lecture sessions too) are intended to provide an environment in which it is easy to get assistance and advice from the course instructor. You are strongly advised to make the most of these sessions!

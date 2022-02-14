@@ -10,7 +10,7 @@ The steps involved are
 followed optionally by
 
 + [Download and install _QGIS_](software-02-installing-qgis.md)
-+ [Download and install _ArcGIS_](software-03-installing-ArcGIS.md)
+<!-- + [Download and install _ArcGIS_](software-03-installing-ArcGIS.md) -->
 
 ## If you already have _R_ and _RStudio_
 Well... that's great! However, you need to check that your version is the same or close to the one we are using in the labs, which is 4.1.2. To check type
