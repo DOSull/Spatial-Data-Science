@@ -3,21 +3,25 @@ Details of any additional readings or useful links will be provided on this page
 
 ## General
 There is no course text, but this one:
-+ Brunsdon C and L Comber. 2018. [*An Introduction to R for Spatial Analysis and Mapping*](https://au.sagepub.com/en-gb/oce/an-introduction-to-r-for-spatial-analysis-and-mapping/book241031 "Brunsdon and Comber Introduction to R book") 2nd edn. Sage, London.
 
-is likely to be useful for anyone who wants to extend their *R* knowledge. Also very useful (and freely available online) is
-+ Lovelace R, J Nowosad and J Münchow. 2019. [*Geocomputation with R*](https://geocompr.robinlovelace.net/ "Lovelace et al. Geocomputation with R book"). Boca Raton: Taylor & Francis
+  + Brunsdon C and L Comber. 2018. [*An Introduction to R for Spatial Analysis and Mapping*](https://au.sagepub.com/en-gb/oce/an-introduction-to-r-for-spatial-analysis-and-mapping/book241031 "Brunsdon and Comber Introduction to R book") 2nd edn. Sage, London.
+
+might be useful for anyone who wants to extend their *R* knowledge. Also very useful (and freely available online) is
+
+  + Lovelace R, J Nowosad and J Münchow. 2019. [*Geocomputation with R*](https://geocompr.robinlovelace.net/ "Lovelace et al. Geocomputation with R book"). Boca Raton: Taylor & Francis
 
 ---
 
 ## Week 1 General background
-+ These papers
+These papers
 
-  Harris R, D O’Sullivan, M Gahegan, M Charlton, L Comber, P Longley, C Brunsdon, N Malleson, A Heppenstall, A Singleton, D Arribas-Bel, and A Evans. 2017. [More bark than bytes? Reflections on 21+ years of geocomputation](https://dx.doi.org/10.1177/2399808317710132). *Environment and Planning B: Urban Analytics and City Science* **44**(4) 598-617.
++ Harris R, D O’Sullivan, M Gahegan, M Charlton, L Comber, P Longley, C Brunsdon, N Malleson, A Heppenstall, A Singleton, D Arribas-Bel, and A Evans. 2017. [More bark than bytes? Reflections on 21+ years of geocomputation](https://dx.doi.org/10.1177/2399808317710132). *Environment and Planning B: Urban Analytics and City Science* **44**(4) 598-617.
 
-  Brunsdon C and A Comber. 2020. [Opening practice: supporting reproducibility and critical spatial data science](http://link.springer.com/10.1007/s10109-020-00334-2). *Journal of Geographical Systems*.
++ Brunsdon C and A Comber. 2020. [Opening practice: supporting reproducibility and critical spatial data science](http://link.springer.com/10.1007/s10109-020-00334-2). *Journal of Geographical Systems*.
 
-  give a sense of the current state of GIS in relation to broader trends in open data science
+give a sense of the current state of GIS in relation to broader trends in open data science.
+
+These may also be useful:
 
 + [R spatial resources](https://www.r-spatial.org/projects/ "R spatial stuff")
 + [A short article on the history of _R_](https://doi.org/10.1111/j.1740-9713.2018.01169.x)

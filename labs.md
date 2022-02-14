@@ -3,17 +3,21 @@ Lab sessions are sequenced to run in parallel with the lecture materials and wil
 
 Only four lab sessions have an associated assessed assignment, but you should attend all labs and participate fully to broaden your knowledge of geospatial data science methods and tools as any of the approaches covered may prove useful for you in the project component of the class or in your geographical studies more generally.
 
-## Links to each lab (when available)
+## Links to lab materials
+You can get an idea of what's coming from the links below.
+
+**HOWEVER**, materials are _not current for 2022_, until the pages are marked with the heading **Geog 315 T1 2022** (and not an earlier year). You are advised not to work on any lab materials until the heading is updated (since the assessment items may change) to 2022. You can still get an idea of what to expect in most cases, before then.
+
 + **Week 1** [Setting up your computer](labs/week-01 "lab materials")
 + **Week 2** [Introduction to *R* and *RStudio*](labs/week-02 "lab materials")
 + **Week 3** [Making maps](labs/week-03 "lab materials")
 + **Week 4** [Spatial data wrangling](labs/week-04 "lab materials")
 + **Week 5** [Geographic cluster analysis](labs/week-05 "lab materials")
 + **Week 7** [Regression analysis in *R*](labs/week-07 "lab materials")
-+ **Week 8** [The mini-projects](labs/mini-project "more on the mini-project")
++ **Week 9** [The mini-projects](labs/mini-project "more on the mini-project")
 
 ### Non-assessed lab work
-Note that there are also non-assessed lab sessions. In particular lab sessions in the second half of trimester (and some lecture sessions too) are intended to provide an environment in which it is easy to get assistance and advice from the course instructors. You are strongly advised to make the most of these sessions!
+Note that there are also non-assessed lab sessions. In particular lab sessions in the second half of trimester (and some lecture sessions too) are intended to provide an environment in which it is easy to get assistance and advice from the course instructor. You are strongly advised to make the most of these sessions!
 
 ## Mini-projects
 The final assessment in the class is a mini-project, which is a more open-ended and more substantial exercise in data analysis and presentation. Lab _and_ lecture time in the last 3 weeks or so of semester will be allocated to supporting you in this exercise.
@@ -25,4 +29,4 @@ A number of datasets are available covering a range of topics, so hopefully you'
 Expectations for the submitted report from the mini-project are [provided here](labs/mini-project/guidance-on-mini-project-report.md "guidance on the mini-project report write-up").
 
 ## Course Slack channel
-A link to join the [course slack channel](https://vuwgeog315t22021.slack.com/ "Course slack channel") will be sent via Blackboard. This should be used for technical support questions on the labs.
+A link to join the [course slack channel](https://vuwgeog315t12022.slack.com/ "Course slack channel") will be sent via Blackboard. This should be used for technical support questions on the labs.
