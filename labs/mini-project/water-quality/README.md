@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Determinants of water quality
 The aim of this project would be to look at possible determinants of water quality at catchment levels.

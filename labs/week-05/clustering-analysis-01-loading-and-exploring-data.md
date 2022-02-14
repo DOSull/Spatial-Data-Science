@@ -1,4 +1,4 @@
-#### Geog 315 T2 2021
+#### Geog 315 T2 2021 - materials still to be finalised for T1 2022
 # Loading and exploring data
 ## Load some libraries
 First just make sure we have all libraries we need.

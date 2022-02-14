@@ -1,4 +1,4 @@
-#### Geog 315 T2 2021
+#### Geog 315 T2 2021 - materials still to be finalised for T1 2022
 # Assignment 2 Spatial data manipulation
 ## The assignment requirements summarised
 Here are the questions from the lab all in one place for ease of reference. The links will take you back to the original context where the question was asked.

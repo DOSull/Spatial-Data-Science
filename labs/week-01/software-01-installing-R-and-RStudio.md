@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Software setup for this course
 ## Download and install _R_

@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Assignment 1 - Making maps
 Your task is to make a map of the 2016 presidential election result contained in the supplied `election.gpkg` dataset.

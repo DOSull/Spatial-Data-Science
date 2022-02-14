@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Distribution of an invasive species
 This project uses observational data on the occurrence of [_tradescantia fluminensis_](https://www.weedbusters.org.nz/what-are-weeds/weed-list/tradescantia/) and should focus on using overlay or related methods to develop a model for the risk of invasion by this species.

@@ -1,4 +1,4 @@
-#### Geog 315 T2 2021
+#### Geog 315 T2 2021 - materials still to be finalised for T1 2022
 # Clustering a spatial dataset
 This week we will apply k-means clustering analysis to a spatial dataset, so you can see how the method might be used to segment a spatial dataset into various categories that make it easier to understand an otherwise complex situation.
 

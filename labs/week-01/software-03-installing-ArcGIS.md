@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Installing ESRI software
 There is no specific need for ESRI software in this class.

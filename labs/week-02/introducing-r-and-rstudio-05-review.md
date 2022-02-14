@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Review
 The aim of this week has been just to get a feel for things. Don't panic if you don't completely understand what is happening. The important thing is to realize

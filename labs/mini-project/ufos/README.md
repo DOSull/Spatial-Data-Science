@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # UFO sightings in the US
 These data are shown in this previously [rather wonderful web map](https://metrocosm.com/ufo-sightings-map.html). It's no longer as wonderful as it was because it looks like the basemap access token for Mapbox has expired (probably).

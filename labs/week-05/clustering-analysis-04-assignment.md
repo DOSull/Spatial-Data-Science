@@ -1,4 +1,4 @@
-#### Geog 315 T2 2021
+#### Geog 315 T2 2021 - materials still to be finalised for T1 2022
 # Assignment 3 Cluster analysis of commuting data
 This assignment is quite open-ended. Here is the description:
 

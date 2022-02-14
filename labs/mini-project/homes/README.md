@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Wellington house sales, July-August 2021
 These data are from [homes.co.nz](https://homes.co.nz) scraped from their website on or around 1 September 2021. These are about 800 or so recent house sales in the Wellington region.

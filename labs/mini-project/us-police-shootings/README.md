@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # US Police shootings 2015-21
 These data were obtained from these [_Washington Post_](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/) and [_Guardian_](https://www.theguardian.com/us-news/ng-interactive/2015/jun/01/the-counted-police-killings-us-database) projects to record (to the extent possible) all police-involved shootings in the United States from 2015 onwards. Specifically the data were downloaded from [this site](https://github.com/washingtonpost/data-police-shootings) around mid-June this year (so the most recent data are incomplete).

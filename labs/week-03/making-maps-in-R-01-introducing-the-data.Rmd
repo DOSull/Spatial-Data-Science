@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Introducing the data
 First you need to load the `sf` library for handling spatial data, `tmap` for mapping, and `dplyr` for data wrangling.

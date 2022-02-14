@@ -1,4 +1,4 @@
-#### Geog 315 T2 2021
+#### Geog 315 T2 2021 - materials still to be finalised for T1 2022
 # Building a simple statistical model
 This week the main focus of the assignment is building a simple statistical (regression) model to help us understand a spatial pattern.
 

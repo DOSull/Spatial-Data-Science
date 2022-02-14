@@ -1,4 +1,4 @@
-#### Geog 315 T2 2021
+#### Geog 315 T2 2021 - materials still to be finalised for T1 2022
 # Making and mapping k-means clusters
 ## Loading libraries and data
 In case you are starting here not continuing on from the previous instructions, reload libraries and data:

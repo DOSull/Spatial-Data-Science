@@ -1,4 +1,4 @@
-#### Geog 315 T2 2021
+#### Geog 315 T2 2021 - materials still to be finalised for T1 2022
 # The assignment data: Wellington region commutes, 2018
 OK... you will be relieved to know that the assignment is based on a dataset you probably know a bit more about (and which is actually pretty relevant to thinking about geographies of lockdowns), namely data from the 2018 census concerning travel to work and travel to education.
 

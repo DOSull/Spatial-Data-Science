@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Making thematic maps in *R*
 We cover a lot of ground in this lab, including handling simple spatial data in *R*, and the options available for mapping using the `tmap` package. Keep in mind that you can refer back to last week's material if you need to refresh your memory of anything we did previously.

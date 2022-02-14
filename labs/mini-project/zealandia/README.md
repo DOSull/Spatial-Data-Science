@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Zealandia mouse trapping data 2003-14
 This [archive file](zealandia-data.zip) contains data relating to mouse trapping along four trap lines in the Zealandia reserve carried out from 2003 to 2014. Initially this was part of the pest-removal effort that went into establishing the reserve, while later years were aimed at monitoring any return of mice.

@@ -1,4 +1,4 @@
-#### Geog 315 T2 2021
+#### Geog 315 T2 2021 - materials still to be finalised for T1 2022
 
 **You may find that the easiest way to follow this document is by knitting it to a HTML file using the Knit button. To run the various commands discussed you should work in _RStudio_.**
 

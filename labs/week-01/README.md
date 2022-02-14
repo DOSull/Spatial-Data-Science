@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Installing the course software
 This class focuses on learning how to do geospatial things in _R_ and _RStudio_, so an important task if you want to work on materials on your own computer is to install these pieces of software. These instructions help you through the process.

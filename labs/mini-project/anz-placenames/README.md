@@ -1,4 +1,4 @@
-**Geog 315 T2 2021**
+**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
 
 # Aotearoa placename origins
 These data were sourced from the locations referenced at [this page](https://github.com/fogonwater/we-are-here/tree/master/8_heart_memory#801-ingoa-w%C4%81hi-o-aotearoa--place-names-of-new-zealand) describing how one of the maps in Chris McDowall and Tim Denee's [_We Are Here_](https://www.masseypress.ac.nz/books/all/all/we-are-here) was produced, specifically this one:
