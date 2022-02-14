@@ -1,6 +1,7 @@
 **Geog 315 T1 2022**
 
 # Introducing *R* and *RStudio*
+## Data
 Before we get into it, download the  data for this lab [here](data.zip?raw=true).
 
 This is a *zip* file and must be unpacked into a folder you have access to on the machine you are using. If you are working on a lab machine, it needs to be a folder on the **H: drive**. If you are unsure how to do this, ask for help, as if you get it wrong, you will inevitably run into problems later in the session.
