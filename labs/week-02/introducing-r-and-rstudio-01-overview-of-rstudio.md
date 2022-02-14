@@ -1,9 +1,9 @@
-**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
+**Geog 315 T1 2022**
 
 # An overview of *RStudio*
 We're using *R* inside a slightly friendlier 'front-end' called *RStudio*, so start that program up in whatever platform you are running on. You should see something like the display below (without all the text which is from an open session on my machine).
 
-<img src="rstudio.png">
+<img src="rstudio.png" style="width:80%; margin: 20px">
 
 I have labeled four major areas of the interface, these are
 
@@ -12,10 +12,4 @@ I have labeled four major areas of the interface, these are
 + **Environment/History** here you can examine the data currently in your session (*environment*) more closely, or if you switch to the history tab, see all the commands you have issued in the session. The latter is very useful for retrieving versions of commands that worked, and copying them to the console or to the script window.
 + **Various outputs** are displayed in this area. These will be plot ouputs, or help information.
 
-Before going any further, it makes sense to do some cleaning up, since the lab machines are shared computers, and there may be data sitting around from the previous session. Use the 'broom' buttons in the **Environment** and **Output** panes to clear these out. Clear the console of previous commands by clicking in the console and selecting **Edit – Clear Console** and then click the **X** buttons on any open files or datasets in the upper left pane.
-
-Alternatively **Session - New Session** will accomplish the same thing.
-
-Now you have cleaned house, we are ready to go.
-
-Go to the [next page of instructions](introducing-r-and-rstudio-02-meet-the-command-line.md) or [back to the overview page](README.md).
+Before going any further we need to make a new _RStudio_ project, which is explained in the [next page of instructions](introducing-r-and-rstudio-02-starting-an-Rstudio-project.md). Or you can go [back to the overview page](README.md).

@@ -1,7 +1,11 @@
-**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
+**Geog 315 T1 2022**
 
 # Introducing *R* and *RStudio*
-The data for this lab are in [this file](data.zip?raw=true). This is a *zip* file and must be unpacked into a folder you have access to on the machine you are using. If you are working on a lab machine, it needs to be a folder on the **H: drive**. If you are unsure how to do this, ask for help, as if you get it wrong, you will inevitably run into problems later in the session.
+Before we get into it, download the  data for this lab [here](data.zip?raw=true).
+
+This is a *zip* file and must be unpacked into a folder you have access to on the machine you are using. If you are working on a lab machine, it needs to be a folder on the **H: drive**. If you are unsure how to do this, ask for help, as if you get it wrong, you will inevitably run into problems later in the session.
+
+It is recommended you unzip the data to an appropriately named folder (something like `geog315-week2`).
 
 ## Introduction
 This lab will introduce you to the statistical analysis and programming environment *R*, running in *RStudio* (which makes it a bit easier to deal with). *R* has become one of the standard tools for statistical analysis particularly in the academic research community, but [increasingly also in commercial and other work settings](https://statfr.blogspot.com/2018/08/r-generation-story-of-statistical.html). *R* is well suited to these settings for a number of reasons, particularly
@@ -23,7 +27,17 @@ This lab introduces *R* by just asking you to get on with it, without stopping t
 
 Ask questions, confer with your fellow students, consult Google (this [cartoon](https://xkcd.com/627/) is good advice).
 
-### Videos supporting this week's lab material
+### This week's instruction pages linked from one place
+You should follow these in order, but here they all are linked from one place:
+
++ [Overview of _RStudio_](introducing-r-and-rstudio-01-overview-of-rstudio.md)
++ [Starting an _RStudio_ project](introducing-r-and-rstudio-02-starting-an-Rstudio-project.md)
++ [Meet the command line...](introducing-r-and-rstudio-03-meet-the-command-line.md)
++ [Exploring data](introducing-r-and-rstudio-04-exploring-data.md)
++ [Making a map](introducing-r-and-rstudio-05-making-a-map.md)
++ [Review](introducing-r-and-rstudio-06-review.md)
+
+### Some (old) videos supporting this week's lab material
 These are linked [here](../../video-indexes/week02.md).
 
 View them at any time for additional help.
