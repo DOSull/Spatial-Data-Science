@@ -10,10 +10,12 @@ The aim of this week has been just to get a feel for things. Don't panic if you 
 + All the plots you make are also remembered (mess around with the back and forward arrows in the plot display).
 
 ## Some ways to work more efficiently
+### The session history
 The **History** tab is particularly useful. If you want to run a command again, find it in the list, select it and then select the **To Console** option (at the top). The command will appear in the console at the current prompt, where you can edit it to make any desired changes and hit `<RETURN>` to run it again. 
 
 You can also get the history functionality using the up arrow key in the console, which will bring previous commands back to the console line for you to reuse. But this gets kind of annoying once you have run many commands.
 
+### Scripts
 Another way to rerun things you have done earlier is to save them to a script. Open a new script with **File - New File - R Script**. You can type commands here in the usual way, but they won't run immediately like they do when you type them in the console. Instead you can run selected lines using the **Run** button at the top of the scripts area of the user interface (the top left area) for selected lines.
 
 When you have worked a whole workflow out, you can record it in a script file to run the whole thing later. The easiest way to do this is to go to the history, select the commands you want, and then select **To Source** to drop them into an open script file. This will add the commands to the current file in the upper left panel, and then you can save them to a `.R` script file to run all at once.
