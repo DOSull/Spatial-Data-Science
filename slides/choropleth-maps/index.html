@@ -3,32 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>GEOG 315 Advanced GIS - VUW - O&rsquo;Sullivan</title>
+    
     <meta name="author" content="David O'Sullivan">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
-    <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
-    <!-- Include the appropriate print stylesheet -->
-    <script>
-      if (window.location.search.match(/print-pdf/gi)) {
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = '../reveal.js/css/print/pdf.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
-      }
-    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../reveal.js/dist/reset.css">
+    <link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/dist/theme/black.css" id="theme">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css">
     <!-- [if lt IE 9] >
       <script src="reveal.js/lib/js/html5shiv.js"></script>
     <! [endif] -->
-    <script type="text/javascript"
-      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
-
     <link rel="stylesheet" href="../extra-styles.css">
-    <style>
-    </style>
   </head>
 
   <body>
@@ -303,8 +295,12 @@
 
       </div>
     </div>
-    <script src="../reveal.js/lib/js/head.min.js"></script>
-    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="../reveal.js/dist/reveal.js"></script>
+		<script src="../reveal.js/plugin/zoom/zoom.js"></script>
+		<script src="../reveal.js/plugin/notes/notes.js"></script>
+		<script src="../reveal.js/plugin/search/search.js"></script>
+		<script src="../reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="../reveal.js/plugin/highlight/highlight.js"></script>
     <script src="../config-options.js"></script>
     <script>Reveal.configure({loop: true});</script>
   </body>
