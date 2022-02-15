@@ -1,0 +1,46 @@
+
+```{r remedy001}
+library(dplyr)
+```
+
+Make a couple of simple data frames
+
+```{r remedy002}
+df1 <- data.frame(id = 1:4, 
+                  x = c("one", "two", "three", "four"))
+df2 <- data.frame(id = 3:6, 
+                  y = as.character(3:6))
+```
+
+Now check them out
+
+```{r remedy003}
+as_tibble(df1)
+as_tibble(df2)
+```
+
+## Various joins
+
+`inner_join` only retains the matching cases.
+
+```{r remedy004}
+inner_join(df1, df2)
+```
+
+`left_join` retains all records from the first table, regardless of whether there is a matching record in the second.
+
+```{r remedy004}
+left_join(df1, df2)
+```
+
+`right_join` is the opposite - all rows in the second table are retained whether or not there is a match.
+
+```{r remedy006}
+right_join(df1, df2)
+```
+
+Finally (not really there are a couple of other obscurities...), `full_join` retains all records across both tables regardless of matches.
+
+```{r remedy007}
+full_join(df1, df2)
+```
