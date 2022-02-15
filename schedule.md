@@ -9,10 +9,10 @@ Date | Mon | Wed | Lab (also Wed)
 7 Mar | [Starting *R*](slides/starting-r/) | [The myth of tidy data](slides/tidy-data/) | [Introducing *R* and *RStudio*](labs/week-02)
 14 Mar | [Choropleth map design](slides/choropleth-maps/) | [Data wrangling](slides/data-wrangling/) | [**Making maps**](labs/week-03) (15%) due {{ site.data.dates.assignment_1 }}
 21 Mar | [Handling tables](slides/table-joins-and-dissolves/) and<br>[Spatial data wrangling](slides/spatial-data-wrangling/) | [Spatial data wrangling (continued)](slides/spatial-data-wrangling/) | [**Spatial data manipulation**](labs/week-04) (15%) due {{ site.data.dates.assignment_2 }}
-28 Mar | [Clustering analysis](slides/classification-clustering/) | [Applications of clustering analysis](slides/classification-examples/) | [**Geographic cluster analysis**](labs/week-05) (20%) due {{ site.data.dates.assignment_3 }}
+28 Mar | [Clustering analysis](slides/classification-clustering/) | [Applications of clustering analysis](slides/classification-examples/) | **Geographic cluster analysis** (20%) due {{ site.data.dates.assignment_3 }}
 4 Apr | Introducing raster data | [Surface analysis](slides/surface-analysis/) | Help with assignments
 &nbsp; | &nbsp; | **BREAK** | &nbsp;
-25 Apr | **ANZAC DAY HOLIDAY** | [From overlay to regression models](slides/from-overlay-to-regression/) | [**Building a simple statistical model**](labs/week-07) (20%) due {{ site.data.dates.assignment_4 }}
+25 Apr | **ANZAC DAY HOLIDAY** | [From overlay to regression models](slides/from-overlay-to-regression/) | **Building a simple statistical model** (20%) due {{ site.data.dates.assignment_4 }}
 2 May | [Regression models](slides/regression/) | [More on regression](slides/more-on-regression/) | Help with assignments
 9 May | [Running a GIS project](slides/running-a-gis-project/) and [**Introducing the mini-projects**](labs/mini-project) (30%) due {{ site.data.dates.assignment_5 }} | [Other spatial analysis methods](slides/spatial-analysis-methods/) | Help with assignments / project work
 16 May | [Network analysis](slides/network-analysis/) | [Time geography](slides/time-geography/) | Help with assignments / project work
