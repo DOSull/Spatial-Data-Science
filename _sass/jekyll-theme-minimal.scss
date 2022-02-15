@@ -226,7 +226,7 @@ footer {
   .width:100%;
 }
 
-@media print, screen and (max-width: 1080px) {
+@media print, screen and (max-width: 1920px) {
 
   div.wrapper {
     width:auto;
@@ -261,7 +261,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 1080px) {
+@media print, screen and (max-width: 1920px) {
   body {
     word-wrap:break-word;
   }
