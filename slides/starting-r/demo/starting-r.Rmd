@@ -1,0 +1,115 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+# Starting R demo notebook
+
+This document is an Rmarkdown file. We'll learn more about these later in the semester. For now, you can run chunks of code using the play button at the top right of each chunk.
+
+## Make some simple variables
+
+```{r}
+x <- 3 
+y <- c(2, 4, 7, 11, 17) 
+z <- data.frame(a = 1:1000, b = rep(5, 1000), c = rnorm(1000))
+```
+
+`x` is a scalar, `y` is a vector, and `z` is a dataframe.
+
+We can apply simple maths operations to any of them
+
+```{r}
+x ^ 2 
+y ^ 2
+```
+
+For the dataframe we can examine it with the `View()` function, or usually a better idea to start look at the first few rows with `head()`
+
+```{r}
+head(z)
+```
+
+If we want to examine just one column we use the `$` notation
+
+```{r}
+z$a
+```
+
+We can apply any R functions to these data with simple commands
+
+Plot a graph of a value and its square
+
+```{r}
+plot(z$a, z$a ^ 2, type = "line") 
+```
+
+Plot a whole table as a scatterplot matrix
+
+```{r}
+plot(z) 
+```
+
+Or a single variable as a boxplot
+
+```{r}
+boxplot(z$c) 
+```
+
+Or histogram
+
+```{r}
+hist(z$c)
+```
+
+## Simple spatial stuff
+
+For spatial operations we need some special *packages*, so we load them with the `library()` function
+
+```{r}
+library(sf) 
+library(tmap)
+```
+
+Now we can read a spatial dataset
+
+```{r}
+welly <- st_read("welly.geojson") 
+```
+
+and plot it
+
+```{r}
+plot(welly)
+```
+
+We can find out what attributes are in the data table with the `names()` function
+
+```{r}
+names(welly)
+```
+
+Um... there are a lot!
+
+### Make some simple maps
+
+We'll be looking at this in labs over the next couple of weeks, for now, here are some simple maps
+
+```{r}
+tm_shape(welly) + 
+  tm_polygons(col = "Median_Age_UR13")
+```
+
+```{r}
+tm_shape(welly) + 
+  tm_polygons(col = "PopUR13", palette = "YlGnBu")
+```
+
+And even web maps
+
+```{r}
+tmap_mode('plot') 
+tm_shape(welly) + 
+  tm_polygons(col = "PopUR13", palette = "YlGnBu", 
+              alpha = 0.5, title = "Population 2013")
+```
