@@ -43,4 +43,4 @@ These are linked [here](../../video-indexes/week02.md).
 
 View them at any time for additional help.
 
-Now on to the [first page of instructions](introducing-r-and-rstudio-01-overview-of-rstudio.md).
+[next page &rArr;](introducing-r-and-rstudio-01-overview-of-rstudio.md)

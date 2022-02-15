@@ -31,6 +31,6 @@ You should see a data table appear in the upper left panel. The data appear very
 + `DEPTH` is the estimate depth at which the earthquake or aftershock occurred
 + `YEAR`, `MONTH`, `DAY`, `HOUR`, `MINUTE`, `SECOND` provide detailed time information
 
-Look back at the command we used to read the data. You will see that we *assigned* the result of reading the specified file to a *variable* which we called `quakes`. This means we now have a *dataframe* called `quakes` in memory, which we can examine more closely. To look at the data in more interesting ways we have a range of options. One option is
+Look back at the command we used to read the data. You will see that we *assigned* the result of reading the specified file to a *variable* which we called `quakes`. This means we now have a *dataframe* called `quakes` in memory, which we can examine more closely.
 
-Go to the [next page of instructions](introducing-r-and-rstudio-04-exploring-data.md) or [back to the overview page](README.md).
+[&lArr; previous page](introducing-r-and-rstudio-02-starting-an-Rstudio-project.md) &bull; [up to overview](README.md) &bull; [next page &rArr;](introducing-r-and-rstudio-04-exploring-data.md)

@@ -54,7 +54,7 @@ The options I've used above include:
 + the function `tm_layout` provides some layout options like the main title and a background colour (`bg.color`)
 + the functions `tm_compass` and `tm_scalebar` do exactly what it sounds like they might do (note that I don't think you really need these on a thematic map like this one, but the options exist)
 
-For a list of named colours in *R* see [this document](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf). Try experimenting by changing a few things in the above map. 
+For a list of named colours in *R* see [this document](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf). Try experimenting by changing a few things in the above map.
 
 Consult the help on `tm_layout` using `?tm_layout` to see what options are available.
 
@@ -66,7 +66,7 @@ quakes_sf <- quakes %>%
   st_as_sf(coords = c('NZMGE', 'NZMGN'), crs = st_crs(nz))
 ```
 
-What's happening here? `st_as_sf` is the function that does the conversion. 
+What's happening here? `st_as_sf` is the function that does the conversion.
 The *parameters* in parentheses tell the function what to work on. First is the input dataframe `quakes` which is piped into the function with the `%>%` or *pipe* operator. Next the `coords` parameter tells the function which variables in the dataframe are the *x* and *y* coordinates in the dataframe. the `c()` structure concatenates the two variable names into a single *vector* which is required by `st_as_sf`. Finally, we also specify the *coordinate reference system* or map projection of the data. These data are in New Zealand Map Grid, which I made sure the `nz` data layer is also in. We use `st_crs(nz)` to retrieve this information from the `nz` dataset and apply it to the new spatial `quakes_sf` dataset we are making.
 
 Now we have two datasets we can make a layered map including both of them.
@@ -147,4 +147,4 @@ tm_shape(quakes_sf) +
 
 Making an interactive web map with just a couple of lines of code is pretty nice!
 
-Go to the [review page](introducing-r-and-rstudio-06-review.md) or [back to the overview page](README.md).
+[&lArr; previous page](introducing-r-and-rstudio-04-exploring-data.md) &bull; [up to overview](README.md) &bull; [next page &rArr;](introducing-r-and-rstudio-06-review.md)

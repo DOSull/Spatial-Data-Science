@@ -9,8 +9,8 @@ This is straightforward to do, although figuring out exactly which version you w
 
 The specific downloads I recommend are
 
-**Windows** [QGIS-OSGeo4W-3.22.3-1.msi](https://qgis.org/downloads/QGIS-OSGeo4W-3.22.3-1.msi)
++ **Windows** [QGIS-OSGeo4W-3.22.3-1.msi](https://qgis.org/downloads/QGIS-OSGeo4W-3.22.3-1.msi)
++ **Mac** [qgis-macos-pr.dmg](https://qgis.org/downloads/macos/qgis-macos-pr.dmg)
++ **Linux** There are several flavours here and the links are clearly indicated on the downloads page.
 
-**Mac** [qgis-macos-pr.dmg](https://qgis.org/downloads/macos/qgis-macos-pr.dmg)
-
-**Linux** There are several flavours here and the links are clearly indicated on the downloads page.
+[&lArr; previous page](software-01-installing-R-and-RStudio.md) &bull; [back to overview](README.md)

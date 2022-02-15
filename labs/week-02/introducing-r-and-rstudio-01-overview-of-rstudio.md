@@ -12,4 +12,6 @@ I have labeled four major areas of the interface, these are
 + **Environment/History** here you can examine the data currently in your session (*environment*) more closely, or if you switch to the history tab, see all the commands you have issued in the session. The latter is very useful for retrieving versions of commands that worked, and copying them to the console or to the script window.
 + **Various outputs** are displayed in this area. These will be plot ouputs, or help information.
 
-Before going any further we need to make a new _RStudio_ project, which is explained in the [next page of instructions](introducing-r-and-rstudio-02-starting-an-Rstudio-project.md). Or you can go [back to the overview page](README.md).
+Before going any further we need to make a new _RStudio_ project, which is explained in the [next page of instructions](introducing-r-and-rstudio-02-starting-an-Rstudio-project.md).
+
+[back to overview](README.md) &bull; [next page &rArr;](introducing-r-and-rstudio-02-starting-an-Rstudio-project.md)

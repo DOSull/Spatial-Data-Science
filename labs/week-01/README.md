@@ -18,3 +18,5 @@ Well... that's great! However, you need to check that your version is the same o
     > version
 
 in the command console. If your version is very different then you may need to upgrade. You will probably be fine if you have a version that starts 4.1. If not unfortunately you'll have to _uninstall_ the existing version and then install a new version per the instructions on the page linked above.
+
+[Next page &rArr;](software-01-installing-R-and-RStudio.md)

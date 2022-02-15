@@ -36,4 +36,4 @@ If you get stuck, ask for help! If it's not lab time ask in the slack workspace!
 
 Now you have a new project open, we can continue:
 
-Go to the [next page of instructions](introducing-r-and-rstudio-03-meet-the-command-line.md) or [back to the overview page](README.md).
+[&lArr; previous page](introducing-r-and-rstudio-01-overview-of-rstudio.md) &bull; [up to overview](README.md) &bull; [next page &rArr;](introducing-r-and-rstudio-03-meet-the-command-line.md)

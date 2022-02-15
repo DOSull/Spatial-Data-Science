@@ -38,3 +38,5 @@ Since I am on Linux and not Windows or Mac, it doesn't make much sense for me to
 
 + [This one is for Windows users](https://www.youtube.com/watch?v=rHZ9MGWxU5I&t=0s)
 + [This one is for Mac users](https://www.youtube.com/watch?v=AEebOXiMyyI)
+
+[back to overview](README.md) &bull; [next page &rArr;](software-02-installing-qgis.md)

@@ -13,7 +13,7 @@ quakes <- read.csv('earthquakes.csv')
 plot(quakes)
 ```
 
-This might take a while...  It's also a bad case of *waaaay* too much information. *R* is trying to plot every possible pair of variables in the dataframe, and there is just not enough room to do it. Instead, we can plot a subset. 
+This might take a while...  It's also a bad case of *waaaay* too much information. *R* is trying to plot every possible pair of variables in the dataframe, and there is just not enough room to do it. Instead, we can plot a subset.
 
 We need the `dplyr` package to perform tidy selections, so let's load that
 
@@ -69,10 +69,10 @@ and then you can access the attributes of the `quakes` dataset using their names
 hist(MAG)
 ```
 
-will plot the specified variable. 
+will plot the specified variable.
 
 Be careful using `attach` as it can lead to ambiguity about what you are plotting if you are working with different datasets that include variables with the same names.
 
 Try the above commands just to get a feel for things.
 
-Go to the [next page of instructions](introducing-r-and-rstudio-05-making-a-map.md) or [back to the overview page](README.md).
+[&lArr; previous page](introducing-r-and-rstudio-03-meet-the-command-line.md) &bull; [up to overview](README.md) &bull; [next page &rArr;](introducing-r-and-rstudio-05-making-a-map.md)
