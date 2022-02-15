@@ -28,4 +28,4 @@ When you have made a map you are happy with, use the plot export feature in *RSt
 
 Once you have finished your write up (it does not need to be very long) then export the Word document to a PDF file (make sure the document includes your map!) and save it to a filename that *includes your name*. Upload this PDF document to the dropbox provided on Blackboard by the end of the day on **{{ site.data.dates.assignment_1 }}**.
 
-[Go back to the overview](README.md)
+[&lArr; previous page](making-maps-in-R-03-using-tmap.md) &bull; [up to overview](README.md)

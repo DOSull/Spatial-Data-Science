@@ -16,3 +16,5 @@ Some of this week's material may be hard to follow at first, and some of it won'
 
 ## Videos
 Video support for this week's lab is [here](../../video-indexes/week03.md)
+
+[next page &rArr;](making-maps-in-R-01-introducing-the-data.md)

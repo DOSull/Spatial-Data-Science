@@ -30,8 +30,8 @@ head(results)
 [By the way, there is also a `tail` function.] You can also see the dataset by clicking on it in the **Environment** tab of *RStudio*. If you want to make sure the spatial aspects are working OK, then try
 
 ```{r}
-results %>% 
-  select(population) %>% 
+results %>%
+  select(population) %>%
   plot()
 ```
 
@@ -40,7 +40,7 @@ OK... the goal eventually will be to make a map of the election results. Here, I
 The spatial units are US counties. Each county is in a particular state and has a name. This information is contained in the `state` and `name` attributes. The state's each have a two letter abbreviation, as shown on [this map](https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Postal_codes), so for example, California is 'CA'. Not all counties have unique names, so we need the state names to uniquely identify them. For example
 
 ```{r}
-results %>% 
+results %>%
   filter(name == 'Washington')
 ```
 
@@ -60,5 +60,4 @@ In the assignment it is important to consider if these vote *counts* are what yo
 tm_shape(results) +
   tm_polygons(col = 'dem', palette = 'Blues')
 ```
-
-Now [go back to the overview](README.md) or [on to the next page](making-maps-in-R-02-selecting-and-tidying-data.md).
+[back to overview](README.md) &bull; [next page &rArr;](making-maps-in-R-02-selecting-and-tidying-data.md)

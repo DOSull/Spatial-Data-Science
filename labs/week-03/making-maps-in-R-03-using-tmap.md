@@ -153,4 +153,4 @@ Any of the functions in *R* has associated help that you can consult in this way
 
 Above all, you should not be afraid to experiment!
 
-Now [go back to the overview](README.md) or [on to the assignment details](making-maps-in-R-04-assignment.md).
+[&lArr; previous page](making-maps-in-R-02-selecting-and-tidying-data.md) &bull; [up to overview](README.md) &bull; [next page &rArr;](making-maps-in-R-04-assignment.md)

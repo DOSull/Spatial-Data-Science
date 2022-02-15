@@ -20,28 +20,28 @@ The tasks covered in this document are
 + [Adding new attributes](#adding-new-attributes) to a dataset using `mutate`
 
 ## Filtering data
-The data in the `election.gpkg` file is a bit odd in that it has Alaska and Hawai'i where Mexico is in real life. To show how easy it is to select data in *R* we will use the `filter` function from the `dplyr` package to get rid of these. (You might not want to do this in your map, this is just to demonstrate filtering). 
+The data in the `election.gpkg` file is a bit odd in that it has Alaska and Hawai'i where Mexico is in real life. To show how easy it is to select data in *R* we will use the `filter` function from the `dplyr` package to get rid of these. (You might not want to do this in your map, this is just to demonstrate filtering).
 
 The variable we need to do the selection on is `state`. Say we wanted just to map California, we can do this by filtering the `results` dataset then plotting it:
 
 ```{r}
-results %>% 
-  filter(state == 'CA') %>% 
+results %>%
+  filter(state == 'CA') %>%
   plot()
 ```
 
 How does this work? You read the command above something like "take the `results` dataset, _then_ `filter` it, _then_ `plot`". The _pipe_ `%>%` directs whatever is before it, into whatever function comes after it. the `filter` function specifies a *condition* for which cases to retain in the filtered dataset. Here we want all those cases with the `state` value 'CA' (i.e., California). If we wanted all those states *NOT* California, we can use *not equals* which is designated by `!=`
 
 ```{r}
-results %>% 
-  filter(state != 'CA') %>% 
+results %>%
+  filter(state != 'CA') %>%
   plot()
 ```
 
 So, to get rid of Alaska and Hawai'i we can do this:
 
 ```{r}
-lower48 <- results %>% 
+lower48 <- results %>%
   filter(state != 'AK' & state != 'HI')
 ```
 
@@ -74,7 +74,7 @@ Either way, we now we have a dataset with only the contiguous ('lower 48') state
 ## Saving data
 Saving a dataset is easy. Just as there is a `st_read` function, there is an `st_write` function. We tell it the dataset to save, and the filename to use, and that's pretty much it.
 
-The only complication is that if the file already exists, then we also have to tell it that it is OK to delete the existing file, using a `delete_dsn` parameter (`delete_dsn` denotes 'delete datasource named'). 
+The only complication is that if the file already exists, then we also have to tell it that it is OK to delete the existing file, using a `delete_dsn` parameter (`delete_dsn` denotes 'delete datasource named').
 
 So here goes with `delete_dsn` set to `TRUE` just in case you end up running this command again later.
 
@@ -142,4 +142,4 @@ Keep in mind if you add new attributes or make new datasets in this way that
 + they are just as valid as the original datasets and attributes, and
 + **they aren't permanently stored until you use `st_write` to save them to a file**
 
-Now [go back to the overview](README.md) or [on to the next page](making-maps-in-R-03-using-tmap.md).
+[&lArr; previous page](making-maps-in-R-01-introducing-the-data.md) &bull; [up to overview](README.md) &bull; [next page &rArr;](making-maps-in-R-03-using-tmap.md)
