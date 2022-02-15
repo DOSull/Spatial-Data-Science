@@ -1,11 +1,11 @@
-**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
+**Geog 315 T1 2022**
 
 # Assignment 1 - Making maps
 Your task is to make a map of the 2016 presidential election result contained in the supplied `election.gpkg` dataset.
 
 In doing this, you need to consider the following issues:
 
-+ What are appropriate data to map? Probably none of the supplied attributes is quite what you need to make an effective map, so you may need to add one or more new attributes (this was explained [here](making-maps-in-R-02-selecting-and-tidying-data.md#adding-new-attributes))
++ What are appropriate data to map? It may be that none of the supplied attributes is quite what you need to make an effective map, so you may need to add one or more new attributes (this was explained [here](making-maps-in-R-02-selecting-and-tidying-data.md#adding-new-attributes))
 + Choose an appropriate map classification style, a sensible number of classes, and a meaningful colour scheme (there are explanations of how to do all these things [here](making-maps-in-R-03-using-tmap.md))
 + Add any additional map features that you think are useful such as a legend, north arrow, scale bar, overlay of state boundaries and so on (also discussed in that set of instructions).
 

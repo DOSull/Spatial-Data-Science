@@ -1,4 +1,4 @@
-**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
+**Geog 315 T1 2022**
 
 In case you have restarted the session, reload the libraries and data again
 
@@ -51,7 +51,7 @@ tm_shape(lower48) +
 ```
 
 ## Specifying the colour palette
-Just like *ArcGIS* `tmap` has a mysterious preference for a kind of muddy orange colour as the default. Just like *ArcGIS* it also allows you to specify a very wide range of alternative colour palettes, and you should consider the choice of these carefully in making your map. We specify the colour palette by name. You reverse the direction of the palette by prefixing its name with a `-` sign.
+Just like *Arc* used to `tmap` has a mysterious preference for a kind of muddy orange colour as the default. Just like *Arc* it also allows you to specify a very wide range of alternative colour palettes, and you should consider the choice of these carefully in making your map. We specify the colour palette by name. You reverse the direction of the palette by prefixing its name with a `-` sign.
 
 ```{r}
 tm_shape(lower48) +
@@ -64,6 +64,8 @@ All the named palettes can be examined using the palette explorer in the `tmapto
 library(tmaptools)
 palette_explorer()
 ```
+
+**Note that after you run the palette explorer you have to close it to do anything else!**
 
 You can get a feel for what many of the available palettes will look like in an actual map at [this website](http://colorbrewer2.org).
 
@@ -84,7 +86,7 @@ tm_shape(lower48) +
   tm_polygons(col = 'dem', palette = 'Blues', style = 'quantile', n = 9)
 ```
 
-will produce a classification based on *qauntiles* and 9 classes. There are a number of different possible classification styles:
+will produce a classification based on *quantiles* and 9 classes. There are a number of different possible classification styles:
 
 + `equal` will divide the data range into equal length intervals
 + `sd` is a variant of equal intervals where the intervals will be in some round number of *standard deviations*
@@ -121,7 +123,7 @@ tm_shape(lower48) +
   tm_borders(col = 'black')
 ```
 
-In this example, I have used `tm_borders` because I am only interested in the state boundaries, and have ensured that there are no county boundaries by using `tm_fill` instead of `tm_polygons` for the `lower48` layer of the map. notice that the order of adding layers is important. The `tm_fill` function applies to the most recently added data layer (`lower48`), then the `states` data layer is added, and so the `tm_borders` function which follows applies to it.
+In this example, we use `tm_borders` because we're only interested in the state boundaries, and have ensured that there are no county boundaries by using `tm_fill` instead of `tm_polygons` for the `lower48` layer of the map. Notice that the order of adding layers is important. The `tm_fill` function applies to the most recently added data layer (`lower48`), then the `states` data layer is added, and so the `tm_borders` function which follows applies to it.
 
 ## Other stuff
 There are many other map elements that can be controlled using `tmap` functions. We can add a north arrow and scale bar using `tm_compass()` and `tm_scale_bar()`. We can move the position of the legend around using `tm_legend()` options. We can add text using `tm_text()`. Here's an example with many options.
@@ -139,9 +141,9 @@ tm_shape(lower48) +
 
 Two options that are good to know about both used here are that the line thickness in plots is controlled by a `lwd` setting, and opacity of colours by an `alpha` setting.
 
-This is not a perfect map by any means. You may see duplicate labels on the states because some states have more than one polygon (for example California and Texas have offshore islands) and `tmap` may label each island (the `remove.overlap` option helps a bit). There are ways to fix this kind of problem, but we won't worry about that for now.
+This is not a perfect map by any means (maybe not even a good one). You may see duplicate labels on the states because some states have more than one polygon (for example California and Texas have offshore islands) and `tmap` may label each island (the `remove.overlap` option helps a bit). There are ways to fix this kind of problem, but we won't worry about that for now.
 
-The best way to figure out all these options is to either ask for help in the lab sessions, or to use the help available, by prefixing the command you want to know more about with a `?` mark, such as
+The best way to figure out all these options is to either ask for help in the lab sessions (or on slack), or to use the help available, by prefixing the command you want to know more about with a `?` mark, such as
 
 ```{r}
 ?tm_legend
