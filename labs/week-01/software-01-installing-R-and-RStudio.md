@@ -1,7 +1,7 @@
 **Geog 315 T1 2022**
 
 # Software setup for this course
-Note that with recent changes in operating systems (the release of Windows 11) and new Apple hardware, it is difficult to provide directions for all users that are guaranteed to be right. If you are uncertain what you should do, get in touch on the [course slack][https://vuwgeog315t12022.slack.com] and ask and we will do all we can to help.
+Note that with recent changes in operating systems (the release of Windows 11) and new Apple hardware, it is difficult to provide directions for all users that are guaranteed to be right. If you are uncertain what you should do, get in touch on the [course slack](https://vuwgeog315t12022.slack.com "course slack workspace") and ask and we will do all we can to help.
 
 The sooner you get set up the better, so please do this in the first week of trimester.
 
