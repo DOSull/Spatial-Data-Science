@@ -1,4 +1,4 @@
-setwd("~/Documents/teaching/Geog315/slides/starting-r/data")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 x <- 3 
 y <- c(2, 4, 7, 11, 17) 
@@ -19,7 +19,7 @@ hist(z$c)
 library(sf) 
 library(tmap)
 
-welly <- st_read("welly.gpkg") 
+welly <- st_read("welly.geojson") 
 plot(welly) 
 names(welly)
 
