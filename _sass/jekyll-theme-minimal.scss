@@ -1,13 +1,16 @@
 @import "fonts";
 @import "rouge-github";
 
+html {
+  overflow-y: overlay;
+}
+
 body {
   background-color: #fff;
   padding:40px;
   font: 14px "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#727272;
   font-weight:400;
-  overflow-y: overlay;
 }
 
 h1, h2, h3, h4, h5, h6 {
