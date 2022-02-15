@@ -1,9 +1,9 @@
 @import "fonts";
 @import "rouge-github";
 
-html {
-  height: 101%;
-}
+// html {
+//   height: 101%;
+// }
 
 body {
   background-color: #fff;
@@ -62,6 +62,7 @@ a:hover small {
 .wrapper {
   width:1050px;
   margin:0 auto;
+  padding-left: calc(100vw - 100%);
 }
 
 blockquote {
