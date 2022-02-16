@@ -1,8 +1,4 @@
 # Week 1 videos
-## Installing _R_ and _RStudio_
-+ [For Windows users](https://www.youtube.com/watch?v=gx7A7C_wdyE)
-+ [For Mac users](https://www.youtube.com/watch?v=by5HyJX6H1I)
-
 ## Zoom lecture on open geographical data science
 I had to stay home for this one as I was feeling a bit unwell, so here is the zoom recording in manageable chunks:
 + [Introduction](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-1.m4v) (3:11)

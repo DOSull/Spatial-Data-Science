@@ -174,7 +174,7 @@
 <p>As explained last week, you should <a href="02-lab.html#starting-a-new-rstudio-project">set up an RStudio project</a> for this week’s work to make sure you can keep track of everything.</p>
 <div id="videos" class="section level2">
 <h2>Videos</h2>
-<p>Video support for this week’s lab is <a href="03-videos.html">here</a></p>
+<p>Video support for this week’s lab is <a href="https://dosull.github.io/Geog315/video-indexes/week03.html">here</a></p>
 </div>
 </div>
 <div id="introducing-the-data" class="section level1">
@@ -204,8 +204,7 @@
 <div id="data" class="section level2">
 <h2>Data</h2>
 <p>The data for this week are election results from the US Presidential Election of 2016 (the one that gave us president Donald J. Trump). I’m sticking with that election because the data are more interesting than in 2020.</p>
-<p>The data are at the county level for the US (over 3000 counties of wildly varying populations), with numbers of votes recorded for the two major parties—Democrat (<code>dem</code>) and Republican (<code>gop</code>)— along with some other minor parties: Libertarian (<code>lib</code>), Green (<code>grn</code>), Evan McMullin (<code>una</code>) and ‘Other’ (<code>oth</code>).</p>
-<p>You will find the data in the <a href="election.gpkg?raw=true">this geopackage file</a>. Download it and save it to an accessible folder on the computer you are working on (this will be <strong>on the H: drive</strong> if you are on a lab computer). Then create a new <em>RStudio</em> project in that folder like <a href="02-02.html">you learned last week</a>.</p>
+<p>You will find the data in the <a href="election.gpkg?raw=true">this geopackage file</a>. Download it and save it to an accessible folder on the computer you are working on (this will be <strong>on the H: drive</strong> if you are on a lab computer). Then create a new <em>RStudio</em> project in that folder like <a href="02-lab.html#starting-a-new-RStudio-project">you learned last week</a>.</p>
 <p>Then you can read the data using the <code>st_read</code> function</p>
 <pre class="r"><code>results &lt;- st_read(&#39;election.gpkg&#39;)</code></pre>
 <pre><code>## Reading layer `election&#39; from data source 
@@ -216,6 +215,7 @@
 ## Dimension:     XY
 ## Bounding box:  xmin: -2775548 ymin: -170310 xmax: 2256204 ymax: 3165691
 ## Projected CRS: Albers</code></pre>
+<p>The data are at the county level for the US (over 3000 counties of wildly varying populations), with numbers of votes recorded for the two major parties—Democrat (<code>dem</code>) and Republican (<code>gop</code>)— along with some other minor parties: Libertarian (<code>lib</code>), Green (<code>grn</code>), Evan McMullin (<code>una</code>) and ‘Other’ (<code>oth</code>).</p>
 <div id="inspect-the-data" class="section level3">
 <h3>Inspect the data</h3>
 <p>To make sure all is as it should be, take a look at the first few rows of the data using the <code>head</code> function</p>

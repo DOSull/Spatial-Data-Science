@@ -1,6 +1,8 @@
 # Week 3 videos
 ## Making maps in *R*
-Videos supporting each section are linked below. These use a different data set to demonstrate some of the ideas. You can download that dataset [here](../labs/week-03/ak-region-ethnicity.gpkg?raw=true), if you'd like to try following along. Video 'cuts' might overlap a little.
+These are from 2020, but remain relevant in 2022!
+
+Videos supporting each section are linked below. These use a different data set to demonstrate some of the ideas. You can download that dataset [here](../labs/ak-region-ethnicity.gpkg?raw=true), if you'd like to try following along. Video 'cuts' might overlap a little.
 
 ### Introduction
 + [Lab intro](https://southosullivan.com/geog315/video/week-03-lab/geog315-week03-01-making-maps-intro.mp4) (4:33 min)
