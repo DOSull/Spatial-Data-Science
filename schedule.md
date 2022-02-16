@@ -5,9 +5,9 @@ Below is the schedule we will aim to follow. The lecture schedule for the second
 
 Date | Mon | Wed | Lab (also Wed)
 -- | -- | -- | --
-28 Feb | Course introduction | [Open science, open source, and doing GIS in code](slides/open/) | [Lab session to get software setup](labs/week-01)
-7 Mar | [Starting *R*](slides/starting-r/) | [The myth of tidy data](slides/tidy-data/) | [Introducing *R* and *RStudio*](labs/week-02)
-14 Mar | [Choropleth map design](slides/choropleth-maps/) | [Data wrangling](slides/data-wrangling/) | [**Making maps**](labs/03-lab.html) (15%) due {{ site.data.dates.assignment_1 }}
+28 Feb | Course introduction | [Open science, open source, and doing GIS in code](slides/open/) | [Lab session to get software setup](labs/01-lab.html){:target="_blank"}
+7 Mar | [Starting *R*](slides/starting-r/) | [The myth of tidy data](slides/tidy-data/) | [Introducing *R* and *RStudio*](labs/02-lab.html){:target="_blank"}
+14 Mar | [Choropleth map design](slides/choropleth-maps/) | [Data wrangling](slides/data-wrangling/) | [**Making maps**](labs/03-lab.html){:target="_blank"} (15%) due {{ site.data.dates.assignment_1 }}
 21 Mar | [Handling tables](slides/table-joins-and-dissolves/) and<br>[Spatial data wrangling](slides/spatial-data-wrangling/) | [Spatial data wrangling (continued)](slides/spatial-data-wrangling/) | [**Spatial data manipulation**](labs/week-04) (15%) due {{ site.data.dates.assignment_2 }}
 28 Mar | [Clustering analysis](slides/classification-clustering/) | [Applications of clustering analysis](slides/classification-examples/) | **Geographic cluster analysis** (20%) due {{ site.data.dates.assignment_3 }}
 4 Apr | Introducing raster data | [Surface analysis](slides/surface-analysis/) | Help with assignments
