@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+
+    
+    
+    <title>Making thematic maps in R</title>
+
+        <script src="03-lab_files/header-attrs-2.11/header-attrs.js"></script>
+        <script src="03-lab_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="03-lab_files/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="03-lab_files/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script src="03-lab_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+        <script src="03-lab_files/navigation-1.1/tabsets.js"></script>
+        <link href="03-lab_files/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
+        <script src="03-lab_files/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
+        <link href="03-lab_files/robobook-0.1/robobook.css" rel="stylesheet" />
+        <link href="03-lab_files/robobook-0.1/robobook_fonts_embed.css" rel="stylesheet" />
+        <script src="03-lab_files/robobook-0.1/robobook.js"></script>
+    
+    
+        <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">
+      pre > code.sourceCode { white-space: pre; position: relative; }
+      pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+      pre > code.sourceCode > span:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
+      code.sourceCode > span { color: inherit; text-decoration: inherit; }
+      div.sourceCode { margin: 1em 0; }
+      pre.sourceCode { margin: 0; }
+      @media screen {
+      div.sourceCode { overflow: auto; }
+      }
+      @media print {
+      pre > code.sourceCode { white-space: pre-wrap; }
+      pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+      }
+      pre.numberSource code
+        { counter-reset: source-line 0; }
+      pre.numberSource code > span
+        { position: relative; left: -4em; counter-increment: source-line; }
+      pre.numberSource code > span > a:first-child::before
+        { content: counter(source-line);
+          position: relative; left: -1em; text-align: right; vertical-align: baseline;
+          border: none; display: inline-block;
+          -webkit-touch-callout: none; -webkit-user-select: none;
+          -khtml-user-select: none; -moz-user-select: none;
+          -ms-user-select: none; user-select: none;
+          padding: 0 4px; width: 4em;
+          background-color: #ffffff;
+          color: #a0a0a0;
+        }
+      pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+      div.sourceCode
+        { color: #1f1c1b; background-color: #ffffff; }
+      @media screen {
+      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+      }
+      code span { color: #1f1c1b; } /* Normal */
+      code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+      code span.an { color: #ca60ca; } /* Annotation */
+      code span.at { color: #0057ae; } /* Attribute */
+      code span.bn { color: #b08000; } /* BaseN */
+      code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+      code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+      code span.ch { color: #924c9d; } /* Char */
+      code span.cn { color: #aa5500; } /* Constant */
+      code span.co { color: #898887; } /* Comment */
+      code span.cv { color: #0095ff; } /* CommentVar */
+      code span.do { color: #607880; } /* Documentation */
+      code span.dt { color: #0057ae; } /* DataType */
+      code span.dv { color: #b08000; } /* DecVal */
+      code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+      code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+      code span.fl { color: #b08000; } /* Float */
+      code span.fu { color: #644a9b; } /* Function */
+      code span.im { color: #ff5500; } /* Import */
+      code span.in { color: #b08000; } /* Information */
+      code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+      code span.op { color: #1f1c1b; } /* Operator */
+      code span.ot { color: #006e28; } /* Other */
+      code span.pp { color: #006e28; } /* Preprocessor */
+      code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+      code span.sc { color: #3daee9; } /* SpecialChar */
+      code span.ss { color: #ff5500; } /* SpecialString */
+      code span.st { color: #bf0303; } /* String */
+      code span.va { color: #0057ae; } /* Variable */
+      code span.vs { color: #bf0303; } /* VerbatimString */
+      code span.wa { color: #bf0303; } /* Warning */
+    </style>
+    
+    
+    <!-- tabsets -->
+    <script>
+      $(document).ready(function () {
+	  window.buildTabsets("toc");
+      });
+      $(document).ready(function () {
+	  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+	      $(this).parent().toggleClass('nav-tabs-open')
+	  });
+      });
+    </script>
+
+    <!-- code folding -->
+    
+    <!-- code download -->
+    
+    <!-- tabsets dropdown -->
+
+    <style type="text/css">
+      .tabset-dropdown > .nav-tabs {
+	  display: inline-table;
+	  max-height: 500px;
+	  min-height: 44px;
+	  overflow-y: auto;
+	  background: white;
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+	  content: "&#xe258;";
+	  border: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active {
+	  display: block;
+      }
+
+      .tabset-dropdown > .nav-tabs > li.active a {
+  	  padding: 0 15px !important;
+      }
+
+      .tabset-dropdown > .nav-tabs > li > a,
+      .tabset-dropdown > .nav-tabs > li > a:focus,
+      .tabset-dropdown > .nav-tabs > li > a:hover {
+	  border: none;
+	  display: inline-block;
+	  border-radius: 4px;
+	  background-color: transparent;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+	  display: block;
+	  float: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li {
+	  display: none;
+	  margin-left: 0 !important;
+      }
+    </style>
+    
+</head>
+
+<body class="preload">
+
+   	
+            <!-- robobook start -->   
+   <div class="book with-summary">
+      <div class="book-summary">
+        <ul>
+          <li class="title">Making thematic maps in R</li>
+          <li class="divider"></li>
+        </ul>
+        <nav role="navigation" id="toc">
+          <ul>
+          <li><a href="#overview">Overview</a>
+          <ul>
+          <li><a href="#videos">Videos</a></li>
+          </ul></li>
+          <li><a href="#introducing-the-data">Introducing the data</a></li>
+          <li><a href="#data-preparation">Data preparation</a>
+          <ul>
+          <li><a href="#filtering-data">Filtering data</a></li>
+          <li><a href="#saving-data">Saving data</a></li>
+          <li><a href="#grouping-data">Grouping data</a></li>
+          <li><a href="#adding-new-attributes">Adding new attributes</a></li>
+          </ul></li>
+          <li><a href="#how-to-use-the-tmap-package">How to use the tmap package</a>
+          <ul>
+          <li><a href="#specifying-the-attribute-to-map">Specifying the attribute to map</a></li>
+          <li><a href="#specifying-the-colour-palette">Specifying the colour palette</a></li>
+          <li><a href="#specifying-the-classification-scheme">Specifying the classification scheme</a></li>
+          <li><a href="#adding-more-layers">Adding more layers</a></li>
+          <li><a href="#other-stuff">Other stuff</a></li>
+          </ul></li>
+          <li><a href="#assignment-1---making-maps">Assignment 1 - Making maps</a></li>
+          </ul>
+        </nav>
+        <ul class="authors">
+          <li class="divider"></li>
+                            </ul>     
+      </div>
+      <div class="book-body fixed">
+        <div class="body-inner">
+            <a class="btn pull-left js-toolbar-action toggle-sidebar" aria-label="Toggle Sidebar" title="Toggle Sidebar" href="#">
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </a>
+            <div class="page-inner">
+              <section id="content" class="normal">
+      
+   
+        
+      <h1 class="title">Making thematic maps in R</h1>
+         <h1 class="subtitle">Geog 315 T1 2022</h1>
+   
+        
+
+   
+      
+   
+<!-- Don't indent these lines or it will mess pre blocks indentation --> 
+<div id="overview" class="section level1">
+<h1>Overview</h1>
+<p>We cover a lot of ground in this lab, including handling simple spatial data in <em>R</em>, and the options available for mapping using the <code>tmap</code> package. Keep in mind that you can refer back to <a href="02-00.html">last week’s material</a> if you need to refresh your memory of anything we did previously.</p>
+<p>The instructions this week are in several parts, to make it a bit easier to follow.</p>
+<p>You may want to take a quick look at the last section so you know what is expected of you, then come back to this page and work through the first three to learn the various tools you can use to accomplish what is asked of you.</p>
+<p>Some of this week’s material may be hard to follow at first, and some of it won’t come together completely until I explain the pipe (<code>%&gt;%</code>) operator in class, but bear with us and all will become clear (and the relevant lectures have already started).</p>
+<div id="videos" class="section level2">
+<h2>Videos</h2>
+<p>Video support for this week’s lab is <a href="03-videos.html">here</a></p>
+</div>
+</div>
+<div id="introducing-the-data" class="section level1">
+<h1>Introducing the data</h1>
+<p>First you need to load the <code>sf</code> library for handling spatial data, <code>tmap</code> for mapping, and <code>dplyr</code> for data wrangling.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code></pre></div>
+<pre><code>## Linking to GEOS 3.8.0, GDAL 3.3.1, PROJ 8.1.0</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tmap)</span></code></pre></div>
+<pre><code>## Registered S3 methods overwritten by &#39;stars&#39;:
+##   method             from
+##   st_bbox.SpatRaster sf  
+##   st_crs.SpatRaster  sf</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<p>The data for this week are election results from the US Presidential Election of 2016 (the one that gave us president Donald J. Trump). I’m sticking with that election because the data are more interesting than in 2020.</p>
+<p>The data are at the county level for the US (over 3000 counties of wildly varying populations), with numbers of votes recorded for the two major parties—Democrat (<code>dem</code>) and Republican (<code>gop</code>)— along with some other minor parties: Libertarian (<code>lib</code>), Green (<code>grn</code>), Evan McMullin (<code>una</code>) and ‘Other’ (<code>oth</code>).</p>
+<p>You will find the data in the <a href="election.gpkg?raw=true">this geopackage file</a>. Download it and save it to an accessible folder on the computer you are working on (this will be <strong>on the H: drive</strong> if you are on a lab computer). Then create a new <em>RStudio</em> project in that folder like <a href="02-02.html">you learned last week</a>.</p>
+<p>Then you can read the data using the <code>st_read</code> function</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&#39;election.gpkg&#39;</span>)</span></code></pre></div>
+<pre><code>## Reading layer `election&#39; from data source 
+##   `/home/osullid3/Documents/teaching/Geog315/_labs/week-03/election.gpkg&#39; 
+##   using driver `GPKG&#39;
+## Simple feature collection with 3092 features and 10 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: -2775548 ymin: -170310 xmax: 2256204 ymax: 3165691
+## Projected CRS: Albers</code></pre>
+<p>To make sure all is as it should be, take a look at the first few rows of the data using the <code>head</code> function</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(results)</span></code></pre></div>
+<pre><code>## Simple feature collection with 6 features and 10 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 761051.8 ymin: 828012.4 xmax: 1026128 ymax: 1287748
+## Projected CRS: Albers
+##   state    name population votes   dem   gop grn  lib una oth
+## 1    AL Autauga      54571 24661  5908 18110 105  538   0   0
+## 2    AL Baldwin     182265 94090 18409 72780 453 2448   0   0
+## 3    AL Barbour      27457 10390  4848  5431  18   93   0   0
+## 4    AL    Bibb      22915  8748  1874  6733  17  124   0   0
+## 5    AL  Blount      57322 25384  2150 22808  89  337   0   0
+## 6    AL Bullock      10914  4701  3530  1139  10   22   0   0
+##                             geom
+## 1 MULTIPOLYGON (((892112.8 11...
+## 2 MULTIPOLYGON (((780232.6 94...
+## 3 MULTIPOLYGON (((1026128 105...
+## 4 MULTIPOLYGON (((845034.9 11...
+## 5 MULTIPOLYGON (((871035.6 12...
+## 6 MULTIPOLYGON (((988752.8 10...</code></pre>
+<p>[By the way, there is also a <code>tail</code> function.] You can also see the dataset by clicking on it in the <strong>Environment</strong> tab of <em>RStudio</em>. If you want to make sure the spatial aspects are working OK, then try</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>results <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(population) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>()</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-4-1.png" width="768" /></p>
+<p>OK… the goal eventually will be to make a map of the election results. Here, I’ll explain the variables in the dataset.</p>
+<p>The spatial units are US counties. Each county is in a particular state and has a name. This information is contained in the <code>state</code> and <code>name</code> attributes. The state’s each have a two letter abbreviation, as shown on <a href="https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Postal_codes">this map</a>, so for example, California is ‘CA’. Not all counties have unique names, so we need the state names to uniquely identify them. For example</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>results <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">&#39;Washington&#39;</span>)</span></code></pre></div>
+<pre><code>## Simple feature collection with 32 features and 10 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: -2118948 ymin: 774485.4 xmax: 2256204 ymax: 2845010
+## Projected CRS: Albers
+## First 10 features:
+##    state       name population  votes    dem   gop  grn  lib una oth
+## 1     AL Washington      17581   8492   2366  6031   22   73   0   0
+## 2     AR Washington     203065  78153  32296 40418 1275 3280   0 884
+## 3     CO Washington       4814   2708    289  2284   11   81  14  29
+## 4     DC Washington     601723 280272 260223 11553 3995 4501   0   0
+## 5     FL Washington      24896  11144   2261  8630   21  191   0  41
+## 6     GA Washington      21187   8422   4187  4138    0   97   0   0
+## 7     ID Washington      10198   4454    776  3283   26  138 175  56
+## 8     IL Washington      14716   7376   1446  5566   75  289   0   0
+## 9     IN Washington      28262  11333   2636  8206    0  491   0   0
+## 10    IA Washington      21704  10824   3938  6170   79  458  92  87
+##                              geom
+## 1  MULTIPOLYGON (((745944.3 98...
+## 2  MULTIPOLYGON (((182541.1 14...
+## 3  MULTIPOLYGON (((-569757.9 1...
+## 4  MULTIPOLYGON (((1622264 191...
+## 5  MULTIPOLYGON (((1009201 888...
+## 6  MULTIPOLYGON (((1222984 121...
+## 7  MULTIPOLYGON (((-1599544 25...
+## 8  MULTIPOLYGON (((591785.5 17...
+## 9  MULTIPOLYGON (((869100.4 17...
+## 10 MULTIPOLYGON (((374443.1 20...</code></pre>
+<p>will return a list of 32 (yes 32!) counties called Washington (although it only shows the first 10). There are also several Jefferson counties and a few other duplicates besides. (Fun fact: <a href="https://matadornetwork.com/read/road-trip-every-springfield-america/">there are as many as 36 places called Springfield in the US</a>)</p>
+<p>Of more relevance to the assignment are the vote and population information contained in the other variables as follows:</p>
+<ul>
+<li><code>population</code> an estimate of the county populations. Note that these vary widely. Use <code>summary(results$population)</code> to see just how much</li>
+<li><code>votes</code> the total number of votes cast in the presidential election in the county</li>
+<li><code>dem</code> votes cast for the Democratic Party candidate (i.e. Hillary Clinton)</li>
+<li><code>gop</code> votes cast for the Republican Party (GOP) candidate (i.e. Donald Trump)</li>
+<li><code>grn</code>, <code>lib</code>, <code>una</code>, <code>oth</code> votes case for respectively the Green, Libertarian, Independent, and ‘Other’ candidates - apart from Utah, these numbers are rather low across the country</li>
+</ul>
+<p>In the assignment it is important to consider if these vote <em>counts</em> are what you want to map (and why) or if it makes more sense to make additional variables for the vote <em>share</em> of the different candidates, or even of the margin of victory, or difference between various candidate’s votes. To quickly map any one of these attributes, or any new attribute that you make, use the following (you can change the variable or the colours easily) as we did last week</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(results) <span class="sc">+</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">col =</span> <span class="st">&#39;dem&#39;</span>, <span class="at">palette =</span> <span class="st">&#39;Blues&#39;</span>)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-6-1.png" width="768" /></p>
+</div>
+<div id="data-preparation" class="section level1">
+<h1>Data preparation</h1>
+<p>The spatial data we just loaded has some quirks, so in this document, I explain how you can tidy it up to make it more suitable for the assignment. To do this, we will be using the <code>dplyr</code> library which provides functions for selecting, filtering and combining data in various ways. This week we’ll just be seeing these in action, but in later weeks we’ll be looking more closely at their operation.</p>
+<p>The tasks covered in this document are + <a href="#filtering-data">Filtering data</a> to remove Alaska and Hawai’i + <a href="#saving-data">Saving data to spatial data files</a> to make the filtering we did permanent + <a href="#grouping-data">Grouping data</a> to make a states dataset + <a href="#adding-new-attributes">Adding new attributes</a> to a dataset using <code>mutate</code></p>
+<div id="filtering-data" class="section level2">
+<h2>Filtering data</h2>
+<p>The data in the <code>election.gpkg</code> file is a bit odd in that it has Alaska and Hawai’i where Mexico is in real life. To show how easy it is to select data in <em>R</em> we will use the <code>filter</code> function from the <code>dplyr</code> package to get rid of these. (You might not want to do this in your map, this is just to demonstrate filtering).</p>
+<p>The variable we need to do the selection on is <code>state</code>. Say we wanted just to map California, we can do this by filtering the <code>results</code> dataset then plotting it:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>results <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">==</span> <span class="st">&#39;CA&#39;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>()</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
+<p>How does this work? You read the command above something like “take the <code>results</code> dataset, <em>then</em> <code>filter</code> it, <em>then</em> <code>plot</code>”. The <em>pipe</em> <code>%&gt;%</code> directs whatever is before it, into whatever function comes after it. the <code>filter</code> function specifies a <em>condition</em> for which cases to retain in the filtered dataset. Here we want all those cases with the <code>state</code> value ‘CA’ (i.e., California). If we wanted all those states <em>NOT</em> California, we can use <em>not equals</em> which is designated by <code>!=</code></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>results <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">!=</span> <span class="st">&#39;CA&#39;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>()</span></code></pre></div>
+<pre><code>## Warning: plotting the first 9 out of 10 attributes; use max.plot = 10 to plot
+## all</code></pre>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-8-1.png" width="768" /></p>
+<p>So, to get rid of Alaska and Hawai’i we can do this:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>lower48 <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">!=</span> <span class="st">&#39;AK&#39;</span> <span class="sc">&amp;</span> state <span class="sc">!=</span> <span class="st">&#39;HI&#39;</span>)</span></code></pre></div>
+<p>Here we’ve combined the requirement that the state not be Alaska (AK) <em>and</em> not be Hawai’i (HI) using the <code>&amp;</code> operator. This works fine and there is nothing wrong with this way of doing things.</p>
+<p>This time, because we might want to retain the result we assign the output to a new variable called <code>lower48</code> using <code>&lt;-</code>.</p>
+<p>We could also use the pipe operation to filter the data twice like this:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>lower48 <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">!=</span> <span class="st">&#39;AK&#39;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(state <span class="sc">!=</span> <span class="st">&#39;HI&#39;</span>)</span></code></pre></div>
+<p>Which will give us the same result:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(lower48)</span></code></pre></div>
+<pre><code>## Warning: plotting the first 9 out of 10 attributes; use max.plot = 10 to plot
+## all</code></pre>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-11-1.png" width="768" /></p>
+<p>Because filtering data is not our primary focus right now, we will worry more about exactly how this works in later lectures and assignments.</p>
+<p>For now, it is enough to know that we can do this kind of filtering to make new datasets, that the <code>filter</code> function is how we do it, and that the <em>pipe operator</em> <code>%&gt;%</code> is a neat way to do it.</p>
+<p>Again, the way to read the the command above is “start with <code>results</code> as the input, pipe it into the first <code>filter</code> (which throws away Alaska, <code>AK</code>) then pipe it into a second <code>filter</code> (which throws away Hawai’i, <code>HI</code>)”. Pipe functions are central to the <em>R</em> <strong>tidyverse</strong>.</p>
+<p>Either way, we now we have a dataset with only the contiguous (‘lower 48’) states of the US.</p>
+</div>
+<div id="saving-data" class="section level2">
+<h2>Saving data</h2>
+<p>Saving a dataset is easy. Just as there is a <code>st_read</code> function, there is an <code>st_write</code> function. We tell it the dataset to save, and the filename to use, and that’s pretty much it.</p>
+<p>The only complication is that if the file already exists, then we also have to tell it that it is OK to delete the existing file, using a <code>delete_dsn</code> parameter (<code>delete_dsn</code> denotes ‘delete datasource named’).</p>
+<p>So here goes with <code>delete_dsn</code> set to <code>TRUE</code> just in case you end up running this command again later.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(lower48, <span class="st">&#39;lower48.gpkg&#39;</span>, <span class="at">delete_dsn =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## Deleting source `lower48.gpkg&#39; using driver `GPKG&#39;
+## Writing layer `lower48&#39; to data source `lower48.gpkg&#39; using driver `GPKG&#39;
+## Writing 3087 features with 10 fields and geometry type Multi Polygon.</code></pre>
+<p>That’s it. You should find that there is now a new geopackage file in the folder you are working in. We can also save to other data formats. For example</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(lower48, <span class="st">&#39;lower48.geojson&#39;</span>, <span class="at">driver =</span> <span class="st">&#39;GeoJSON&#39;</span>, <span class="at">delete_dsn =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## Deleting source `lower48.geojson&#39; using driver `GeoJSON&#39;
+## Writing layer `lower48&#39; to data source `lower48.geojson&#39; using driver `GeoJSON&#39;
+## Writing 3087 features with 10 fields and geometry type Multi Polygon.</code></pre>
+<p>will save a GeoJSON file.</p>
+</div>
+<div id="grouping-data" class="section level2">
+<h2>Grouping data</h2>
+<p>The <code>lower48</code> dataset includes an attribute <code>state</code> which tells us the US state in which each county is found. We can use this information to make a new shapefile by <em>dissolving</em> counties together based on the value of this attribute. In ESRI <em>Arc</em> products you may have seen this already as a ‘dissolve’ operation. It would be nice if exactly that function was available in <code>sf</code> but we actually use the <code>dplyr</code> function <code>group_by</code> instead. Again we use pipes:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>states <span class="ot">&lt;-</span> lower48 <span class="sc">%&gt;%</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), sum)) <span class="sc">%&gt;%</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>()</span></code></pre></div>
+<p>The last two lines here should not be required, but are a workaround for a problem reported on some combinations of package versions that seems to be affecting the lab computers.</p>
+<p>Here we pass the <code>lower48</code> dataset to the <code>group_by</code> function, which will use the <code>state</code> attribute to group counties. The second pipe sends this result to the <code>summarise</code> function, which uses <code>across</code> with a <code>where</code> clause to check if attributes are numeric (the <code>is.numeric</code> parameter), and if they are, combines values by using a <code>sum</code> operation.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(states) <span class="sc">+</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">col =</span> <span class="st">&#39;population&#39;</span>)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-15-1.png" width="768" /></p>
+<p>With all that done, we can write the <code>states</code> dataset out to a new file to save our work</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(states, <span class="st">&#39;states.gpkg&#39;</span>, <span class="at">delete_dsn =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## Deleting source `states.gpkg&#39; using driver `GPKG&#39;
+## Writing layer `states&#39; to data source `states.gpkg&#39; using driver `GPKG&#39;
+## Writing 49 features with 9 fields and geometry type Unknown (any).</code></pre>
+</div>
+<div id="adding-new-attributes" class="section level2">
+<h2>Adding new attributes</h2>
+<p>Often the attributes we are provided with in a dataset are not quite what we want. Perhaps we want proportions or percentages rather than counts. Or maybe we want densities per unit area, or maybe we want the differences or sums of the original attributes.</p>
+<p>It is easy to add new attributes to an existing dataset using the <code>mutate</code> function from the <code>dplyr</code> package. For example, to create a new variable showing the percentage of population in each state that voted we can do:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>states <span class="ot">&lt;-</span> states <span class="sc">%&gt;%</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">turnout =</span> votes <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100</span>)</span></code></pre></div>
+<p>Note that we have to assign the result of the mutate back to the same variable to add it to the dataset. This seems like a nuisance at first, but you’ll get used to it.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(states) <span class="sc">+</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">col =</span> <span class="st">&#39;turnout&#39;</span>)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-18-1.png" width="768" /></p>
+<p>Try adding some other new variables, such as (say) the margin between the Republican (<code>gop</code>) and Democratic (<code>dem</code>) votes in each state, or the percentage of votes cast for one of the parties.</p>
+<p>Generally speaking it is easier to add new attributes to a dataset, and then when you are happy you have all the attributes you need you can tidy things up a bit by dropping ones you don’t need using <code>select</code>.</p>
+<p>Keep in mind if you add new attributes or make new datasets in this way that</p>
+<ul>
+<li>they are just as valid as the original datasets and attributes, and</li>
+<li><strong>they aren’t permanently stored until you use <code>st_write</code> to save them to a file</strong></li>
+</ul>
+</div>
+</div>
+<div id="how-to-use-the-tmap-package" class="section level1">
+<h1>How to use the tmap package</h1>
+<p>The <code>tmap</code> package provides a straightforward way to make simple but effective thematic maps in <em>R</em>. It can’t do all the things you might want in the realm of thematic mapping, but it can do most of the commonly required things, and more importantly do them in a flexible and straightforward way.</p>
+<p>A good resource for understanding <code>tmap</code> is provided by this <a href="https://geocompr.robinlovelace.net/adv-map.html">book chapter</a> online.</p>
+<p>The idea of <code>tmap</code> is that we layer map elements onto a map object. We’ve already seen this last week, so a simple map is something like</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(lower48) <span class="sc">+</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-19-1.png" width="768" /></p>
+<p>The first part of the above command <code>tm_shape(lower48)</code> says something like “stand back! I am going to make a map, with input dataset <code>lower48</code>”. <code>tm_shape</code> makes the map object, which we can then add more layers to. In the simple example above, we add to it <code>+ tm_polygons()</code>, which says something like “and you should style the map based on the fact the data are polygons”. For the particular kind of map you are making in this assignment—a <em>choropleth</em> map— most of the critical information about how the map should look will be included in additional parameters we supply to the <code>tm_polygons</code> function.</p>
+<p>The various aspects of this are discussed in the sections listed below + <a href="#specifying-the-attribute-to-map">Specifying the attribute to be mapped</a> + <a href="#specifying-the-colour-palette">Specifying the colour palette</a> + <a href="#specifying-the-classification-scheme">Specifying the classification scheme</a> + <a href="#adding-more-layers">Adding more layers</a> + <a href="#other-stuff">Other stuff</a></p>
+<div id="specifying-the-attribute-to-map" class="section level2">
+<h2>Specifying the attribute to map</h2>
+<p>The most basic parameter of the <code>tm_polygons</code> function is the colour of the polygons. This can be a single colour for all polygons</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(lower48) <span class="sc">+</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">col =</span> <span class="st">&#39;darkgrey&#39;</span>, <span class="at">border.col =</span> <span class="st">&#39;white&#39;</span>)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-20-1.png" width="768" /></p>
+<p>I’ve also shown here how you can change the outline colour (<code>border.col</code>) for future reference.</p>
+<p>A single colour isn’t very interesting, if instead we want to base the colours on the value of one of the dataset attributes, we name that attribute in the call to <code>tm_polygons</code>:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(lower48) <span class="sc">+</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">col =</span> <span class="st">&#39;votes&#39;</span>)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-21-1.png" width="768" /></p>
+</div>
+<div id="specifying-the-colour-palette" class="section level2">
+<h2>Specifying the colour palette</h2>
+<p>Just like <em>Arc</em> used to <code>tmap</code> has a mysterious preference for a kind of muddy orange colour as the default. Just like <em>Arc</em> it also allows you to specify a very wide range of alternative colour palettes, and you should consider the choice of these carefully in making your map. We specify the colour palette by name. You reverse the direction of the palette by prefixing its name with a <code>-</code> sign.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(lower48) <span class="sc">+</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">col =</span> <span class="st">&#39;votes&#39;</span>, <span class="at">palette =</span> <span class="st">&#39;PRGn&#39;</span>)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-22-1.png" width="768" /></p>
+<p>All the named palettes can be examined using the palette explorer in the <code>tmaptools</code> package. This might require you to install an additional library. If so use the <strong>Tools - Install Packages…</strong> menu option in <em>RStudio</em> to do so. After <code>tmaptools</code> is installed, you can do:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tmaptools)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_explorer</span>()</span></code></pre></div>
+<p><strong>Note that after you run the palette explorer you have to close it to do anything else!</strong></p>
+<p>You can get a feel for what many of the available palettes will look like in an actual map at <a href="http://colorbrewer2.org">this website</a>.</p>
+<p>Specifying your own palette is much trickier, and involves supplying the palette option of <code>tm_polygons</code> with a vector of colours that you want it to interpolate along.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(lower48) <span class="sc">+</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">col =</span> <span class="st">&quot;votes&quot;</span>, <span class="at">palette =</span> <span class="fu">c</span>(<span class="st">&quot;orange&quot;</span>, <span class="st">&quot;purple&quot;</span>))</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-24-1.png" width="768" /></p>
+<p>It is difficult to control the behaviour of this option precisely, so <strong>I recommend you stick with the built-in named palettes to begin with</strong>. They provide a lot of options, without trying to get too clever. It may still be interesting to explore this option, however.</p>
+</div>
+<div id="specifying-the-classification-scheme" class="section level2">
+<h2>Specifying the classification scheme</h2>
+<p>Specifying the colours and the attribute is only half the choropleth map design problem. The other aspect is to specify both the number of colours to use, and more importantly how to divide the values of the mapped attribute into classes for colouring. This aspect of the design is determined by the <code>style</code> and <code>n</code> parameters. For example</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(lower48) <span class="sc">+</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">col =</span> <span class="st">&#39;dem&#39;</span>, <span class="at">palette =</span> <span class="st">&#39;Blues&#39;</span>, <span class="at">style =</span> <span class="st">&#39;quantile&#39;</span>, <span class="at">n =</span> <span class="dv">9</span>)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-25-1.png" width="768" /></p>
+<p>will produce a classification based on <em>quantiles</em> and 9 classes. There are a number of different possible classification styles:</p>
+<ul>
+<li><code>equal</code> will divide the data range into equal length intervals</li>
+<li><code>sd</code> is a variant of equal intervals where the intervals will be in some round number of <em>standard deviations</em></li>
+<li><code>quantile</code> will divide the range so that each class has an approximately equal number of cases (in this case counties); depending on how the data are distributed, this may result in intervals of very different sizes</li>
+<li><code>kmeans</code>, <code>hclust</code>, <code>bclust</code>, <code>fisher</code> and <code>jenks</code> will attempt to cluster the data into groups that make sense with respect to the distribution of the data values</li>
+<li><code>cont</code> will not set up classes at all, but will assign colours to cases (i.e., counties) based on their exact values along a continuous range</li>
+</ul>
+<p>The best way to get a feel for these is to experiment.</p>
+<p>One thing you should do is examine the distribution of the attribute you are mapping to make sure that the chosen style of classification makes sense. You can do this using a histogram to see the distribution of the attribute you are mapping:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(lower48<span class="sc">$</span>votes)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-26-1.png" width="768" /></p>
+<p>For example, in this case, the <code>votes</code> attribute is highly skewed, because there are a small number of very high population counties. This means that if we use <code>equal</code> intervals (say intervals of 200,000 as in the histogram) then almost all the counties will be in the first class and there will be lots of classes (i.e., colours) with no associated county. In such a case it would make more sense to use a <code>quantile</code> style, although we then have to be sure that the chosen class boundaries make sense. Of course, the design problem will change if you focus on mapping not numbers of votes, but shares of the vote, since these are more comparable across counties regardless of their population (since they are inherently limited to a range between 0 and 100%).</p>
+<p>One option is the <code>pretty</code> style, which will choose data values that are easy to read at equally spaced intervals.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(lower48) <span class="sc">+</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">col =</span> <span class="st">&#39;votes&#39;</span>, <span class="at">palette =</span> <span class="st">&#39;viridis&#39;</span>, <span class="at">style =</span> <span class="st">&#39;pretty&#39;</span>)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-27-1.png" width="768" /></p>
+<p>In preparing your final map for this assignment the choice of colour palette, number of classes and classification style are the most relevant aspects to consider, on which you will be expected to comment in writing up.</p>
+</div>
+<div id="adding-more-layers" class="section level2">
+<h2>Adding more layers</h2>
+<p>To add an additional layer to a map, you add another <code>tm_shape</code> function call. In this case, we could add state boundaries</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(lower48) <span class="sc">+</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col =</span> <span class="st">&#39;population&#39;</span>, <span class="at">palette =</span> <span class="st">&#39;Reds&#39;</span>, <span class="at">style =</span> <span class="st">&#39;quantile&#39;</span>, <span class="at">n =</span> <span class="dv">9</span>) <span class="sc">+</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_shape</span>(states) <span class="sc">+</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_borders</span>(<span class="at">col =</span> <span class="st">&#39;black&#39;</span>)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-28-1.png" width="768" /></p>
+<p>In this example, we use <code>tm_borders</code> because we’re only interested in the state boundaries, and have ensured that there are no county boundaries by using <code>tm_fill</code> instead of <code>tm_polygons</code> for the <code>lower48</code> layer of the map. Notice that the order of adding layers is important. The <code>tm_fill</code> function applies to the most recently added data layer (<code>lower48</code>), then the <code>states</code> data layer is added, and so the <code>tm_borders</code> function which follows applies to it.</p>
+</div>
+<div id="other-stuff" class="section level2">
+<h2>Other stuff</h2>
+<p>There are many other map elements that can be controlled using <code>tmap</code> functions. We can add a north arrow and scale bar using <code>tm_compass()</code> and <code>tm_scale_bar()</code>. We can move the position of the legend around using <code>tm_legend()</code> options. We can add text using <code>tm_text()</code>. Here’s an example with many options.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(lower48) <span class="sc">+</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col =</span> <span class="st">&#39;population&#39;</span>, <span class="at">palette =</span> <span class="st">&#39;Reds&#39;</span>, <span class="at">style =</span> <span class="st">&#39;quantile&#39;</span>, <span class="at">n =</span> <span class="dv">9</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>) <span class="sc">+</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_legend</span>(<span class="at">outside =</span> <span class="cn">TRUE</span>, <span class="at">outside.position =</span> <span class="st">&#39;right&#39;</span>) <span class="sc">+</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_shape</span>(states) <span class="sc">+</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_borders</span>(<span class="at">col =</span> <span class="st">&#39;black&#39;</span>, <span class="at">lwd =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_text</span>(<span class="at">text =</span> <span class="st">&#39;state&#39;</span>, <span class="at">shadow =</span> <span class="cn">TRUE</span>, <span class="at">remove.overlap =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_compass</span>() <span class="sc">+</span></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_scale_bar</span>(<span class="at">position =</span> <span class="st">&#39;left&#39;</span>)</span></code></pre></div>
+<p><img src="03-lab_files/figure-html/unnamed-chunk-29-1.png" width="768" /></p>
+<p>Two options that are good to know about both used here are that the line thickness in plots is controlled by a <code>lwd</code> setting, and opacity of colours by an <code>alpha</code> setting.</p>
+<p>This is not a perfect map by any means (maybe not even a good one). You may see duplicate labels on the states because some states have more than one polygon (for example California and Texas have offshore islands) and <code>tmap</code> may label each island (the <code>remove.overlap</code> option helps a bit). There are ways to fix this kind of problem, but we won’t worry about that for now.</p>
+<p>The best way to figure out all these options is to either ask for help in the lab sessions (or on slack), or to use the help available, by prefixing the command you want to know more about with a <code>?</code> mark, such as</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>?tm_legend</span></code></pre></div>
+<p>Any of the functions in <em>R</em> has associated help that you can consult in this way. The explanations can be a little bit technical sometimes, but it is a good idea to get used to consulting the help.</p>
+<p>Above all, you should not be afraid to experiment!</p>
+</div>
+</div>
+<div id="assignment-1---making-maps" class="section level1">
+<h1>Assignment 1 - Making maps</h1>
+<p>Your task is to make a map of the 2016 presidential election result contained in the supplied <code>election.gpkg</code> dataset.</p>
+<p>In doing this, you need to consider the following issues:</p>
+<ul>
+<li>What are appropriate data to map? It may be that none of the supplied attributes is quite what you need to make an effective map, so you may need to add one or more new attributes (this was explained <a href="03-02.html#adding-new-attributes">here</a>)</li>
+<li>Choose an appropriate map classification style, a sensible number of classes, and a meaningful colour scheme (there are explanations of how to do all these things <a href="site/03-03.html">here</a>)</li>
+<li>Add any additional map features that you think are useful such as a legend, north arrow, scale bar, overlay of state boundaries and so on (also discussed in that set of instructions).</li>
+</ul>
+<p>Some particular questions to consider:</p>
+<ul>
+<li>What is the most salient piece of data in an election situation? Is this piece of data available in the original dataset? How could you add this data to the provided dataset?</li>
+<li>What is the most salient information in US Presidential elections <em>in particular</em>? (Do a bit of reading about the electoral system in the US, particularly the electoral college). Would that make a ‘better’ or more interesting map?</li>
+<li>Are the numbers of votes more relevant than the relative vote shares of each party (keeping in mind the very large differences in county populations)?</li>
+<li>For reasons mostly to do with television rather than politics, the colour conventions in US politics are Democrats (<code>dem</code>) = blue, Republicans (<code>gop</code>) = red. Consider this when choosing a colour palette to work with.</li>
+<li>Consider adding the state boundaries as a layer on top of the county results(if you are even showing the county results) (how to do this is <a href="03-03.html#adding-more-layers">covered in the tutorial materials</a>)</li>
+<li>If you really feel you need to include context information (like, for example, Mexico and Canada) one approach is to make a web map (<code>tmap_mode('view')</code>), and export it as an image. Be careful about this option however, as it may mean using a strange projection. Export from the web map view is not very predictable, and may work better if you export <strong>Export - Save as Web Page…</strong> first then screen shot from the web page in a browser.</li>
+</ul>
+<p>Below is an example map</p>
+<p><img src='example-election-map.png'></p>
+<p>There is plenty wrong with this map, so don’t necessarily consider it something to aim for. It might not even be showing the most relevant data. (There is no ‘correct’ map in this assignment, the important thing is your design choices and explanation, and also getting comfortable with using the tools at your disposal.)</p>
+<p>When you have made a map you are happy with, use the plot export feature in <em>RStudio</em> to export it to a PNG image file, and then include it in a Word document, including a short write up explaining the design choices you made to produce your map. There is no need to provide the <em>R</em> code you used—I am more interested in the design choices, not how they were accomplished. Half the mark for this assignment will be based on the map, and half on your explanation of the choices you made.</p>
+<p>Once you have finished your write up (it does not need to be very long) then export the Word document to a PDF file (make sure the document includes your map!) and save it to a filename that <em>includes your name</em>. Upload this PDF document to the dropbox provided on Blackboard by the end of the day on <strong>{{ site.data.dates.assignment_1 }}</strong>.</p>
+</div>
+
+   
+   
+           </section>
+  </div>
+  </div>
+  </div>
+  </div>
+      
+      
+
+  <script>
+    $(document).ready(function () {
+
+		// add bootstrap table styles to pandoc tables
+	$('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+		
+ 	 	$('#content img').addClass("image-thumb");
+		
+		$('#content img:not(.no-lightbox)').addClass("image-lb");
+	$('#content').magnificPopup({
+	    type:'image',
+	    closeOnContentClick: false,
+	    closeBtnInside: false,
+	    delegate: '.image-lb',
+	    gallery: {enabled: false },
+	    image: {
+	        verticalFit: true,
+		titleSrc: 'alt'
+	    }
+ 	});
+ 	    });
+  </script>
+
+
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+	document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+  
+</body>
+</html>

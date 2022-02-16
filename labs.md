@@ -10,7 +10,7 @@ You can get an idea of what's coming from the links below.
 
 + **Week 1** [Setting up your computer](labs/week-01 "lab materials")
 + **Week 2** [Introduction to *R* and *RStudio*](labs/week-02 "lab materials")
-+ **Week 3** [Making maps](labs/week-03 "lab materials")
++ **Week 3** [Making maps](labs/03-lab.html "lab materials")
 + **Week 4** [Spatial data wrangling](labs/week-04 "lab materials") (this one may change a little)
 + **Week 5** Geographic cluster analysis
 + **Week 7** Regression analysis in *R*

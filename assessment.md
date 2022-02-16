@@ -3,7 +3,7 @@ This course is 100% internally assessed.  Assessment is based on the various ite
 
 Assessment item | Credit | Due date | Learning objectives
  -- | -- | -- | --
-[Making maps](labs/week-03 "lab materials") | 15% | {{ site.data.dates.assignment_1 }} | 2
+[Making maps](labs/03-lab.html "lab materials") | 15% | {{ site.data.dates.assignment_1 }} | 2
 [Spatial data manipulation](labs/week-04 "lab materials") | 15% | {{ site.data.dates.assignment_2 }} | 2 4
 [Geographic cluster analysis](labs/week-05 "lab materials") | 20% | {{ site.data.dates.assignment_3 }} | 6
 [Building a simple statistical model](labs/week-07 "lab materials") | 20% | {{ site.data.dates.assignment_4 }} | 6
