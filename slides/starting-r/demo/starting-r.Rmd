@@ -108,7 +108,7 @@ tm_shape(welly) +
 And even web maps
 
 ```{r}
-tmap_mode('plot') 
+tmap_mode('view') 
 tm_shape(welly) + 
   tm_polygons(col = "PopUR13", palette = "YlGnBu", 
               alpha = 0.5, title = "Population 2013")
