@@ -9,20 +9,20 @@
     
     <title>Geographic Cluster Analysis</title>
 
-        <script src="05.lab_files/header-attrs-2.11/header-attrs.js"></script>
-        <script src="05.lab_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script src="05-lab_files/header-attrs-2.11/header-attrs.js"></script>
+        <script src="05-lab_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="05.lab_files/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-        <script src="05.lab_files/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-        <script src="05.lab_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
-        <script src="05.lab_files/navigation-1.1/tabsets.js"></script>
-        <link href="05.lab_files/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
-        <script src="05.lab_files/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
-        <link href="05.lab_files/downcute-0.1/downcute.css" rel="stylesheet" />
-        <link href="05.lab_files/downcute-0.1/downcute_fonts_embed.css" rel="stylesheet" />
-        <script src="05.lab_files/downcute-0.1/downcute_styles.js"></script>
-        <script src="05.lab_files/downcute-0.1/downcute.js"></script>
-        <script src="05.lab_files/prism-1.22/prism.js"></script>
+        <link href="05-lab_files/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="05-lab_files/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script src="05-lab_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+        <script src="05-lab_files/navigation-1.1/tabsets.js"></script>
+        <link href="05-lab_files/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
+        <script src="05-lab_files/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
+        <link href="05-lab_files/downcute-0.1/downcute.css" rel="stylesheet" />
+        <link href="05-lab_files/downcute-0.1/downcute_fonts_embed.css" rel="stylesheet" />
+        <script src="05-lab_files/downcute-0.1/downcute_styles.js"></script>
+        <script src="05-lab_files/downcute-0.1/downcute.js"></script>
+        <script src="05-lab_files/prism-1.22/prism.js"></script>
     
     
     
@@ -216,11 +216,11 @@ library(dplyr)</code></pre>
 <p>The <code>plot()</code> function will make small maps of 9 or 10 of the variables. If you’d like it to map other than the first 9 or 10, then use select as shown below.</p>
 <pre class="r"><code>select(sanfran, 10:18) %&gt;% 
   plot()</code></pre>
-<p><img src="05.lab_files/figure-html/unnamed-chunk-4-1.png" width="768" /></p>
+<p><img src="05-lab_files/figure-html/unnamed-chunk-4-1.png" width="768" /></p>
 <p>Note that the colours are a rainbow palette with purple/blue for low values through to yellow/orange/red for high. You can change the colour palette if you like, but it’s a bit messy, unfortunately… the <code>plot()</code> function is just for a quick look-see not really for final maps.</p>
 <pre class="r"><code>select(sanfran, 10:18) %&gt;%
   plot(pal = RColorBrewer::brewer.pal(9, &quot;Reds&quot;))</code></pre>
-<p><img src="05.lab_files/figure-html/unnamed-chunk-5-1.png" width="768" /></p>
+<p><img src="05-lab_files/figure-html/unnamed-chunk-5-1.png" width="768" /></p>
 <p>Keep in mind, the <code>plot()</code> function is only showing you the first few variables, there are 15 more! If any variable is of particular interest map it with <code>tmap</code> in the usual way.</p>
 <p>In the short sections that follow, I show some ways to examine all the data, using packages we haven’t worked with before. There isn’t really scope in this course to fully explain these operations, the focus is simply on getting an idea of the data.</p>
 </div>
@@ -240,7 +240,7 @@ library(dplyr)</code></pre>
     geom_point(aes(x = value, y = name)) +
     xlab(&quot;Value&quot;) +
     ylab(&quot;Variable&quot;)</code></pre>
-<p><img src="05.lab_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
+<p><img src="05-lab_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
 </div>
 <div id="scatterplots-of-all-the-variables" class="section level3">
 <h3>Scatterplots of all the variables</h3>
@@ -248,7 +248,7 @@ library(dplyr)</code></pre>
 <pre class="r"><code>sanfran.d %&gt;% 
   select(1:6) %&gt;%  
   plot()</code></pre>
-<p><img src="05.lab_files/figure-html/unnamed-chunk-8-1.png" width="768" /></p>
+<p><img src="05-lab_files/figure-html/unnamed-chunk-8-1.png" width="768" /></p>
 <p>Here, since we are only using this dataset to illustrate how to perform clustering analysis and aren’t interested in its structure as such, we will not spend any more time on this data exploration. In a more realistic situation you would probably want to do so.</p>
 </div>
 </div>
@@ -269,71 +269,71 @@ library(dplyr)</code></pre>
 <pre class="r"><code>km &lt;- kmeans(sanfran.d, 5)</code></pre>
 <p>That’s it! All the results for the chosen number of clusters (specified as 5 in the above example) are now contained in the dataset <code>km</code>. Take a look at it by selecting it from the Environment tab, or just type <code>km</code> at the console:</p>
 <pre class="r"><code>km</code></pre>
-<pre><code>## K-means clustering with 5 clusters of sizes 19, 31, 34, 38, 67
+<pre><code>## K-means clustering with 5 clusters of sizes 15, 64, 33, 71, 6
 ## 
 ## Cluster means:
 ##     density medianYearBuilt  PConeUnit PCownerOccUnits PCcommutingNotCar
-## 1 0.1243014      0.60869565 0.11189698       0.2506476         0.4930859
-## 2 0.3535732      0.03179056 0.06546492       0.1031317         0.7203376
-## 3 0.1102430      0.08525149 0.65063972       0.5983421         0.3427160
-## 4 0.1383918      0.12509535 0.79160791       0.6154541         0.3393826
-## 5 0.1659080      0.02574086 0.18779938       0.3068891         0.4989383
+## 1 0.1246643      0.63574879 0.04395938      0.26352499         0.5533434
+## 2 0.1242886      0.11548913 0.75268607      0.63238043         0.3330287
+## 3 0.3424004      0.05094422 0.07087217      0.09836557         0.7012756
+## 4 0.1646977      0.02918963 0.20725638      0.31864877         0.4906421
+## 5 0.1047166      0.20772947 0.50926343      0.32608261         0.3475283
 ##   PCmovedWithinCounty PClessHighSchool PCsomeCollegeOrMore PCdoctorate
-## 1          0.10365935       0.12431334           0.7426345 0.025199492
-## 2          0.09814102       0.22492391           0.6120467 0.011752056
-## 3          0.06891582       0.09298221           0.7966360 0.028564346
-## 4          0.05479010       0.24986285           0.5157689 0.008134132
-## 5          0.08740663       0.05001485           0.8812931 0.035653370
+## 1          0.11117199       0.10543009           0.7875180 0.030511706
+## 2          0.05795519       0.17456687           0.6468239 0.017555259
+## 3          0.09812820       0.21929988           0.6188999 0.012242333
+## 4          0.08801619       0.05176225           0.8799148 0.035084432
+## 5          0.07153552       0.27933775           0.4513068 0.005993472
 ##   PCmarriedCouple PCunmarriedSSCouple PCwithKids PCsexMale medianAge
-## 1       0.2625462          0.01752287  0.1637307 0.5036410 0.3339071
-## 2       0.2304998          0.01504482  0.1293788 0.5347876 0.3400144
-## 3       0.4813269          0.02232414  0.2532609 0.4961764 0.3883770
-## 4       0.4802100          0.01121133  0.3429161 0.4877177 0.3535646
-## 5       0.2788861          0.03150187  0.1461548 0.5231804 0.2970175
+## 1       0.2656633         0.020265786 0.09990601 0.5188567 0.3895582
+## 2       0.4968675         0.015385622 0.29957078 0.4896164 0.3825839
+## 3       0.2332009         0.014256695 0.13292005 0.5310887 0.3354718
+## 4       0.2863396         0.032225219 0.15193930 0.5213531 0.2968170
+## 5       0.2703541         0.007978744 0.45175197 0.4906096 0.1586345
 ##   PCraceBlackAlone PCraceAsianAlone PCraceHispanic PCraceWhiteAlone
-## 1       0.15096715        0.3137641      0.1173515        0.4252432
-## 2       0.05410593        0.3754462      0.2010137        0.4333957
-## 3       0.02430359        0.3780705      0.1071087        0.5009339
-## 4       0.09255978        0.5077422      0.2267782        0.2489388
-## 5       0.03389218        0.1586869      0.1134876        0.7194477
+## 1       0.07978405        0.3262712      0.1081134        0.5030040
+## 2       0.05073137        0.4740230      0.1605502        0.3598213
+## 3       0.06290117        0.3724853      0.1936357        0.4302161
+## 4       0.03367394        0.1657636      0.1160024        0.7104119
+## 5       0.37497869        0.1813665      0.3001625        0.1665523
 ##   PCforeignBorn perCapitaIncome PCunemployed PCpoorStruggling PCwithInterests
-## 1     0.3692370       0.2842226   0.08679212        0.3731304       0.2254637
-## 2     0.4520887       0.1750116   0.08665385        0.4971851       0.1761933
-## 3     0.3279742       0.3020804   0.06578667        0.1912890       0.4061441
-## 4     0.5004685       0.1300755   0.11429509        0.3387134       0.2058305
-## 5     0.2150350       0.4578800   0.05898759        0.1839987       0.3506628
+## 1     0.3926311      0.36478130   0.06723213        0.3127269      0.27503048
+## 2     0.4344170      0.21177502   0.08815927        0.2553231      0.30577452
+## 3     0.4507348      0.17141622   0.08831062        0.4973963      0.17345387
+## 4     0.2148590      0.44666421   0.05769950        0.1844951      0.35262133
+## 5     0.2975231      0.05365633   0.20097645        0.6100425      0.06925801
 ##   PCveryWealthyHHolds
-## 1          0.12417139
-## 2          0.05790512
-## 3          0.18424987
-## 4          0.06964340
-## 5          0.21402570
+## 1          0.16083146
+## 2          0.12467019
+## 3          0.05587889
+## 4          0.21223794
+## 5          0.01678678
 ## 
 ## Clustering vector:
 ##   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
-##   1   5   5   5   5   2   2   2   5   2   2   5   2   2   2   2   2   2   2   2 
+##   1   4   4   4   1   3   3   3   4   3   3   4   3   3   3   3   3   3   3   3 
 ##  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 
-##   2   2   2   2   2   2   2   5   5   5   5   5   5   5   5   5   5   5   5   5 
+##   3   3   3   3   3   3   3   4   4   4   4   4   4   4   4   4   4   4   4   4 
 ##  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60 
-##   1   5   5   5   1   5   5   1   5   1   1   1   5   5   5   5   5   5   5   5 
+##   1   4   4   4   1   4   4   1   4   1   1   3   4   4   4   4   4   4   4   4 
 ##  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80 
-##   5   5   5   5   1   5   1   1   1   2   5   5   5   5   5   5   5   2   2   5 
+##   4   4   4   4   1   4   1   1   1   3   4   4   4   4   4   4   4   3   3   4 
 ##  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100 
-##   5   5   5   5   5   3   3   5   1   5   5   5   2   2   2   5   5   4   4   1 
+##   4   4   4   4   4   4   2   4   1   4   4   4   3   3   3   4   4   2   2   5 
 ## 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 
-##   1   4   4   4   3   3   5   3   3   4   4   4   4   4   4   4   4   4   4   4 
+##   5   5   2   5   2   4   4   2   2   2   2   2   2   2   2   2   2   2   2   2 
 ## 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 
-##   4   4   4   4   4   4   4   4   4   5   3   5   5   3   3   3   3   3   3   3 
+##   2   2   2   2   2   2   2   2   2   4   4   4   4   2   2   2   2   2   2   2 
 ## 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 
-##   3   3   3   4   4   4   4   4   3   3   3   4   4   4   4   3   3   2   1   2 
+##   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   3   3   3 
 ## 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 
-##   3   3   3   4   4   5   5   2   5   2   3   5   3   3   3   3   3   3   3   3 
+##   2   2   2   2   2   4   4   3   4   3   2   4   4   4   2   2   2   2   2   2 
 ## 181 182 183 184 185 186 187 188 189 
-##   5   1   4   1   1   2   4   5   1 
+##   4   1   5   1   2   3   5   4   1 
 ## 
 ## Within cluster sum of squares by cluster:
-## [1]  7.480135 10.114724  7.179067  6.405336 10.094734
-##  (between_SS / total_SS =  60.0 %)
+## [1]  3.605301 15.863326 10.973012 11.424221  1.315666
+##  (between_SS / total_SS =  58.2 %)
 ## 
 ## Available components:
 ## 
@@ -347,7 +347,7 @@ library(dplyr)</code></pre>
 <pre class="r"><code>tm_shape(sanfran) +
   tm_polygons(col = &#39;k5&#39;) +
   tm_legend(legend.outside = TRUE)</code></pre>
-<p><img src="05.lab_files/figure-html/unnamed-chunk-12-1.png" width="768" /></p>
+<p><img src="05-lab_files/figure-html/unnamed-chunk-12-1.png" width="768" /></p>
 <p>Note how <code>tmap</code> knows to use a categorical palette because <code>k5</code> is a factor.</p>
 <div id="notes" class="section level3">
 <h3>Notes</h3>
@@ -362,45 +362,45 @@ library(dplyr)</code></pre>
 <p>The ‘quality’ of a particular clustering solution is dependent on how well we think we can interpret it. In this case, for an unfamiliar setting, you probably can’t do much. Measures of the variance within and between clusters can be used to assess ‘quality’ in a more technical sense and are available from the <code>kmeans</code> object produced by the function.</p>
 <p>Here is some code you can use to compare a specific variable across clusters</p>
 <pre class="r"><code>boxplot(PCwithKids ~ k5, data = sanfran)</code></pre>
-<p><img src="05.lab_files/figure-html/unnamed-chunk-13-1.png" width="768" /></p>
+<p><img src="05-lab_files/figure-html/unnamed-chunk-13-1.png" width="768" /></p>
 <p>You have to use this code one variable at a time. You can get an overview of which variables are particularly high or low in each cluster from the <code>centers</code> component of the <code>kmeans()</code> results:</p>
 <pre class="r"><code>km$centers</code></pre>
 <pre><code>##     density medianYearBuilt  PConeUnit PCownerOccUnits PCcommutingNotCar
-## 1 0.1243014      0.60869565 0.11189698       0.2506476         0.4930859
-## 2 0.3535732      0.03179056 0.06546492       0.1031317         0.7203376
-## 3 0.1102430      0.08525149 0.65063972       0.5983421         0.3427160
-## 4 0.1383918      0.12509535 0.79160791       0.6154541         0.3393826
-## 5 0.1659080      0.02574086 0.18779938       0.3068891         0.4989383
+## 1 0.1246643      0.63574879 0.04395938      0.26352499         0.5533434
+## 2 0.1242886      0.11548913 0.75268607      0.63238043         0.3330287
+## 3 0.3424004      0.05094422 0.07087217      0.09836557         0.7012756
+## 4 0.1646977      0.02918963 0.20725638      0.31864877         0.4906421
+## 5 0.1047166      0.20772947 0.50926343      0.32608261         0.3475283
 ##   PCmovedWithinCounty PClessHighSchool PCsomeCollegeOrMore PCdoctorate
-## 1          0.10365935       0.12431334           0.7426345 0.025199492
-## 2          0.09814102       0.22492391           0.6120467 0.011752056
-## 3          0.06891582       0.09298221           0.7966360 0.028564346
-## 4          0.05479010       0.24986285           0.5157689 0.008134132
-## 5          0.08740663       0.05001485           0.8812931 0.035653370
+## 1          0.11117199       0.10543009           0.7875180 0.030511706
+## 2          0.05795519       0.17456687           0.6468239 0.017555259
+## 3          0.09812820       0.21929988           0.6188999 0.012242333
+## 4          0.08801619       0.05176225           0.8799148 0.035084432
+## 5          0.07153552       0.27933775           0.4513068 0.005993472
 ##   PCmarriedCouple PCunmarriedSSCouple PCwithKids PCsexMale medianAge
-## 1       0.2625462          0.01752287  0.1637307 0.5036410 0.3339071
-## 2       0.2304998          0.01504482  0.1293788 0.5347876 0.3400144
-## 3       0.4813269          0.02232414  0.2532609 0.4961764 0.3883770
-## 4       0.4802100          0.01121133  0.3429161 0.4877177 0.3535646
-## 5       0.2788861          0.03150187  0.1461548 0.5231804 0.2970175
+## 1       0.2656633         0.020265786 0.09990601 0.5188567 0.3895582
+## 2       0.4968675         0.015385622 0.29957078 0.4896164 0.3825839
+## 3       0.2332009         0.014256695 0.13292005 0.5310887 0.3354718
+## 4       0.2863396         0.032225219 0.15193930 0.5213531 0.2968170
+## 5       0.2703541         0.007978744 0.45175197 0.4906096 0.1586345
 ##   PCraceBlackAlone PCraceAsianAlone PCraceHispanic PCraceWhiteAlone
-## 1       0.15096715        0.3137641      0.1173515        0.4252432
-## 2       0.05410593        0.3754462      0.2010137        0.4333957
-## 3       0.02430359        0.3780705      0.1071087        0.5009339
-## 4       0.09255978        0.5077422      0.2267782        0.2489388
-## 5       0.03389218        0.1586869      0.1134876        0.7194477
+## 1       0.07978405        0.3262712      0.1081134        0.5030040
+## 2       0.05073137        0.4740230      0.1605502        0.3598213
+## 3       0.06290117        0.3724853      0.1936357        0.4302161
+## 4       0.03367394        0.1657636      0.1160024        0.7104119
+## 5       0.37497869        0.1813665      0.3001625        0.1665523
 ##   PCforeignBorn perCapitaIncome PCunemployed PCpoorStruggling PCwithInterests
-## 1     0.3692370       0.2842226   0.08679212        0.3731304       0.2254637
-## 2     0.4520887       0.1750116   0.08665385        0.4971851       0.1761933
-## 3     0.3279742       0.3020804   0.06578667        0.1912890       0.4061441
-## 4     0.5004685       0.1300755   0.11429509        0.3387134       0.2058305
-## 5     0.2150350       0.4578800   0.05898759        0.1839987       0.3506628
+## 1     0.3926311      0.36478130   0.06723213        0.3127269      0.27503048
+## 2     0.4344170      0.21177502   0.08815927        0.2553231      0.30577452
+## 3     0.4507348      0.17141622   0.08831062        0.4973963      0.17345387
+## 4     0.2148590      0.44666421   0.05769950        0.1844951      0.35262133
+## 5     0.2975231      0.05365633   0.20097645        0.6100425      0.06925801
 ##   PCveryWealthyHHolds
-## 1          0.12417139
-## 2          0.05790512
-## 3          0.18424987
-## 4          0.06964340
-## 5          0.21402570</code></pre>
+## 1          0.16083146
+## 2          0.12467019
+## 3          0.05587889
+## 4          0.21223794
+## 5          0.01678678</code></pre>
 <p>This is quite difficult to interpret (all those numbers) but scanning the information should enable you to spot which cluster has particularly high or low values of particular variables.</p>
 <p>For a more visual presentation of all the information we can use some more complicated plotting code, as shown below.</p>
 <pre class="r"><code>sanfran %&gt;%
@@ -410,7 +410,7 @@ library(dplyr)</code></pre>
   ggplot() +
     geom_point(aes(x = value, y = name, colour = k5)) +
     facet_wrap(~ k5, nrow = 1)</code></pre>
-<p><img src="05.lab_files/figure-html/unnamed-chunk-15-1.png" width="768" /></p>
+<p><img src="05-lab_files/figure-html/unnamed-chunk-15-1.png" width="768" /></p>
 </div>
 <div id="the-assignment-data-wellington-region-commutes-2018" class="section level1">
 <h1>The assignment data: Wellington region commutes, 2018</h1>
