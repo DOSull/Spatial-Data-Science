@@ -9,3 +9,6 @@ I had to stay home for this one as I was feeling a bit unwell, so here is the zo
 + [Two examples](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-6.m4v) (10:10)
 + [FOSS for geo](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-7.m4v) (5:27)
 + [Wrapping up](https://southosullivan.com/geog315/video/lecture-on-open/geog315-01-2021-8.m4v) (2:13)
+
+## For video on installing _R_ and _RStudio_
+These are linked from the [week 1 lab materials](../labs/01-lab.html).

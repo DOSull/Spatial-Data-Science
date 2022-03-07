@@ -5,7 +5,7 @@ A variety of video content relevant to different stages of the course is linked 
 A zoom recorded lecture from 2021 (because I was unwell and staying home), and videos on installing _R_ and _RStudio_
 
 ## [Week 2](video-indexes/week02.md)
-Using _R_ and _RStudio_
+Lectures introducing _R_ and _RStudio_ and discussing the limitations of data.
 
 ## [Week 3](video-indexes/week03.md)
 Practical material on making maps in _R_
