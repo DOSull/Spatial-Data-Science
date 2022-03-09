@@ -24,3 +24,13 @@ Some of these are pretty short; some of the later ones may also be helpful if yo
 + [Making maps with `tmap` and wrap up](https://southosullivan.com/geog315/video/week-02-lecture-01/geog315-03-2022-starting-r-13.mp4) 2m41s
 
 ---
+## The limits of tidy data lecture
++ [Preamble](https://southosullivan.com/geog315/video/week-02-lecture-02/geog315-04-2022-not-so-tidy-data-1.mp4) 1m37s
++ [What is/are data?](https://southosullivan.com/geog315/video/week-02-lecture-02/geog315-04-2022-not-so-tidy-data-2.mp4) 4m17s
++ [Data-information-knowledge](https://southosullivan.com/geog315/video/week-02-lecture-02/geog315-04-2022-not-so-tidy-data-3.mp4) 5m39s
++ [Data feminism](https://southosullivan.com/geog315/video/week-02-lecture-02/geog315-04-2022-not-so-tidy-data-4.mp4) 6m12s
++ [A geographical perspective](https://southosullivan.com/geog315/video/week-02-lecture-02/geog315-04-2022-not-so-tidy-data-5.mp4) 8m17s
++ [In sum: data are messy](https://southosullivan.com/geog315/video/week-02-lecture-02/geog315-04-2022-not-so-tidy-data-6.mp4) 4m03s
++ [So anyhoo... tidy data](https://southosullivan.com/geog315/video/week-02-lecture-02/geog315-04-2022-not-so-tidy-data-7.mp4) 5m50s
++ [Spatial data types](https://southosullivan.com/geog315/video/week-02-lecture-02/geog315-04-2022-not-so-tidy-data-8.mp4) 6m44s
++ [Wrap](https://southosullivan.com/geog315/video/week-02-lecture-02/geog315-04-2022-not-so-tidy-data-9.mp4) 1m44s
