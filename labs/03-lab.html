@@ -167,14 +167,14 @@
 <div class="page-content has-page-title">
 <div id="overview" class="section level1">
 <h1>Overview</h1>
-<p>We cover a lot of ground in this lab, including handling simple spatial data in <em>R</em>, and the options available for mapping using the <code>tmap</code> package. Keep in mind that you can refer back to <a href="02-00.html">last week’s material</a> if you need to refresh your memory of anything we did previously.</p>
+<p>We cover a lot of ground in this lab, including handling simple spatial data in <em>R</em>, and the options available for mapping using the <code>tmap</code> package. Keep in mind that you can refer back to <a href="02-lab.html">last week’s material</a> if you need to refresh your memory of anything we did previously.</p>
 <p>The instructions this week are in several parts, to make it a bit easier to follow.</p>
 <p>You may want to take a quick look at the last section detailing the assignment so you know what is expected of you, then come back to the top of the page and work through things in order to learn about the various tools you can use to accomplish what is asked of you.</p>
 <p>Some of this week’s material may be hard to follow at first, and some of it won’t come together completely until I explain the pipe (<code>%&gt;%</code>) operator in class, but bear with us and all will become clear (and the relevant lectures have already started).</p>
 <p>As explained last week, you should <a href="02-lab.html#starting-a-new-rstudio-project">set up an RStudio project</a> for this week’s work to make sure you can keep track of everything.</p>
 <div id="videos" class="section level2">
 <h2>Videos</h2>
-<p>Video support for this week’s lab is <a href="https://dosull.github.io/Geog315/video-indexes/week03.html">here</a></p>
+<p>Video support for this week’s lab is <a href="https://dosull.github.io/Geog315/video-indexes/week03.html#making-maps-in-r">here</a></p>
 </div>
 </div>
 <div id="introducing-the-data" class="section level1">
@@ -183,28 +183,16 @@
 <h2>Libraries</h2>
 <p>First you need to load the <code>sf</code> library for handling spatial data</p>
 <pre class="r"><code>library(sf)</code></pre>
-<pre><code>## Linking to GEOS 3.8.0, GDAL 3.3.1, PROJ 8.1.0</code></pre>
 <p><code>tmap</code> for mapping</p>
 <pre class="r"><code>library(tmap)</code></pre>
-<pre><code>## Registered S3 methods overwritten by &#39;stars&#39;:
-##   method             from
-##   st_bbox.SpatRaster sf  
-##   st_crs.SpatRaster  sf</code></pre>
 <p>and <code>dplyr</code> for data wrangling</p>
 <pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
+<p>If any of these are not available on your installation, then install them with the <strong>Tools - Install Packages…</strong> tool from the main menu.</p>
 </div>
 <div id="data" class="section level2">
 <h2>Data</h2>
 <p>The data for this week are election results from the US Presidential Election of 2016 (the one that gave us president Donald J. Trump). I’m sticking with that election because the data are more interesting than in 2020.</p>
-<p>You will find the data in the <a href="election.gpkg?raw=true">this geopackage file</a>. Download it and save it to an accessible folder on the computer you are working on (this will be <strong>on the H: drive</strong> if you are on a lab computer). Then create a new <em>RStudio</em> project in that folder like <a href="02-lab.html#starting-a-new-RStudio-project">you learned last week</a>.</p>
+<p>You will find the data in the <a href="election.gpkg?raw=true">this geopackage file</a>. Download it and save it to an accessible folder on the computer you are working on (this will be <strong>on the H: drive</strong> if you are on a lab computer). Then create a new <em>RStudio</em> project in that folder like <a href="02-lab.html#starting-a-new-rstudio-project">you learned last week</a>.</p>
 <p>Then you can read the data using the <code>st_read</code> function</p>
 <pre class="r"><code>results &lt;- st_read(&#39;election.gpkg&#39;)</code></pre>
 <pre><code>## Reading layer `election&#39; from data source 
@@ -296,7 +284,13 @@
 <div id="data-preparation" class="section level1">
 <h1>Data preparation</h1>
 <p>The spatial data we just loaded has some quirks, so in this document, I explain how you can tidy it up to make it more suitable for the assignment. To do this, we will be using the <code>dplyr</code> library which provides functions for selecting, filtering and combining data in various ways. This week we’ll just be seeing these in action, but in later weeks we’ll be looking more closely at their operation.</p>
-<p>The tasks covered in this document are + <a href="#filtering-data">Filtering data</a> to remove Alaska and Hawai’i + <a href="#saving-data">Saving data to spatial data files</a> to make the filtering we did permanent + <a href="#grouping-data">Grouping data</a> to make a states dataset + <a href="#adding-new-attributes">Adding new attributes</a> to a dataset using <code>mutate</code></p>
+<p>The tasks covered in this document are</p>
+<ul>
+<li><a href="#filtering-data">Filtering data</a> to remove Alaska and Hawai’i</li>
+<li><a href="#saving-data">Saving data to spatial data files</a> to make the filtering we did permanent</li>
+<li><a href="#grouping-data">Grouping data</a> to make a states dataset</li>
+<li><a href="#adding-new-attributes">Adding new attributes</a> to a dataset using <code>mutate</code></li>
+</ul>
 <div id="filtering-data" class="section level2">
 <h2>Filtering data</h2>
 <p>The data in the <code>election.gpkg</code> file is a bit odd in that it has Alaska and Hawai’i where Mexico is in real life. To show how easy it is to select data in <em>R</em> we will use the <code>filter</code> function from the <code>dplyr</code> package to get rid of these. (You might not want to do this in your map, this is just to demonstrate filtering).</p>
@@ -305,7 +299,7 @@
   filter(state == &#39;CA&#39;) %&gt;%
   plot()</code></pre>
 <p><img src="03-lab_files/figure-html/unnamed-chunk-9-1.png" width="768" /></p>
-<p>How does this work? You read the command above something like “take the <code>results</code> dataset, <em>then</em> <code>filter</code> it, <em>then</em> <code>plot</code>”. The <em>pipe</em> <code>%&gt;%</code> directs whatever is before it, into whatever function comes after it. the <code>filter</code> function specifies a <em>condition</em> for which cases to retain in the filtered dataset. Here we want all those cases with the <code>state</code> value ‘CA’ (i.e., California). If we wanted all those states <em>NOT</em> California, we can use <em>not equals</em> which is designated by <code>!=</code></p>
+<p>How does this work? You read the command above something like “take the <code>results</code> dataset, <em>then</em> <code>filter</code> it, <em>then</em> <code>plot</code> it”. The <em>pipe</em> <code>%&gt;%</code> directs whatever is before it, into whatever function comes after it. The <code>filter</code> function specifies a <em>condition</em> for which cases to retain in the filtered dataset. Here we want all those cases with the <code>state</code> value ‘CA’ (i.e., California). If we wanted all those states <em>NOT</em> California, we can use <em>not equals</em> which is designated by <code>!=</code></p>
 <pre class="r"><code>results %&gt;%
   filter(state != &#39;CA&#39;) %&gt;%
   plot()</code></pre>
@@ -394,15 +388,22 @@
   tm_polygons()</code></pre>
 <p><img src="03-lab_files/figure-html/unnamed-chunk-21-1.png" width="768" /></p>
 <p>The first part of the above command <code>tm_shape(lower48)</code> says something like “stand back! I am going to make a map, with input dataset <code>lower48</code>”. <code>tm_shape</code> makes the map object, which we can then add more layers to. In the simple example above, we add to it <code>+ tm_polygons()</code>, which says something like “and you should style the map based on the fact the data are polygons”. For the particular kind of map you are making in this assignment—a <em>choropleth</em> map— most of the critical information about how the map should look will be included in additional parameters we supply to the <code>tm_polygons</code> function.</p>
-<p>The various aspects of this are discussed in the sections listed below + <a href="#specifying-the-attribute-to-map">Specifying the attribute to be mapped</a> + <a href="#specifying-the-colour-palette">Specifying the colour palette</a> + <a href="#specifying-the-classification-scheme">Specifying the classification scheme</a> + <a href="#adding-more-layers">Adding more layers</a> + <a href="#other-stuff">Other stuff</a></p>
+<p>The various aspects of this are discussed in the sections listed below</p>
+<ul>
+<li><a href="#specifying-the-attribute-to-map">Specifying the attribute to be mapped</a></li>
+<li><a href="#specifying-the-colour-palette">Specifying the colour palette</a></li>
+<li><a href="#specifying-the-classification-scheme">Specifying the classification scheme</a></li>
+<li><a href="#adding-more-layers">Adding more layers</a></li>
+<li><a href="#other-stuff">Other stuff</a></li>
+</ul>
 <div id="specifying-the-attribute-to-map" class="section level2">
 <h2>Specifying the attribute to map</h2>
-<p>The most basic parameter of the <code>tm_polygons</code> function is the colour of the polygons. This can be a single colour for all polygons</p>
+<p>The most basic parameter of the <code>tm_polygons</code> function is the colour of the polygons, which we specify with the <code>col</code> option in the <code>tm_polygons</code> function. This can be a single colour for all polygons</p>
 <pre class="r"><code>tm_shape(lower48) +
   tm_polygons(col = &#39;darkgrey&#39;, border.col = &#39;white&#39;)</code></pre>
 <p><img src="03-lab_files/figure-html/unnamed-chunk-22-1.png" width="768" /></p>
 <p>I’ve also shown here how you can change the outline colour (<code>border.col</code>) for future reference.</p>
-<p>A single colour isn’t very interesting, if instead we want to base the colours on the value of one of the dataset attributes, we name that attribute in the call to <code>tm_polygons</code>:</p>
+<p>A single colour isn’t very interesting, if instead we want to base the colours on the value of one of the dataset attributes, we set <code>col</code> to the name of that attribute in the call to <code>tm_polygons</code>:</p>
 <pre class="r"><code>tm_shape(lower48) +
   tm_polygons(col = &#39;votes&#39;)</code></pre>
 <p><img src="03-lab_files/figure-html/unnamed-chunk-23-1.png" width="768" /></p>
@@ -416,13 +417,15 @@
 <p>All the named palettes can be examined using the palette explorer in the <code>tmaptools</code> package. This might require you to install an additional library. If so use the <strong>Tools - Install Packages…</strong> menu option in <em>RStudio</em> to do so. After <code>tmaptools</code> is installed, you can do:</p>
 <pre class="r"><code>library(tmaptools)
 palette_explorer()</code></pre>
-<p><strong>Note that after you run the palette explorer you have to close it to do anything else!</strong></p>
+<p>This should cause this window to appear where you see different palettes with their names and also experiment with how they look with different numbers of categories:</p>
+<p><img src="palette_explorer.png" style="width:80%; margin: 20px"/></p>
+<p><strong>Note that after you run the palette explorer you must close it before you can do anything else!</strong></p>
 <p>You can get a feel for what many of the available palettes will look like in an actual map at <a href="http://colorbrewer2.org">this website</a>.</p>
 <p>Specifying your own palette is much trickier, and involves supplying the palette option of <code>tm_polygons</code> with a vector of colours that you want it to interpolate along.</p>
 <pre class="r"><code>tm_shape(lower48) +
   tm_polygons(col = &quot;votes&quot;, palette = c(&quot;orange&quot;, &quot;purple&quot;))</code></pre>
 <p><img src="03-lab_files/figure-html/unnamed-chunk-26-1.png" width="768" /></p>
-<p>It is difficult to control the behaviour of this option precisely, so <strong>I recommend you stick with the built-in named palettes to begin with</strong>. They provide a lot of options, without trying to get too clever. It may still be interesting to explore this option, however.</p>
+<p>It is difficult to control the behaviour of this option precisely, so <strong>I recommend you stick with the built-in named palettes</strong>. They provide a lot of options, without trying to get too clever. It may still be interesting to explore this option, however.</p>
 </div>
 <div id="specifying-the-classification-scheme" class="section level2">
 <h2>Specifying the classification scheme</h2>
@@ -447,7 +450,7 @@ palette_explorer()</code></pre>
 <pre class="r"><code>tm_shape(lower48) +
   tm_polygons(col = &#39;votes&#39;, palette = &#39;viridis&#39;, style = &#39;pretty&#39;)</code></pre>
 <p><img src="03-lab_files/figure-html/unnamed-chunk-29-1.png" width="768" /></p>
-<p>In preparing your final map for this assignment the choice of colour palette, number of classes and classification style are the most relevant aspects to consider, on which you will be expected to comment in writing up.</p>
+<p>In preparing your final map for this assignment the choice of variable(s) to map, colour palette, number of classes and classification style are the most relevant aspects to consider, on which you will be expected to comment in writing up.</p>
 </div>
 <div id="adding-more-layers" class="section level2">
 <h2>Adding more layers</h2>
@@ -457,7 +460,7 @@ palette_explorer()</code></pre>
   tm_shape(states) +
   tm_borders(col = &#39;black&#39;)</code></pre>
 <p><img src="03-lab_files/figure-html/unnamed-chunk-30-1.png" width="768" /></p>
-<p>In this example, we use <code>tm_borders</code> because we’re only interested in the state boundaries, and have ensured that there are no county boundaries by using <code>tm_fill</code> instead of <code>tm_polygons</code> for the <code>lower48</code> layer of the map. Notice that the order of adding layers is important. The <code>tm_fill</code> function applies to the most recently added data layer (<code>lower48</code>), then the <code>states</code> data layer is added, and so the <code>tm_borders</code> function which follows applies to it.</p>
+<p>In this example, we use <code>tm_borders</code> because we’re only interested in the state boundaries, and have ensured that there are no county boundaries by using <code>tm_fill</code> instead of <code>tm_polygons</code> for the <code>lower48</code> layer of the map. <code>tm_fill</code> is basically the same as <code>tm_polygons</code> but it only fills the polygons, and does not outline them. Notice that the order of adding layers is important. The <code>tm_fill</code> function applies to the most recently added data layer (<code>lower48</code>), then the <code>states</code> data layer is added, and so the <code>tm_borders</code> function which follows applies to it.</p>
 </div>
 <div id="other-stuff" class="section level2">
 <h2>Other stuff</h2>
@@ -472,7 +475,7 @@ palette_explorer()</code></pre>
   tm_scale_bar(position = &#39;left&#39;)</code></pre>
 <p><img src="03-lab_files/figure-html/unnamed-chunk-31-1.png" width="768" /></p>
 <p>Two options that are good to know about both used here are that the line thickness in plots is controlled by a <code>lwd</code> setting, and opacity of colours by an <code>alpha</code> setting.</p>
-<p>This is not a perfect map by any means (maybe not even a good one). You may see duplicate labels on the states because some states have more than one polygon (for example California and Texas have offshore islands) and <code>tmap</code> may label each island (the <code>remove.overlap</code> option helps a bit). There are ways to fix this kind of problem, but we won’t worry about that for now.</p>
+<p>This is not a perfect map by any means (it’s not even really a good one). You may see duplicate labels on the states because some states have more than one polygon (for example California and Texas have offshore islands) and <code>tmap</code> may label each island (the <code>remove.overlap</code> option helps a bit). There are ways to fix this kind of problem, but we won’t worry about that for now.</p>
 <p>The best way to figure out all these options is to either ask for help in the lab sessions (or on slack), or to use the help available, by prefixing the command you want to know more about with a <code>?</code> mark, such as</p>
 <pre class="r"><code>?tm_legend</code></pre>
 <p>Any of the functions in <em>R</em> has associated help that you can consult in this way. The explanations can be a little bit technical sometimes, but it is a good idea to get used to consulting the help.</p>
@@ -481,12 +484,12 @@ palette_explorer()</code></pre>
 </div>
 <div id="assignment-1---making-maps" class="section level1">
 <h1>Assignment 1 - Making maps</h1>
-<p>Your task is to make a map of the 2016 presidential election result contained in the supplied <code>election.gpkg</code> dataset.</p>
+<p>Your task is to make a map of the 2016 presidential election result contained in the supplied <a href="election.gpkg?raw=true"><code>election.gpkg</code></a> dataset.</p>
 <p>In doing this, you need to consider the following issues:</p>
 <ul>
 <li>What are appropriate data to map? It may be that none of the supplied attributes is quite what you need to make an effective map, so you may need to add one or more new attributes (this was explained <a href="#adding-new-attributes">here</a>)</li>
 <li>Choose an appropriate map classification style, a sensible number of classes, and a meaningful colour scheme (there are explanations of how to do all these things <a href="#how-to-use-the-tmap-package">here</a>)</li>
-<li>Add any additional map features that you think are useful such as a legend, north arrow, scale bar, overlay of state boundaries and so on (also discussed in that set of instructions).</li>
+<li>Add any additional map features that you think are useful such as a legend, north arrow, scale bar, overlay of state boundaries and so on (also discussed above). Consider carefully if any of these features are really necessary, and if so, why.</li>
 </ul>
 <p>Some particular questions to consider:</p>
 <ul>
@@ -494,13 +497,14 @@ palette_explorer()</code></pre>
 <li>What is the most salient information in US Presidential elections <em>in particular</em>? (Do a bit of reading about the electoral system in the US, particularly the electoral college). Would that make a ‘better’ or more interesting map?</li>
 <li>Are the numbers of votes more relevant than the relative vote shares of each party (keeping in mind the very large differences in county populations)?</li>
 <li>For reasons mostly to do with television rather than politics, the colour conventions in US politics are Democrats (<code>dem</code>) = blue, Republicans (<code>gop</code>) = red. Consider this when choosing a colour palette to work with.</li>
-<li>Consider adding the state boundaries as a layer on top of the county results(if you are even showing the county results) (how to do this is <a href="#adding-more-layers">covered in the tutorial materials</a>)</li>
-<li>If you really feel you need to include context information (like, for example, Mexico and Canada) one approach is to make a web map (<code>tmap_mode('view')</code>), and export it as an image. Be careful about this option however, as it may mean using a strange projection. Export from the web map view is not very predictable, and may work better if you export <strong>Export - Save as Web Page…</strong> first then screen shot from the web page in a browser.</li>
+<li>Consider adding the state boundaries as a layer on top of the county results (if you are even showing the county results) How to do this is <a href="#adding-more-layers">covered in the tutorial materials</a>.</li>
+<li>If you really feel you need to include context information (like, for example, Mexico and Canada) one approach is to make a web map (<code>tmap_mode('view')</code>), and export it as an image. Be careful about this option however, as it may mean using a strange projection. Export from the web map view is not very predictable, and may work better if you export <strong>Export - Save as Web Page…</strong> first then screen shot from the web page in a browser. There are other ways to add basemaps than a web-map. If you are interested in them, then ask in the slack workspace.</li>
 </ul>
 <p>Below is an example map</p>
 <p><img src='example-election-map.png'></p>
 <p>There is plenty wrong with this map, so don’t necessarily consider it something to aim for. It might not even be showing the most relevant data. (There is no ‘correct’ map in this assignment, the important thing is your design choices and explanation, and also getting comfortable with using the tools at your disposal.)</p>
-<p>When you have made a map you are happy with, use the plot export feature in <em>RStudio</em> to export it to a PNG image file, and then include it in a Word document, including a short write up explaining the design choices you made to produce your map. There is no need to provide the <em>R</em> code you used—I am more interested in the design choices, not how they were accomplished. Half the mark for this assignment will be based on the map, and half on your explanation of the choices you made.</p>
+<p>When you have made a map you are happy with, use the <strong>Export - Save as Image…</strong> option in the <strong>Plot</strong> tab to export to a PNG image file, and then include it in a Word document. Also include a short write up explaining the design choices you made to produce your map.</p>
+<p>There is no need to provide the <em>R</em> code you used—I am more interested in the design choices, not how they were accomplished. Half the mark for this assignment will be based on the map, and the accomplishment in mapping in <em>R</em> that it demonstrates, and half on your explanation of the choices you made.</p>
 <p>Once you have finished your write up (it does not need to be very long) then export the Word document to a PDF file (make sure the document includes your map!) and save it to a filename that <em>includes your name</em>. Upload this PDF document to the dropbox provided on Blackboard by the end of the day on the due date indicated on the course schedule page.</p>
 </div>
 </div>
