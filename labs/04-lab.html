@@ -146,7 +146,7 @@
             </ul></li>
             <li><a href="#question-4"><strong>Question 4</strong></a>
             <ul>
-            <li><a href="#in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-15">In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull) (15%)</a></li>
+            <li><a href="#in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-and-also-to-map-the-results-15">In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull, and also to map the results) (15%)</a></li>
             </ul></li>
             <li><a href="#saving-our-work">Saving our work</a></li>
             </ul></li>
@@ -154,7 +154,7 @@
             <ul>
             <li><a href="#question-5"><strong>Question 5</strong></a>
             <ul>
-            <li><a href="#finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each-include-a-short-write-up-explaining-what-the-map-shows.-30">Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each? Include a short write up explaining what the map shows. (30%)</a></li>
+            <li><a href="#finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each.-include-a-short-write-up-explaining-what-the-map-shows.-30">Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each. Include a short write up explaining what the map shows. (30%)</a></li>
             </ul></li>
             <li><a href="#saving-our-work-1">Saving our work</a></li>
             </ul></li>
@@ -174,11 +174,11 @@
             </ul></li>
             <li><a href="#question-4-1"><span><strong>Question 4</strong></span></a>
             <ul>
-            <li><a href="#in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-15-1">In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull) (15%)</a></li>
+            <li><a href="#in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-and-also-to-map-the-results-15-1">In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull, and also to map the results) (15%)</a></li>
             </ul></li>
             <li><a href="#question-5-1"><span><strong>Question 5</strong></span></a>
             <ul>
-            <li><a href="#finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each-include-a-short-write-up-explaining-what-the-map-shows.-30-1">Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each? Include a short write up explaining what the map shows. (30%)</a></li>
+            <li><a href="#finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each.-include-a-short-write-up-explaining-what-the-map-shows.-30-1">Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each. Include a short write up explaining what the map shows. (30%)</a></li>
             </ul></li>
             <li><a href="#submission-instructions">Submission instructions</a></li>
             </ul></li>
@@ -207,7 +207,7 @@
 <p>Last week you (hopefully) got accustomed to basic map-making using the <code>sf</code> and <code>tmap</code>.</p>
 <p>This week we focus more on typical kinds of data wrangling that are required <em>before</em> you can even think about making useful maps.</p>
 <p>This time there are questions through the different sections so that you have a better idea when you should be paying close attention, and also so that it is easier to see where you can get credit for completing tasks and answering questions.</p>
-<p>You can look at the last page, to get an overview of the assignment requirements.</p>
+<p>You can look at the <a href="#assignment-2---spatial-data-manipulation">last section</a>, to get an overview of the assignment requirements.</p>
 <p>Again, the instructions this week are in several parts which you can access from the navigation to the left.</p>
 <p>There is an additional page of material on much more of the spatial data manipulation operations available in <code>sf</code> <a href="https://dosull.github.io/Geog315/slides/spatial-data-wrangling">here</a>, but this is not required to complete the assignment. It is covered in detail in class.</p>
 <p>Make sure you have the libraries we need loaded (I won’t show the results of running these commands any more, since you should be used to them by now.)</p>
@@ -350,8 +350,8 @@ library(dplyr)</code></pre>
 </div>
 <div id="changing-the-crs-by-reprojecting" class="section level2">
 <h2>Changing the CRS by reprojecting</h2>
-<p>OK. So, this should make it clear that an important spatial data wrangling task is <strong>to get all the data you are working with into the same coordinate reference</strong> and not only that, but to <strong>choose a projection appropriate to the location of interest that uses sensible distance units</strong>, such as metres (and not loopy ones like feet).</p>
-<p>Note that if all we wanted to do was make a single map, reprojection wouldn’t <em>necessarily</em> be required, we could do temporary workarounds, and get by. But for serious further work it makes sense to reproject all the datasets we are dealing with.</p>
+<p>OK. So, this should make it clear that an important spatial data wrangling task is <strong>to get all the data you are working with into the same coordinate reference</strong> and not only that, but to <strong>choose a projection appropriate to the location of interest that uses sensible distance units</strong>, such as metres (and not loopy ones like feet or degrees).</p>
+<p>Note that if all we wanted to do was make a single map, reprojection wouldn’t <em>necessarily</em> be required, we could do temporary workarounds like the bounding box trick above, and get by. But for serious further work it makes sense to reproject all the datasets we are dealing with so that they match.</p>
 <p>Since we are working with Aotearoa New Zealand data, it makes sense to use New Zealand Transverse Mercator (NZTM), which has EPSG code 2193. Reprojection of these data is simple using the <code>st_transform</code> function. To project to a known code, do this</p>
 <pre class="r"><code>abb_2193 &lt;- abb %&gt;%
   st_transform(2193)</code></pre>
@@ -430,7 +430,7 @@ st_crs(sa2_2193)</code></pre>
 <p><img src="04-lab_files/figure-html/unnamed-chunk-15-1.png" width="768" /></p>
 <p>Not the greatest map but you get the general idea. As always, if you want a closer look, the easiest approach is to switch to <code>tmap_mode("view")</code> and make a zoomable web-map.</p>
 <p><em>Anyhoo</em>…</p>
-<p>For our purposes the important thing about these codes is that we can do a selection to limit things to a specific area of interest. For example</p>
+<p>For our purposes the important thing about these codes is that we can apply a filter operation to limit things to a specific area of interest. For example</p>
 <pre class="r"><code>sa2_welly &lt;- sa2_2193 %&gt;%
   filter(ta_name == &quot;Wellington City&quot; | ta_name == &quot;Lower Hutt City&quot;)</code></pre>
 <p>This should immediately make dealing with the data at least a little bit easier:</p>
@@ -450,7 +450,7 @@ st_crs(sa2_2193)</code></pre>
 <div id="a-spatial-filter" class="section level2">
 <h2>A spatial filter</h2>
 <p>We can narrow things down further to focus on statistical areas where there are Airbnb listings, using a <em>spatial filter</em>.</p>
-<pre class="r"><code>sa2_abb &lt;- sa2_2193 %&gt;%
+<pre class="r"><code>sa2_abb &lt;- sa2_welly %&gt;%
   st_filter(abb_2193)</code></pre>
 <p>Try mapping these two layers (<code>sa2_abb</code> and <code>abb_2193</code>) and then answer the following question.</p>
 </div>
@@ -458,7 +458,7 @@ st_crs(sa2_2193)</code></pre>
 <h2><strong>Question 3</strong></h2>
 <div id="this-spatial-filter-selects-only-statistical-areas-that-include-at-least-one-airbnb-listing.-looking-at-a-map-of-the-selected-areas-why-might-it-not-be-a-be-very-satisfactory-way-to-narrow-down-a-study-20" class="section level3">
 <h3>This spatial filter selects only statistical areas that include at least one Airbnb listing. Looking at a map of the selected areas, why might it not be a be very satisfactory way to narrow down a study? (20%)</h3>
-<p>It seems clear we need to be a bit cleverer about the selection of areas of interest. This gets us into applying various methods that are considered in more detail in class, and in the <a href="https://github.com/DOSull/Geog315/blob/master/labs/week-04/spatial-data-manipulation-03B-spatial-relations.md">associated material here</a>.</p>
+<p>It seems clear we need to be a bit cleverer about the selection of areas of interest. This gets us into applying various methods that are considered in more detail in class, and in the <a href="https://dosull.github.io/Geog315/slides/spatial-data-wrangling">associated material here</a>.</p>
 <p>For now here is a possible approach using the convex hull</p>
 <pre class="r"><code>hull &lt;- abb_2193 %&gt;%
   st_union() %&gt;%
@@ -470,8 +470,8 @@ sa2_abb &lt;- sa2_2193 %&gt;%
 </div>
 <div id="question-4" class="section level2">
 <h2><strong>Question 4</strong></h2>
-<div id="in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-15" class="section level3">
-<h3>In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull) (15%)</h3>
+<div id="in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-and-also-to-map-the-results-15" class="section level3">
+<h3>In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull, and also to map the results) (15%)</h3>
 </div>
 </div>
 <div id="saving-our-work" class="section level2">
@@ -485,9 +485,10 @@ sa2_abb &lt;- sa2_2193 %&gt;%
 </div>
 <div id="counting-points-in-polygons" class="section level1">
 <h1>Counting points in polygons</h1>
-<p>We’ve narrowed the census area down. But there are still a lot of Airbnb listings, and for the analysis we want to do in the next lab, we only need the <em>number</em> of listings in each census area. There are various ways we might get that information. The most reliable is to use one of the <em>spatial predicate</em> functions. This is less scary than it sounds!</p>
+<p>We’ve narrowed the census area down. But there are still a lot of Airbnb listings, and for the analysis we want to do in a later lab, we only need the <em>number</em> of listings in each census area. There are various ways we might get that information. The most reliable is to use one of the <em>spatial predicate</em> functions. This is less scary than it sounds!</p>
 <p>In this case, we want to count how many Airbnb listings are contained in each SA2 polygon. The spatial predicate of interest is therefore <code>st_contains</code>. We run the function like this</p>
-<pre class="r"><code>st_contains(sa2_abb, abb_2193)</code></pre>
+<pre class="r"><code>sa2_abb %&gt;% 
+  st_contains(abb_2193)</code></pre>
 <pre><code>## Sparse geometry binary predicate list of length 188, where the
 ## predicate was `contains&#39;
 ## first 10 elements:
@@ -502,7 +503,9 @@ sa2_abb &lt;- sa2_2193 %&gt;%
 ##  9: 1099, 1100, 1101, 1102, 1114, 1115, 1117, 1118, 1124, 1127, ...
 ##  10: 1195, 1216, 1221, 1224, 1236, 1238, 1254, 1255, 1261, 1262, ...</code></pre>
 <p>This gives us a list of lists where each list is for the corresponding polygon, a list of the Airbnb listings contained by it. To count these, we use the <code>lengths()</code> function</p>
-<pre class="r"><code>lengths(st_contains(sa2_abb, abb_2193))</code></pre>
+<pre class="r"><code>sa2_abb %&gt;% 
+  st_contains(abb_2193) %&gt;% 
+  lengths()</code></pre>
 <pre><code>##   [1] 16  8  8 30  0 61 17 17 29 15  9  5  9 15 13 11 15 30 12  0  6  6 22 12 13
 ##  [26]  7 29  6 10  1  7  0  9 11  3  5  9  6  5 11  0  9  2  0  1  1  1  6  7  6
 ##  [51] 13  4  0 12  2  0  3  5 12  4  0  3  5  5  0  4 10 13 11  4  9 12 11  2  5
@@ -512,15 +515,17 @@ sa2_abb &lt;- sa2_2193 %&gt;%
 ## [151] 16 44 48 61 21 21 29 11 17  9 62 26 16 15  9 15 24  6 17  6  8 20 24 25  7
 ## [176] 28  6  8 11  4  6 15 28 11 13  1 17 28</code></pre>
 <p>That’s great, but to save this in the SA2 dataframe, we need to assign the result to a variable. The end result is</p>
-<pre class="r"><code>num_listings &lt;- lengths(st_contains(sa2_abb, abb_2193))
+<pre class="r"><code>num_listings &lt;- sa2_abb %&gt;% 
+  st_contains(abb_2193) %&gt;% 
+  lengths()
 sa2_abb_counts &lt;- sa2_abb %&gt;%
   mutate(n = num_listings)</code></pre>
 <p>There are other possible approaches to this, but this is by far the cleanest. Although it’s two steps, it avoids a lot of confusing merging of tables and so on, which is what can happen if you try to use spatial join approaches.</p>
 <p>So anyway…</p>
 <div id="question-5" class="section level2">
 <h2><strong>Question 5</strong></h2>
-<div id="finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each-include-a-short-write-up-explaining-what-the-map-shows.-30" class="section level3">
-<h3>Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each? Include a short write up explaining what the map shows. (30%)</h3>
+<div id="finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each.-include-a-short-write-up-explaining-what-the-map-shows.-30" class="section level3">
+<h3>Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each. Include a short write up explaining what the map shows. (30%)</h3>
 </div>
 </div>
 <div id="saving-our-work-1" class="section level2">
@@ -556,14 +561,14 @@ sa2_abb_counts &lt;- sa2_abb %&gt;%
 </div>
 <div id="question-4-1" class="section level2">
 <h2><a href="#question-4"><strong>Question 4</strong></a></h2>
-<div id="in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-15-1" class="section level3">
-<h3>In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull) (15%)</h3>
+<div id="in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-and-also-to-map-the-results-15-1" class="section level3">
+<h3>In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull, and also to map the results) (15%)</h3>
 </div>
 </div>
 <div id="question-5-1" class="section level2">
 <h2><a href="#question-5"><strong>Question 5</strong></a></h2>
-<div id="finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each-include-a-short-write-up-explaining-what-the-map-shows.-30-1" class="section level3">
-<h3>Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each? Include a short write up explaining what the map shows. (30%)</h3>
+<div id="finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each.-include-a-short-write-up-explaining-what-the-map-shows.-30-1" class="section level3">
+<h3>Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each. Include a short write up explaining what the map shows. (30%)</h3>
 </div>
 </div>
 <div id="submission-instructions" class="section level2">
