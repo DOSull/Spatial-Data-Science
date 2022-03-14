@@ -1,4 +1,31 @@
 # Week 3 videos
+## Grammar of graphics and choropleth maps
+### The grammar of graphics
++ [Introduction](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-01.mp4) 1m11s
++ [The grammar of graphics](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-02.mp4) 2m58s
++ [The grammar of graphics layers](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-03.mp4) 3m28s
++ [Apply GG to cartography](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-04.mp4) 3m06s
+
+### Data scales
++ [Data measurement scales](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-05.mp4) 7m30s
++ [The limitations of nominal-ordinal-ratio scales](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-06.mp4) 2m32s
++ [Data scales in relation to cartography](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-07.mp4) 2m55s
++ [Back to maps](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-08.mp4) 1m35s
+
+### Colour and classification
++ [Available colour palettes](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-09.mp4) 7m19s
++ [Classification methods](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-10.mp4) 0m58s
+
+### Live demo of `tmap`
++ [`tmap` demonstration 1: loading libraries and data](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-11.mp4) 1m48s
++ [`tmap` demonstration 2: making maps, changing palettes](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-12.mp4) 5m22s
++ [`tmap` demonstration 3: changing the style](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-13.mp4) 3m03s
+
+### Wrapping up
++ [Summary](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-14.mp4) 1m17s
+
+***
+
 ## Making maps in *R*
 These are from 2020, but remain relevant in 2022!
 
