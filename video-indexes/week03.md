@@ -1,5 +1,5 @@
 # Week 3 videos
-## Grammar of graphics and choropleth maps
+## Grammar of graphics and choropleth maps lecture
 Apologies for intermittent coughing throughout (probably just as well I was at home...)
 
 ### The grammar of graphics
