@@ -12,9 +12,9 @@ Apologies for intermittent coughing throughout (probably just as well I was at h
 + [Data measurement scales](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-05.mp4) 7m30s
 + [The limitations of nominal-ordinal-ratio scales](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-06.mp4) 2m32s
 + [Data scales in relation to cartography](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-07.mp4) 2m55s
-+ [Back to maps](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-08.mp4) 1m35s
 
 ### Colour and classification
++ [Colour: it's complicated](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-08.mp4) 1m35s
 + [Available colour palettes](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-09.mp4) 7m19s
 + [Classification methods](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-10.mp4) 0m58s
 
