@@ -1,5 +1,7 @@
 # Week 3 videos
 ## Grammar of graphics and choropleth maps
+Apologies for intermittent coughing throughout (probably just as well I was at home...)
+
 ### The grammar of graphics
 + [Introduction](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-01.mp4) 1m11s
 + [The grammar of graphics](https://southosullivan.com/geog315/video/week-03-lecture-01/geog315-05-2022-choropleth-maps-02.mp4) 2m58s
