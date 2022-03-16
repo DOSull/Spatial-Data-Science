@@ -28,6 +28,25 @@ Apologies for intermittent coughing throughout (probably just as well I was at h
 
 ***
 
+## Data wrangling with `dplyr` pipelined workflows lecture
++ [Introduction](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-1.mp4) 3m50s
+
+### Meet the pipe
++ [A workflow using base _R_ functions](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-2.mp4) 4m41s
++ [Using pipes instead](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-3.mp4) 4m29s
+
+### `tidyverse` functions
++ [A big old beast of a dataset](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-4.mp4) 2m17s
++ [`filter`](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-5.mp4) 6m56s
++ [`select`](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-6.mp4) 6m11s
++ [`mutate`](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-7.mp4) 7m51s
+
+### Demonstration and wrap
++ [A workflow to cut that big dataset down to size](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-8.mp4) 3m50s
++ [Ask for help!](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-9.mp4) 3m50s
+
+***
+
 ## Making maps in *R*
 These are from 2020, but remain relevant in 2022!
 
