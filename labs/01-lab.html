@@ -135,6 +135,7 @@
             </ul></li>
             <li><a href="#helpful-videos">Helpful videos</a></li>
             </ul></li>
+            <li><a href="#installing-r-packages">Installing <em>R</em> packages</a></li>
             <li><a href="#installing-qgis">Installing <em>QGIS</em></a></li>
             </ul>
           </div>
@@ -171,7 +172,11 @@
 <h2>If you already have <em>R</em> and <em>RStudio</em></h2>
 <p>Well… that’s great! However, you need to check that your version is the same or close to the one we are using in the labs, which is 4.1.2. To check type</p>
 <pre><code>&gt; version</code></pre>
-<p>in the <em>RStudio</em> command console. If your version is very different then you may need to upgrade. You will probably be fine if you have a version that starts 4.1. If not unfortunately you’ll have to <em>uninstall</em> the existing version and then install a new version per the instructions on the page linked above.</p>
+<p>in the <em>RStudio</em> command console. If your version is very different then you may need to upgrade. You will probably be fine if you have a version that starts 4.1. If not unfortunately you’ll have to upgrade the existing version. With luck, you can do this and retain all your existing packages using the <code>installr</code> package:</p>
+<pre><code>install.packages(&quot;installr&quot;) 
+library(installr)</code></pre>
+<p>and following the instructions. If that for some reason fails… unfortunately then you will need to uninstall <em>R</em> and <em>RStudio</em> and perform a fresh installation.</p>
+<p>Once you have an installation, go to <a href="#installing-r-packages">Install <em>R</em> packages</a> below.</p>
 </div>
 </div>
 <div id="software-setup-for-this-course" class="section level1">
@@ -220,6 +225,25 @@
 <li><a href="https://www.youtube.com/watch?v=AEebOXiMyyI">This one is for Mac users</a></li>
 </ul>
 </div>
+</div>
+<div id="installing-r-packages" class="section level1">
+<h1>Installing <em>R</em> packages</h1>
+<p>Base <em>R</em> comes with lots of tools for doing standard statistical analysis. We’re using <em>R</em> for doing specifically geospatial work, so we need a bunch of additional packages, specific to those tasks, and you therefore will need to install them. We are also going to be using the <em>R</em> <code>tidyverse</code> (more on that as the course unfolds) and that requires us to install a bunch of packages also.</p>
+<p>For more about packages, see <a href="https://southosullivan.com/geog315/video/week-02-lecture-01/geog315-03-2022-starting-r-11.mp4">this video</a>.</p>
+<p>Fortunately, as shown in the video, adding packages to <em>R</em> in <em>RStudio</em> is straightforward:</p>
+<ul>
+<li>Start up <em>RStudio</em></li>
+<li>Navigate to the <strong>Tools - Install Packages…</strong> menu option.</li>
+<li>In the dialogue box start typing the name of a package you want to install (<code>sf</code> is a good one to start with)</li>
+<li>Make sure the <strong>Install dependencies</strong> checkbox is ticked</li>
+<li>Click <strong>Install</strong></li>
+</ul>
+<p><em>R</em> will then do its thing, which will usually include a load of indecipherable text scrolling up the screen in the console. When it is done the <code>&gt;</code> prompt will return in the console.</p>
+<p>You can check that the package installed successfully by typing</p>
+<pre><code>library(sf)</code></pre>
+<p>at the prompt. You should get a message confirming that the package has loaded.</p>
+<p>You should go through the above steps for <code>tmap</code>, <code>tmaptools</code>, and <code>tidyverse</code>. The last one in particular may take a while to complete, because it is a ‘meta-package’ of many different packages.</p>
+<p>If you have a problem with any of this, then just ask for help. The spatial packages <code>sf</code> and <code>tmap</code> sometimes cause problems on Windows in particular, that might some expert guidance to resolve.</p>
 </div>
 <div id="installing-qgis" class="section level1">
 <h1>Installing <em>QGIS</em></h1>
