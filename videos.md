@@ -8,9 +8,9 @@ A zoom recorded lecture from 2021 (because I was unwell and staying home), and v
 Lectures introducing _R_ and _RStudio_ and discussing the limitations of data.
 
 ## [Week 3](video-indexes/week03.md)
-Practical material on making maps in _R_
+Lectures on choropleth maps and `tidyverse` pipelines. Practical material on making maps in _R_
 
-And then lockdown and lots more video...
+## [Week 4](video-indexes/week04.md)
 
 ## [Week 7](video-indexes/week07.md)
 Two lectures and a bunch of practical stuff about using _RStudio_ with scripts and _Rmarkdown_
