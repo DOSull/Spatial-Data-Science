@@ -1,4 +1,4 @@
-setwd("~/Documents/teaching/Geog315/slides/table-joins-and-dissolves/data")
+setwd("~/Documents/teaching/Geog315/slides/table-joins-and-dissolves/demo")
 
 library(dplyr)
 library(sf)
@@ -79,16 +79,15 @@ as_tibble(p1)
 as_tibble(p1c)
 
 tm_shape(p1) + 
-  tm_polygons(col = "id", palette = "Reds", alpha = 0.5) + 
+  tm_polygons(col = "id", palette = "Reds", alpha = 0.5) +
   tm_shape(p2) + 
-  tm_dots(col = "id", palette = "Blues", alpha = 0.5) +
-  tm_text(text = "id", just = c(0, 1))
+  tm_bubbles(col = "id", palette = "Blues", alpha = 0.5)
 
 # where there's a one-to-one match it's simple
 st_join(p1, p1c)
 
 # when there are one-to-many matches, you get duplicates
-p1_p2 <- st_join(p1, p2)
-p2_p1 <- st_join(p2, p1)
+st_join(p1, p2)
+st_join(p2, p1)
 
 

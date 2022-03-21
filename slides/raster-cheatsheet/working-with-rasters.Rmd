@@ -1,0 +1,336 @@
+---
+title: "Raster data in R"
+subtitle: "Geog 315 T1 2022"
+output:
+  rmdformats::material:
+    lightbox: true
+    thumbnails: true
+    gallery: false
+    embed_fonts: true
+    self_contained: true
+    # toc_depth: 3
+    css: "extra.css" # to override the sidebar width
+editor_options: 
+  chunk_output_type: inline
+
+---
+# Raster data in *R*
+
+This document is a 'cheatsheet' for working with raster datasets in *R* and introduces the `terra` package which is the preferred option for handling such data currently. We first load some libraries (including some vector libraries too).
+
+```{r message = FALSE}
+library(terra)
+library(sf)
+library(tmap)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+tmap_mode("plot")
+```
+
+# An example dataset to start
+
+Reading a dataset is pretty simple, especially if it is a simple dataset. I have put a bunch of GeoTIFFs in [this zip file](raster-datasets.zip?raw=true), which you should download and unzip to a folder on your computer. Then read the digital elevation model dataset `dem.tif` into a variable with the `rast()` function, like this:
+
+```{r}
+dem <- rast("dem.tif")
+```
+
+Confusingly this doesn't tell you anything about what it just did. So you have to ask:
+
+```{r}
+dem
+```
+
+This tells us a few things about the dataset, including the dimension (in numbers of cells), the resolution (in units of the projection), the extent, and projection . It also tells us the minimum and maximum values in the data.
+
+As usual in _R_ we can get a summary of the statistics of the dataset:
+
+```{r}
+summary(dem)
+```
+
+What are all those NA values? Well... best bet is to plot the data to make sense of it
+
+```{r}
+plot(dem)
+```
+
+This shows us right away that a lot of the rectangular area of the raster is taken up by sea, and since it is an elevation model, we might expect the sea areas to be recorded as NA values (which they are).
+
+# `tmap` can consume rasters too!
+`tmap` knows about raster data and can map them, quite happily. The same options such as the number of classes (`n`), the `style` of classification (e.g. quantile), and the colour `palette` to us in the mapping also work for rasters. Here, because you might want to use it, I've also shown how to use _R_'s built-in terrain colour palette.
+
+```{r}
+tm_shape(dem) +
+  tm_raster(n = 10, palette = terrain.colors(10)) +
+  tm_legend(legend.outside = TRUE)
+```
+
+`tmap` can also map raster layers in combination with non-raster layers. For example, read in the `nz.gpkg` file also found in the provided zip file, and add it as an outline around the raster:
+
+```{r}
+welly <- st_read("welly.gpkg")
+tm_shape(dem) + 
+  tm_raster() + 
+  tm_shape(welly) + 
+  tm_borders(col = "blue")
+```
+
+# But wait, there's more than one layer!
+There are a bunch of raster data sets in this folder. We can read them into a raster stack by making a directory listing of them and supplying that to the `rast` function
+
+```{r message = FALSE}
+layer_sources <- dir(pattern = "*.tif")
+layers <- rast(layer_sources)
+```
+
+Again, you have to ask to get more information
+
+```{r}
+layers
+```
+
+If we want to know the names of all the layers, we can use the `names()` function
+
+```{r}
+names(layers)
+```
+
+And `plot` will make several plots of all the layers (this might be a bit slow).
+
+```{r}
+plot(layers)
+```
+
+`tmap` can also deal with multiple layers, although it will apply the same classification to all of them unless you override this behaviour:
+
+```{r warning=FALSE}
+tm_shape(layers) + 
+  tm_raster() + #title = names(layers)) # this fix no longer needed
+  tm_layout(legend.position = c("RIGHT", "BOTTOM")) +
+  tm_facets(free.scales = TRUE) # different scales on each layer
+```
+
+There might be some complaining about fitting the legends in on this plot, or about projections (this is to do with recent changes in how projections are handled by the `proj` tools see [this post](https://cran.r-project.org/web/packages/rgdal/vignettes/CRS_projections_transformations.html) but you can ignore it for now).
+
+To examine a single layer in the stack, just use the `$` notation:
+
+```{r}
+tm_shape(layers$mat) +
+  tm_raster(palette = "-RdBu", n = 9, title = "Mean annual temp (x10)")
+```
+
+# Layers in the raster stack
+The layers included now in the `layers` dataset are:
+
+The layers in the stack were assembled from [LENZ](https://www.landcareresearch.co.nz/tools-and-resources/mapping/lenz/) data developed by Manaaki Whenua Landcare Research, and available [here](https://lris.scinfo.org.nz/). Their interpretations are roughly as follows (this information from the `disdat` package).
+
+Layer name | Explanation | Units
+:- |:- |:-
+age | Soil age | 3 classes (0 to 2): \<2000, 2000-postglacial (app. 30,000), and pre-glacial
+deficit | Annual water deficit | mm (higher is greater deficit)
+dem | Elevation | metres
+mas | Mean annual solar radiation | MJ/m2/day
+mat | Mean annual temperature | degrees C \* 10
+r2pet | Average monthly ratio of rainfall and potential evapotranspiration | (ratio)
+rain | annual precipitation | mm 
+slope | Slope | degrees
+sseas | Solar radiation seasonality | dimensionless
+tseas | Temperature seasonality | degrees C
+vpd | Mean October vapor pressure deficit at 9 AM | kPa
+
+
+# Raster calculation
+`terra` will also allow you to do operations between layers, to perform raster calculations. For example, we can easily do this (nonsensical) calculation
+
+```{r}
+layers$mas + layers$mat - layers$dem * layers$deficit
+```
+
+This makes a new layer by mathematically combining the values in the original layers. When combined in this way raster layers must be aligned with one another and in the same projected coordinate system, and the values at the same locations in each layer contribute to the result at the corresponding location in the result.
+
+This means that we can use raster calculations of this type to perform overlay as described in the next section.
+
+# Raster overlay
+If we recode each layer by whether or not it is greater than some threshold, then we can logically combine them to find regions that satisfy a desired combination of criteria. Say we wanted places below 250m elevation with slope under 5 degrees:
+
+```{r}
+below_250m <- layers$dem < 250
+flat <- layers$slope < 5
+result <- below_250m & flat
+```
+
+As usual make some maps
+
+```{r fig.width=8, fig.height=4, warning=FALSE}
+m1 <- tm_shape(below_250m) + 
+  tm_raster(palette = "Set1", style = "cat", title = "dem<250m") +
+  tm_shape(welly) + 
+  tm_borders(col = "white", lwd = 0.2)
+m2 <- tm_shape(flat) + 
+  tm_raster(palette = "Set1", style = "cat", title = "slope<5deg") + 
+  tm_shape(welly) + 
+  tm_borders(col = "white", lwd = 0.2)
+m3 <- tm_shape(result) + 
+  tm_raster(palette = "Set1", style = "cat") + 
+  tm_shape(welly) + 
+  tm_borders(col = "white", lwd = 0.2)
+tmap_arrange(m1, m2, m3, nrow = 1)
+```
+
+There is nothing to stop us performing all these operations in a single step, once we are used to how it works:
+
+```{r}
+r <- (layers$dem < 250) & (layers$slope < 5)
+```
+
+This makes it relatively easy to flexibly perform complex suitability evaluations using `terra` raster calculation operations.
+
+# Focal calculations
+The simple calculations in the previous sections are known as _local_ because they apply locally across the values at the same locations in each layer. Two other kinds of calculation are possible _focal_ and _zonal_.
+
+We can apply functions in focal windows within a single layer and perform calculations based on the values within that window centred on each location across a raster. For example, we might want to determine the max value of raster cells in a 3x3 window.
+
+```{r}
+max_elev <- layers$dem %>%
+  focal(fun = max)
+plot(max_elev)
+```
+
+A 3x3 window is the default. If you want a larger window specify the size with the `w` parameter (which must be an odd number)
+
+```{r}
+max_elev <- layers$dem %>%
+  focal(w = 11, fun = max)
+plot(max_elev)
+```
+Notice how a larger window produces a more 'smoothed' or generalised result.
+
+Again, we can flexibly combine such operations. For example a measure of relief (or roughness) is the local difference between the maximum and minimum values of that surface
+
+```{r}
+relief <- focal(layers$dem, fun = max) - focal(layers$dem, fun = min)
+names(relief) <- "relief"
+tm_shape(relief) +
+  tm_raster(style = "cont", palette = "Reds", alpha = 0.7)
+```
+
+# Zonal calculations
+You can also perform calculations based on a set of zones. If you want the results in a raster, then both inputs must be rasters. That means we have to do quite a lot of fiddling around with the data. First we make a zones dataset from some polygons, converting first to `terra`'s `SpatVector` format, then using `rasterize` to select one attribute from the zones as an identifier for zones. The raster we provide to the `rasterize` function is a 'template' for the number of cells and their resolution.
+
+```{r}
+welly_zones <- welly %>%
+  as("SpatVector") %>%
+  rasterize(relief, field = "ID")
+tm_shape(welly_zones) + 
+  tm_raster(n = 30, palette = "Set1", legend.show = FALSE) + 
+  tm_shape(welly) +
+  tm_borders()
+```
+
+We can't easily map the zones, because there are a large number of unique values.
+
+Once we have zones we can perform a `zonal` calculation, which will calculate the result of applying a function across all the raster cells in each zone. We may need to change the NA values in the input raster layer to zeros (or some other defined value) so that any missing NA values in a zone don't prevent calculation of a result for the zone they are in.
+
+```{r}
+zonal_relief <- relief %>%
+  replace_na(0) %>% 
+  zonal(welly_zones, fun = mean, as.raster = TRUE) %>%
+  mask(relief) ## 
+```
+
+The result of this operation is a raster where the value in each cell is the mean relief of all the cells in the zone it is in.
+
+```{r}
+tm_shape(zonal_relief) + 
+  tm_raster(n = 10, palette = "RdYlBu", title = "Zonal mean relief") + 
+  tm_shape(welly) + 
+  tm_borders()
+```
+
+In many situations, it is more appropriate to output the results from zonal calculations as a table of values which can be attached to the original vector data.
+
+```{r}
+zonal_relief_table <- relief %>%
+  replace_na(0) %>% 
+  zonal(welly_zones, fun = mean)
+welly_relief <- welly %>%
+  merge(zonal_relief_table)
+tm_shape(welly_relief) +
+  tm_polygons(col = "relief", style = "cont")
+```
+
+# Surface analysis
+`terra` provides an array of commonly used surface analysis methods. These are a better option than figuring out how to calculate them yourself using focal functions.
+
+For example, we can calculate slopes from an elevation model using the `terrain` function
+
+```{r}
+slope <- terrain(dem)
+tm_shape(slope) + 
+  tm_raster()
+```
+
+The terrain function offers several options, which you can find out more about in the help using `?terrain`. A common use is for calculating hillshade, which can be done like the example below
+
+```{r}
+aspect <- dem %>% 
+  terrain("aspect", unit = "radians")
+slope <- dem %>%
+  terrain("slope", unit = "radians")
+hillshade <- shade(slope, aspect, angle = 315)
+tm_shape(hillshade) + 
+  tm_raster(palette = "Greys", style = "cont", alpha = 0.65, legend.show = FALSE)
+```
+
+# Combining raster and vector operations
+In the examples for zonal calculations, it was necessary to combine raster and vector data and translate between them.
+
+This is a common requirement, and can sometimes be challenging. Here a few important examples are shown. The key to success is realising that `terra` has its own vector data format `SpatVector` and terra functions want vector data to be in this format in order to work. To convert `sf` vector data to `SpatVector` use `as("SpatVector")` and to convert from `SpatVector` to `sf` use `st_as_sf()`.
+
+## Extract values to points
+For example, say we have a set of points, which we want values from a raster layer attached to.
+
+First load the points. Here we have some sampled plants. They have to be projected to match the target raster, and we also restrict them only to the study area using `st_filter()`.
+
+```{r}
+plants <- st_read("tradescantia.gpkg") %>%
+  st_transform(crs(layers)) %>% 
+  st_filter(welly)
+```
+
+Extract the values of a particular raster with this point set, we have to convert it to `SpatVector` points, then run `terra::extract` (we have to specify `terra::` because there is another function called `extract` in `tidyr`).
+
+```{r}
+mean_t <- layers$mat %>%
+  terra::extract(as(plants, "SpatVector"))
+as_tibble(mean_t)
+```
+
+The result is just a table. If we want to map this, we have to add it back to the original spatial data:
+
+```{r}
+plants <- plants %>%
+  mutate(mean_t = mean_t$mat)
+tm_shape(plants) + 
+  tm_dots(col = "mean_t")
+```
+
+We can apply `terra::extract` to a raster stack to get a multi-attribute table all in one go:
+
+```{r}
+layers %>% terra::extract(as(plants, "SpatVector")) 
+```
+
+This is very useful in statistical model building (which we will get to in a week or two.)
+
+## Make a raster layer from vector data
+To convert vector data to a raster we convert first to `SpatVector` then to raster with `rasterize`
+
+```{r}
+plants %>% as("SpatVector") %>% 
+  rasterize(dem) %>%
+  tm_shape() + 
+  tm_raster(col = "dem", palette = "Greys")
+```
