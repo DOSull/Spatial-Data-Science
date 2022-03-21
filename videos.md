@@ -11,6 +11,10 @@ Lectures introducing _R_ and _RStudio_ and discussing the limitations of data.
 Lectures on choropleth maps and `tidyverse` pipelines. Practical material on making maps in _R_
 
 ## [Week 4](video-indexes/week04.md)
+Lectures on dealing with tables, and spatial data wrangling.
+
+## [Week 5](video-indexes/week05.md)
+Lectures on clustering analysis and applications of clustering analysis.
 
 ## [Week 7](video-indexes/week07.md)
 Two lectures and a bunch of practical stuff about using _RStudio_ with scripts and _Rmarkdown_
