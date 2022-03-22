@@ -16,6 +16,9 @@ Lectures on dealing with tables, and spatial data wrangling.
 ## [Week 5](video-indexes/week05.md)
 Lectures on clustering analysis and applications of clustering analysis.
 
+## [Week 6](video-indexes/week06.md)
+Lectures on surface analysis and handling raster data in _R_
+
 ## [Week 7](video-indexes/week07.md)
 Two lectures and a bunch of practical stuff about using _RStudio_ with scripts and _Rmarkdown_
 
