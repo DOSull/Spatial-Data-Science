@@ -30,7 +30,7 @@ I strongly encourage you to explore the demonstration web pages linked from the 
 
 ## Examples of clustering analysis lecture
 + [Introduction](https://southosullivan.com/geog315/video/week-05-lecture-02/geog315-10-2020-clustering-applications-01.mp4) 2m56s
-+ [Land Environments of New Zealand](https://southosullivan.com/geog315/video/geog315-10-2020-clustering-applications-02.mp4) 10m47s
++ [Land Environments of New Zealand](https://southosullivan.com/geog315/video/week-05-lecture-02/geog315-10-2020-clustering-applications-02.mp4) 10m47s
 + [LENZ applications](https://southosullivan.com/geog315/video/week-05-lecture-02/geog315-10-2020-clustering-applications-03.mp4) 3m16s
-+ [Introduction](https://southosullivan.com/geog315/video/week-05-lecture-02/geog315-10-2020-clustering-applications-04.mp4) 7m22ss
-+ [Introduction](https://southosullivan.com/geog315/video/week-05-lecture-02/geog315-10-2020-clustering-applications-05.mp4) 4m45s
++ [Geodemographics](https://southosullivan.com/geog315/video/week-05-lecture-02/geog315-10-2020-clustering-applications-04.mp4) 7m22ss
++ [Thoughts on geodemographics](https://southosullivan.com/geog315/video/week-05-lecture-02/geog315-10-2020-clustering-applications-05.mp4) 4m45s
