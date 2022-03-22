@@ -31,4 +31,4 @@ Much more on spatial joins in the next lecture!
 ### Operations between layers
 + [Spatial predicates](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-3.mp4) 2m46s
 + [Applying the predicates in `sf`](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-4.mp4) 2m16s
-+ [Getting the full 'not sparse' results]() 1m25s
++ [Getting the full 'not sparse' results](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-5.mp4) 1m25s
