@@ -32,3 +32,24 @@ Much more on spatial joins in the next lecture!
 + [Spatial predicates](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-3.mp4) 2m46s
 + [Applying the predicates in `sf`](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-4.mp4) 2m16s
 + [Getting the full 'not sparse' results](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-5.mp4) 1m25s
++ [Getting back to it (second session begins)](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-6.mp4) 2m29s
++ [Counting points in polygons](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-7.mp4) 2m21s
++ [Spatial filtering with `st_filter`](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-8.mp4) 5m15s
++ [Spatial joins with `st_join`](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-9.mp4) 7m47s
+
+There was a question about `st_join` when the two datasets are both polygons. This is answered in this video. I should note that the function I couldn't remember the name of for doing a weighted assignment of data from the join polygons. It is called `st_interpolate_aw`.
+
++ [Spatial joins with two sets of polygons](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-10.mp4) 1m35s
++ [Spatial intersection with `st_intersection`](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-11.mp4) 1m03s
+
+### Operations on single layers
++ [Buffering with `st_buffer`](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-12.mp4) 3m36s
++ [Centroids with `st_centroid`](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-13.mp4) 3m11s
++ [Convex hull with `st_convex_hull`](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-14.mp4) 3m16s
+
+### Operations on collections of objects
++ [Voronoi or proximity polygons with `st_voronoi`](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-15.mp4) 5m19s
++ [Triangulation with `st_triangulate`, and an aside on alphashapes](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-16.mp4) 4m20s
+
+### And finally...
++ [Don't be afraid to ask for help!](https://southosullivan.com/geog315/video/week-04-lecture-02/geog315-08-2022-spatial-data-wrangling-17.mp4) 2m16s
