@@ -107,8 +107,8 @@ plot(layers)
 
 ```{r warning=FALSE}
 tm_shape(layers) + 
-  tm_raster() + #title = names(layers)) # this fix no longer needed
-  tm_layout(legend.position = c("RIGHT", "BOTTOM")) +
+  tm_raster(title = names(layers)) +
+  tm_layout(legend.position = c("left", "top")) +
   tm_facets(free.scales = TRUE) # different scales on each layer
 ```
 
@@ -320,7 +320,7 @@ tm_shape(plants) +
 We can apply `terra::extract` to a raster stack to get a multi-attribute table all in one go:
 
 ```{r}
-layers %>% terra::extract(as(plants, "SpatVector")) 
+layers %>% terra::extract(as(plants, "SpatVector")) %>% as_tibble()
 ```
 
 This is very useful in statistical model building (which we will get to in a week or two.)

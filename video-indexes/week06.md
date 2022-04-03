@@ -28,7 +28,7 @@ And here's part II
 ### Basics
 + [Introduction to the 'cheatsheet'](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-01.mp4) 2m19s
 + [Reading a simple dataset](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-02.mp4) 3m46s
-+ [`tmap` and `terra` raster data](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-03.mp4) 4m12s
++ [`tmap` and `terra` raster data](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-03.mp4) 4m12s \[**Note** there is a small difference in this one between the online cheatsheet and the one in the video... see if you can spot it!\]
 
 ### More layers in a raster stack
 + [Reading a set of layers into a stack](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-04.mp4) 6m17s
