@@ -7,7 +7,7 @@ output:
     thumbnails: true
     gallery: false
     embed_fonts: true
-    self_contained: true
+    self_contained: false
     # toc_depth: 3
     css: "extra.css" # to override the sidebar width
 editor_options: 
