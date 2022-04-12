@@ -4,7 +4,7 @@ Below is the schedule we will aim to follow. The lecture schedule for the second
 **Bolded labs** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit.  Relevant materials (lecture slides, lab scripts and datasets) are linked below, as they become available. Lab instructions should not be considered current for 2021 unless they are clearly marked **Geog 315 T1 2022** at the top.
 
 Date | Mon | Wed | Lab (also Wed)
--- | -- | -- | --
+--: | -- | -- | --
 28 Feb | Course introduction | [Open science, open source, and doing GIS in code](slides/open/) | [Lab session to get software setup](labs/01-lab.html){:target="_blank"}
 7 Mar | [Starting *R*](slides/starting-r/) | [The myth of tidy data](slides/tidy-data/) | [Introducing *R* and *RStudio*](labs/02-lab.html){:target="_blank"}
 14 Mar | [Choropleth map design](slides/choropleth-maps/) | [Data wrangling](slides/data-wrangling/) | [**Making maps**](labs/03-lab.html){:target="_blank"} (15%) due {{ site.data.dates.assignment_1 }}
