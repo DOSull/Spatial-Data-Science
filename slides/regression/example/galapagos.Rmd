@@ -116,29 +116,33 @@ galapagos.s <- galapagos.s %>%
 
 Now we can map the actual and predicted number of species. We will use `tmap_arrange` to do this for side-by-side comparisons.
 
-```{r}
+<div style="float:right;">
+```{r, message=FALSE}
 m1map <- tm_shape(galapagos.s) + tm_polygons(col = "m1fit", style = "cont", palette = "Greens", title="model 1")
 m2map <- tm_shape(galapagos.s) + tm_polygons(col = "m2fit", style = "cont", palette = "Greens", title="model 2")
 actual <- tm_shape(galapagos.s) + tm_polygons(col = "NUM_SPEC", style = "cont", palette = "Greens", title="actual")
 tmap_arrange(m1map, m2map, actual, sync = TRUE)
 ```
+</div>
 
-It is clear from this that both models substantiall overpredict the number of species present on the largest island Isla Isabela, and underpredicts diversity on Isla Santa Cruz. Reading up on the complex histories (both human and natural) of the islands, suggests many reasons why our simplistic models might not do a particularly great job.
+<br><br>It is clear from this that both models substantiall overpredict the number of species present on the largest island Isla Isabela, and underpredicts diversity on Isla Santa Cruz. Reading up on the complex histories (both human and natural) of the islands, suggests many reasons why our simplistic models might not do a particularly great job.
 
 Perhaps an easier way to visualise the model performance is mapping model errors (the residuals).
 
+<div style="float:left;">
 ```{r, message=FALSE}
 m1err <- tm_shape(galapagos.s) + tm_polygons(col = "m1error", style = "cont", palette = "RdBu", title="m1 error")
 m2err <- tm_shape(galapagos.s) + tm_polygons(col = "m2error", style = "cont", palette = "RdBu", title="m2 error")
 actual <- tm_shape(galapagos.s) + tm_polygons(col = "NUM_SPEC", style = "cont", palette = "Greens", title="actual")
 tmap_arrange(m1err, m2err, actual, sync = TRUE)
 ```
+</div>
 
-It is worth noticing that I have mapped the negative of the model residuals, as this is maybe a bit easier to think about as an 'error'. The residual is the difference actual - model, so a positive residual is when the model predicts a lower value than the actual, meaning that the model error is negative. This can get a little bit confusing, so it is important to be clear in your head about the signs of model errors, and I find it helpful to take this approach.
+<br><br>It is worth noticing that I have mapped the negative of the model residuals, as this is maybe a bit easier to think about as an 'error'. The residual is the difference actual - model, so a positive residual is when the model predicts a lower value than the actual, meaning that the model error is negative. This can get a little bit confusing, so it is important to be clear in your head about the signs of model errors, and I find it helpful to take this approach.
 
 Overall, it is difficult to draw many firm conclusions from this exercise, although the interpretive nature of regression modelling as a way to explore the complexities of data is hopefully apparent.
 
-From a geographical perspective, of particular note is that we are especially interested in where a model performs well and where it performs badly as this may provide clues to more nuanced explanations of what is happening. In this case, Santa Cruz is the most human-affected of the islands, and conservation activity is most focused on Isabela, and it seems clear that these would have to be accounted for in any more substantial modelling exercise.
+From a geographical perspective, of particular note is that we are especially interested in where a model performs well and where it performs badly as this may provide clues to more nuanced explanations of what is happening. In this case, Isabela is the most human-affected of the islands, and conservation activity is most focused on Santa Cruz, and it seems clear that these would have to be accounted for in any more substantial modelling exercise.
 
 ## Automating searching all the possible models
 

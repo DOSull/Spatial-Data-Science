@@ -33,17 +33,19 @@
 
     <div class="reveal">
       <div class="slides">
-        <section data-background="images/klee-polyphony.jpg">
-          <p class="attribution">
-            Paul Klee&rsquo;s <i>Polyphony</i> 1932, Kunstmuseum, Basel<br />
-            image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Polyphony.JPG">commons.wikimedia.org</a>
-          </p>
-          <div class="translucent fragment">
-            <h1>From overlay to regression</h1>
-            <h2><a href="#/1">Overlay in GIS</a></h2>
-            <h2><a href="#/2">A general perspective on overlay</a></h2>
-            <h2><a href="#/3">The basics of regression models</a></h2>
-          </div>
+        <section>
+          <section data-background="images/klee-polyphony.jpg">
+            <p class="attribution">
+              Paul Klee&rsquo;s <i>Polyphony</i> 1932, Kunstmuseum, Basel<br />
+              image source <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Polyphony.JPG">commons.wikimedia.org</a>
+            </p>
+            <div class="translucent fragment">
+              <h1>From overlay to regression</h1>
+              <h2><a href="#/1">Overlay in GIS</a></h2>
+              <h2><a href="#/2">A general perspective on overlay</a></h2>
+              <h2><a href="#/3">The basics of regression models</a></h2>
+            </div>
+          </section>
         </section>
 
         <section>
@@ -64,7 +66,7 @@
               source <a target="_blank" href="https://suzanneodonovan.wordpress.com/research-theory/2012-relational-space-_-m-arch-year-2-elective/">suzanneodonovan.wordpress.com</a>
             </p>
             <h3 class="translucent fragment fade-in">Overlay has a long history, see: Steinitz C, P Parker and L Jordan. 1976.
-              <a target="_blank" href="https://www.jstor.org/stable/4466423">Hand-drawn overlays: Their history and prospective uses</a>.
+              <a target="_blank" href="https://www.jstor.org/stable/44664237">Hand-drawn overlays: Their history and prospective uses</a>.
               <i>Landscape Architecture</i> (September) 444–455.
             </h3>
           </section>
@@ -108,18 +110,18 @@
 
           <section>
             <h1>Raster overlay</h1>
-            <div class="left">
-            <img src="images/ss-raster-layers.png">
-            <figcaption>image source Figure 6.4 in O'Sullivan D and Perry GLW, 2013
-            <a target="_blank" href="https://www.wiley.com/WileyCDA/WileyTitle/productCd-1119970792.html">
-            <i>Spatial Simulation: Exploring Pattern and Process</i></a> Wiley.</figcaption>
+            <div class="left" style="width:45%">
+              <img src="images/ss-raster-layers.png">
+              <figcaption>image source Figure 6.4 in O'Sullivan D and Perry GLW, 2013
+              <a target="_blank" href="https://www.wiley.com/WileyCDA/WileyTitle/productCd-1119970792.html">
+              <i>Spatial Simulation: Exploring Pattern and Process</i></a> Wiley.</figcaption>
             </div>
-            <div class="left">
-            <h2>Overlay becomes a calculation at each cell</h2>
-            <h2>Using values at that location
-            across all input layers</h2>
-            <h2>An example of <em>map algebra</em></h2>
-            <h2>Use <code>r3 &lt;- r1 + r2</code> in <i>R</i></h2>
+            <div class="left" style="width:51%">
+              <h2>Overlay becomes a calculation at each cell</h2>
+              <h2>Using values at that location
+              across all input layers</h2>
+              <h2>An example of <em>map algebra</em></h2>
+              <h2>In <i>R</i> use<br /><code>r3 &lt;- r1 + r2</code></h2>
             </div>
           </section>
 
@@ -145,7 +147,7 @@
             <p class="attribution">aerial view of the Arc de Triomphe, Paris<br />
               image source <a target="_blank" href="https://www.yatzer.com/daily-overview">yatzer.com</a>
             </p>
-            <h1>Many ways to<br />combine layers</h2>
+            <h1>Key is that there are many ways to combine layers</h2>
           </section>
 
           <section data-background="images/black-and-white.png">
@@ -156,7 +158,7 @@
           </section>
 
           <section data-background="images/gradient.png">
-            <h1>Summation&mdash;shades of grey</h1>
+            <h1>Summation admits<br />shades of grey</h1>
             <h2>Input layers are scores from
             low to high values in some fixed range</h2>
             <h2>Outcome is <em>sum of all inputs</em>, from low to high</h2>
@@ -176,14 +178,14 @@
 
           <section class='translucent' data-background="images/scales-of-justice.jpg">
             <p class="attribution">image source <a target="_blank" href="https://www.flickr.com/photos/hisgett/6266059533/">
-            flickr</a> by <a href="https://www.flickr.com/photos/hisgett/">Tony Hisgett</a>
+            flickr</a> by <a target="_blank" href="https://www.flickr.com/photos/hisgett/">Tony Hisgett</a>
             </p>
             <h1>Making overlay more<br />evidence-based</h1>
             <h2>In overlay we need weights to associate<br />
               with each layer; where to get them?</h2>
             <h2>
               <ul>
-                <li>Inexpert opinion (gut feel?<br /><a target="_blank" href="http://www.cc.com/video-clips/63ite2/the-colbert-report-the-word---truthiness">truthiness</a>? &lsquo;seems about right&rsquo;?)</li>
+                <li>Inexpert opinion (gut feel?<br /><a target="_blank" href="https://en.wikipedia.org/wiki/Truthiness">truthiness</a>? &lsquo;seems about right&rsquo;?)</li>
                 <li>Expert opinion</li>
               </ul>
             </h2>
@@ -200,10 +202,8 @@
           <section data-background-transition='none' class='translucent' data-background="images/scales-of-justice.jpg">
             <h1>Calculating the weights</h1>
             <h2>For each factor, weight is events per unit area <em>inside</em>
-            versus <em>outside</em> area where factor applies</h2>
-            <h2>For each factor weight is events per unit area<br />
-              <em>inside</em> vs. <em>outside</em> area where factor applies</h2>
-            <h2>\[
+            versus <em>outside</em> area where factor applies
+            \[
             w_X = \frac{(n_{\mathrm{in}\,X}/{\mathrm{Area}}_{\;X})}{(n_{\mathrm{not\,in}\,X}/{\mathrm{Area}}_{\;\mathrm{not}\,X})}
             \]
             </h2>
@@ -211,7 +211,7 @@
 
           <section data-background-color='#000'>
             <img src='images/weighted-overlay.png'>
-            <div class="fragment" style="position:relative; bottom:95px;">
+            <div class="fragment" style="position:relative; bottom:50px;">
               <h2>
                 <pre class="stretch">
                   <code data-trim data-noescape contenteditable class="r" style='background:#00000060;'>
@@ -256,7 +256,7 @@
 
           <section>
             <h1>Structure of regression</h1>
-            <h2><em>Dependent variable</em> (the phenomenon we are modelling)</h2>
+            <h2><em>Dependent variable</em> (the thing we are modelling)</h2>
             <h2><em>Independent variables</em> (the explanatory factors)</h2>
             <h2>There are various preferences for the distribution of the variables (normal, no outliers, etc.), which makes <em>exploring data first</em> really important, especially for outlier detection</h2>
           </section>
@@ -269,27 +269,21 @@
             <h2>
               where \(y\) is the dependent variable, \(x_i\) are the independent variables, \(b_i\) are the regression coefficients, and \(\epsilon\) is the model error
             </h2>
-            <h2>This is essentially the same as overlay&rsquo;s<br />
+            <h2>This mirrors overlay&rsquo;s<br />
               \[ y=w_0+w_1x_1+w_2x_2+\ldots+w_nx_n \]
             </h2>
           </section>
-
-          <!-- <section>
-            <h1>Some wrinkles</h1>
-            <h2>Where independent variables are non-numeric use <em>dummy variables</em></h2>
-            <h2>Where dependent variable is binary (yes/no, presence/absence), use <em>logistic regression</em></h2>
-            <h2>Choice of which variables to consider and which to include/exclude is key: be wary about including many closely interrelated variables</h2>
-          </section> -->
         </section>
 
-
-        <section data-background="#936">
-          <h1>Summary</h1>
-          <h2>Overlay is the most characteristic GIS method</h2>
-          <h2>Vector and raster approaches are possible</h2>
-          <h2>Can be rather subjective</h2>
-          <h2>Regression relates a dependent variable, \(y\), to a collection of independent variables, \(X=\{x_i\}\)</h2>
-          <h2>Regression coefficients \(b_i\) are an evidence-based way to think about overlay</h2>
+        <section>
+          <section data-background="#936">
+            <h1>Summary</h1>
+            <h2>Overlay is the most characteristic GIS method</h2>
+            <h2>Vector and raster approaches are possible</h2>
+            <h2>Can be rather subjective</h2>
+            <h2>Regression relates a dependent variable, \(y\), to a collection of independent variables, \(X=\{x_i\}\)</h2>
+            <h2>Regression coefficients \(b_i\) are an evidence-based way to think about overlay</h2>
+          </section>
         </section>
       </div>
     </div>
