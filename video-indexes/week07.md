@@ -1,22 +1,22 @@
 # Week 7 videos
 ## From overlay to regression lecture
-+ [Overview](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-01.mp4) (1:37 min)
++ [Overview](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-01.mp4) (1:37 min)
 
 ### Overlay analysis
-+ [Layers in GIS](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-02.mp4) (2:28 min)
-+ [Overlay: GIS's 'killer app'](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-03.mp4) (5:53 min)
-+ [Two approaches: vector and raster](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-04.mp4) (4:37 min) 
-+ [Some points to note](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-05.mp4) (5:38 min)
++ [Layers in GIS](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-02.mp4) (2:28 min)
++ [Overlay: GIS's 'killer app'](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-03.mp4) (5:53 min)
++ [Two approaches: vector and raster](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-04.mp4) (4:37 min) 
++ [Some points to note](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-05.mp4) (5:38 min)
 
 ### Combining layers different ways
-+ [Black and white](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-06.mp4) (2:31 min)
-+ [Shades of grey](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-07.mp4) (1:54 min)
-+ [Weighted overlay](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-08.mp4) (3:35 min)
++ [Black and white](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-06.mp4) (2:31 min)
++ [Shades of grey](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-07.mp4) (1:54 min)
++ [Weighted overlay](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-08.mp4) (3:35 min)
 
 ### From overlay to regression
-+ [More evidence-based overlay](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-09.mp4) (3:54 min)
-+ [Weights-of-evidence overlay](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-10.mp4) (5:42 min)
-+ [How regression and overlay are related](https://southosullivan.com/geog315/video/week-07-lecture-02/from-overlay-to-regression-11.mp4) (3:39 min)
++ [More evidence-based overlay](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-09.mp4) (3:54 min)
++ [Weights-of-evidence overlay](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-10.mp4) (5:42 min)
++ [How regression and overlay are related](https://southosullivan.com/geog315/video/week-07-lecture-01/from-overlay-to-regression-11.mp4) (3:39 min)
 
 ---
 
