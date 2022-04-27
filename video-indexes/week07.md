@@ -20,7 +20,7 @@
 
 ---
 
-## Various ways of using R
+## Various ways of using *R* (from 2020)
 + [Introduction and R scripts](https://southosullivan.com/geog315/video/week-07-lab/geog315-week07-01-intro-and-R-scripts.mp4) (12:17 min)
 + [R script comments](https://southosullivan.com/geog315/video/week-07-lab/geog315-week07-02-R-script-comments.mp4) (1:38 min)
 + [Markdown markup](https://southosullivan.com/geog315/video/week-07-lab/geog315-week07-03-markdown.mp4) (8:28 min)

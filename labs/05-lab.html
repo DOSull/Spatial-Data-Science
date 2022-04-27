@@ -177,8 +177,7 @@
 <p>Clustering methods segment the observations in a dataset into <em>clusters</em> or <em>classes</em> based on the differences and similarities between them. The idea of clustering analysis is to break the dataset into clusters or classes such that observations in the same class are similar to each other, and different from observations in other classes.</p>
 <p>Unfortunately, there is no easy way to define clusters beyond recognising that they are the groups of observations identified by a clustering method! Clustering analysis therefore depends a great deal on the interpretation of an analyst to give it meaning.</p>
 <p>What do we mean by ‘similar’ and ‘different’? We extend the basic idea of distance in (two dimensional) space where the distance between observation <em>i</em> and observation <em>j</em> is given by</p>
-<p><img src="pythagoras.png" style="height:30px;"/></p>
-<p>that is the square root of the sum of the squared differences in each coordinate. But now we apply this measure to many data dimensions. So if we have a dataset with (say) 15 attributes, we are in a 15 dimensional data space, and we take the sum of the squared differences in each of the 15 dimensions (i.e. on each variable) between every pair of observations, add them together and take the square root.</p>
+<p><span class="math display">\[d_{ij}=\sqrt{(x_i-x_j)^2+(y_i-y_j)^2}\]</span> that is the square root of the sum of the squared differences in each coordinate. But now we apply this measure to many data dimensions. So if we have a dataset with (say) 15 attributes, we are in a 15 dimensional data space, and we take the sum of the squared differences in each of the 15 dimensions (i.e. on each variable) between every pair of observations, add them together and take the square root.</p>
 <p>Other versions of the basic idea of ‘total difference’ in attribute values are possible.</p>
 <p>An important consideration is that all the attributes be rescaled so that the differences in one particular attribute which happens to have large values associated with it don’t ‘drown out’ differences in other variables. For example if one variable is mean income in dollars and has values like 25000 or 50000, while another variable is proportion of children under 5 and has values like 0.04 or 0.05, then if we do not rescale things, the differences in income will swamp any differences in the demographic mix.</p>
 <p>A similar concern is that we try not to include lots of strongly correlated variables in the analysis.</p>
@@ -196,8 +195,7 @@ library(dplyr)</code></pre>
 <p>Download the data from <a href="sf_demo.gpkg?raw=true">this link</a>, and open them in <em>R</em></p>
 <pre class="r"><code>sanfran &lt;- st_read(&quot;sf_demo.gpkg&quot;)</code></pre>
 <pre><code>## Reading layer `sf_demo&#39; from data source 
-##   `/home/osullid3/Documents/teaching/Geog315/_labs/week-05/sf_demo.gpkg&#39; 
-##   using driver `GPKG&#39;
+##   `/home/osullid3/Downloads/week5/sf_demo.gpkg&#39; using driver `GPKG&#39;
 ## Simple feature collection with 189 features and 25 fields
 ## Geometry type: MULTIPOLYGON
 ## Dimension:     XY
@@ -279,71 +277,71 @@ library(dplyr)</code></pre>
 <pre class="r"><code>km &lt;- kmeans(sanfran.d, 5)</code></pre>
 <p>That’s it! All the results for the chosen number of clusters (specified as 5 in the above example) are now contained in the dataset <code>km</code>. Take a look at it by selecting it from the Environment tab, or just type <code>km</code> at the console:</p>
 <pre class="r"><code>km</code></pre>
-<pre><code>## K-means clustering with 5 clusters of sizes 35, 17, 34, 37, 66
+<pre><code>## K-means clustering with 5 clusters of sizes 34, 12, 71, 31, 41
 ## 
 ## Cluster means:
 ##     density medianYearBuilt  PConeUnit PCownerOccUnits PCcommutingNotCar
-## 1 0.3287206      0.06293996 0.08640823       0.1013458         0.6811844
-## 2 0.1203073      0.64364876 0.09568959       0.2862710         0.5223202
-## 3 0.1102430      0.08525149 0.65063972       0.5983421         0.3427160
-## 4 0.1375028      0.12455934 0.80050554       0.6262863         0.3359293
-## 5 0.1675632      0.01932367 0.19014239       0.3079078         0.4980942
+## 1 0.1380531      0.15260017 0.81178892       0.6449458         0.3297185
+## 2 0.1444951      0.11231884 0.44396366       0.3441517         0.4235713
+## 3 0.1604302      0.07511737 0.18083311       0.3128386         0.5012844
+## 4 0.1089185      0.07947639 0.67000867       0.6143581         0.3341577
+## 5 0.2987980      0.18522446 0.05861115       0.1204200         0.6691093
 ##   PCmovedWithinCounty PClessHighSchool PCsomeCollegeOrMore PCdoctorate
-## 1          0.09565598       0.22253284           0.6061979 0.011933491
-## 2          0.10354697       0.11058903           0.7702135 0.029096315
-## 3          0.06891582       0.09298221           0.7966360 0.028564346
-## 4          0.05484217       0.24873109           0.5206688 0.007984373
-## 5          0.08807195       0.05013128           0.8811221 0.035352205
+## 1          0.05102677       0.24111427           0.5316415 0.008865621
+## 2          0.06680520       0.23539525           0.5346827 0.007559580
+## 3          0.09056067       0.04964294           0.8840446 0.036528743
+## 4          0.06935163       0.08995990           0.7971238 0.028151535
+## 5          0.10187865       0.19526193           0.6547555 0.015945859
 ##   PCmarriedCouple PCunmarriedSSCouple PCwithKids PCsexMale medianAge
-## 1       0.2320401          0.01371622  0.1564771 0.5263338 0.3206295
-## 2       0.2734281          0.01925209  0.1349341 0.5124037 0.3673180
-## 3       0.4813269          0.02232414  0.2532609 0.4961764 0.3883770
-## 4       0.4855200          0.01151434  0.3379670 0.4885911 0.3591199
-## 5       0.2777772          0.03185751  0.1465069 0.5230839 0.2949460
+## 1       0.5015789          0.01109483  0.3324023 0.4832578 0.3696467
+## 2       0.2955399          0.01716946  0.3742658 0.4999659 0.2286288
+## 3       0.2803788          0.03188385  0.1410610 0.5269897 0.2990473
+## 4       0.4911939          0.02236769  0.2536621 0.4954321 0.3963689
+## 5       0.2365431          0.01352662  0.1191211 0.5219253 0.3559464
 ##   PCraceBlackAlone PCraceAsianAlone PCraceHispanic PCraceWhiteAlone
-## 1       0.07881089        0.3602166      0.1988001        0.4143167
-## 2       0.11648743        0.3251476      0.1117481        0.4602676
-## 3       0.02430359        0.3780705      0.1071087        0.5009339
-## 4       0.09029092        0.5137745      0.2233494        0.2508879
-## 5       0.03415569        0.1573005      0.1145559        0.7207435
+## 1       0.07257924        0.5480753     0.20229334        0.2472154
+## 2       0.21226729        0.1599303     0.39257258        0.3480782
+## 3       0.03563461        0.1657718     0.10849974        0.7136635
+## 4       0.02320503        0.3862060     0.09980407        0.4997374
+## 5       0.07062719        0.3923187     0.14482408        0.4259777
 ##   PCforeignBorn perCapitaIncome PCunemployed PCpoorStruggling PCwithInterests
-## 1     0.4389433       0.1630703   0.09856683        0.5117747       0.1655470
-## 2     0.3771835       0.3394384   0.07180457        0.3189530       0.2624580
-## 3     0.3279742       0.3020804   0.06578667        0.1912890       0.4061441
-## 4     0.5036219       0.1326268   0.11113163        0.3300871       0.2105605
-## 5     0.2128220       0.4554745   0.05830780        0.1841470       0.3487136
+## 1     0.5116443       0.1401876   0.10287591        0.3063474       0.2217888
+## 2     0.3420834       0.1177711   0.14896179        0.4903162       0.1501008
+## 3     0.2182757       0.4640983   0.05795774        0.1801782       0.3544504
+## 4     0.3320544       0.3055327   0.06581949        0.1871975       0.4093553
+## 5     0.4466916       0.1979275   0.08357860        0.4709679       0.1871376
 ##   PCveryWealthyHHolds
-## 1          0.05320198
-## 2          0.15304999
-## 3          0.18424987
-## 4          0.07103738
-## 5          0.21285127
+## 1          0.07743945
+## 2          0.06224154
+## 3          0.21976774
+## 4          0.18697150
+## 5          0.06403698
 ## 
 ## Clustering vector:
 ##   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
-##   2   5   5   5   2   1   1   1   5   1   1   5   1   1   1   1   1   1   1   1 
+##   5   3   3   3   3   5   5   5   3   5   5   3   5   5   5   5   5   5   5   5 
 ##  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 
-##   1   1   1   1   1   1   1   5   5   5   5   5   5   5   5   5   5   5   5   5 
+##   5   5   5   5   5   5   5   3   3   3   3   3   3   3   3   3   3   3   3   3 
 ##  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60 
-##   2   5   5   5   2   5   5   2   5   2   2   1   5   5   5   5   5   5   5   5 
+##   3   3   3   3   5   3   3   5   3   5   5   5   3   3   3   3   3   3   3   3 
 ##  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80 
-##   5   5   5   5   2   5   2   2   2   1   5   5   5   5   5   5   5   1   1   5 
+##   3   3   3   3   5   3   5   5   3   5   3   3   3   3   3   3   3   5   5   3 
 ##  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100 
-##   5   5   5   5   5   3   3   5   2   5   5   5   1   1   1   5   5   4   4   2 
+##   3   3   3   3   3   4   4   3   3   3   3   3   2   2   2   3   2   1   1   2 
 ## 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 
-##   1   4   4   4   3   3   5   3   3   4   4   4   4   4   4   4   4   4   4   4 
+##   2   2   1   2   4   4   3   2   4   2   1   1   1   1   1   1   1   1   1   1 
 ## 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 
-##   4   4   4   4   4   4   4   4   4   5   3   5   5   3   3   3   3   3   3   3 
+##   1   1   1   1   1   1   1   1   1   3   3   3   3   4   4   4   4   4   4   4 
 ## 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 
-##   3   3   3   4   4   4   4   4   3   3   3   4   4   4   4   3   3   1   1   1 
+##   4   4   4   1   1   1   1   1   4   4   4   1   1   1   1   4   4   5   5   5 
 ## 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 
-##   3   3   3   4   4   5   5   1   5   1   3   5   3   3   3   3   3   3   3   3 
+##   4   4   4   1   1   3   3   5   3   5   4   3   4   4   4   4   4   5   4   4 
 ## 181 182 183 184 185 186 187 188 189 
-##   5   2   1   2   2   1   4   5   2 
+##   3   5   2   5   1   5   2   3   3 
 ## 
 ## Within cluster sum of squares by cluster:
-## [1] 13.128031  5.607629  7.179067  5.700216  9.746833
-##  (between_SS / total_SS =  59.9 %)
+## [1]  4.865569  3.590148 13.239683  6.233968 15.216308
+##  (between_SS / total_SS =  58.2 %)
 ## 
 ## Available components:
 ## 
@@ -376,41 +374,41 @@ library(dplyr)</code></pre>
 <p>You have to use this code one variable at a time. You can get an overview of which variables are particularly high or low in each cluster from the <code>centers</code> component of the <code>kmeans()</code> results:</p>
 <pre class="r"><code>km$centers</code></pre>
 <pre><code>##     density medianYearBuilt  PConeUnit PCownerOccUnits PCcommutingNotCar
-## 1 0.3287206      0.06293996 0.08640823       0.1013458         0.6811844
-## 2 0.1203073      0.64364876 0.09568959       0.2862710         0.5223202
-## 3 0.1102430      0.08525149 0.65063972       0.5983421         0.3427160
-## 4 0.1375028      0.12455934 0.80050554       0.6262863         0.3359293
-## 5 0.1675632      0.01932367 0.19014239       0.3079078         0.4980942
+## 1 0.1380531      0.15260017 0.81178892       0.6449458         0.3297185
+## 2 0.1444951      0.11231884 0.44396366       0.3441517         0.4235713
+## 3 0.1604302      0.07511737 0.18083311       0.3128386         0.5012844
+## 4 0.1089185      0.07947639 0.67000867       0.6143581         0.3341577
+## 5 0.2987980      0.18522446 0.05861115       0.1204200         0.6691093
 ##   PCmovedWithinCounty PClessHighSchool PCsomeCollegeOrMore PCdoctorate
-## 1          0.09565598       0.22253284           0.6061979 0.011933491
-## 2          0.10354697       0.11058903           0.7702135 0.029096315
-## 3          0.06891582       0.09298221           0.7966360 0.028564346
-## 4          0.05484217       0.24873109           0.5206688 0.007984373
-## 5          0.08807195       0.05013128           0.8811221 0.035352205
+## 1          0.05102677       0.24111427           0.5316415 0.008865621
+## 2          0.06680520       0.23539525           0.5346827 0.007559580
+## 3          0.09056067       0.04964294           0.8840446 0.036528743
+## 4          0.06935163       0.08995990           0.7971238 0.028151535
+## 5          0.10187865       0.19526193           0.6547555 0.015945859
 ##   PCmarriedCouple PCunmarriedSSCouple PCwithKids PCsexMale medianAge
-## 1       0.2320401          0.01371622  0.1564771 0.5263338 0.3206295
-## 2       0.2734281          0.01925209  0.1349341 0.5124037 0.3673180
-## 3       0.4813269          0.02232414  0.2532609 0.4961764 0.3883770
-## 4       0.4855200          0.01151434  0.3379670 0.4885911 0.3591199
-## 5       0.2777772          0.03185751  0.1465069 0.5230839 0.2949460
+## 1       0.5015789          0.01109483  0.3324023 0.4832578 0.3696467
+## 2       0.2955399          0.01716946  0.3742658 0.4999659 0.2286288
+## 3       0.2803788          0.03188385  0.1410610 0.5269897 0.2990473
+## 4       0.4911939          0.02236769  0.2536621 0.4954321 0.3963689
+## 5       0.2365431          0.01352662  0.1191211 0.5219253 0.3559464
 ##   PCraceBlackAlone PCraceAsianAlone PCraceHispanic PCraceWhiteAlone
-## 1       0.07881089        0.3602166      0.1988001        0.4143167
-## 2       0.11648743        0.3251476      0.1117481        0.4602676
-## 3       0.02430359        0.3780705      0.1071087        0.5009339
-## 4       0.09029092        0.5137745      0.2233494        0.2508879
-## 5       0.03415569        0.1573005      0.1145559        0.7207435
+## 1       0.07257924        0.5480753     0.20229334        0.2472154
+## 2       0.21226729        0.1599303     0.39257258        0.3480782
+## 3       0.03563461        0.1657718     0.10849974        0.7136635
+## 4       0.02320503        0.3862060     0.09980407        0.4997374
+## 5       0.07062719        0.3923187     0.14482408        0.4259777
 ##   PCforeignBorn perCapitaIncome PCunemployed PCpoorStruggling PCwithInterests
-## 1     0.4389433       0.1630703   0.09856683        0.5117747       0.1655470
-## 2     0.3771835       0.3394384   0.07180457        0.3189530       0.2624580
-## 3     0.3279742       0.3020804   0.06578667        0.1912890       0.4061441
-## 4     0.5036219       0.1326268   0.11113163        0.3300871       0.2105605
-## 5     0.2128220       0.4554745   0.05830780        0.1841470       0.3487136
+## 1     0.5116443       0.1401876   0.10287591        0.3063474       0.2217888
+## 2     0.3420834       0.1177711   0.14896179        0.4903162       0.1501008
+## 3     0.2182757       0.4640983   0.05795774        0.1801782       0.3544504
+## 4     0.3320544       0.3055327   0.06581949        0.1871975       0.4093553
+## 5     0.4466916       0.1979275   0.08357860        0.4709679       0.1871376
 ##   PCveryWealthyHHolds
-## 1          0.05320198
-## 2          0.15304999
-## 3          0.18424987
-## 4          0.07103738
-## 5          0.21285127</code></pre>
+## 1          0.07743945
+## 2          0.06224154
+## 3          0.21976774
+## 4          0.18697150
+## 5          0.06403698</code></pre>
 <p>This is quite difficult to interpret (all those numbers) but scanning the information should enable you to spot which cluster has particularly high or low values of particular variables.</p>
 <p>For a more visual presentation of all the information we can use some more complicated plotting code, as shown below.</p>
 <pre class="r"><code>sanfran %&gt;%
@@ -430,8 +428,7 @@ library(dplyr)</code></pre>
 <p>Load the data, and make a data-only copy</p>
 <pre class="r"><code>commutes &lt;- st_read(&quot;welly-commutes.gpkg&quot;)</code></pre>
 <pre><code>## Reading layer `welly-commutes&#39; from data source 
-##   `/home/osullid3/Documents/teaching/Geog315/_labs/week-05/welly-commutes.gpkg&#39; 
-##   using driver `GPKG&#39;
+##   `/home/osullid3/Downloads/week5/welly-commutes.gpkg&#39; using driver `GPKG&#39;
 ## Simple feature collection with 223 features and 24 fields
 ## Geometry type: MULTIPOLYGON
 ## Dimension:     XY
