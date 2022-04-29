@@ -12,7 +12,7 @@ Date | Mon | Wed | Lab (also Wed)
 28 Mar | [Clustering analysis](slides/classification-clustering/) | [Applications of clustering analysis](slides/classification-examples/) | [**Geographic cluster analysis**](labs/05-lab.html){:target="_blank"} (20%) due {{ site.data.dates.assignment_3 }}
 4 Apr | [Introducing raster data](slides/surface-analysis/) | [Working with rasters](slides/raster-cheatsheet/) | Help with assignments / self-learn rasters
 &nbsp; | &nbsp; | **BREAK** | &nbsp;
-25 Apr | **ANZAC DAY HOLIDAY** | [From overlay to regression models](slides/from-overlay-to-regression/) | **Building a simple statistical model** (20%) due {{ site.data.dates.assignment_4 }}
+25 Apr | **ANZAC DAY HOLIDAY** | [From overlay to regression models](slides/from-overlay-to-regression/) | [**Building a simple statistical model**](labs/07-lab.html){:target="_blank"} (20%) due {{ site.data.dates.assignment_4 }}
 2 May | [Regression models](slides/regression/) | [More on regression](slides/more-on-regression/) | Help with assignments
 9 May | [Running a GIS project](slides/running-a-gis-project/) and [**Introducing the mini-projects**](labs/mini-project) (30%) due {{ site.data.dates.assignment_5 }} | [Other spatial analysis methods](slides/spatial-analysis-methods/) | Help with assignments / project work
 16 May | [Network analysis](slides/network-analysis/) | [Time geography](slides/time-geography/) | Help with assignments / project work
