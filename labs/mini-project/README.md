@@ -1,4 +1,4 @@
-**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
+**Geog 315 T1 2022**
 
 # Mini-projects
 Datasets for the mini-project are linked below with project-specific datasets in the first section, and collections of more general datasets that might be relevant to more than one project in the second section.
@@ -15,6 +15,7 @@ Details of the various available datasets and some thoughts on what you might lo
 + [Mouse trapping at Zealandia, 2003-14](zealandia)
 + [US COVID 19 pandemic](us-covid19)
 + [US UFO sightings](ufos)
++ [Aotearoa New Zealand COVID vaccination rollout](vaccination)
 
 ## Other datasets
 Some other general datasets that may be of use, depending on your topic, are discussed on the pages linked below, which also include advice on usage of theses datasets.

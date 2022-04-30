@@ -1,7 +1,7 @@
-**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
+**Geog 315 T1 2022**
 
 # US COVID-19
-These data were obtained using the _R_ package `COVID19`, which allows download of publicly available COVID-19 data from a large number of countries. New Zealand data on this subject are not very interesting for our purposes because no detailed spatial breakdown of the numbers is available (also... the numbers have thankfully not been very large so far... he said, on 2 September 2021, fingers-crossed).
+These data were obtained using the _R_ package `COVID19`, which allows download of publicly available COVID-19 data from a large number of countries. New Zealand data on this subject are not very interesting for our purposes because no detailed spatial breakdown of the numbers is available. if you'd like to do something COVID related in a New Zealand setting, then take a look at the [vaccination project](../vaccination/../README.md).
 
 The US data are a different matter, with detailed information available down to the county level.
 

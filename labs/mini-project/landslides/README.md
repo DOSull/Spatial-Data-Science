@@ -1,7 +1,7 @@
-**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
+**Geog 315 T1 2022**
 
 ## Landslides in South Taranaki
-This project is based on data for over 13000 landslides recorded north of Waitotara in South Taranaki. The aim would be to produce landslide risk maps for the provided study area, based on some kind of overlay analysis of the provided data in combination with other datasets.
+This project is based on data for over 13000 landslides recorded north of Waitotara in South Taranaki. The aim would be to produce landslide risk maps for the provided study area, based on some kind of overlay analysis of the provided data in combination with other datasets. The event leading to the landslides is documented in [this report from GNS](https://trc.govt.nz/assets/Documents/Research-reviews/Land/GNS-June2015Flood-w.pdf).
 
 ## Commentary
 ### Datasets
@@ -17,6 +17,6 @@ Think about the factors that influence landslide incidence, from landform to lan
 
 Depending on the approach you opt for you may need to convert the landslide polygons to points. This is relatively easy to do in _R_ or any GIS.
 
-You might also need **non-landslide** locations for some kinds of analysis (for example, both weights-of-evidence overlay and logistic regression would require these). This is also relatively easily accomplished in _R_ although you may find it even more straightforward in _ArcGIS_ or _QGIS_.
+You might also need **non-landslide** locations for some kinds of analysis (for example, both weights-of-evidence overlay and logistic regression would require these). This is relatively easily accomplished in _R_ using the `st_sample()` function with an appropriate area in which to generate points.
 
-If you opt for logistic regression, don't forget that we are here to help! The workflow might involve some back and forth between _R_ and various GIS tools, although a lot can be accomplished in _R_ alone. For example, see this explanation of [logistic regression for landslides](https://geocompr.robinlovelace.net/spatial-cv.html#case-landslide).
+If you opt for logistic regression, don't forget that we are here to help! For example, see this explanation of [logistic regression for landslides](https://geocompr.robinlovelace.net/spatial-cv.html#case-landslide).

@@ -1,7 +1,7 @@
-**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
+**Geog 315 T1 2022**
 
 # Aotearoa placename origins
-These data were sourced from the locations referenced at [this page](https://github.com/fogonwater/we-are-here/tree/master/8_heart_memory#801-ingoa-w%C4%81hi-o-aotearoa--place-names-of-new-zealand) describing how one of the maps in Chris McDowall and Tim Denee's [_We Are Here_](https://www.masseypress.ac.nz/books/all/all/we-are-here) was produced, specifically this one:
+These data were sourced from the locations referenced at [this page](https://github.com/fogonwater/we-are-here/tree/master/8_heart_memory#801-ingoa-w%C4%81hi-o-aotearoa--place-names-of-new-zealand) describing how one of the maps in Chris McDowall and Tim Denee's [_We Are Here_](https://www.masseypress.ac.nz/books/we-are-here/) was produced, specifically this one:
 
 ![](we-are-here-spread.jpg)
 
@@ -21,6 +21,6 @@ These results were assigned using the code available from [this repository](http
 ## Commentary
 The contrast between the prevalence of Māori placenames in Te Ika-a-Māui and Te Waipounamu is immediately apparent in the visualisations linked above. As a first step you should make sure you can replicate these maps. Figure out how to do it for yourself, rather than just grabbing code from the sources linked!
 
-You may have some ideas about more interesting ways to visualise the data. You might consider density maps, or hexbins (see the package ) or additional categories ('mixed' names with some te reo and some other elements for example).
+You may have some ideas about more interesting ways to visualise the data. You might consider density maps, or hexbin maps (for this you will probably start from the `st_make_grid` function). Or you might look at additional categories ('mixed' names with some te reo and some other elements for example).
 
-Another direction would be to explore how the relative prevalence of names is related to present day population distributions, using more general data available [here](../aotearoa-new-zealand-census-data.md).
+Another direction would be to explore how (if at all) the relative prevalence of names is related to present day population distributions, using more general data available [here](../aotearoa-new-zealand-census-data.md).

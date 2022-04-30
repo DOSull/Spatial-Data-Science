@@ -1,4 +1,4 @@
-**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
+**Geog 315 T1 2022**
 
 # US Census data
 As you can imagine, actual US census data all the way down to the block level is abso-frickin-lutely ginormous, so it is not recommended that you go there.
@@ -17,7 +17,7 @@ An option that is amazingly effective is the [`tidycensus` package](https://walk
 The only part of this which is tricky is setting up the variables you need with the `variables = c(...)` option, where the variable names, or tables you want are specified, and the names and information about the variables are quite complex in themselves. You can get information about the tables and variables using the `load_variables` function. It's actually easier than it sounds... and once you have figured out how to download one variable, more is not a problem.
 
 ## Your API key
-You request an API key from the [US census Bureau](https://census.gov) here: [api.census.gov/data/key_signup.html](https://api.census.gov/data/key_signup.html). Use your university email address, and expect to have to wait an hour or two for the key, and maybe even to have to request it more than once. (That's how it went in 2020 when the pandemic was at its height, and US governance was... uh... not at its best. Maybe it'll be better this year.)
+You request an API key from the [US census Bureau](https://census.gov) here: [api.census.gov/data/key_signup.html](https://api.census.gov/data/key_signup.html). Use your university email address, and expect to have to wait an hour or two for the key, and maybe even to have to request it more than once. 
 
 Once you get the key you register it with the package using the `census_api_key()` function, as above, and it should all work fine. You might need to register the key again if you are on a different machine - so don't lose the email you got it from.
 
