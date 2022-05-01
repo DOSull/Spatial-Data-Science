@@ -5,6 +5,8 @@
 + [Reminder of what regression is and its relation to overlay](https://southosullivan.com/geog315/video/week-08-lecture-01/regression-02.m4v) (7:47 min)
 
 ### Simple example
+The *R* script for this section is [available here](../scripts/lapse-rate.R?raw=true).
+
 + [Introducing a simple example](https://southosullivan.com/geog315/video/week-08-lecture-01/regression-03.m4v) (3:05 min)
 + [Building a simple model](https://southosullivan.com/geog315/video/week-08-lecture-01/regression-04.m4v) (4:40 min)
 + [Getting information about the model](https://southosullivan.com/geog315/video/week-08-lecture-01/regression-05.m4v) (3:32 min)

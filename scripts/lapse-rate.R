@@ -4,7 +4,7 @@ library(tmap)
 library(ggplot2)
 library(GGally) # for scatmat
 
-setwd("~/Documents/teaching/Geog315/slides/regression/data")
+# setwd("~/Documents/teaching/Geog315/slides/regression/data")
 
 clim <- getData("worldclim", var = "tmin", res = 0.5, lon = 175, lat = -39)
 elev <- getData("SRTM", lon = 175, lat = -39)
@@ -32,13 +32,18 @@ ggplot(df, aes(x = elevation, y = t_min_july, colour = lat)) +
   ylab("Minimum July temperature, C")
 
 
+# crop the raster layers to make the mapping a bit easier
+elev <- crop(elev, st_bbox(pts.sf %>% st_buffer(5000)))
+clim <- crop(clim, st_bbox(pts.sf %>% st_buffer(5000)))
+
 tmap_mode('view')
 tm_shape(elev) + 
   tm_raster(style = "cont", title = "Elevation")+ 
   tm_shape(clim[[7]]) + 
   tm_raster(style = "cont", palette = "Blues", title = "Tmin, July") +
   tm_shape(pts.sf) + 
-  tm_dots()
+  tm_dots() + 
+  tm_basemap("CartoDB.Voyager")
 
 scatmat(df)
 
