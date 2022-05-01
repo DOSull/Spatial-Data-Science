@@ -13,6 +13,8 @@ The *R* script for this section is [available here](../scripts/lapse-rate.R?raw=
 + [Making the model a bit more complicated, and reflections](https://southosullivan.com/geog315/video/week-08-lecture-01/regression-06.m4v) (4:50 min)
 
 ### A more complex model (Galapagos biodiversity)
+The *RMarkdown* and data files for this example are [available here](../slides/regression/example/galapagos.zip?raw=true) (in a `.zip` archive, which you will need to unzip.)
+
 + [Introducing the data](https://southosullivan.com/geog315/video/week-08-lecture-01/regression-07.m4v) (4:22 min)
 + [The kitchen sink and other models](https://southosullivan.com/geog315/video/week-08-lecture-01/regression-08.m4v) (5:39 min)
 + [Mapping residuals](https://southosullivan.com/geog315/video/week-08-lecture-01/regression-09.m4v) (3:06 min)
