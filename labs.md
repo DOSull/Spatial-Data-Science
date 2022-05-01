@@ -14,7 +14,7 @@ You can get an idea of what's coming from the links below.
      "lab materials"){:target="_blank"}
 + **Week 4** [Spatial data wrangling](labs/04-lab.html "lab materials"){:target="_blank"}
 + **Week 5** [Geographic cluster analysis](labs/05-lab.html "lab materials"){:target="_blank"}
-+ **Week 7** [A simple statistical model in *R*](labs/07-html "lab materials"){:target="_blank"}
++ **Week 7** [A simple statistical model in *R*](labs/07-lab.html "lab materials"){:target="_blank"}
 + **Week 9** [The mini-projects](labs/mini-project "more on the mini-project"){:target="_blank"} (more projects will be added, but the ones already there will remain available this year)
 
 ### Non-assessed lab work
