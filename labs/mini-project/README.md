@@ -3,6 +3,8 @@
 # Mini-projects
 Datasets for the mini-project are linked below with project-specific datasets in the first section, and collections of more general datasets that might be relevant to more than one project in the second section.
 
+I am also open to any suggestions you might have for projects you'd like to pursue on any other topic. Given the nature of the course, you will need to have a pretty good idea of where you will be sourcing relevant (spatial) data, but other than that I am open to reasonable suggestions&mdash;just get in touch so we can discuss your ideas.
+
 ## Specific datasets
 Details of the various available datasets and some thoughts on what you might look at for each are linked below.
 
@@ -16,6 +18,7 @@ Details of the various available datasets and some thoughts on what you might lo
 + [US COVID 19 pandemic](us-covid19)
 + [US UFO sightings](ufos)
 + [Aotearoa New Zealand COVID vaccination rollout](vaccination)
++ [The COVID delta outbreak in Aotearoa New Zealand 2021](delta)
 
 ## Other datasets
 Some other general datasets that may be of use, depending on your topic, are discussed on the pages linked below, which also include advice on usage of theses datasets.
