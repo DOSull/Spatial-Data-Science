@@ -6,6 +6,8 @@ These data were obtained from these [_Washington Post_](https://www.washingtonpo
 ## Data
 Here's [the dataset](us-police-shootings-2015-22.gpkg?raw=true). There are more shootings in the original dataset (at the above link) but these are the 6601 that have been accurately geocoded (i.e. placed on a map).
 
+<img src="map.png">
+
 Information about what the various attributes of the data mean can be found at the above web pages.
 
 ## Commentary

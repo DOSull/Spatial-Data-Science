@@ -1,4 +1,4 @@
-**Geog 315 T1 2022 for T1 2022**
+**Geog 315 T1 2022**
 
 # Wellington house sales, early 2022
 These data are from [homes.co.nz](https://homes.co.nz) scraped from their website on or around 30 April 2022. These are 800 or so recent house sales in the Wellington region.

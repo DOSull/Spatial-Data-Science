@@ -3,6 +3,8 @@
 # US COVID-19
 These data were obtained using the _R_ package `COVID19`, which allows download of publicly available COVID-19 data from a large number of countries. New Zealand data on this subject are not very interesting for our purposes because no detailed spatial breakdown of the numbers is available. if you'd like to do something COVID related in a New Zealand setting, then take a look at the [vaccination project](../vaccination/../README.md).
 
+This is an [interesting podcast](https://99percentinvisible.org/episode/pandemic-tracking-and-the-future-of-data/) about the complexities (and inadequacies) of COVID data collection in the US.
+
 The US data are a different matter, with detailed information available down to the county level.
 
 ## Data
