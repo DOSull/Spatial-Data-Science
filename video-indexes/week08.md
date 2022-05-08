@@ -26,7 +26,7 @@ The *RMarkdown* and data files for this example are [available here](../slides/r
 ---
 
 ## Regression lecture supplemental materials
-+ [A script to do the lapse rate example](../scripts/lapse-rate.?raw=true) (you will need to install some packages to make this work)
++ [A script to do the lapse rate example](../scripts/lapse-rate.R?raw=true) (you will need to install some packages to make this work)
 + [Materials for the Galapagos regression model example](../slides/regression/example/galapagos.zip?raw=true)
 
 
