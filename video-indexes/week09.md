@@ -35,3 +35,8 @@ Two datasets have been added for 2022 (the COVID vaccination rollout, and the Au
 ### Spatial relations and conclusion
 + [Relational geographies and GIS](https://southosullivan.com/geog315/video/week-09-lecture-02/spatial-analysis-methods-09.mp4) (11:15 min)
 + [Summary](https://southosullivan.com/geog315/video/week-09-lecture-02/spatial-analysis-methods-10.mp4) (0:42 min)
+
+___
+
+## Bonus material
+Some pointers on making zoomed in static maps or adding basemaps to static maps. 
