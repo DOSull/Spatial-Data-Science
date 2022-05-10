@@ -14,7 +14,7 @@ Date | Mon | Wed | Lab (also Wed) | Video
 &nbsp; | &nbsp; | **BREAK** | &nbsp;
 25 Apr | **ANZAC DAY HOLIDAY** | [From overlay to regression models](slides/from-overlay-to-regression/) | [**Building a simple statistical model**](labs/07-lab.html){:target="_blank"} (20%) due {{ site.data.dates.assignment_4 }} | [Links](video-indexes/week07.html)
 2 May | [Regression models](slides/regression/) | [More on regression](slides/more-on-regression/) | Help with assignments | [Links](video-indexes/week08.html)
-9 May | [Running a GIS project](slides/running-a-gis-project/) and [**Introducing the mini-projects**](labs/mini-project) (30%) due {{ site.data.dates.assignment_5 }} | [Other spatial analysis methods](slides/spatial-analysis-methods/) | Help with assignments / project work | [Links](video-indexes/week09.html)
+9 May | [Running a GIS project](slides/running-a-gis-project/) and [**Introducing the mini-projects**](labs/mini-project) (30%) due {{ site.data.dates.assignment_5 }} | [Other spatial analysis methods](slides/spatial-analysis-methods/)<br>or [Alternative material on zoomed-in maps](slides/zoomed-in-maps/) | Help with assignments / project work | [Links](video-indexes/week09.html)
 16 May | [Network analysis](slides/network-analysis/) | [Time geography](slides/time-geography/) | Help with assignments / project work
 23 May | [Simulation models](slides/simulation-models/) | Project support | Project work
 30 May | Project support | Project support | Project work

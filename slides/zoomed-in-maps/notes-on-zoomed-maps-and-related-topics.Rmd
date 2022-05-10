@@ -1,0 +1,192 @@
+# Notes on zoomed in maps and related topics
+You can download the materials for this notebook from [this link](zoomed-in-maps.zip?raw=true).
+
+First load the usual libraries
+
+```{r}
+library(sf)
+library(tmap)
+library(tmaptools)
+library(dplyr)
+```
+
+Next, we'll load a couple of datasets. These are from the week 7 lab materials.
+
+```{r}
+abb <- st_read("abb-2193.gpkg")
+welly <- st_read("wellington-base-data.gpkg")
+```
+
+These layers are in the same projection, so we don't need to worry about that, but as is usual, it is a good idea to transform all layers to a matching projecting suitable for the project. Use `st_transform()` to do this.
+
+## Web maps
+The easiest way to handle variations in scale and extent of layers is a web map. For this, use `tmap_mode("view")`
+
+```{r}
+tmap_mode("view")
+tm_shape(welly) +
+  tm_polygons(col = "pop", alpha = 0.5) + 
+  tm_shape(abb) +
+  tm_dots()
+```
+
+The different extents of these two datasets might be a problem. If we are OK with filtering the point data to match the polygons data, then just use `st_filter()`:
+
+```{r}
+welly_abb <- abb %>%
+  st_filter(welly)
+tmap_mode("view")
+tm_shape(welly) +
+  tm_polygons(col = "pop", alpha = 0.5) + 
+  tm_shape(welly_abb) +
+  tm_dots()
+```
+
+With a web map you can use the export options in _RStudio_ to make snapshots of zoomed in portions of your maps for inclusion in a report.
+ 
+## When a web map is no good
+Sometimes a web map is not a viable option. We have a number of static map options available. Before looking at them, I will switch back to static mapping:
+
+```{r}
+tmap_mode("plot")
+```
+
+### Bounding box
+We can limit the extent of a static map with a `bbox` option in the first layer. By default, `tmap` uses the extent of the first layer to set the bounding box. So
+
+```{r}
+tm_shape(welly) + 
+  tm_polygons() +
+  tm_shape(abb) + 
+  tm_dots()
+```
+ 
+makes a map that only extends as far as that first layer. If we want it to extend to the full extent of the `abb` data then we can do
+
+```{r}
+tm_shape(welly, bbox = abb) +
+  tm_polygons() +
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+We'll worry about the missing 'base' layer later in this document!
+
+We can also use a bounding box to zoom in on an area. For example, if we make a bounding box that is from only the Lower Hutt City TA:
+
+```{r}
+lower_hutt <- welly %>%
+  filter(ta_name == "Lower Hutt City")
+tm_shape(welly, bbox = lower_hutt) +
+  tm_polygons() +
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+Again, there is missing basemap, but we'll get to that in a bit.
+
+### Using a bounding box for a detailed local map
+If we want to make a specific bounding box, then we need to figure out the relevant coordinates. For this purpose, it is useful to make a temporary map with a grid.
+
+```{r}
+tm_shape(welly) +
+  tm_polygons() +
+  tm_grid()
+```
+
+Now say we wanted a map showing only the central city. This has an extent from 1,745,000 to 1,750,000 EW and 5,425,000 to 5,430,000 NS. We can use this information to make a bounding box using the `bb` function from `tmaptools`:
+
+```{r}
+cbd <- bb(xlim = c(1745000, 1750000), ylim = c(5425000, 5430000))
+```
+
+and now we can do
+
+```{r}
+tm_shape(welly, bbox = cbd) +
+  tm_polygons() +
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+There are other options in the `bb` function, that allow you to specify it by using `cx` and `cy` (x and y centre coordinates) and `width` and `height`. The units are always the map projection units, which here are metres, so for example another way to make the above map would be
+
+```{r}
+cbd <- bb(cx = 1747500, cy = 5427500, width = 5000, height = 5000)
+tm_shape(welly, bbox = cbd) +
+  tm_polygons() +
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+This approach is a bit easier to recalculate if you want to zoom in a bit closer or zoom out a bit, by just changing the width and height of the bounding box. There is also an `ext` option in the `bb` function to increase or shrink the bounding box relative to the requested width and height.
+
+### But what I really want is a basemap
+Often what we really want a web map for is the basemap.
+
+We can get basemaps in static maps using the `read_osm()` function in `tmaptools` and including it as a `tm_rgb` layer in the map. Here's how we use it. First we grab the map tiles:
+
+```{r}
+basemap <- read_osm(abb)
+```
+
+Then we make a map
+
+```{r}
+tm_shape(basemap) + 
+  tm_rgb() + 
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+If the basemap is a bit blurry, then you can zoom in a bit. You have to be careful about this, as if you increase the zoom too much it will take ages to download (and you won't be able to read the detail anyway). By experiment zoom levels in the range 9 to 11 are about right for the Wellington region, and `read_osm` is smart enough to get it about right most of the time, without you specifying a zoom level. If you'd like the basemap to extend a bit beyond the data you can use the `ext` option (look it up in the help for `read_osm`!).
+ 
+If the colours are distracting, you can wash them out with the saturation option in `tm_rgb`
+
+```{r}
+tm_shape(basemap) + 
+  tm_rgb(saturation = 0.35) + 
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+Other basemaps are available than plain OSM, but they can be unreliable. You can see the options in the `openmap` package help. For example, this is a nice one (if a bit distracting):
+
+```{r}
+basemap <- read_osm(abb, type = "stamen-terrain")
+tm_shape(basemap) + 
+  tm_rgb() + 
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+Remember that if you are overlaying polygons on a basemap you will probably want to set `alpha` (the opacity) to less than 1. So here is a final example.
+
+```{r}
+basemap <- read_osm(lower_hutt)
+tm_shape(basemap) +
+  tm_rgb(saturation = 0.3) +
+  tm_shape(welly) + 
+  tm_polygons(col = "pop", palette = "viridis", alpha = 0.5) +
+  tm_shape(abb) + 
+  tm_dots() +
+  tm_layout(legend.outside = TRUE)
+```
+
+No really... here's a final little extra. The `cbd` bounding box might be something we want to use in a map like this. Unfortunately a `bb` object is not able to be used directly to specify the limits of a web map. We have to convert it to a simple features object with a known projection. Here's how we can do that.
+
+```{r}
+cbd_sf <- cbd %>% 
+  st_as_sfc() %>% 
+  st_set_crs(2193) # this is the known projection in this case
+basemap <- read_osm(cbd_sf, zoom = 13) # I experimented to get best zoom
+tm_shape(basemap) +
+  tm_rgb(saturation = 0.3) +
+  tm_shape(welly) + 
+  tm_polygons(col = "pop", palette = "viridis", alpha = 0.5) +
+  tm_shape(abb) + 
+  tm_dots() +
+  tm_layout(legend.outside = TRUE)
+```
+
+
