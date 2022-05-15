@@ -3,7 +3,7 @@
 Some of these are pretty short; some of the later ones may also be helpful if you are confused about how to install packages or make simple maps with `tmap`.
 
 ### Before you start
-+ [Getting to the slides, and how they work...](https://southosullivan.com/geog315/video/week-02-lecture-01/geog315-03-2022-starting-r-01.mp4){class:vidlink} 1m18s
++ [Getting to the slides, and how they work...](https://southosullivan.com/geog315/video/week-02-lecture-01/geog315-03-2022-starting-r-01.mp4) 1m18s
 
 ### Introducing _R_ and _RStudio_
 + [Overview of lecture](https://southosullivan.com/geog315/video/week-02-lecture-01/geog315-03-2022-starting-r-02.mp4) 1m21s
