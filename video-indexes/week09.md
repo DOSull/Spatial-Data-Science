@@ -6,7 +6,7 @@
 + [Explore the data](https://southosullivan.com/geog315/video/week-09-lecture-01/intro-to-mini-projects-4.m4v) (5:16 min) *it's due in 4 weeks this year, not 5 per a comment in the video!
 + [Do it!](https://southosullivan.com/geog315/video/week-09-lecture-01/intro-to-mini-projects-5.m4v) (6:46 min)
 
-Since the above was recorded in 2021, here's a [quick video](4:19 min) (https://southosullivan.com/geog315/video/week-09-lecture-01/addendum-2022-01.mp4) confirming the relevancy in 2022.
+Since the above was recorded in 2021, here's a [quick video](https://southosullivan.com/geog315/video/week-09-lecture-01/addendum-2022-01.mp4) (4:19 min) confirming the relevancy in 2022.
 
 ### Project topics
 + [Overview](https://southosullivan.com/geog315/video/week-09-lecture-01/intro-to-mini-projects-6.m4v) (1:09 min)
