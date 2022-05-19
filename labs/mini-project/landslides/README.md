@@ -9,6 +9,7 @@ Two project-specific datasets are provided
 
 + [Landslides data](landslides.gpkg?raw=true) captured as polygons which provides some indication of landslide severity (big landslides are more severe...)
 + [Study area](study-area.gpkg?raw=true) an area appropriate for restricting the analysis
++ [GNS 250K geology](waitotara-geology-GNS-250K.gpkg?raw=true) which may be useful. This was obtained from their Web Feature Server at [maps.gns.cri.nz/geology/wfs](https://maps.gns.cri.nz/geology/wfs) details of which can be found [here](https://maps.gns.cri.nz/).
 
 You will also want supplementary datasets some of them [here](../aotearoa-new-zealand-physical-geography-data.md). Others may be accessible locally through the university, and you should ask me for more information on this if necessary.
 
