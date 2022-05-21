@@ -7,7 +7,7 @@ output:
     thumbnails: true
     gallery: false
     embed_fonts: true
-    self_contained: false
+    self_contained: true
     # toc_depth: 3
     css: "extra.css" # to override the sidebar width
 editor_options: 
@@ -107,8 +107,8 @@ plot(layers)
 
 ```{r warning=FALSE}
 tm_shape(layers) + 
-  tm_raster(title = names(layers)) +
-  tm_layout(legend.position = c("left", "top")) +
+  tm_raster() + #title = names(layers)) # this fix no longer needed
+  tm_layout(legend.position = c("RIGHT", "BOTTOM")) +
   tm_facets(free.scales = TRUE) # different scales on each layer
 ```
 
@@ -234,8 +234,8 @@ We can't easily map the zones, because there are a large number of unique values
 Once we have zones we can perform a `zonal` calculation, which will calculate the result of applying a function across all the raster cells in each zone. We may need to change the NA values in the input raster layer to zeros (or some other defined value) so that any missing NA values in a zone don't prevent calculation of a result for the zone they are in.
 
 ```{r}
+relief[is.na(relief)] <- 0
 zonal_relief <- relief %>%
-  replace_na(0) %>% 
   zonal(welly_zones, fun = mean, as.raster = TRUE) %>%
   mask(relief) ## 
 ```
@@ -253,7 +253,6 @@ In many situations, it is more appropriate to output the results from zonal calc
 
 ```{r}
 zonal_relief_table <- relief %>%
-  replace_na(0) %>% 
   zonal(welly_zones, fun = mean)
 welly_relief <- welly %>%
   merge(zonal_relief_table)
@@ -332,5 +331,5 @@ To convert vector data to a raster we convert first to `SpatVector` then to rast
 plants %>% as("SpatVector") %>% 
   rasterize(dem) %>%
   tm_shape() + 
-  tm_raster(col = "dem", palette = "Greys")
+  tm_raster(palette = "Reds")
 ```
