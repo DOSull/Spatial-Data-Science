@@ -19,7 +19,7 @@ If you want the whole country in one, then a convenient download has been provid
 It's conceivable that you'd want higher resolution if you are doing any of the [Wellington house prices](homes), [landslides](landslides) or [_tradescantia_](tradescantia) projects (for the latter only if you are doing it for a regional extent). Here are useful options:
 
 + [Wellington region 15m DEM](https://koordinates.com/layer/3743-16-wellington-15m-dem-nzsosdem-v10/)
-+ An [8m resolution DEM](../datasets/waitotara-8m.tif?raw=true) local to the landslide study area.
++ An [8m resolution DEM](datasets/waitotara-8m.tif?raw=true) local to the landslide study area.
 
 Or there are North and South Island datasets at 25m resolution close to 1GB each:
 
