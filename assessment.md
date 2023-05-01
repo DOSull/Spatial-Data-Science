@@ -17,7 +17,7 @@ All assignments must be handed in by their due dates. Non-submission  by the req
 
 Computer crash or similar excuses are not acceptable. Save your material and make sure you have something to submit by the due date.
 
-If you cannot complete an assignment or sit a test or examination, refer to [Aegrotats](https://www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat "About aegrotats")
+If you cannot complete an assignment, refer to [Aegrotats](https://www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat "About aegrotats")
 
 ## Course learning objectives
 1. Appreciate and describe the scope, limitations and challenges of geospatial methods in real world applications;
