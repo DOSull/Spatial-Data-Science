@@ -32,7 +32,7 @@ If you have particular difficulties with labs and are working remotely then appo
 The primary mode of communication for course announcements will be [Blackboard](https://www.wgtn.ac.nz/students/tools-and-help/nuku "VUW Nuku"), so please ensure that your contact details there are up to date and are regularly checked (note that Nuku defaults to your myvuw email address&mdash;change it to an address you check regularly). Nuku is also where you will find any video recordings made in class, assignment dropboxes for submission of assignments and information about your grades. What I am saying is: **check in regularly on Nuku!**
 
 ### This website
-All other course information (links to lecture slides, lab materials, additional video content, readings) will be posted to this website (the one you are looking at right now) at [dosull.github.io/Geog315](https://dosull.github.io/Geog315). You will likely find the [schedule](schedule.md "Course chedule") and [labs](labs.md "Lab materials") areas particularly useful.
+All other course information (links to lecture slides, lab materials, additional video content, readings) will be posted to this website (the one you are looking at right now) at [dosull.github.io/Geog315](https://dosull.github.io/Geog315). You will likely find the [schedule](schedule.html "Course schedule") and [labs](labs.html "Lab materials") areas particularly useful.
 
 ### People
 
