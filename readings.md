@@ -4,7 +4,7 @@ Details of any additional readings or useful links will be provided on this page
 ## General
 There is no course text, but this one:
 
-  + Brunsdon C and L Comber. 2018. [*An Introduction to R for Spatial Analysis and Mapping*](https://au.sagepub.com/en-gb/oce/an-introduction-to-r-for-spatial-analysis-and-mapping/book241031 "Brunsdon and Comber Introduction to R book") 2nd edn. Sage, London.
+  + Brunsdon C and L Comber. 2018. [*An Introduction to R for Spatial Analysis and Mapping*](https://au.sagepub.com/en-gb/oce/an-introduction-to-r-for-spatial-analysis-and-mapping/book258267 "Brunsdon and Comber Introduction to R book") 2nd edn. Sage, London.
 
 might be useful for anyone who wants to extend their *R* knowledge. Also very useful (and freely available online) is
 
