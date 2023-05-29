@@ -15,32 +15,30 @@ Withdrawal dates | See [Course additions and  withdrawals](https://www.wgtn.ac.n
 **Sessions** are in **TTR 104** from **3:10-5:00** on **Tuesdays** and **Fridays**.
 
 ## Delivery
-This class is offered face-to-face in a mixed lecture-lab format. Recorded materials covering course content are available to view _before_ class meeting times. About half the class meeting time each week (mostly the Tuesday session) will be dedicated to review, questions, and discussion of the course materials (these will _not_ be two hour lectures!). **You will get more out of the course if you review the materials before class, and come along with questions or points of clarification.**
+This class is offered face-to-face in a mixed lecture-lab format. Recorded materials covering course content are available to view _before_ class meeting times. About half the class meeting time each week (mostly the Tuesday session) will be dedicated to review, questions, and discussion of the course materials (these will _not_ be two hour lectures!). **You will get more out of the course by reviewing the materials before class, and then coming along with questions or points of clarification.**
 
 Most of the time in the Friday sessions will be dedicated to practical matters: demonstrations of software, assistance for students working on assignments, and so on.
 
-Software required to complete lab sessions is free to download and install so that you can complete labs while working remotely. Details of getting set up for this will be available in the first week of semester, and we will spend time on this in the first session.
-
-Supplemental video tutorial material is available to assist students in completion of labs remotely.
+Software required to complete lab sessions is free to download and install so that you can complete labs on any computer. Details of getting set up for this will be available in the first week of semester, and we will spend time on this in the first session.Supplemental video tutorial material is also available to assist students in completion of labs.
 
 In addition a [course Slack workspace](https://vuwgeog315t22023.slack.com/ "Course slack workspace") (an invitation to join will be sent out early in semester) provides rapid responses to technical questions about lab materials. **Please use it, and also answer others' questions if you can!.**
 
-If you have particular difficulties with labs and are working remotely then appointments to meet either in person or by Zoom can be made from [this link](https://calendly.com/dosullivan "Schedule an office hours appointment").
+If you have particular difficulties with labs and are unable to make it to class sessions then appointments to meet either in person or by Zoom can be made from [this link](https://calendly.com/dosullivan "Schedule an office hours appointment").
 
 ## Communications
 ### Nuku
-The primary mode of communication for course announcements will be [Nuku](https://nuku.wgtn.ac.nz/courses/11944 "VUW Nuku"), so please ensure that your contact details there are up to date and are regularly checked (note that Nuku defaults to your myvuw email address&mdash;change it to an address you check regularly). Nuku is also where you will find any video recordings made in class, assignment dropboxes for submission of assignments, and information about your grades. What I am saying is: **check in regularly on Nuku!**
+The primary mode of communication for course announcements will be [Nuku](https://nuku.wgtn.ac.nz/courses/11944 "VUW Nuku"), so please ensure that your contact details there are up to date and are regularly checked (note that Nuku defaults to your **myvuw** email address&mdash;if necessary, change it to an address you check regularly). Nuku is also where you will find any video recordings made in class, assignment dropboxes for submission of assignments, and information about your grades. What I am saying is: **check in regularly on Nuku!**
 
 ### This website
-All other course information (lecture slides and video, lab materials, additional video content, readings) will be posted to this website (the one you are looking at right now) at [dosull.github.io/Geog315](https://dosull.github.io/Geog315). You will likely find the [schedule](schedule.html "Course schedule") and [labs](labs.html "Lab materials") areas particularly useful.
+All other course information (lecture slides and video, lab materials, additional video content, readings) will be posted to this website (the one you are looking at right now) at [dosull.github.io/Geog315](https://dosull.github.io/Geog315 "Geog315 website"). You will find the [schedule](schedule.html "Course schedule") and [labs](labs.html "Lab materials") areas particularly useful.
 
 ### People
 
-| Lecturer/coordinator | GIS technician |
-| -- | -- |
-| Prof. [David O'Sullivan](mailto:david.osullivan@vuw.ac.nz "email David") | TBA |
-| **Office** CO227 | **Office** TBA |
-| **Office hours** [by appointment](https://calendly.com/dosullivan "Schedule an office hours appointment") | **Office hours** TBA |
+Lecturer/coordinator | GIS technician |
+-- | -- |
+Prof. [David O'Sullivan](mailto:david.osullivan@vuw.ac.nz "email David") | TBA |
+**Office** CO227 | **Office** TBA |
+**Office hours** [by appointment](https://calendly.com/dosullivan "Schedule an office hours appointment") | **Office hours** TBA |
 
 ### Slack channel
 A link to join the [course slack workspace](https://vuwgeog315t22023.slack.com/ "Course slack workspace") will be sent via Nuku. This should be used for technical support questions on the labs, and is probably the quickest way to get help if you are stuck.

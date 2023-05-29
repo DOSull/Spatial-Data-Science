@@ -1,13 +1,15 @@
 # Schedule
-Relevant materials (lecture slides, lab scripts and datasets) are linked below, as they become available. Lab instructions should not be considered current for 2021 unless they are clearly marked **Geog 315 T2 2023** at the top.
+Relevant materials (lecture slides, lab materials, and video) are linked below. Some of these may be updated as semester unfolds, although even the material available from the start of semester is likely to be useful. However, *lab instructions should not be considered current for 2023* **unless** they are clearly marked **Geog 315 T2 2023** at the top.
 
-We will aim to follow the schedule below. The lecture materials are all available ahead of time, including video either newly recorded or recorded on the same topic over the last 3 years. The idea is that you review these ahead of time and come to the Tuesday session of the course when the material will be quickly reviewed to resolve confusions, ask and answer questions, and discuss related issues. You can do this in the Friday session also, but in that session the emphasis will be on helping people out with the lab assignments and any associated technical challenges.
+We will aim to follow the schedule below. The lecture materials are all available ahead of time, including video either newly recorded or recorded on the same topic during the last 3 years. 
+
+The idea is that you review these ahead of time and come to the Tuesday session of the course when the material will be reviewed to resolve confusions, ask and answer questions, and discuss related issues. You can do this in the Friday session also, but in that session greater emphasis will put on helping people out with the lab assignments and any associated technical challenges.
 
 **Bolded lab materials** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit. 
 
 Week | Content | Video | Lab material<br>(mostly Friday)
---: | -- | -- | -- |:--
-{{site.data.dates.w1}} | Course introduction <br> [Open science, open source, and doing GIS in code](slides/open/) | [Links](video-indexes/week01.html) | [Lab session to get software setup](labs/01-lab.html){:target="_blank"} | [Links](video-indexes/week01.html)
+--: | -- | -- | -- 
+{{site.data.dates.w1}} | Course introduction <br> [Open science, open source, and doing GIS in code](slides/open/) | [Links](video-indexes/week01.html) | [Lab session to get software setup](labs/01-lab.html){:target="_blank"} 
 {{site.data.dates.w2}} | [Starting *R*](slides/starting-r/) <br> [The myth of tidy data](slides/tidy-data/) | [Links](video-indexes/week02.html) | [Introducing *R* and *RStudio*](labs/02-lab.html){:target="_blank"}
 {{site.data.dates.w3}} | [Choropleth map design](slides/choropleth-maps/) <br> [Data wrangling](slides/data-wrangling/) | [Links](video-indexes/week03.html) | [**Making maps**](labs/03-lab.html){:target="_blank"} (15%) due {{ site.data.dates.assignment_1 }}
 {{site.data.dates.w4}} | [Handling tables](slides/table-joins-and-dissolves/) <br> [Spatial data wrangling](slides/spatial-data-wrangling/) <br> [Spatial data wrangling (continued)](slides/spatial-data-wrangling/) | [Links](video-indexes/week04.html) | [**Spatial data manipulation**](labs/04-lab.html){:target="_blank"} (15%) due {{ site.data.dates.assignment_2 }}
