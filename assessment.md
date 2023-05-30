@@ -3,19 +3,19 @@ This course is 100% internally assessed.  Assessment is based on the various ite
 
 Assessment item | Credit | Due date | Learning objectives
  -- | -- | -- | --
-[Making maps](labs/03-lab.html "lab materials"){:target="_blank"} | 15% | {{ site.data.dates.assignment_1 }} | 2
-[Spatial data manipulation](labs/04-lab.html "lab materials"){:target="_blank"} | 15% | {{ site.data.dates.assignment_2 }} | 2 4
+[Making maps](labs/03-lab.html "lab materials") | 15% | {{ site.data.dates.assignment_1 }} | 2
+[Spatial data manipulation](labs/04-lab.html "lab materials") | 15% | {{ site.data.dates.assignment_2 }} | 2 4
 [Geographic cluster analysis](labs/05-lab.html "lab materials") | 20% | {{ site.data.dates.assignment_3 }} | 6
 [Building a simple statistical model](labs/07-lab.html "lab materials") | 20% | {{ site.data.dates.assignment_4 }} | 6
 [Mini-project](labs/mini-project "More on the mini-project") | 30% | {{ site.data.dates.assignment_5 }} | 1 3 5 6 7
 
 ## Submission
-Assessments are to be submitted electronically via dropbox on [Blackboard](https://blackboard.vuw.ac.nz "VUW Blackboard"). I will aim to return coursework within 3 weeks. Extensions should be requested from the SGEES administration office. If you anticipate problems come and talk to me.
+Assessments are to be submitted electronically via dropbox on [Nuku](https://nuku.wgtn.ac.nz/courses/11944 "Course nuku page"){:target="_blank"}. I will aim to return coursework within 3 weeks. Extensions should be requested from the SGEES administration office. If you anticipate problems come and talk to me.
 
 ### Late submission penalties
 All assignments must be handed in by their due dates. Non-submission  by the required date will result in a 5% penalty  off your grade for that assignment for each day or part thereof that the coursework is late.  No submissions will be accepted more than 5 days after the due date.
 
-Computer crash or similar excuses are not acceptable. Save your material and make sure you have something to submit by the due date.
+Computer crash or similar excuses are not acceptable. Save your work regularly and make sure you have something to submit by the due date.
 
 If you cannot complete an assignment, refer to [Aegrotats](https://www.victoria.ac.nz/home/study/exams-and-assessments/aegrotat "About aegrotats")
 
