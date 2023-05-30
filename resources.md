@@ -1,6 +1,6 @@
 # Resources
 The links below may be useful if you need help, advice, or any other more general information about relevant university policies and resources.
-+ [Academic Integrity and Plagiarism](https://www.wgtn.ac.nz/home/study/plagiarism)
++ [Academic Integrity and Plagiarism](https://www.wgtn.ac.nz/students/study/exams/academic-integrity)
 + [Aegrotats](https://www.wgtn.ac.nz/home/study/exams-and-assessments/aegrotat)
 + [Academic Progress](https://www.wgtn.ac.nz/home/study/academic-progress) (including restrictions and non-engagement)
 + [Dates and deadlines](https://www.wgtn.ac.nz/home/study/dates)
