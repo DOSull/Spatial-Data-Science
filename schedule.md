@@ -6,7 +6,7 @@ We will aim to follow the schedule below. The lecture materials are all availabl
 The idea is that you review these ahead of time and come to the Tuesday session of the course when the material will be reviewed to resolve confusions, ask and answer questions, and discuss related issues. You can do this in the Friday session also, but in that session greater emphasis will put on helping people out with the lab assignments and any associated technical challenges.
 
 **Bolded lab materials** have an associated assignment that must be submitted and contributes the indicated percentage of the course credit. 
-s
+
 Week | Content | Video | Lab material<br>(mostly Friday)
 --: | -- | -- | -- 
 {{site.data.dates.w1}} | Course introduction <br> [Open science, open source, and doing GIS in code](slides/open/) | [Links](video-indexes/week01.html) | [Lab session to get software setup](labs/01-lab.html) 
