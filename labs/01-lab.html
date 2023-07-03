@@ -9,12 +9,11 @@
     
     <title>Installing the course software</title>
 
-        <script src="01-lab_files/header-attrs-2.11/header-attrs.js"></script>
+        <script src="01-lab_files/header-attrs-2.23/header-attrs.js"></script>
         <script src="01-lab_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="01-lab_files/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
         <script src="01-lab_files/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-        <script src="01-lab_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
         <script src="01-lab_files/navigation-1.1/tabsets.js"></script>
         <link href="01-lab_files/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
         <script src="01-lab_files/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
@@ -117,26 +116,40 @@
         <div class="Sidebar">
           <div class="SidebarItems" id="toc">
             <ul>
-            <li><a href="#installing-the-course-software">Installing the course software</a>
+            <li><a href="#installing-the-course-software"
+            id="toc-installing-the-course-software">Installing the
+            course software</a>
             <ul>
-            <li><a href="#if-you-already-have-r-and-rstudio">If you already have <em>R</em> and <em>RStudio</em></a></li>
+            <li><a href="#if-you-already-have-r-and-rstudio"
+            id="toc-if-you-already-have-r-and-rstudio">If you already
+            have <em>R</em> and <em>RStudio</em></a></li>
             </ul></li>
-            <li><a href="#software-setup-for-this-course">Software setup for this course</a>
+            <li><a href="#software-setup-for-this-course"
+            id="toc-software-setup-for-this-course">Software setup for
+            this course</a>
             <ul>
-            <li><a href="#download-and-install-r">Download and install <em>R</em></a>
+            <li><a href="#download-and-install-r"
+            id="toc-download-and-install-r">Download and install
+            <em>R</em></a>
             <ul>
-            <li><a href="#windows-and-mac">Windows and Mac</a></li>
-            <li><a href="#linux">Linux</a></li>
+            <li><a href="#windows-and-mac"
+            id="toc-windows-and-mac">Windows and Mac</a></li>
+            <li><a href="#linux" id="toc-linux">Linux</a></li>
             </ul></li>
-            <li><a href="#download-and-install-rstudio">Download and install <em>RStudio</em></a>
+            <li><a href="#download-and-install-rstudio"
+            id="toc-download-and-install-rstudio">Download and install
+            <em>RStudio</em></a>
             <ul>
-            <li><a href="#windows-and-mac-1">Windows and Mac</a></li>
-            <li><a href="#linux-1">Linux</a></li>
+            <li><a href="#windows-and-mac-1"
+            id="toc-windows-and-mac-1">Windows and Mac</a></li>
+            <li><a href="#linux-1" id="toc-linux-1">Linux</a></li>
             </ul></li>
-            <li><a href="#helpful-videos">Helpful videos</a></li>
             </ul></li>
-            <li><a href="#installing-r-packages">Installing <em>R</em> packages</a></li>
-            <li><a href="#installing-qgis">Installing <em>QGIS</em></a></li>
+            <li><a href="#installing-r-packages"
+            id="toc-installing-r-packages">Installing <em>R</em>
+            packages</a></li>
+            <li><a href="#installing-qgis"
+            id="toc-installing-qgis">Installing <em>QGIS</em></a></li>
             </ul>
           </div>
           <div data-position="sidebar:post-end" class="InjectedComponents"><div class="dark-theme-toggler"><div class="toggle "><div class="toggle-track"><div class="toggle-track-check"><img  src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div> <div class="toggle-track-x"><img src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div></div> <div class="toggle-thumb"></div></div> <input type="checkbox" aria-label="Switch between Dark and Default theme" class="toggler-screen-reader-only"></div></div>
@@ -147,7 +160,7 @@
    
         
       <h1 class="title">Installing the course software</h1>
-         <h1 class="subtitle">Geog 315 T1 2022</h1>
+         <h1 class="subtitle">Geog 315 T2 2023</h1>
    
       <p class="authors">
               
@@ -159,56 +172,101 @@
 <div class="page-content has-page-title">
 <div id="installing-the-course-software" class="section level1">
 <h1>Installing the course software</h1>
-<p>This class focuses on learning how to do ‘geospatial stuff’ in <em>R</em> and <em>RStudio</em>, so an important task if you want to work on materials on your own computer is to install these pieces of software. These instructions help you through the process.</p>
+<p>This class focuses on learning how to do ‘geospatial stuff’ in
+<em>R</em> and <em>RStudio</em>, so an important task if you want to
+work on materials on your own computer is to install these pieces of
+software. These instructions help you through the process.</p>
 <p>The steps involved are</p>
 <ul>
-<li><a href="#software-setup-for-this-course">Download and install <em>R</em> and <em>RStudio</em></a></li>
+<li><a href="#software-setup-for-this-course">Download and install
+<em>R</em> and <em>RStudio</em></a></li>
 </ul>
 <p>followed optionally by</p>
 <ul>
-<li><a href="#installing-qgis">Download and install <em>QGIS</em></a> <!-- + [Download and install _ArcGIS_](software-03-installing-ArcGIS.md) --></li>
+<li><a href="#installing-qgis">Download and install <em>QGIS</em></a>
+<!-- + [Download and install _ArcGIS_](software-03-installing-ArcGIS.md) --></li>
 </ul>
 <div id="if-you-already-have-r-and-rstudio" class="section level2">
 <h2>If you already have <em>R</em> and <em>RStudio</em></h2>
-<p>Well… that’s great! However, you need to check that your version is the same or close to the one we are using in the labs, which is 4.1.2. To check type</p>
+<p>Well… that’s great! However, you need to check that your version is
+the same or close to the one I am using, which is 4.3.1. To check
+type</p>
 <pre><code>&gt; version</code></pre>
-<p>in the <em>RStudio</em> command console. If your version is very different then you may need to upgrade. You will probably be fine if you have a version that starts 4.1. If not unfortunately you’ll have to upgrade the existing version. With luck, you can do this and retain all your existing packages using the <code>installr</code> package:</p>
+<p>in the <em>RStudio</em> command console. If your version is very
+different then you may need to upgrade. You will probably be fine if you
+have a version that starts 4.3. or even 4.2. If not unfortunately you’ll
+have to upgrade the existing version. With luck, you can do this and
+retain all your existing packages using the <code>installr</code>
+package:</p>
 <pre><code>install.packages(&quot;installr&quot;) 
 library(installr)</code></pre>
-<p>and following the instructions. If that for some reason fails… unfortunately then you will need to uninstall <em>R</em> and <em>RStudio</em> and perform a fresh installation.</p>
-<p>Once you have an installation, go to <a href="#installing-r-packages">Install <em>R</em> packages</a> below.</p>
+<p>and following the instructions. If that for some reason fails…
+unfortunately then you will need to uninstall <em>R</em> and
+<em>RStudio</em> and perform a fresh installation.</p>
+<p>Once you have an installation, go to <a
+href="#installing-r-packages">Install <em>R</em> packages</a> below.</p>
 </div>
 </div>
 <div id="software-setup-for-this-course" class="section level1">
 <h1>Software setup for this course</h1>
-<p>Note that with recent changes in operating systems (the release of Windows 11) and new Apple hardware, it is difficult to provide directions for all users that are guaranteed to be right. If you are uncertain what you should do, get in touch on the <a href="https://vuwgeog315t12022.slack.com" title="course slack workspace">course slack</a> and ask and we will do all we can to help.</p>
-<p>The sooner you get set up the better, so please do this in the first week of trimester.</p>
+<p>Note that with relatively recent changes in operating systems (the
+release of Windows 11) and new Apple hardware, it is difficult to
+provide directions for all users that are guaranteed to be right. If you
+are uncertain what you should do, get in touch on the <a
+href="https://vuwgeog315t22023.slack.com"
+title="course slack workspace">course slack</a> and ask and I will do
+all I can to help.</p>
+<p>The sooner you get set up the better, so please do this in the first
+week of trimester.</p>
 <div id="download-and-install-r" class="section level2">
 <h2>Download and install <em>R</em></h2>
 <div id="windows-and-mac" class="section level3">
 <h3>Windows and Mac</h3>
-<p>You’ll find what you need at the <a href="https://www.r-project.org/">R project website</a>, but it’s not exactly friendly, so to get you where you need a bit more quickly, here are the direct links for the Windows and Mac machine installers:</p>
+<p>You’ll find what you need at the <a
+href="https://www.r-project.org/">R project website</a>, but it’s not
+exactly friendly, so to get you where you need a bit more quickly, here
+are the direct links for the Windows and Mac machine installers:</p>
 <ul>
-<li><a href="https://cran.stat.auckland.ac.nz/bin/windows/base/R-4.1.3-win.exe">Windows <em>R</em> 4.1</a> [right-click and save to download]</li>
-<li>The Mac situation is complicated by recent changes in MacOS and the Mac ARM architecture which some may have on newer machines. Best bet is to find the version you need on <a href="https://cran.stat.auckland.ac.nz/bin/macosx/">this page</a>.</li>
+<li><a
+href="https://cran.stat.auckland.ac.nz/bin/windows/base/R-4.3.1-win.exe">Windows
+<em>R</em> 4.3</a> [right-click and save to download]</li>
+<li>The Mac situation is complicated by recent changes in MacOS and the
+Mac ARM architecture which some may have on newer machines. Best bet is
+to find the version you need on <a
+href="https://cran.stat.auckland.ac.nz/bin/macosx/">this page</a>.</li>
 </ul>
-<p>Click on the appropriate link to download the version for your operating system.</p>
-<p>From there things should be fairly straightforward. Installing <em>R</em> is no different than installing any other piece of software.</p>
+<p>Click on the appropriate link to download the version for your
+operating system.</p>
+<p>From there things should be fairly straightforward. Installing
+<em>R</em> is no different than installing any other piece of
+software.</p>
 </div>
 <div id="linux" class="section level3">
 <h3>Linux</h3>
-<p>If you are on Linux, I’ll assume you know what you are doing when it comes to installing software. The key thing to know is that you need to find <strong>version 4.1.2</strong> of <em>R</em>. It’s best not to install using your OS package management as you will end up with a relatively old version that way.</p>
-<p>If you don’t know what you are doing, then just ask for help!</p>
+<p>If you are on Linux, I’ll assume you know what you are doing when it
+comes to installing software. The key thing to know is that you need to
+find <strong>version 4.3.1</strong> of <em>R</em>. It’s best not to
+install using your OS package management as you will end up with a
+relatively old version that way.</p>
+<p>If you are unsure what you are doing, then just ask for help!</p>
 </div>
 </div>
 <div id="download-and-install-rstudio" class="section level2">
 <h2>Download and install <em>RStudio</em></h2>
 <div id="windows-and-mac-1" class="section level3">
 <h3>Windows and Mac</h3>
-<p>Once you have installed <em>R</em> you can install <em>RStudio</em>. You’ll find the download you need on <a href="https://rstudio.com/products/rstudio/download/#download">this page</a>. I would recommend the ‘installer’ download for your operating system. For Windows and Mac these are</p>
+<p>Once you have installed <em>R</em> you can install <em>RStudio</em>.
+You’ll find the download you need on <a
+href="https://posit.co/download/rstudio-desktop/#download">this
+page</a>. I would recommend the ‘installer’ download for your operating
+system. For Windows and Mac these are</p>
 <ul>
-<li><a href="https://download1.rstudio.org/desktop/windows/RStudio-2021.09.2-382.exe">Windows <em>RStudio</em></a></li>
-<li><a href="https://download1.rstudio.org/desktop/macos/RStudio-2021.09.2-382.dmg">Mac <em>RStudio</em></a></li>
+<li><a
+href="https://download1.rstudio.org/electron/windows/RStudio-2023.06.0-421.exe">Windows
+<em>RStudio</em></a></li>
+<li><a
+href="https://download1.rstudio.org/electron/macos/RStudio-2023.06.0-421.dmg">Mac
+<em>RStudio</em></a></li>
 </ul>
 <p>Again from there it should be reasonably straightforward.</p>
 </div>
@@ -217,44 +275,68 @@ library(installr)</code></pre>
 <p>Installers are at the same page linked above.</p>
 </div>
 </div>
-<div id="helpful-videos" class="section level2">
-<h2>Helpful videos</h2>
-<p>Since I am on Linux and not Windows or Mac, it doesn’t make much sense for me to show you how to do this by recording a video on my machine. Helpful videos if you feel you need them are linked below. ‘How to install R’ videos are not exactly exciting, so I haven’t watched these all the way through, but they seem helpful and up to date.</p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=rHZ9MGWxU5I&amp;t=0s">This one is for Windows users</a></li>
-<li><a href="https://www.youtube.com/watch?v=AEebOXiMyyI">This one is for Mac users</a></li>
-</ul>
-</div>
 </div>
 <div id="installing-r-packages" class="section level1">
 <h1>Installing <em>R</em> packages</h1>
-<p>Base <em>R</em> comes with lots of tools for doing standard statistical analysis. We’re using <em>R</em> for doing specifically geospatial work, so we need a bunch of additional packages, specific to those tasks, and you therefore will need to install them. We are also going to be using the <em>R</em> <code>tidyverse</code> (more on that as the course unfolds) and that requires us to install a bunch of packages also.</p>
-<p>For more about packages, see <a href="https://southosullivan.com/geog315/video/week-02-lecture-01/geog315-03-2022-starting-r-11.mp4">this video</a>.</p>
-<p>Fortunately, as shown in the video, adding packages to <em>R</em> in <em>RStudio</em> is straightforward:</p>
+<p>Base <em>R</em> comes with lots of tools for doing standard
+statistical analysis. We’re using <em>R</em> for doing specifically
+geospatial work, so we need a bunch of additional packages tailored to
+those tasks, and you therefore will need to install them. We are also
+going to be using the <em>R</em> <code>tidyverse</code> (more on that as
+the course unfolds) and that requires us to install a bunch of packages
+also.</p>
+<p>For more about packages, see <a
+href="https://southosullivan.com/geog315/video/week-02-lecture-01/geog315-03-2022-starting-r-11.mp4">this
+video</a>.</p>
+<p>Fortunately, as shown in the video, adding packages to <em>R</em> in
+<em>RStudio</em> is straightforward:</p>
 <ul>
 <li>Start up <em>RStudio</em></li>
-<li>Navigate to the <strong>Tools - Install Packages…</strong> menu option.</li>
-<li>In the dialogue box start typing the name of a package you want to install (<code>sf</code> is a good one to start with)</li>
-<li>Make sure the <strong>Install dependencies</strong> checkbox is ticked</li>
+<li>Navigate to the <strong>Tools - Install Packages…</strong> menu
+option.</li>
+<li>In the dialogue box start typing the name of a package you want to
+install (<code>sf</code> is a good one to start with)</li>
+<li>Make sure the <strong>Install dependencies</strong> checkbox is
+ticked</li>
 <li>Click <strong>Install</strong></li>
 </ul>
-<p><em>R</em> will then do its thing, which will usually include a load of indecipherable text scrolling up the screen in the console. When it is done the <code>&gt;</code> prompt will return in the console.</p>
-<p>You can check that the package installed successfully by typing</p>
+<p><em>R</em> will then do its thing, which will usually include some
+indecipherable text scrolling up the screen in the console. When it is
+done the <code>&gt;</code> prompt will return in the console.</p>
+<p>You can check that the package you requested installed successfully
+by typing (in this case)</p>
 <pre><code>library(sf)</code></pre>
-<p>at the prompt. You should get a message confirming that the package has loaded.</p>
-<p>You should go through the above steps for <code>tmap</code>, <code>tmaptools</code>, and <code>tidyverse</code>. The last one in particular may take a while to complete, because it is a ‘meta-package’ of many different packages.</p>
-<p>If you have a problem with any of this, then just ask for help. The spatial packages <code>sf</code> and <code>tmap</code> sometimes cause problems on Windows in particular, that might some expert guidance to resolve.</p>
+<p>at the prompt. You should get a message confirming that the package
+has loaded.</p>
+<p>You should go through the above steps for <code>sf</code>,
+<code>tmap</code>, <code>tmaptools</code>, and <code>tidyverse</code>
+(you can do them all at once, if you like). The last one in particular
+may take a while to complete, because it is a ‘meta-package’ of many
+different packages.</p>
+<p>If you have a problem with any of this, then just ask for help. The
+spatial packages <code>sf</code> and <code>tmap</code> sometimes cause
+problems, that might require some expert guidance to resolve.</p>
 </div>
 <div id="installing-qgis" class="section level1">
 <h1>Installing <em>QGIS</em></h1>
-<p><em>QGIS</em> is a fully functional and completely free alternative to <em>ArcGIS</em>. It’s not required for this course (nor is <em>ArcGIS</em>), but it can be very useful and is unencumbered by the complicated licensing of <em>Arc</em>, so you might find it a worthwhile thing to install.</p>
-<p>This is straightforward to do, although figuring out exactly which version you want is not necessarily so obvious. All the links are here:</p>
-<p><a href="https://www.qgis.org/en/site/forusers/download.html">www.qgis.org/en/site/forusers/download.html</a></p>
+<p><em>QGIS</em> is a fully functional and completely free alternative
+to <em>ArcGIS</em>. It’s not required for this course (nor is
+<em>ArcGIS</em>), but it can be very useful and is unencumbered by the
+complicated licensing of <em>Arc</em>, so you might find it a worthwhile
+thing to install.</p>
+<p>This is straightforward to do, although figuring out exactly which
+version you want is not necessarily so obvious. All the links are
+here:</p>
+<p><a
+href="https://www.qgis.org/en/site/forusers/download.html">www.qgis.org/en/site/forusers/download.html</a></p>
 <p>The specific downloads I recommend are</p>
 <ul>
-<li><strong>Windows</strong> <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.22.3-1.msi">QGIS-OSGeo4W-3.22.3-1.msi</a></li>
-<li><strong>Mac</strong> <a href="https://qgis.org/downloads/macos/qgis-macos-pr.dmg">qgis-macos-pr.dmg</a></li>
-<li><strong>Linux</strong> There are several flavours here and the links are clearly indicated on the downloads page.</li>
+<li><strong>Windows</strong> <a
+href="https://qgis.org/downloads/QGIS-OSGeo4W-3.32.0-1.msi">QGIS-OSGeo4W-3.32.0-1.msi</a></li>
+<li><strong>Mac</strong> <a
+href="https://qgis.org/downloads/macos/qgis-macos-pr.dmg">qgis-macos-pr.dmg</a></li>
+<li><strong>Linux</strong> There are several possible flavours here and
+the links are clearly indicated on the downloads page.</li>
 </ul>
 </div>
 </div>
