@@ -9,12 +9,11 @@
     
     <title>Spatial data wrangling in R</title>
 
-        <script src="04-lab_files/header-attrs-2.11/header-attrs.js"></script>
+        <script src="04-lab_files/header-attrs-2.23/header-attrs.js"></script>
         <script src="04-lab_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="04-lab_files/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
         <script src="04-lab_files/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-        <script src="04-lab_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
         <script src="04-lab_files/navigation-1.1/tabsets.js"></script>
         <link href="04-lab_files/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
         <script src="04-lab_files/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
@@ -117,70 +116,76 @@
         <div class="Sidebar">
           <div class="SidebarItems" id="toc">
             <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#introducing-the-data">Introducing the data</a></li>
-            <li><a href="#map-projections">Map projections</a>
+            <li><a href="#overview" id="toc-overview">Overview</a></li>
+            <li><a href="#introducing-the-data"
+            id="toc-introducing-the-data">Introducing the data</a></li>
+            <li><a href="#map-projections" id="toc-map-projections">Map
+            projections</a>
             <ul>
-            <li><a href="#epsg-codes">EPSG codes</a></li>
-            <li><a href="#wkt-projection-information">WKT projection information</a></li>
-            <li><a href="#useful-resources-on-epsg-codes-and-wkt-codes">Useful resources on EPSG codes and WKT codes</a></li>
-            <li><a href="#unmatched-map-projections">Unmatched map projections…</a></li>
-            <li><a href="#changing-the-crs-by-reprojecting">Changing the CRS by reprojecting</a></li>
-            <li><a href="#question-1"><strong>Question 1</strong></a>
-            <ul>
-            <li><a href="#explain-to-the-best-of-your-ability-what-is-happening-when-you-use-the-command-sa2_2193---sa2-st_transformst_crsabb_2193-with-specific-reference-to-how-the-projection-to-be-used-in-the-transformation-is-specified-that-is-the-st_crsabb_2193-part.-15">Explain to the best of your ability what is happening when you use the command <code>sa2_2193 &lt;- sa2 %&gt;% st_transform(st_crs(abb_2193))</code> with specific reference to how the projection to be used in the transformation is specified, that is the <code>st_crs(abb_2193)</code> part. (15%)</a></li>
+            <li><a href="#epsg-codes" id="toc-epsg-codes">EPSG
+            codes</a></li>
+            <li><a href="#wkt-projection-information"
+            id="toc-wkt-projection-information">WKT projection
+            information</a></li>
+            <li><a href="#useful-resources-on-epsg-codes-and-wkt-codes"
+            id="toc-useful-resources-on-epsg-codes-and-wkt-codes">Useful
+            resources on EPSG codes and WKT codes</a></li>
+            <li><a href="#unmatched-map-projections"
+            id="toc-unmatched-map-projections">Unmatched map
+            projections…</a></li>
+            <li><a href="#changing-the-crs-by-reprojecting"
+            id="toc-changing-the-crs-by-reprojecting">Changing the CRS
+            by reprojecting</a></li>
+            <li><a href="#question-1"
+            id="toc-question-1"><strong>Question 1</strong></a></li>
+            <li><a href="#that-st_intersects-operation-again"
+            id="toc-that-st_intersects-operation-again">That
+            <code>st_intersects</code> operation again</a></li>
             </ul></li>
-            <li><a href="#that-st_intersects-operation-again">That <code>st_intersects</code> operation again</a></li>
-            </ul></li>
-            <li><a href="#filtering-data-by-attribute-and-spatially">Filtering data by attribute and spatially</a>
+            <li><a href="#filtering-data-by-attribute-and-spatially"
+            id="toc-filtering-data-by-attribute-and-spatially">Filtering
+            data by attribute and spatially</a>
             <ul>
-            <li><a href="#narrowing-things-down-with-a-filter-operation">Narrowing things down with a <code>filter</code> operation</a></li>
-            <li><a href="#question-2"><strong>Question 2</strong></a>
-            <ul>
-            <li><a href="#change-the-filter-code-above-to-extend-the-selection-to-all-the-territorial-authorities-mentioned-and-show-you-succeeded-by-including-a-simple-map-illustrating-your-answer.-20">Change the <code>filter</code> code above to extend the selection to all the territorial authorities mentioned, and show you succeeded <em>by including a simple map illustrating your answer</em>. (20%)</a></li>
+            <li><a href="#narrowing-things-down-with-a-filter-operation"
+            id="toc-narrowing-things-down-with-a-filter-operation">Narrowing
+            things down with a <code>filter</code> operation</a></li>
+            <li><a href="#question-2"
+            id="toc-question-2"><strong>Question 2</strong></a></li>
+            <li><a href="#a-spatial-filter" id="toc-a-spatial-filter">A
+            spatial filter</a></li>
+            <li><a href="#question-3"
+            id="toc-question-3"><strong>Question 3</strong></a></li>
+            <li><a href="#question-4"
+            id="toc-question-4"><strong>Question 4</strong></a></li>
+            <li><a href="#saving-our-work"
+            id="toc-saving-our-work">Saving our work</a></li>
             </ul></li>
-            <li><a href="#a-spatial-filter">A spatial filter</a></li>
-            <li><a href="#question-3"><strong>Question 3</strong></a>
+            <li><a href="#counting-points-in-polygons"
+            id="toc-counting-points-in-polygons">Counting points in
+            polygons</a>
             <ul>
-            <li><a href="#this-spatial-filter-selects-only-statistical-areas-that-include-at-least-one-airbnb-listing.-looking-at-a-map-of-the-selected-areas-why-might-it-not-be-a-be-very-satisfactory-way-to-narrow-down-a-study-20">This spatial filter selects only statistical areas that include at least one Airbnb listing. Looking at a map of the selected areas, why might it not be a be very satisfactory way to narrow down a study? (20%)</a></li>
+            <li><a href="#question-5"
+            id="toc-question-5"><strong>Question 5</strong></a></li>
+            <li><a href="#saving-our-work-1"
+            id="toc-saving-our-work-1">Saving our work</a></li>
             </ul></li>
-            <li><a href="#question-4"><strong>Question 4</strong></a>
+            <li><a href="#assignment-2---spatial-data-manipulation"
+            id="toc-assignment-2---spatial-data-manipulation">Assignment
+            2 - Spatial data manipulation</a>
             <ul>
-            <li><a href="#in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-and-also-to-map-the-results-15">In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull, and also to map the results) (15%)</a></li>
-            </ul></li>
-            <li><a href="#saving-our-work">Saving our work</a></li>
-            </ul></li>
-            <li><a href="#counting-points-in-polygons">Counting points in polygons</a>
-            <ul>
-            <li><a href="#question-5"><strong>Question 5</strong></a>
-            <ul>
-            <li><a href="#finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each.-include-a-short-write-up-explaining-what-the-map-shows.-30">Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each. Include a short write up explaining what the map shows. (30%)</a></li>
-            </ul></li>
-            <li><a href="#saving-our-work-1">Saving our work</a></li>
-            </ul></li>
-            <li><a href="#assignment-2---spatial-data-manipulation">Assignment 2 - Spatial data manipulation</a>
-            <ul>
-            <li><a href="#question-1-1"><span><strong>Question 1</strong></span></a>
-            <ul>
-            <li><a href="#explain-to-the-best-of-your-ability-what-is-happening-when-you-use-the-command-sa2_2193---sa2-st_transformst_crsabb_2193-with-specific-reference-to-how-the-projection-to-be-used-in-the-transformation-is-specified-that-is-the-st_crsabb_2193-part.-15-1">Explain to the best of your ability what is happening when you use the command <code>sa2_2193 &lt;- sa2 %&gt;% st_transform(st_crs(abb_2193))</code> with specific reference to how the projection to be used in the transformation is specified, that is the <code>st_crs(abb_2193)</code> part. (15%)</a></li>
-            </ul></li>
-            <li><a href="#question-2-1"><span><strong>Question 2</strong></span></a>
-            <ul>
-            <li><a href="#change-the-filter-code-above-to-extend-the-selection-to-all-the-territorial-authorities-mentioned-and-show-you-succeeded-by-including-a-simple-map-illustrating-your-answer.-20-1">Change the <code>filter</code> code above to extend the selection to all the territorial authorities mentioned, and show you succeeded <em>by including a simple map illustrating your answer</em>. (20%)</a></li>
-            </ul></li>
-            <li><a href="#question-3-1"><span><strong>Question 3</strong></span></a>
-            <ul>
-            <li><a href="#this-spatial-filter-selects-only-statistical-areas-that-include-at-least-one-airbnb-listing.-looking-at-a-map-of-the-selected-areas-why-might-it-not-be-a-very-satisfactory-way-to-narrow-down-the-study-area-20">This spatial filter selects only statistical areas that include at least one Airbnb listing. Looking at a map of the selected areas, why might it not be a very satisfactory way to narrow down the study area? (20%)</a></li>
-            </ul></li>
-            <li><a href="#question-4-1"><span><strong>Question 4</strong></span></a>
-            <ul>
-            <li><a href="#in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-and-also-to-map-the-results-15-1">In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull, and also to map the results) (15%)</a></li>
-            </ul></li>
-            <li><a href="#question-5-1"><span><strong>Question 5</strong></span></a>
-            <ul>
-            <li><a href="#finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each.-include-a-short-write-up-explaining-what-the-map-shows.-30-1">Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each. Include a short write up explaining what the map shows. (30%)</a></li>
-            </ul></li>
-            <li><a href="#submission-instructions">Submission instructions</a></li>
+            <li><a href="#question-1-1"
+            id="toc-question-1-1"><strong>Question 1</strong></a></li>
+            <li><a href="#question-2-1"
+            id="toc-question-2-1"><strong>Question 2</strong></a></li>
+            <li><a href="#question-3-1"
+            id="toc-question-3-1"><strong>Question 3</strong></a></li>
+            <li><a href="#question-4-1"
+            id="toc-question-4-1"><strong>Question 4</strong></a></li>
+            <li><a href="#question-5-1"
+            id="toc-question-5-1"><strong>Question 5</strong></a></li>
+            <li><a href="#submission-instructions"
+            id="toc-submission-instructions">Submission
+            instructions</a></li>
             </ul></li>
             </ul>
           </div>
@@ -192,7 +197,7 @@
    
         
       <h1 class="title">Spatial data wrangling in R</h1>
-         <h1 class="subtitle">Geog 315 T1 2022</h1>
+         <h1 class="subtitle">Geog 315 T2 2023</h1>
    
       <p class="authors">
               
@@ -204,13 +209,26 @@
 <div class="page-content has-page-title">
 <div id="overview" class="section level1">
 <h1>Overview</h1>
-<p>Last week you (hopefully) got accustomed to basic map-making using the <code>sf</code> and <code>tmap</code>.</p>
-<p>This week we focus more on typical kinds of data wrangling that are required <em>before</em> you can even think about making useful maps.</p>
-<p>This time there are questions through the different sections so that you have a better idea when you should be paying close attention, and also so that it is easier to see where you can get credit for completing tasks and answering questions.</p>
-<p>You can look at the <a href="#assignment-2---spatial-data-manipulation">last section</a>, to get an overview of the assignment requirements.</p>
-<p>Again, the instructions this week are in several parts which you can access from the navigation to the left.</p>
-<p>There is an additional page of material on much more of the spatial data manipulation operations available in <code>sf</code> <a href="https://dosull.github.io/Geog315/slides/spatial-data-wrangling">here</a>, but this is not required to complete the assignment. It is covered in detail in class.</p>
-<p>Make sure you have the libraries we need loaded (I won’t show the results of running these commands any more, since you should be used to them by now.)</p>
+<p>Last week you (hopefully) got accustomed to basic map-making using
+the <code>sf</code> and <code>tmap</code> packages.</p>
+<p>This week we focus more on typical kinds of data wrangling that are
+required <em>before</em> you can even think about making useful
+maps.</p>
+<p>This time there are questions through the different sections so that
+you have a better idea when you should be paying close attention, and
+also so that it is easier to see where you can get credit for completing
+tasks and answering questions.</p>
+<p>You can look at the <a
+href="#assignment-2---spatial-data-manipulation">last section</a>, to
+get an overview of the assignment requirements.</p>
+<p>There is an additional page of material on much more of the spatial
+data manipulation operations available in <code>sf</code> <a
+href="https://dosull.github.io/Geog315/slides/spatial-data-wrangling">here</a>,
+but this is not required to complete the assignment. It is covered in
+detail in class.</p>
+<p>Make sure you have the libraries we need loaded (I won’t show the
+results of running these commands any more, since you should be used to
+them by now.)</p>
 <pre class="r"><code>library(sf)
 library(tmap)
 library(dplyr)</code></pre>
@@ -219,16 +237,28 @@ library(dplyr)</code></pre>
 <h1>Introducing the data</h1>
 <p>The data this week can be downloaded below</p>
 <ul>
-<li><a href="sa2.gpkg?raw=true"><code>sa2.gpkg</code></a> Census geographies at Statistical Area 2 level for Aotearoa New Zealand</li>
-<li><a href="abb.gpkg?raw=true"><code>abb.gpkg</code></a> data obtained from the <a href="http://insideairbnb.com/new-zealand">Inside AirBnB</a> website</li>
+<li><a href="sa2.gpkg?raw=true"><code>sa2.gpkg</code></a> Census
+geographies at Statistical Area 2 level for Aotearoa New Zealand</li>
+<li><a href="abb.gpkg?raw=true"><code>abb.gpkg</code></a> data obtained
+from the <a href="http://insideairbnb.com/new-zealand">Inside AirBnB</a>
+website</li>
 </ul>
-<p>Our aim in this assignment is to organise these data so we can potentially do some analysis (in a later lab) on the relationships (if any) between Airbnb rentals in neighbourhoods and the socioeconomic and demographic character of those neighbourhoods. This week we focus on organising the Airbnb side of things.</p>
-<p>Save the data to a folder <strong>on the H: drive</strong> of your lab computer (or anywhere accessible on your own computer) and as usual make a new project to work in.</p>
-<p>You can use the usual approaches to exploring these data, so you know what is going on, although I recommend that rather than mapping them (they are quite large and may cause issues on some machines) you simply look at the table structure using the <code>as_tibble</code> function.</p>
+<p>Our aim in this assignment is to organise these data so we can
+potentially do some analysis (in a later lab) on the relationships (if
+any) between Airbnb rentals in neighbourhoods and the socioeconomic and
+demographic character of those neighbourhoods. This week we focus on
+organising the Airbnb side of things.</p>
+<p>Save the data to a folder on your computer and as usual make a new
+project to work in.</p>
+<p>You can use the usual approaches to exploring these data, so you know
+what is going on, although I recommend that rather than mapping them
+(they are quite large and may cause issues on some machines) you simply
+look at the table structure using the <code>as_tibble</code>
+function.</p>
 <p>To get started you’ll need to read in the data</p>
 <pre class="r"><code>abb &lt;- st_read(&quot;abb.gpkg&quot;)</code></pre>
 <pre><code>## Reading layer `abb&#39; from data source 
-##   `/home/osullid3/Documents/teaching/Geog315/_labs/week-04/abb.gpkg&#39; 
+##   `/Users/osullid3/Documents/teaching/Geog315/_labs/week-04/abb.gpkg&#39; 
 ##   using driver `GPKG&#39;
 ## Simple feature collection with 2125 features and 16 fields
 ## Geometry type: POINT
@@ -237,7 +267,7 @@ library(dplyr)</code></pre>
 ## Geodetic CRS:  WGS 84</code></pre>
 <pre class="r"><code>sa2 &lt;- st_read(&quot;sa2.gpkg&quot;)</code></pre>
 <pre><code>## Reading layer `sa2&#39; from data source 
-##   `/home/osullid3/Documents/teaching/Geog315/_labs/week-04/sa2.gpkg&#39; 
+##   `/Users/osullid3/Documents/teaching/Geog315/_labs/week-04/sa2.gpkg&#39; 
 ##   using driver `GPKG&#39;
 ## Simple feature collection with 2155 features and 4 fields
 ## Geometry type: MULTIPOLYGON
@@ -247,30 +277,56 @@ library(dplyr)</code></pre>
 </div>
 <div id="map-projections" class="section level1">
 <h1>Map projections</h1>
-<p>As we might hope the <code>sf</code> package provides the ability to project spatial datasets, so that they can be properly aligned with one another for processing purposes, and so that reliable measurements of distances and areas in meaningful units (like metres) can be made.</p>
-<p>We can’t get into too many details in this class, since projections are a very large topic, but we can at least get a feel for how they work in this environment.</p>
-<p><code>sf</code> makes use of standard ways of specifying projections, namely <em>WKT</em> (well-known text) formatted information, or <em>EPSG codes</em>. These are also used in <em>ArcGIS</em> (well hidden from users) and <em>QGIS</em> (less well hidden!). In <em>R</em> they are right out in the open. This can be a bit intimidating, but has some advantages when it comes to quickly projecting and reprojecting data, as we often need to do early in a project.</p>
+<p>As we might hope the <code>sf</code> package provides the ability to
+project spatial datasets, so that they can be properly aligned with one
+another for processing purposes, and so that reliable measurements of
+distances and areas in meaningful units (like metres) can be made.</p>
+<p>We can’t get into too many details in this class, since projections
+are a very large topic, but we can at least get a feel for how they work
+in this environment.</p>
+<p><code>sf</code> makes use of standard ways of specifying projections,
+namely <em>WKT</em> (well-known text) formatted information, or <em>EPSG
+codes</em>. These are also used in <em>ArcGIS</em> (well hidden from
+users) and <em>QGIS</em> (less well hidden!). In <em>R</em> they are
+right out in the open. This can be a bit intimidating, but has some
+advantages when it comes to quickly projecting and reprojecting data, as
+we often need to do early in a project.</p>
 <div id="epsg-codes" class="section level2">
 <h2>EPSG codes</h2>
-<p>EPSG codes are the easier of the two options to get a handle on. These are numeric codes that correspond with specific projections. For example</p>
+<p>EPSG codes are the easier of the two options to get a handle on.
+These are numeric codes that correspond with specific projections. For
+example</p>
 <ul>
 <li><strong>New Zealand Transverse Mercator</strong> (NZTM) is 2193</li>
-<li><strong>New Zealand Map Grid</strong> (NZMG, which preceded NZTM) is 27200</li>
-<li>Plain <strong>latitude longitude</strong> coordinates (which you might get from a GPS) are 4326</li>
-<li><strong>Web Mercator</strong> (the basis of most web maps until recently) is 3857</li>
+<li><strong>New Zealand Map Grid</strong> (NZMG, which preceded NZTM) is
+27200</li>
+<li>Plain <strong>latitude longitude</strong> coordinates (which you
+might get from a GPS) are 4326</li>
+<li><strong>Web Mercator</strong> (the basis of most web maps until
+recently) is 3857</li>
 </ul>
-<p>The numbers are meaningless, they are just reference numbers, but they are all you need to know for some basic transformations of spatial data. Geospatial software is aware of the codes and knows how to deal with them.</p>
-<p>If a dataset is in a standard projection system, it will probably have an EPSG code, and this is the most convenient format in which to examine the projection information. You can see the EPSG information about a particular dataset by using <code>st_crs()</code> and inspecting the <code>$epsg</code> property:</p>
+<p>The numbers are meaningless, they are just reference numbers, but
+they are all you need to know for some basic transformations of spatial
+data. Geospatial software is aware of the codes and knows how to deal
+with them.</p>
+<p>If a dataset is in a standard projection system, it will probably
+have an EPSG code, and this is the most convenient format in which to
+examine the projection information. You can see the EPSG information
+about a particular dataset by using <code>st_crs()</code> and inspecting
+the <code>$epsg</code> property:</p>
 <pre class="r"><code>st_crs(abb)$epsg</code></pre>
 <pre><code>## [1] 4326</code></pre>
-<p>This tells us that the <code>abb</code> dataset is in plain lat lon coordinates.</p>
+<p>This tells us that the <code>abb</code> dataset is in plain lat lon
+coordinates.</p>
 <pre class="r"><code>st_crs(sa2)$epsg</code></pre>
 <pre><code>## [1] 3857</code></pre>
-<p>This tells us that these data are (for some reason) in the Web pseudo-Mercator projection.</p>
+<p>This tells us that these data are (for some reason) in the Web
+pseudo-Mercator projection.</p>
 </div>
 <div id="wkt-projection-information" class="section level2">
 <h2>WKT projection information</h2>
-<p>We can find out more about the projection using <code>st_crs()</code>:</p>
+<p>We can find out more about the projection using
+<code>st_crs()</code>:</p>
 <pre class="r"><code>st_crs(sa2)</code></pre>
 <pre><code>## Coordinate Reference System:
 ##   User input: WGS 84 / Pseudo-Mercator 
@@ -284,6 +340,7 @@ library(dplyr)</code></pre>
 ##             MEMBER[&quot;World Geodetic System 1984 (G1150)&quot;],
 ##             MEMBER[&quot;World Geodetic System 1984 (G1674)&quot;],
 ##             MEMBER[&quot;World Geodetic System 1984 (G1762)&quot;],
+##             MEMBER[&quot;World Geodetic System 1984 (G2139)&quot;],
 ##             ELLIPSOID[&quot;WGS 84&quot;,6378137,298.257223563,
 ##                 LENGTHUNIT[&quot;metre&quot;,1]],
 ##             ENSEMBLEACCURACY[2.0]],
@@ -317,60 +374,107 @@ library(dplyr)</code></pre>
 ##         AREA[&quot;World between 85.06°S and 85.06°N.&quot;],
 ##         BBOX[-85.06,-180,85.06,180]],
 ##     ID[&quot;EPSG&quot;,3857]]</code></pre>
-<p>This is the <em>WKT</em> information for the projection, which is much more verbose, and (supposedly!) more human readable. If you get deep in the weeds of dealing with mismatched coordinate reference systems then you may find yourself dealing with this kind of thing a lot, but for now, it’s just good to know that this information exists.</p>
+<p>This is the <em>WKT</em> information for the projection, which is
+much more verbose, and (supposedly!) more human readable. If you get
+deep in the weeds of dealing with mismatched coordinate reference
+systems then you may find yourself dealing with this kind of thing a
+lot, but for now, it’s just good to know that this information
+exists.</p>
 </div>
-<div id="useful-resources-on-epsg-codes-and-wkt-codes" class="section level2">
+<div id="useful-resources-on-epsg-codes-and-wkt-codes"
+class="section level2">
 <h2>Useful resources on EPSG codes and WKT codes</h2>
-<p>For more information on EPSG codes and WKT codes, you may find the resources below helpful:</p>
+<p>For more information on EPSG codes and WKT codes, you may find the
+resources below helpful:</p>
 <ul>
-<li><a href="https://epsg.io">epsg.io</a> from MapTiler has details and information about EPSG codes</li>
-<li><a href="https://projectionwizard.org">Projection Wizard</a> can suggest suitable projections conforming with various properties for specified areas of Earth’s surface</li>
+<li><a href="https://epsg.io">epsg.io</a> from MapTiler has details and
+information about EPSG codes</li>
+<li><a href="https://projectionwizard.org">Projection Wizard</a> can
+suggest suitable projections conforming with various properties for
+specified areas of Earth’s surface</li>
 </ul>
 </div>
 <div id="unmatched-map-projections" class="section level2">
 <h2>Unmatched map projections…</h2>
-<p>… are a problem even, if it seems like they aren’t</p>
-<p>To get a feel for the issue we are up against, try mapping these two datasets on top of one another.</p>
+<p>… are a problem even when it seems like they aren’t</p>
+<p>To get a feel for the issue we are up against, try mapping these two
+datasets on top of one another.</p>
 <pre class="r"><code>tm_shape(sa2) +
   tm_polygons() +
   tm_shape(abb) +
   tm_dots()</code></pre>
 <p><img src="04-lab_files/figure-html/unnamed-chunk-6-1.png" width="768" /></p>
-<p>Well… that didn’t go well. Because the Chatham Islands are in the data we have problems with the ‘dateline’ at longitude 180, and how various coordinate systems deal with that.</p>
-<p>We can restrict the map to a <em>bounding box</em> for the Airbnb listings like this, which might help</p>
+<p>Well… that didn’t go well. Because the Chatham Islands are in the
+data we have problems with the ‘dateline’ at longitude 180, and how
+various coordinate systems deal with that.</p>
+<p>We can restrict the map to a <em>bounding box</em> for the Airbnb
+listings like this, which might help</p>
 <pre class="r"><code>tm_shape(sa2, bbox = st_bbox(abb)) +
   tm_polygons() +
   tm_shape(abb) +
   tm_dots()</code></pre>
 <p><img src="04-lab_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
-<p>So what’s the problem? <code>tmap</code> seems to cope completely fine with the two layers in different projections. This is pretty common in many geospatial tools today. They will happily layer differently projected data on top of one another. This is great, until … it’s not. Eventually we are going to want to whittle things down to just the tracts where there are listings and start doing things like checking where listings locations and tracts intersect. We might do this kind of thing, for example (try it) to find out which tracts intersect with which listings:</p>
+<p>So what’s the problem? <code>tmap</code> seems to cope completely
+fine with the two layers in different projections. This is pretty common
+in many geospatial tools today. They will happily layer differently
+projected data on top of one another. This is great, until … it’s not.
+Eventually we are going to want to whittle things down to just the
+tracts where there are listings and start doing things like checking
+where listings locations and tracts intersect. We might do this kind of
+thing, for example (try it) to find out which tracts intersect with
+which listings:</p>
 <pre class="r"><code>st_intersects(sa2, abb)</code></pre>
-<p>That will produce an error. Look closely and you will see that the key phrase is <code>st_crs(x) == st_crs(y) is not TRUE</code> which is <em>R</em>’s not-very-friendly way of telling us that the two projections are not matched.</p>
+<p>That will produce an error. Look closely and you will see that the
+key phrase is <code>st_crs(x) == st_crs(y) is not TRUE</code> which is
+<em>R</em>’s not-very-friendly way of telling us that the two
+projections are not matched.</p>
 <p>Fortunately we can fix that…</p>
 </div>
 <div id="changing-the-crs-by-reprojecting" class="section level2">
 <h2>Changing the CRS by reprojecting</h2>
-<p>OK. So, this should make it clear that an important spatial data wrangling task is <strong>to get all the data you are working with into the same coordinate reference</strong> and not only that, but to <strong>choose a projection appropriate to the location of interest that uses sensible distance units</strong>, such as metres (and not loopy ones like feet or degrees).</p>
-<p>Note that if all we wanted to do was make a single map, reprojection wouldn’t <em>necessarily</em> be required, we could do temporary workarounds like the bounding box trick above, and get by. But for serious further work it makes sense to reproject all the datasets we are dealing with so that they match.</p>
-<p>Since we are working with Aotearoa New Zealand data, it makes sense to use New Zealand Transverse Mercator (NZTM), which has EPSG code 2193. Reprojection of these data is simple using the <code>st_transform</code> function. To project to a known code, do this</p>
+<p>OK. So, this should make it clear that an important spatial data
+wrangling task is <strong>to get all the data you are working with into
+the same coordinate reference</strong> and not only that, but to
+<strong>choose a projection appropriate to the location of interest that
+uses sensible distance units</strong>, such as metres (and not loopy
+ones like feet or degrees).</p>
+<p>Note that if all we wanted to do was make a single map, reprojection
+wouldn’t <em>necessarily</em> be required, we could do temporary
+workarounds like the bounding box trick above, and get by. But for
+serious further work it makes sense to reproject all the datasets we are
+dealing with so that they match.</p>
+<p>Since we are working with Aotearoa New Zealand data, it makes sense
+to use New Zealand Transverse Mercator (NZTM), which has EPSG code 2193.
+Reprojection of these data is simple using the <code>st_transform</code>
+function. To project to a known code, do this</p>
 <pre class="r"><code>abb_2193 &lt;- abb %&gt;%
   st_transform(2193)</code></pre>
 <p>And to project to match the projection of another dataset do this</p>
 <pre class="r"><code>sa2_2193 &lt;- sa2 %&gt;%
   st_transform(st_crs(abb_2193))</code></pre>
-<p>You can check the projection information of the datasets again, just to make sure it all worked (results not shown, as they are verbose…)</p>
+<p>You can check the projection information of the datasets again, just
+to make sure it all worked (results not shown, as they are verbose…)</p>
 <pre class="r"><code>st_crs(abb_2193)
 st_crs(sa2_2193)</code></pre>
 </div>
 <div id="question-1" class="section level2">
 <h2><strong>Question 1</strong></h2>
-<div id="explain-to-the-best-of-your-ability-what-is-happening-when-you-use-the-command-sa2_2193---sa2-st_transformst_crsabb_2193-with-specific-reference-to-how-the-projection-to-be-used-in-the-transformation-is-specified-that-is-the-st_crsabb_2193-part.-15" class="section level3">
-<h3>Explain to the best of your ability what is happening when you use the command <code>sa2_2193 &lt;- sa2 %&gt;% st_transform(st_crs(abb_2193))</code> with specific reference to how the projection to be used in the transformation is specified, that is the <code>st_crs(abb_2193)</code> part. (15%)</h3>
+<div
+id="explain-to-the-best-of-your-ability-what-is-happening-when-you-use-the-command-sa2_2193---sa2-st_transformst_crsabb_2193-with-specific-reference-to-how-the-projection-to-be-used-in-the-transformation-is-specified-i.e.-the-st_crsabb_2193-part.-15"
+class="section level4">
+<h4>Explain to the best of your ability what is happening when you use
+the command
+<code>sa2_2193 &lt;- sa2 %&gt;% st_transform(st_crs(abb_2193))</code>
+with specific reference to how the projection to be used in the
+transformation is specified, i.e., the <code>st_crs(abb_2193)</code>
+part. (15%)</h4>
 </div>
 </div>
 <div id="that-st_intersects-operation-again" class="section level2">
 <h2>That <code>st_intersects</code> operation again</h2>
-<p>To check this has fixed the problem, try the <code>st_intersects()</code> operation again, but this time using the reprojected datasets</p>
+<p>To check this has fixed the problem, try the
+<code>st_intersects()</code> operation again, but this time using the
+reprojected datasets</p>
 <pre class="r"><code>st_intersects(sa2_2193, abb_2193)</code></pre>
 <pre><code>## Sparse geometry binary predicate list of length 2155, where the
 ## predicate was `intersects&#39;
@@ -385,25 +489,42 @@ st_crs(sa2_2193)</code></pre>
 ##  8: (empty)
 ##  9: (empty)
 ##  10: (empty)</code></pre>
-<p>For now, don’t worry about the output… the important thing is it worked because the two datasets are now in the same projection. You’ll also find that you can make a sensible map with these new datasets (give it a try) because NZTM has a coordinate system continuous through the dateline.</p>
-<p>So we don’t lose all this good work, we should save the reprojected datasets. We will use geopackage files since these reliably record projection information in a single file format (unlike shapefiles). We will also include some information in the file name about the projection, just so we can keep track of things</p>
-<pre class="r"><code>st_write(abb_2193, &#39;abb-2193.gpkg&#39;, delete_dsn = TRUE)</code></pre>
+<p>For now, don’t worry about the output… the important thing is it
+worked because the two datasets are now in the same projection. You’ll
+also find that you can make a sensible map with these new datasets (give
+it a try) because NZTM has a coordinate system continuous through the
+dateline.</p>
+<p>So we don’t lose all this good work, we should save the reprojected
+datasets. We will use geopackage files since these reliably record
+projection information in a single file format (unlike shapefiles). We
+will also include some information in the file name about the
+projection, just so we can keep track of things</p>
+<pre class="r"><code>abb_2193 %&gt;% 
+  st_write(&#39;abb-2193.gpkg&#39;, delete_dsn = TRUE)</code></pre>
 <pre><code>## Deleting source `abb-2193.gpkg&#39; using driver `GPKG&#39;
 ## Writing layer `abb-2193&#39; to data source `abb-2193.gpkg&#39; using driver `GPKG&#39;
 ## Writing 2125 features with 16 fields and geometry type Point.</code></pre>
-<pre class="r"><code>st_write(sa2_2193, &#39;sa2-2193.gpkg&#39;, delete_dsn = TRUE)</code></pre>
+<pre class="r"><code>sa2_2193 %&gt;%
+  st_write(&#39;sa2-2193.gpkg&#39;, delete_dsn = TRUE)</code></pre>
 <pre><code>## Deleting source `sa2-2193.gpkg&#39; using driver `GPKG&#39;
 ## Writing layer `sa2-2193&#39; to data source `sa2-2193.gpkg&#39; using driver `GPKG&#39;
 ## Writing 2155 features with 4 fields and geometry type Multi Polygon.</code></pre>
-<p>If you need to reload the data at any point you should <strong>use these new files</strong> and not the originals. The new projected coordinates are only made permanent when we write the data out to the file system like this.</p>
+<p>If you need to reload the data at any point you should <strong>use
+these new files</strong> and not the originals. The new projected
+coordinates are only made permanent when we write the data out to the
+file system like this.</p>
 </div>
 </div>
-<div id="filtering-data-by-attribute-and-spatially" class="section level1">
+<div id="filtering-data-by-attribute-and-spatially"
+class="section level1">
 <h1>Filtering data by attribute and spatially</h1>
 <p>There’s a lot to get through in this section.</p>
-<div id="narrowing-things-down-with-a-filter-operation" class="section level2">
+<div id="narrowing-things-down-with-a-filter-operation"
+class="section level2">
 <h2>Narrowing things down with a <code>filter</code> operation</h2>
-<p>The all of Aotearoa census dataset is kind of a pain to work with, so the first thing we should do is ditch a bunch of it with a <code>filter</code> operation. Take a look at the data</p>
+<p>The all of Aotearoa census dataset is kind of a pain to work with, so
+the first thing we should do is ditch a bunch of it with a
+<code>filter</code> operation. Take a look at the data</p>
 <pre class="r"><code>as_tibble(sa2_2193)</code></pre>
 <pre><code>## # A tibble: 2,155 × 5
 ##    sa2_id sa2_name             pop ta_name                                  geom
@@ -418,47 +539,74 @@ st_crs(sa2_2193)</code></pre>
 ##  8 100900 Rangitihi            936 Far North District (((1629318 6117971, 16292…
 ##  9 101000 Oruru-Parapara       846 Far North District (((1642071 6127725, 16418…
 ## 10 101100 Taumarumaru         2193 Far North District (((1649200 6126270, 16491…
-## # … with 2,145 more rows</code></pre>
-<p>Like most statistical reporting systems worldwide, the NZ census is organised into a hierarchy of spatial levels. There are many more than shown here, but you’ll see <code>sa2_id</code> and <code>sa2_name</code> which refer to the ID number and name of these <em>Statistical Area 2</em> units, and <code>ta_name</code> which refers to Territorial Authority names. If you map the data using the <code>ta_name</code> you can see what these look like.</p>
+## # ℹ 2,145 more rows</code></pre>
+<p>Like most statistical reporting systems worldwide, the NZ census is
+organised into a hierarchy of spatial levels. There are many more than
+shown here, but you’ll see <code>sa2_id</code> and <code>sa2_name</code>
+which refer to the ID number and name of these <em>Statistical Area
+2</em> units, and <code>ta_name</code> which refers to Territorial
+Authority names. If you map the data using the <code>ta_name</code> you
+can see what these look like.</p>
 <pre class="r"><code>tm_shape(sa2_2193) +
   tm_fill(col = &quot;ta_name&quot;) +
   tm_layout(legend.outside = TRUE)</code></pre>
-<pre><code>## Warning: Number of levels of the variable &quot;ta_name&quot; is 68, which is
-## larger than max.categories (which is 30), so levels are combined. Set
+<pre><code>## Warning: Number of levels of the variable &quot;ta_name&quot; is 68, which is larger than
+## max.categories (which is 30), so levels are combined. Set
 ## tmap_options(max.categories = 68) in the layer function to show all levels.</code></pre>
 <pre><code>## Some legend labels were too wide. These labels have been resized to 0.57, 0.48, 0.55, 0.56, 0.53, 0.57, 0.55, 0.51. Increase legend.width (argument of tm_layout) to make the legend wider and therefore the labels larger.</code></pre>
 <p><img src="04-lab_files/figure-html/unnamed-chunk-15-1.png" width="768" /></p>
-<p>Not the greatest map but you get the general idea. As always, if you want a closer look, the easiest approach is to switch to <code>tmap_mode("view")</code> and make a zoomable web-map.</p>
+<p>Not the greatest map but you get the general idea. As always, if you
+want a closer look, the easiest approach is to switch to
+<code>tmap_mode("view")</code> and make a zoomable web-map.</p>
 <p><em>Anyhoo</em>…</p>
-<p>For our purposes the important thing about these codes is that we can apply a filter operation to limit things to a specific area of interest. For example</p>
+<p>For our purposes the important thing about these codes is that we can
+apply a filter operation to limit things to a specific area of interest.
+For example</p>
 <pre class="r"><code>sa2_welly &lt;- sa2_2193 %&gt;%
   filter(ta_name == &quot;Wellington City&quot; | ta_name == &quot;Lower Hutt City&quot;)</code></pre>
-<p>This should immediately make dealing with the data at least a little bit easier:</p>
+<p>This should immediately make dealing with the data at least a little
+bit easier:</p>
 <pre class="r"><code>tm_shape(sa2_welly) +
   tm_polygons() +
   tm_shape(abb_2193) +
   tm_dots()</code></pre>
 <p><img src="04-lab_files/figure-html/unnamed-chunk-17-1.png" width="768" /></p>
-<p>It’s still not right, because… well… because the Airbnb listings extend to Upper Hutt, Porirua, and Kapiti Coast also. So…</p>
+<p>It’s still not right, because… well… because the Airbnb listings
+extend to Upper Hutt, Porirua, and Kapiti Coast also. So…</p>
 </div>
 <div id="question-2" class="section level2">
 <h2><strong>Question 2</strong></h2>
-<div id="change-the-filter-code-above-to-extend-the-selection-to-all-the-territorial-authorities-mentioned-and-show-you-succeeded-by-including-a-simple-map-illustrating-your-answer.-20" class="section level3">
-<h3>Change the <code>filter</code> code above to extend the selection to all the territorial authorities mentioned, and show you succeeded <em>by including a simple map illustrating your answer</em>. (20%)</h3>
+<div
+id="change-the-filter-code-above-to-extend-the-selection-to-all-the-territorial-authorities-mentioned-and-show-you-succeeded-by-including-a-simple-map-illustrating-your-answer.-20"
+class="section level4">
+<h4>Change the <code>filter</code> code above to extend the selection to
+all the territorial authorities mentioned, and show you succeeded <em>by
+including a simple map illustrating your answer</em>. (20%)</h4>
 </div>
 </div>
 <div id="a-spatial-filter" class="section level2">
 <h2>A spatial filter</h2>
-<p>We can narrow things down further to focus on statistical areas where there are Airbnb listings, using a <em>spatial filter</em>.</p>
+<p>We can narrow things down further to focus on statistical areas where
+there are Airbnb listings, using a <em>spatial filter</em>.</p>
 <pre class="r"><code>sa2_abb &lt;- sa2_welly %&gt;%
   st_filter(abb_2193)</code></pre>
-<p>Try mapping these two layers (<code>sa2_abb</code> and <code>abb_2193</code>) and then answer the following question.</p>
+<p>Try mapping these two layers (<code>sa2_abb</code> and
+<code>abb_2193</code>) and then answer the following question.</p>
 </div>
 <div id="question-3" class="section level2">
 <h2><strong>Question 3</strong></h2>
-<div id="this-spatial-filter-selects-only-statistical-areas-that-include-at-least-one-airbnb-listing.-looking-at-a-map-of-the-selected-areas-why-might-it-not-be-a-be-very-satisfactory-way-to-narrow-down-a-study-20" class="section level3">
-<h3>This spatial filter selects only statistical areas that include at least one Airbnb listing. Looking at a map of the selected areas, why might it not be a be very satisfactory way to narrow down a study? (20%)</h3>
-<p>It seems clear we need to be a bit cleverer about the selection of areas of interest. This gets us into applying various methods that are considered in more detail in class, and in the <a href="https://dosull.github.io/Geog315/slides/spatial-data-wrangling">associated material here</a>.</p>
+<div
+id="this-spatial-filter-selects-only-statistical-areas-that-include-at-least-one-airbnb-listing.-looking-at-a-map-of-the-selected-areas-why-might-it-not-be-a-be-very-satisfactory-way-to-narrow-down-a-study-20"
+class="section level4">
+<h4>This spatial filter selects only statistical areas that include at
+least one Airbnb listing. Looking at a map of the selected areas, why
+might it not be a be very satisfactory way to narrow down a study?
+(20%)</h4>
+<p>It seems clear we need to be a bit cleverer about the selection of
+areas of interest. This gets us into applying various methods that are
+considered in more detail in class, and in the <a
+href="https://dosull.github.io/Geog315/slides/spatial-data-wrangling">associated
+material here</a>.</p>
 <p>For now here is a possible approach using the convex hull</p>
 <pre class="r"><code>hull &lt;- abb_2193 %&gt;%
   st_union() %&gt;%
@@ -470,13 +618,19 @@ sa2_abb &lt;- sa2_2193 %&gt;%
 </div>
 <div id="question-4" class="section level2">
 <h2><strong>Question 4</strong></h2>
-<div id="in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-and-also-to-map-the-results-15" class="section level3">
-<h3>In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull, and also to map the results) (15%)</h3>
+<div
+id="in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-and-also-to-map-the-results-15"
+class="section level4">
+<h4>In your own words explain what the code above is doing to filter the
+SA2 data to match the study area of Airbnb listings (you’ll find it
+helpful to refer to lecture materials about the convex hull, and also to
+map the results) (15%)</h4>
 </div>
 </div>
 <div id="saving-our-work" class="section level2">
 <h2>Saving our work</h2>
-<p>We’ve made some more progress, so let’s save the data so far to a new file</p>
+<p>We’ve made some more progress, so let’s save the data so far to a new
+file</p>
 <pre class="r"><code>st_write(sa2_abb, &quot;sa2-abb-2193.gpkg&quot;, delete_dsn = TRUE)</code></pre>
 <pre><code>## Deleting source `sa2-abb-2193.gpkg&#39; using driver `GPKG&#39;
 ## Writing layer `sa2-abb-2193&#39; to data source `sa2-abb-2193.gpkg&#39; using driver `GPKG&#39;
@@ -485,8 +639,15 @@ sa2_abb &lt;- sa2_2193 %&gt;%
 </div>
 <div id="counting-points-in-polygons" class="section level1">
 <h1>Counting points in polygons</h1>
-<p>We’ve narrowed the census area down. But there are still a lot of Airbnb listings, and for the analysis we want to do in a later lab, we only need the <em>number</em> of listings in each census area. There are various ways we might get that information. The most reliable is to use one of the <em>spatial predicate</em> functions. This is less scary than it sounds!</p>
-<p>In this case, we want to count how many Airbnb listings are contained in each SA2 polygon. The spatial predicate of interest is therefore <code>st_contains</code>. We run the function like this</p>
+<p>We’ve narrowed the census area down. But there are still a lot of
+Airbnb listings, and for the analysis we want to do in a later lab, we
+only need the <em>number</em> of listings in each census area. There are
+various ways we might get that information. The most reliable is to use
+one of the <em>spatial predicate</em> functions. This is less scary than
+it sounds!</p>
+<p>In this case, we want to count how many Airbnb listings are contained
+in each SA2 polygon. The spatial predicate of interest is therefore
+<code>st_contains</code>. We run the function like this</p>
 <pre class="r"><code>sa2_abb %&gt;% 
   st_contains(abb_2193)</code></pre>
 <pre><code>## Sparse geometry binary predicate list of length 188, where the
@@ -502,7 +663,9 @@ sa2_abb &lt;- sa2_2193 %&gt;%
 ##  8: 1098, 1108, 1122, 1123, 1125, 1126, 1134, 1136, 1138, 1141, ...
 ##  9: 1099, 1100, 1101, 1102, 1114, 1115, 1117, 1118, 1124, 1127, ...
 ##  10: 1195, 1216, 1221, 1224, 1236, 1238, 1254, 1255, 1261, 1262, ...</code></pre>
-<p>This gives us a list of lists where each list is for the corresponding polygon, a list of the Airbnb listings contained by it. To count these, we use the <code>lengths()</code> function</p>
+<p>This gives us a list of lists where each list is for the
+corresponding polygon, a list of the Airbnb listings contained by it. To
+count these, we use the <code>lengths()</code> function</p>
 <pre class="r"><code>sa2_abb %&gt;% 
   st_contains(abb_2193) %&gt;% 
   lengths()</code></pre>
@@ -514,18 +677,26 @@ sa2_abb &lt;- sa2_2193 %&gt;%
 ## [126]  1  8  4  7 21  9 19 16  8 10 15 15 18 26 18  8 14 17 20 44  9 11 30  6 47
 ## [151] 16 44 48 61 21 21 29 11 17  9 62 26 16 15  9 15 24  6 17  6  8 20 24 25  7
 ## [176] 28  6  8 11  4  6 15 28 11 13  1 17 28</code></pre>
-<p>That’s great, but to save this in the SA2 dataframe, we need to assign the result to a variable. The end result is</p>
+<p>That’s great, but to save this in the SA2 dataframe, we need to
+assign the result to a variable. The end result is</p>
 <pre class="r"><code>num_listings &lt;- sa2_abb %&gt;% 
   st_contains(abb_2193) %&gt;% 
   lengths()
 sa2_abb_counts &lt;- sa2_abb %&gt;%
   mutate(n = num_listings)</code></pre>
-<p>There are other possible approaches to this, but this is by far the cleanest. Although it’s two steps, it avoids a lot of confusing merging of tables and so on, which is what can happen if you try to use spatial join approaches.</p>
+<p>There are other possible approaches to this, but this is by far the
+cleanest. Although it’s two steps, it avoids a lot of confusing merging
+of tables and so on, which is what can happen if you try to use spatial
+join approaches.</p>
 <p>So anyway…</p>
 <div id="question-5" class="section level2">
 <h2><strong>Question 5</strong></h2>
-<div id="finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each.-include-a-short-write-up-explaining-what-the-map-shows.-30" class="section level3">
-<h3>Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each. Include a short write up explaining what the map shows. (30%)</h3>
+<div
+id="finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each.-include-a-short-write-up-explaining-what-the-map-shows.-30"
+class="section level4">
+<h4>Finally, make a map of the listings (as points) overlaid on the
+census SA2 areas coloured by the number of listings in each. Include a
+short write up explaining what the map shows. (30%)</h4>
 </div>
 </div>
 <div id="saving-our-work-1" class="section level2">
@@ -538,42 +709,75 @@ sa2_abb_counts &lt;- sa2_abb %&gt;%
 ## Writing 188 features with 5 fields and geometry type Multi Polygon.</code></pre>
 </div>
 </div>
-<div id="assignment-2---spatial-data-manipulation" class="section level1">
+<div id="assignment-2---spatial-data-manipulation"
+class="section level1">
 <h1>Assignment 2 - Spatial data manipulation</h1>
-<p>Here are the questions from the lab all in one place for ease of reference. The links will take you back to the original context where the question was asked.</p>
+<p>Here are the questions from the lab all in one place for ease of
+reference. The links will take you back to the original context where
+the question was asked.</p>
 <div id="question-1-1" class="section level2">
 <h2><a href="#question-1"><strong>Question 1</strong></a></h2>
-<div id="explain-to-the-best-of-your-ability-what-is-happening-when-you-use-the-command-sa2_2193---sa2-st_transformst_crsabb_2193-with-specific-reference-to-how-the-projection-to-be-used-in-the-transformation-is-specified-that-is-the-st_crsabb_2193-part.-15-1" class="section level3">
-<h3>Explain to the best of your ability what is happening when you use the command <code>sa2_2193 &lt;- sa2 %&gt;% st_transform(st_crs(abb_2193))</code> with specific reference to how the projection to be used in the transformation is specified, that is the <code>st_crs(abb_2193)</code> part. (15%)</h3>
+<div
+id="explain-to-the-best-of-your-ability-what-is-happening-when-you-use-the-command-sa2_2193---sa2-st_transformst_crsabb_2193-with-specific-reference-to-how-the-projection-to-be-used-in-the-transformation-is-specified-that-is-the-st_crsabb_2193-part.-15"
+class="section level4">
+<h4>Explain to the best of your ability what is happening when you use
+the command
+<code>sa2_2193 &lt;- sa2 %&gt;% st_transform(st_crs(abb_2193))</code>
+with specific reference to how the projection to be used in the
+transformation is specified, that is the <code>st_crs(abb_2193)</code>
+part. (15%)</h4>
 </div>
 </div>
 <div id="question-2-1" class="section level2">
 <h2><a href="#question-2"><strong>Question 2</strong></a></h2>
-<div id="change-the-filter-code-above-to-extend-the-selection-to-all-the-territorial-authorities-mentioned-and-show-you-succeeded-by-including-a-simple-map-illustrating-your-answer.-20-1" class="section level3">
-<h3>Change the <code>filter</code> code above to extend the selection to all the territorial authorities mentioned, and show you succeeded <em>by including a simple map illustrating your answer</em>. (20%)</h3>
+<div
+id="change-the-filter-code-above-to-extend-the-selection-to-all-the-territorial-authorities-mentioned-and-show-you-succeeded-by-including-a-simple-map-illustrating-your-answer.-20-1"
+class="section level4">
+<h4>Change the <code>filter</code> code above to extend the selection to
+all the territorial authorities mentioned, and show you succeeded <em>by
+including a simple map illustrating your answer</em>. (20%)</h4>
 </div>
 </div>
 <div id="question-3-1" class="section level2">
 <h2><a href="#question-3"><strong>Question 3</strong></a></h2>
-<div id="this-spatial-filter-selects-only-statistical-areas-that-include-at-least-one-airbnb-listing.-looking-at-a-map-of-the-selected-areas-why-might-it-not-be-a-very-satisfactory-way-to-narrow-down-the-study-area-20" class="section level3">
-<h3>This spatial filter selects only statistical areas that include at least one Airbnb listing. Looking at a map of the selected areas, why might it not be a very satisfactory way to narrow down the study area? (20%)</h3>
+<div
+id="this-spatial-filter-selects-only-statistical-areas-that-include-at-least-one-airbnb-listing.-looking-at-a-map-of-the-selected-areas-why-might-it-not-be-a-very-satisfactory-way-to-narrow-down-the-study-area-20"
+class="section level4">
+<h4>This spatial filter selects only statistical areas that include at
+least one Airbnb listing. Looking at a map of the selected areas, why
+might it not be a very satisfactory way to narrow down the study area?
+(20%)</h4>
 </div>
 </div>
 <div id="question-4-1" class="section level2">
 <h2><a href="#question-4"><strong>Question 4</strong></a></h2>
-<div id="in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-and-also-to-map-the-results-15-1" class="section level3">
-<h3>In your own words explain what the code above is doing to filter the SA2 data to match the study area of Airbnb listings (you’ll find it helpful to refer to lecture materials about the convex hull, and also to map the results) (15%)</h3>
+<div
+id="in-your-own-words-explain-what-the-code-above-is-doing-to-filter-the-sa2-data-to-match-the-study-area-of-airbnb-listings-youll-find-it-helpful-to-refer-to-lecture-materials-about-the-convex-hull-and-also-to-map-the-results-15-1"
+class="section level4">
+<h4>In your own words explain what the code above is doing to filter the
+SA2 data to match the study area of Airbnb listings (you’ll find it
+helpful to refer to lecture materials about the convex hull, and also to
+map the results) (15%)</h4>
 </div>
 </div>
 <div id="question-5-1" class="section level2">
 <h2><a href="#question-5"><strong>Question 5</strong></a></h2>
-<div id="finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each.-include-a-short-write-up-explaining-what-the-map-shows.-30-1" class="section level3">
-<h3>Finally, make a map of the listings (as points) overlaid on the census SA2 areas coloured by the number of listings in each. Include a short write up explaining what the map shows. (30%)</h3>
+<div
+id="finally-make-a-map-of-the-listings-as-points-overlaid-on-the-census-sa2-areas-coloured-by-the-number-of-listings-in-each.-include-a-short-write-up-explaining-what-the-map-shows.-30-1"
+class="section level4">
+<h4>Finally, make a map of the listings (as points) overlaid on the
+census SA2 areas coloured by the number of listings in each. Include a
+short write up explaining what the map shows. (30%)</h4>
 </div>
 </div>
 <div id="submission-instructions" class="section level2">
 <h2>Submission instructions</h2>
-<p>Prepare a PDF document that includes answers to the above questions. There are are a couple of maps requested, but the whole document should only need to be 2-3 pages (maximum). Submit the PDF file to the dropbox provided on Blackboard. The due date is as indicated on the course schedule page. Remember that you can easily export maps to PNG format images for inclusion in a Word document from <em>RStudio</em>.</p>
+<p>Prepare a PDF document that includes answers to the above questions.
+There are are a couple of maps requested, but the whole document should
+only need to be 2-3 pages (maximum). Submit the PDF file to the dropbox
+provided on Nuku. The due date is as indicated on the course schedule
+page. Remember that you can easily export maps to PNG format images for
+inclusion in a Word document from <em>RStudio</em>.</p>
 </div>
 </div>
 </div>
