@@ -9,12 +9,11 @@
     
     <title>Geographic Cluster Analysis</title>
 
-        <script src="05-lab_files/header-attrs-2.11/header-attrs.js"></script>
+        <script src="05-lab_files/header-attrs-2.23/header-attrs.js"></script>
         <script src="05-lab_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="05-lab_files/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
         <script src="05-lab_files/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-        <script src="05-lab_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
         <script src="05-lab_files/navigation-1.1/tabsets.js"></script>
         <link href="05-lab_files/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
         <script src="05-lab_files/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
@@ -117,34 +116,59 @@
         <div class="Sidebar">
           <div class="SidebarItems" id="toc">
             <ul>
-            <li><a href="#overview">Overview</a>
+            <li><a href="#overview" id="toc-overview">Overview</a>
             <ul>
-            <li><a href="#libraries-first">Libraries first…</a></li>
-            <li><a href="#example-data">Example data</a>
+            <li><a href="#libraries-first"
+            id="toc-libraries-first">Libraries first…</a></li>
+            <li><a href="#example-data" id="toc-example-data">Example
+            data</a>
             <ul>
-            <li><a href="#make-a-data-only-copy">Make a data only copy</a></li>
+            <li><a href="#make-a-data-only-copy"
+            id="toc-make-a-data-only-copy">Make a data only
+            copy</a></li>
             </ul></li>
             </ul></li>
-            <li><a href="#getting-a-feel-for-the-data">Getting a feel for the data</a>
+            <li><a href="#getting-a-feel-for-the-data"
+            id="toc-getting-a-feel-for-the-data">Getting a feel for the
+            data</a>
             <ul>
-            <li><a href="#univariate-maps">Univariate maps</a></li>
-            <li><a href="#boxplots-of-all-the-variables">Boxplots of all the variables</a></li>
-            <li><a href="#scatterplots-of-all-the-variables">Scatterplots of all the variables</a></li>
+            <li><a href="#univariate-maps"
+            id="toc-univariate-maps">Univariate maps</a></li>
+            <li><a href="#boxplots-of-all-the-variables"
+            id="toc-boxplots-of-all-the-variables">Boxplots of all the
+            variables</a></li>
+            <li><a href="#scatterplots-of-all-the-variables"
+            id="toc-scatterplots-of-all-the-variables">Scatterplots of
+            all the variables</a></li>
             </ul></li>
-            <li><a href="#making-k-means-clusters">Making k-means clusters</a>
+            <li><a href="#making-k-means-clusters"
+            id="toc-making-k-means-clusters">Making k-means clusters</a>
             <ul>
-            <li><a href="#so-here-is-how-we-accomplish-this-in-r.">So here is how we accomplish this in <em>R</em>.</a>
+            <li><a href="#so-here-is-how-we-accomplish-this-in-r."
+            id="toc-so-here-is-how-we-accomplish-this-in-r.">So here is
+            how we accomplish this in <em>R</em>.</a>
             <ul>
-            <li><a href="#notes">Notes</a></li>
+            <li><a href="#notes" id="toc-notes">Notes</a></li>
             </ul></li>
             </ul></li>
-            <li><a href="#interpretation-of-clusters">Interpretation of clusters</a></li>
-            <li><a href="#the-assignment-data-wellington-region-commutes-2018">The assignment data: Wellington region commutes, 2018</a></li>
-            <li><a href="#assignment-3-cluster-analysis-of-commuting-data">Assignment 3 Cluster analysis of commuting data</a>
+            <li><a href="#interpretation-of-clusters"
+            id="toc-interpretation-of-clusters">Interpretation of
+            clusters</a></li>
+            <li><a
+            href="#the-assignment-data-auckland-demographic-data-2018"
+            id="toc-the-assignment-data-auckland-demographic-data-2018">The
+            assignment data: Auckland demographic data, 2018</a></li>
+            <li><a
+            href="#assignment-3-cluster-analysis-of-demographica-data"
+            id="toc-assignment-3-cluster-analysis-of-demographica-data">Assignment
+            3 Cluster analysis of demographica data</a>
             <ul>
-            <li><a href="#things-to-consider">Things to consider</a></li>
-            <li><a href="#assessment">Assessment</a></li>
-            <li><a href="#submission">Submission</a></li>
+            <li><a href="#things-to-consider"
+            id="toc-things-to-consider">Things to consider</a></li>
+            <li><a href="#assessment"
+            id="toc-assessment">Assessment</a></li>
+            <li><a href="#submission"
+            id="toc-submission">Submission</a></li>
             </ul></li>
             </ul>
           </div>
@@ -156,7 +180,7 @@
    
         
       <h1 class="title">Geographic Cluster Analysis</h1>
-         <h1 class="subtitle">Geog 315 T1 2022</h1>
+         <h1 class="subtitle">Geog 315 T2 2023</h1>
    
       <p class="authors">
               
@@ -170,17 +194,45 @@
 <h1>Overview</h1>
 <p>The lecture material related to this lab is available here:</p>
 <ul>
-<li><a href="../slides/classification-clustering/">Clustering analysis</a></li>
-<li><a href="../slides/classification-clustering-examples/">Examples of clustering analysis</a></li>
+<li><a href="../slides/classification-clustering/">Clustering
+analysis</a></li>
+<li><a href="../slides/classification-clustering-examples/">Examples of
+clustering analysis</a></li>
 </ul>
 <p>Meanwhile, here is a quick summary…</p>
-<p>Clustering methods segment the observations in a dataset into <em>clusters</em> or <em>classes</em> based on the differences and similarities between them. The idea of clustering analysis is to break the dataset into clusters or classes such that observations in the same class are similar to each other, and different from observations in other classes.</p>
-<p>Unfortunately, there is no easy way to define clusters beyond recognising that they are the groups of observations identified by a clustering method! Clustering analysis therefore depends a great deal on the interpretation of an analyst to give it meaning.</p>
-<p>What do we mean by ‘similar’ and ‘different’? We extend the basic idea of distance in (two dimensional) space where the distance between observation <em>i</em> and observation <em>j</em> is given by</p>
-<p><span class="math display">\[d_{ij}=\sqrt{(x_i-x_j)^2+(y_i-y_j)^2}\]</span> that is the square root of the sum of the squared differences in each coordinate. But now we apply this measure to many data dimensions. So if we have a dataset with (say) 15 attributes, we are in a 15 dimensional data space, and we take the sum of the squared differences in each of the 15 dimensions (i.e. on each variable) between every pair of observations, add them together and take the square root.</p>
-<p>Other versions of the basic idea of ‘total difference’ in attribute values are possible.</p>
-<p>An important consideration is that all the attributes be rescaled so that the differences in one particular attribute which happens to have large values associated with it don’t ‘drown out’ differences in other variables. For example if one variable is mean income in dollars and has values like 25000 or 50000, while another variable is proportion of children under 5 and has values like 0.04 or 0.05, then if we do not rescale things, the differences in income will swamp any differences in the demographic mix.</p>
-<p>A similar concern is that we try not to include lots of strongly correlated variables in the analysis.</p>
+<p>Clustering methods segment the observations in a dataset into
+<em>clusters</em> or <em>classes</em> based on the differences and
+similarities between them. The idea of clustering analysis is to break
+the dataset into clusters or classes such that observations in the same
+class are similar to each other, and different from observations in
+other classes.</p>
+<p>Unfortunately, there is no easy way to define clusters beyond
+recognising that they are the groups of observations identified by a
+clustering method! Clustering analysis therefore depends a great deal on
+the interpretation of an analyst to give it meaning.</p>
+<p>What do we mean by ‘similar’ and ‘different’? We extend the basic
+idea of distance in (two dimensional) space where the distance between
+observation <em>i</em> and observation <em>j</em> is given by</p>
+<p><span
+class="math display">\[d_{ij}=\sqrt{(x_i-x_j)^2+(y_i-y_j)^2}\]</span></p>
+<p>that is the square root of the sum of the squared differences in each
+coordinate. But now we apply this measure to many data dimensions. So if
+we have a dataset with (say) 15 attributes, we are in a 15 dimensional
+data space, and we take the sum of the squared differences in each of
+the 15 dimensions (i.e. on each variable) between every pair of
+observations, add them together and take the square root.</p>
+<p>Other versions of the basic idea of ‘total difference’ in attribute
+values are possible.</p>
+<p>An important consideration is that all the attributes be rescaled so
+that the differences in one particular attribute which happens to have
+large values associated with it don’t ‘drown out’ differences in other
+variables. For example if one variable is mean income in dollars and has
+values like 25000 or 50000, while another variable is proportion of
+children under 5 and has values like 0.04 or 0.05, then if we do not
+rescale things, the differences in income will swamp any differences in
+the demographic mix.</p>
+<p>A similar concern is that we try not to include lots of strongly
+correlated variables in the analysis.</p>
 <div id="libraries-first" class="section level2">
 <h2>Libraries first…</h2>
 <p>As usual, we need some libraries.</p>
@@ -190,57 +242,106 @@ library(dplyr)</code></pre>
 </div>
 <div id="example-data" class="section level2">
 <h2>Example data</h2>
-<p>I have prepared an example dataset so we can focus on the clustering itself. For the assignment proper, you are also asked to consider doing some data preparation to select variables and perhaps rescale data values before applying cluster analysis.</p>
-<p>The example data are a collection of demographic variables for San Francisco, California from the 2010 census. You can explore the dataset interactively <a href="https://lucguillemot.com/projects/bay-area-geodemographics">at this website</a> to get a feel for things.</p>
-<p>Download the data from <a href="sf_demo.gpkg?raw=true">this link</a>, and open them in <em>R</em></p>
+<p>I have prepared an example dataset so we can focus on the clustering
+itself. For the assignment proper, you are also asked to consider doing
+some data preparation to select variables and perhaps rescale data
+values before applying cluster analysis.</p>
+<p>The example data are a collection of demographic variables for San
+Francisco, California from the 2010 census. You can explore the dataset
+interactively <a
+href="https://lucguillemot.com/projects/bay-area-geodemographics">at
+this website</a> to get a feel for things.</p>
+<p>Download the data from <a href="sf_demo.gpkg?raw=true">this link</a>,
+and open them in <em>R</em></p>
 <pre class="r"><code>sanfran &lt;- st_read(&quot;sf_demo.gpkg&quot;)</code></pre>
 <pre><code>## Reading layer `sf_demo&#39; from data source 
-##   `/home/osullid3/Downloads/week5/sf_demo.gpkg&#39; using driver `GPKG&#39;
+##   `/Users/osullid3/Documents/teaching/Geog315/_labs/week-05/sf_demo.gpkg&#39; 
+##   using driver `GPKG&#39;
 ## Simple feature collection with 189 features and 25 fields
 ## Geometry type: MULTIPOLYGON
 ## Dimension:     XY
 ## Bounding box:  xmin: -122.5145 ymin: 37.70813 xmax: -122.3679 ymax: 37.81144
 ## Geodetic CRS:  WGS 84</code></pre>
-<p>If you run <code>summary(sanfran)</code> you’ll see that all these variables have been scaled so that the values range from 0 to 1. We won’t worry for the sake of the example exactly how this has been done for this dataset, but it’s something we need to pay attention to for the assignment dataset.</p>
+<p>If you run <code>summary(sanfran)</code> you’ll see that all these
+variables have been scaled so that the values range from 0 to 1. We
+won’t worry for the sake of the example exactly how this has been done
+for this dataset, but it’s something we need to pay attention to for the
+assignment dataset.</p>
 <div id="make-a-data-only-copy" class="section level3">
 <h3>Make a data only copy</h3>
-<p>For some of what follows the existence of the <code>geometry</code> attribute causes errors, so it is helpful to make a data-only copy. It is convenient to designate this with <code>.d</code> on the name. Because it is a direct copy the rows of the data table <em>stay in the same order</em>, which is important later when we do the cluster analysis.</p>
+<p>For some of what follows the existence of the <code>geometry</code>
+attribute causes errors, so it is helpful to make a data-only copy. It
+is convenient to designate this with <code>.d</code> on the name.
+Because it is a direct copy the rows of the data table <em>stay in the
+same order</em>, which is important later when we do the cluster
+analysis.</p>
 <pre class="r"><code>sanfran.d &lt;- sanfran %&gt;%
   st_drop_geometry() %&gt;%
   select(-id) # also remove ID variable since it is just an identifier</code></pre>
-<p>Note that we remove the <code>id</code> variable because it is a meaningless identifier and should not be included in the clustering analysis.</p>
+<p>Note that we remove the <code>id</code> variable because it is a
+meaningless identifier and should not be included in the clustering
+analysis.</p>
 </div>
 </div>
 </div>
 <div id="getting-a-feel-for-the-data" class="section level1">
 <h1>Getting a feel for the data</h1>
-<p>This is a complicated dataset, with 24 attributes. We’re likely to be interested in lots of possible relationships and patterns in the data, but it’s difficult to get a handle on things with so much going on. In this section I’ll show you a few possibilities, which you may also wish to try with the assignment data later. We don’t really have the time to cover what is going on with all these plotting methods in detail in this course (but I am happy to answer any questions you may have… post them in the slack workspace so everyone can benefit from the explanations, or if they are very specific, just ask).</p>
+<p>This is a complicated dataset, with 24 attributes. We’re likely to be
+interested in lots of possible relationships and patterns in the data,
+but it’s difficult to get a handle on things with so much going on. In
+this section I’ll show you a few possibilities, which you may also wish
+to try with the assignment data later. We don’t really have the time to
+cover what is going on with all these plotting methods in detail in this
+course (but I am happy to answer any questions you may have… post them
+in the slack workspace so everyone can benefit from the explanations, or
+if they are very specific, just ask).</p>
 <div id="univariate-maps" class="section level3">
 <h3>Univariate maps</h3>
-<p>The <code>plot()</code> function will make small maps of 9 or 10 of the variables. If you’d like it to map other than the first 9 or 10, then use select as shown below.</p>
+<p>The <code>plot()</code> function will make small maps of 9 or 10 of
+the variables. If you’d like it to map other than the first 9 or 10,
+then use select as shown below.</p>
 <pre class="r"><code>sanfran %&gt;%
   plot()</code></pre>
 <pre><code>## Warning: plotting the first 9 out of 25 attributes; use max.plot = 25 to plot
 ## all</code></pre>
 <p><img src="05-lab_files/figure-html/unnamed-chunk-4-1.png" width="768" /></p>
-<p>Note that the colours are a rainbow palette with purple/blue for low values through to orange/yellow for high. You can change the colour palette if you like, but it’s a bit messy, unfortunately… the <code>plot()</code> function is just for a quick look-see not really for final maps.</p>
+<p>Note that the colours are a rainbow palette with purple/blue for low
+values through to orange/yellow for high. You can change the colour
+palette if you like, but it’s a bit messy, unfortunately… the
+<code>plot()</code> function is just for a quick look-see not really for
+final maps.</p>
 <pre class="r"><code>sanfran %&gt;%
   plot(pal = RColorBrewer::brewer.pal(9, &quot;Reds&quot;))</code></pre>
 <pre><code>## Warning: plotting the first 9 out of 25 attributes; use max.plot = 25 to plot
 ## all</code></pre>
 <p><img src="05-lab_files/figure-html/unnamed-chunk-5-1.png" width="768" /></p>
-<p>Keep in mind, the <code>plot()</code> function is only showing you the first few variables, there are 15 more! If any variable is of particular interest map it with <code>tmap</code> in the usual way.</p>
-<p>In the short sections that follow, I show some ways to examine all the data, using packages we haven’t worked with before. There isn’t really scope in this course to fully explain these operations, the focus is simply on getting an idea of the data.</p>
+<p>Keep in mind, the <code>plot()</code> function is only showing you
+the first few variables, there are 15 more! If any variable is of
+particular interest map it with <code>tmap</code> in the usual way.</p>
+<p>In the short sections that follow, I show some ways to examine all
+the data, using packages we haven’t worked with before. There isn’t
+really scope in this course to fully explain these operations, the focus
+is simply on getting an idea of the data.</p>
 </div>
 <div id="boxplots-of-all-the-variables" class="section level3">
 <h3>Boxplots of all the variables</h3>
-<p>To run the code in this section you need to install and load the <code>ggplot2</code> package.</p>
+<p>To run the code in this section you need to install and load the
+<code>ggplot2</code> package.</p>
 <pre class="r"><code>require(ggplot2)</code></pre>
 <pre><code>## Loading required package: ggplot2</code></pre>
 <pre class="r"><code>require(tidyr)</code></pre>
 <pre><code>## Loading required package: tidyr</code></pre>
-<p>We can use the scatter plot and boxplot functionality in this package to get an overview of all the variables in a single graphic. It’s unfortunately quite a complicated procedure because it involves transforming the data to a ‘long’ format, where each row is the observation id, a variable name, and the corresponding value of that variable. That’s what <code>pivot_longer()</code> is doing.</p>
-<p>The code below will show each variable as row of dots. To change to boxplots change the <code>geom_point</code> to <code>geom_boxplot</code> and run it again. It’s best just to copy and paste this code and run it to see the result. If you’d like to understand better how it works, just ask me!</p>
+<p>We can use the scatter plot and boxplot functionality in this package
+to get an overview of all the variables in a single graphic. It’s
+unfortunately quite a complicated procedure because it involves
+transforming the data to a ‘long’ format, where each row is the
+observation id, a variable name, and the corresponding value of that
+variable. That’s what <code>pivot_longer()</code> is doing.</p>
+<p>The code below will show each variable as row of dots. To change to
+boxplots change the <code>geom_point</code> to <code>geom_boxplot</code>
+and run it again. It’s best just to copy and paste this code and run it
+to see the result. If you’d like to understand better how it works, just
+ask me!</p>
 <pre class="r"><code>sanfran %&gt;%
   st_drop_geometry() %&gt;%
   pivot_longer(-id) %&gt;%
@@ -252,165 +353,209 @@ library(dplyr)</code></pre>
 </div>
 <div id="scatterplots-of-all-the-variables" class="section level3">
 <h3>Scatterplots of all the variables</h3>
-<p>With 24 variables a full scatterplot matrix is impractical. But we can easily do subsets. Note that we just use <code>plot()</code> but this time on the data only <code>.d</code> version of the dataset that we made (otherwise it will make maps!)</p>
+<p>With 24 variables a full scatterplot matrix is impractical. But we
+can easily do subsets. Note that we just use <code>plot()</code> but
+this time on the data only <code>.d</code> version of the dataset that
+we made (otherwise it will make maps!)</p>
 <pre class="r"><code>sanfran.d %&gt;% 
   select(1:6) %&gt;%  
   plot()</code></pre>
 <p><img src="05-lab_files/figure-html/unnamed-chunk-8-1.png" width="768" /></p>
-<p>Here, since we are only using this dataset to illustrate how to perform clustering analysis and aren’t interested in its structure as such, we will not spend any more time on this data exploration. In a more realistic situation you would probably want to do so.</p>
+<p>Here, since we are only using this dataset to illustrate how to
+perform clustering analysis and aren’t interested in its structure as
+such, we will not spend any more time on this data exploration. In a
+more realistic situation you would probably want to do so.</p>
 </div>
 </div>
 <div id="making-k-means-clusters" class="section level1">
 <h1>Making k-means clusters</h1>
-<p>Our chosen approach is k-means clustering. The method (or algorithm) is simple:</p>
+<p>Our chosen approach is k-means clustering. The method (or algorithm)
+is simple:</p>
 <ol style="list-style-type: decimal">
 <li>Decide on the number of clusters you want, call this <em>k</em></li>
 <li>Choose <em>k</em> cluster centres</li>
 <li>Assign each observation to its nearest cluster centre</li>
-<li>Calculate the mean centre of each cluster and move the cluster centre accordingly</li>
-<li>Go back to 3 and repeat, until the cluster assignments stop changing</li>
+<li>Calculate the mean centre of each cluster and move the cluster
+centre accordingly</li>
+<li>Go back to 3 and repeat, until the cluster assignments stop
+changing</li>
 </ol>
-<p>Here’s an <a href="https://kkevsterrr.github.io/K-Means/">illustration of this working</a> to help with following the description above.</p>
-<p>It’s important to realise that k-means clustering is <em>non-deterministic</em>, because the choice of initial cluster centres is usually random, and may affect the final assignment arrived at.</p>
-<div id="so-here-is-how-we-accomplish-this-in-r." class="section level2">
+<p>Here’s an <a
+href="https://kkevsterrr.github.io/K-Means/">illustration of this
+working</a> to help with following the description above.</p>
+<p>It’s important to realise that k-means clustering is
+<em>non-deterministic</em>, because the choice of initial cluster
+centres is usually random, and may affect the final assignment arrived
+at.</p>
+<div id="so-here-is-how-we-accomplish-this-in-r."
+class="section level2">
 <h2>So here is how we accomplish this in <em>R</em>.</h2>
 <pre class="r"><code>km &lt;- kmeans(sanfran.d, 5)</code></pre>
-<p>That’s it! All the results for the chosen number of clusters (specified as 5 in the above example) are now contained in the dataset <code>km</code>. Take a look at it by selecting it from the Environment tab, or just type <code>km</code> at the console:</p>
+<p>That’s it! All the results for the chosen number of clusters
+(specified as 5 in the above example) are now contained in the dataset
+<code>km</code>. Take a look at it by selecting it from the Environment
+tab, or just type <code>km</code> at the console:</p>
 <pre class="r"><code>km</code></pre>
-<pre><code>## K-means clustering with 5 clusters of sizes 34, 12, 71, 31, 41
+<pre><code>## K-means clustering with 5 clusters of sizes 44, 20, 69, 21, 35
 ## 
 ## Cluster means:
-##     density medianYearBuilt  PConeUnit PCownerOccUnits PCcommutingNotCar
-## 1 0.1380531      0.15260017 0.81178892       0.6449458         0.3297185
-## 2 0.1444951      0.11231884 0.44396366       0.3441517         0.4235713
-## 3 0.1604302      0.07511737 0.18083311       0.3128386         0.5012844
-## 4 0.1089185      0.07947639 0.67000867       0.6143581         0.3341577
-## 5 0.2987980      0.18522446 0.05861115       0.1204200         0.6691093
+##      density medianYearBuilt  PConeUnit PCownerOccUnits PCcommutingNotCar
+## 1 0.29058065      0.17918314 0.06866902       0.1236030         0.6575759
+## 2 0.08744187      0.11376812 0.75209578       0.7022429         0.3344598
+## 3 0.16270719      0.07225373 0.16943474       0.3053037         0.5040210
+## 4 0.13306262      0.04554865 0.58053378       0.5037540         0.3471361
+## 5 0.13971389      0.16645963 0.77129445       0.6035332         0.3424858
 ##   PCmovedWithinCounty PClessHighSchool PCsomeCollegeOrMore PCdoctorate
-## 1          0.05102677       0.24111427           0.5316415 0.008865621
-## 2          0.06680520       0.23539525           0.5346827 0.007559580
-## 3          0.09056067       0.04964294           0.8840446 0.036528743
-## 4          0.06935163       0.08995990           0.7971238 0.028151535
-## 5          0.10187865       0.19526193           0.6547555 0.015945859
+## 1          0.09901292       0.19952215           0.6430042 0.014898886
+## 2          0.07218581       0.05674108           0.8557938 0.040654551
+## 3          0.08981987       0.05171436           0.8796737 0.034928171
+## 4          0.06665879       0.13922023           0.7240217 0.018200651
+## 5          0.05416043       0.25531604           0.5001423 0.007179005
 ##   PCmarriedCouple PCunmarriedSSCouple PCwithKids PCsexMale medianAge
-## 1       0.5015789          0.01109483  0.3324023 0.4832578 0.3696467
-## 2       0.2955399          0.01716946  0.3742658 0.4999659 0.2286288
-## 3       0.2803788          0.03188385  0.1410610 0.5269897 0.2990473
-## 4       0.4911939          0.02236769  0.2536621 0.4954321 0.3963689
-## 5       0.2365431          0.01352662  0.1191211 0.5219253 0.3559464
+## 1       0.2367210         0.014197984  0.1370320 0.5202178 0.3432170
+## 2       0.5058313         0.037600199  0.2622031 0.5088300 0.4001721
+## 3       0.2738684         0.031091136  0.1393405 0.5262241 0.2991344
+## 4       0.4674480         0.006778364  0.2485461 0.4835698 0.3782477
+## 5       0.4624759         0.012304320  0.3556642 0.4878097 0.3353332
 ##   PCraceBlackAlone PCraceAsianAlone PCraceHispanic PCraceWhiteAlone
-## 1       0.07257924        0.5480753     0.20229334        0.2472154
-## 2       0.21226729        0.1599303     0.39257258        0.3480782
-## 3       0.03563461        0.1657718     0.10849974        0.7136635
-## 4       0.02320503        0.3862060     0.09980407        0.4997374
-## 5       0.07062719        0.3923187     0.14482408        0.4259777
+## 1       0.07954157        0.3610909     0.17503712        0.4296177
+## 2       0.03214789        0.2734200     0.12252670        0.5947399
+## 3       0.03645484        0.1668375     0.11428138        0.7093726
+## 4       0.01269427        0.5073334     0.08296653        0.3924700
+## 5       0.12100797        0.4816796     0.24411886        0.2349359
 ##   PCforeignBorn perCapitaIncome PCunemployed PCpoorStruggling PCwithInterests
-## 1     0.5116443       0.1401876   0.10287591        0.3063474       0.2217888
-## 2     0.3420834       0.1177711   0.14896179        0.4903162       0.1501008
-## 3     0.2182757       0.4640983   0.05795774        0.1801782       0.3544504
-## 4     0.3320544       0.3055327   0.06581949        0.1871975       0.4093553
-## 5     0.4466916       0.1979275   0.08357860        0.4709679       0.1871376
+## 1     0.4369572       0.1912969   0.08918089        0.4789653       0.1818033
+## 2     0.2569183       0.3857251   0.06685998        0.1410965       0.4619488
+## 3     0.2226233       0.4608721   0.05860992        0.1849100       0.3486635
+## 4     0.4136230       0.2159475   0.06670892        0.2439226       0.3365422
+## 5     0.4912844       0.1214433   0.11889480        0.3550712       0.1859193
 ##   PCveryWealthyHHolds
-## 1          0.07743945
-## 2          0.06224154
-## 3          0.21976774
-## 4          0.18697150
-## 5          0.06403698
+## 1          0.06430956
+## 2          0.25667365
+## 3          0.21442953
+## 4          0.11389991
+## 5          0.06441007
 ## 
 ## Clustering vector:
 ##   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
-##   5   3   3   3   3   5   5   5   3   5   5   3   5   5   5   5   5   5   5   5 
+##   1   3   3   3   3   1   1   1   3   1   1   3   1   1   1   1   1   1   1   1 
 ##  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 
-##   5   5   5   5   5   5   5   3   3   3   3   3   3   3   3   3   3   3   3   3 
+##   1   1   1   1   1   1   1   3   3   3   3   3   3   3   3   3   3   3   3   3 
 ##  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60 
-##   3   3   3   3   5   3   3   5   3   5   5   5   3   3   3   3   3   3   3   3 
+##   3   3   3   3   1   3   3   1   3   1   1   1   3   3   3   3   3   3   3   3 
 ##  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80 
-##   3   3   3   3   5   3   5   5   3   5   3   3   3   3   3   3   3   5   5   3 
+##   3   3   3   3   1   3   1   1   3   1   3   3   3   3   3   3   3   1   1   3 
 ##  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100 
-##   3   3   3   3   3   4   4   3   3   3   3   3   2   2   2   3   2   1   1   2 
+##   3   3   2   3   3   2   2   2   3   3   3   3   1   1   1   3   3   5   5   5 
 ## 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 
-##   2   2   1   2   4   4   3   2   4   2   1   1   1   1   1   1   1   1   1   1 
+##   1   5   5   5   2   2   3   4   2   5   5   5   5   5   5   5   5   5   5   5 
 ## 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 
-##   1   1   1   1   1   1   1   1   1   3   3   3   3   4   4   4   4   4   4   4 
+##   5   5   5   5   5   5   5   5   5   3   2   3   3   2   2   2   2   2   2   2 
 ## 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 
-##   4   4   4   1   1   1   1   1   4   4   4   1   1   1   1   4   4   5   5   5 
+##   2   2   2   5   5   5   5   5   4   4   4   4   4   4   4   4   2   1   1   1 
 ## 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 
-##   4   4   4   1   1   3   3   5   3   5   4   3   4   4   4   4   4   5   4   4 
+##   4   4   4   5   4   3   3   1   3   1   2   3   4   4   4   4   4   4   4   4 
 ## 181 182 183 184 185 186 187 188 189 
-##   3   5   2   5   1   5   2   3   3 
+##   3   1   5   1   5   1   5   3   3 
 ## 
 ## Within cluster sum of squares by cluster:
-## [1]  4.865569  3.590148 13.239683  6.233968 15.216308
-##  (between_SS / total_SS =  58.2 %)
+## [1] 17.560495  3.543150 12.771742  2.331839  7.471424
+##  (between_SS / total_SS =  57.7 %)
 ## 
 ## Available components:
 ## 
 ## [1] &quot;cluster&quot;      &quot;centers&quot;      &quot;totss&quot;        &quot;withinss&quot;     &quot;tot.withinss&quot;
 ## [6] &quot;betweenss&quot;    &quot;size&quot;         &quot;iter&quot;         &quot;ifault&quot;</code></pre>
-<p>Most of this is ‘too much information’. The vital information—which observation is in which cluster—is contained in the <code>cluster</code> component, which we can extract and add as a new variable to our dataset like this:</p>
+<p>Most of this is ‘too much information’. The vital information—which
+observation is in which cluster—is contained in the <code>cluster</code>
+component, which we can extract and add as a new variable to our dataset
+like this:</p>
 <pre class="r"><code>sanfran &lt;- sanfran %&gt;%
   mutate(k5 = as.factor(km$cluster))</code></pre>
-<p>Note how I have given this new variable a name that reflects the number of clusters, and also that I have added it to the spatial dataset. Also, I have added it as a <em>factor</em> which means <em>R</em> will know it is a categorical variable and not a meaningful number.</p>
-<p>That means we can map it (<strong>your map will look different!</strong>)</p>
+<p>Note how I have given this new variable a name that reflects the
+number of clusters, and also that I have added it to the spatial
+dataset. Also, I have added it as a <em>factor</em> which means
+<em>R</em> will know it is a categorical variable and not a meaningful
+number.</p>
+<p>That means we can map it (<strong>your map will look
+different!</strong>)</p>
 <pre class="r"><code>tm_shape(sanfran) +
   tm_polygons(col = &#39;k5&#39;) +
   tm_legend(legend.outside = TRUE)</code></pre>
 <p><img src="05-lab_files/figure-html/unnamed-chunk-12-1.png" width="768" /></p>
-<p>Note how <code>tmap</code> knows to use a categorical palette because <code>k5</code> is a factor.</p>
+<p>Note how <code>tmap</code> knows to use a categorical palette because
+<code>k5</code> is a factor.</p>
 <div id="notes" class="section level3">
 <h3>Notes</h3>
-<p>You can run the above code again and you will probably end up with a different (if similar) map. You can also run it specifying a different number of clusters in the <code>kmeans()</code> function.</p>
-<p>If you do this you should make sure you give the new variable in the <code>mutate</code> operation a different name, reflecting the number of clusters.</p>
-<p>The fact that the results may not always be the same means that interpretation of clusters can be quite challenging.</p>
+<p>You can run the above code again and you will probably end up with a
+different (if similar) map. You can also run it specifying a different
+number of clusters in the <code>kmeans()</code> function.</p>
+<p>If you do this you should make sure you give the new variable in the
+<code>mutate</code> operation a different name, reflecting the number of
+clusters.</p>
+<p>The fact that the results may not always be the same means that
+interpretation of clusters can be quite challenging.</p>
 </div>
 </div>
 </div>
 <div id="interpretation-of-clusters" class="section level1">
 <h1>Interpretation of clusters</h1>
-<p>The ‘quality’ of a particular clustering solution is dependent on how well we think we can interpret it. In this case, for an unfamiliar setting, you probably can’t do much. Measures of the variance within and between clusters can be used to assess ‘quality’ in a more technical sense and are available from the <code>kmeans</code> object produced by the function.</p>
-<p>Here is some code you can use to compare a specific variable across clusters (again, your plot will look different)</p>
+<p>The ‘quality’ of a particular clustering solution is dependent on how
+well we think we can interpret it. In this case, for an unfamiliar
+setting, you probably can’t do much. Measures of the variance within and
+between clusters can be used to assess ‘quality’ in a more technical
+sense and are available from the <code>kmeans</code> object produced by
+the function.</p>
+<p>Here is some code you can use to compare a specific variable across
+clusters (again, your plot will look different)</p>
 <pre class="r"><code>boxplot(PCwithKids ~ k5, data = sanfran)</code></pre>
 <p><img src="05-lab_files/figure-html/unnamed-chunk-13-1.png" width="768" /></p>
-<p>You have to use this code one variable at a time. You can get an overview of which variables are particularly high or low in each cluster from the <code>centers</code> component of the <code>kmeans()</code> results:</p>
+<p>You have to use this code one variable at a time. You can get an
+overview of which variables are particularly high or low in each cluster
+from the <code>centers</code> component of the <code>kmeans()</code>
+results:</p>
 <pre class="r"><code>km$centers</code></pre>
-<pre><code>##     density medianYearBuilt  PConeUnit PCownerOccUnits PCcommutingNotCar
-## 1 0.1380531      0.15260017 0.81178892       0.6449458         0.3297185
-## 2 0.1444951      0.11231884 0.44396366       0.3441517         0.4235713
-## 3 0.1604302      0.07511737 0.18083311       0.3128386         0.5012844
-## 4 0.1089185      0.07947639 0.67000867       0.6143581         0.3341577
-## 5 0.2987980      0.18522446 0.05861115       0.1204200         0.6691093
+<pre><code>##      density medianYearBuilt  PConeUnit PCownerOccUnits PCcommutingNotCar
+## 1 0.29058065      0.17918314 0.06866902       0.1236030         0.6575759
+## 2 0.08744187      0.11376812 0.75209578       0.7022429         0.3344598
+## 3 0.16270719      0.07225373 0.16943474       0.3053037         0.5040210
+## 4 0.13306262      0.04554865 0.58053378       0.5037540         0.3471361
+## 5 0.13971389      0.16645963 0.77129445       0.6035332         0.3424858
 ##   PCmovedWithinCounty PClessHighSchool PCsomeCollegeOrMore PCdoctorate
-## 1          0.05102677       0.24111427           0.5316415 0.008865621
-## 2          0.06680520       0.23539525           0.5346827 0.007559580
-## 3          0.09056067       0.04964294           0.8840446 0.036528743
-## 4          0.06935163       0.08995990           0.7971238 0.028151535
-## 5          0.10187865       0.19526193           0.6547555 0.015945859
+## 1          0.09901292       0.19952215           0.6430042 0.014898886
+## 2          0.07218581       0.05674108           0.8557938 0.040654551
+## 3          0.08981987       0.05171436           0.8796737 0.034928171
+## 4          0.06665879       0.13922023           0.7240217 0.018200651
+## 5          0.05416043       0.25531604           0.5001423 0.007179005
 ##   PCmarriedCouple PCunmarriedSSCouple PCwithKids PCsexMale medianAge
-## 1       0.5015789          0.01109483  0.3324023 0.4832578 0.3696467
-## 2       0.2955399          0.01716946  0.3742658 0.4999659 0.2286288
-## 3       0.2803788          0.03188385  0.1410610 0.5269897 0.2990473
-## 4       0.4911939          0.02236769  0.2536621 0.4954321 0.3963689
-## 5       0.2365431          0.01352662  0.1191211 0.5219253 0.3559464
+## 1       0.2367210         0.014197984  0.1370320 0.5202178 0.3432170
+## 2       0.5058313         0.037600199  0.2622031 0.5088300 0.4001721
+## 3       0.2738684         0.031091136  0.1393405 0.5262241 0.2991344
+## 4       0.4674480         0.006778364  0.2485461 0.4835698 0.3782477
+## 5       0.4624759         0.012304320  0.3556642 0.4878097 0.3353332
 ##   PCraceBlackAlone PCraceAsianAlone PCraceHispanic PCraceWhiteAlone
-## 1       0.07257924        0.5480753     0.20229334        0.2472154
-## 2       0.21226729        0.1599303     0.39257258        0.3480782
-## 3       0.03563461        0.1657718     0.10849974        0.7136635
-## 4       0.02320503        0.3862060     0.09980407        0.4997374
-## 5       0.07062719        0.3923187     0.14482408        0.4259777
+## 1       0.07954157        0.3610909     0.17503712        0.4296177
+## 2       0.03214789        0.2734200     0.12252670        0.5947399
+## 3       0.03645484        0.1668375     0.11428138        0.7093726
+## 4       0.01269427        0.5073334     0.08296653        0.3924700
+## 5       0.12100797        0.4816796     0.24411886        0.2349359
 ##   PCforeignBorn perCapitaIncome PCunemployed PCpoorStruggling PCwithInterests
-## 1     0.5116443       0.1401876   0.10287591        0.3063474       0.2217888
-## 2     0.3420834       0.1177711   0.14896179        0.4903162       0.1501008
-## 3     0.2182757       0.4640983   0.05795774        0.1801782       0.3544504
-## 4     0.3320544       0.3055327   0.06581949        0.1871975       0.4093553
-## 5     0.4466916       0.1979275   0.08357860        0.4709679       0.1871376
+## 1     0.4369572       0.1912969   0.08918089        0.4789653       0.1818033
+## 2     0.2569183       0.3857251   0.06685998        0.1410965       0.4619488
+## 3     0.2226233       0.4608721   0.05860992        0.1849100       0.3486635
+## 4     0.4136230       0.2159475   0.06670892        0.2439226       0.3365422
+## 5     0.4912844       0.1214433   0.11889480        0.3550712       0.1859193
 ##   PCveryWealthyHHolds
-## 1          0.07743945
-## 2          0.06224154
-## 3          0.21976774
-## 4          0.18697150
-## 5          0.06403698</code></pre>
-<p>This is quite difficult to interpret (all those numbers) but scanning the information should enable you to spot which cluster has particularly high or low values of particular variables.</p>
-<p>For a more visual presentation of all the information we can use some more complicated plotting code, as shown below.</p>
+## 1          0.06430956
+## 2          0.25667365
+## 3          0.21442953
+## 4          0.11389991
+## 5          0.06441007</code></pre>
+<p>This is quite difficult to interpret (all those numbers) but scanning
+the information should enable you to spot which cluster has particularly
+high or low values of particular variables.</p>
+<p>For a more visual presentation of all the information we can use some
+more complicated plotting code, as shown below.</p>
 <pre class="r"><code>sanfran %&gt;%
   select(-id) %&gt;%
   st_drop_geometry() %&gt;%
@@ -419,96 +564,319 @@ library(dplyr)</code></pre>
     geom_point(aes(x = value, y = name, colour = k5)) +
     facet_wrap(~ k5, nrow = 1)</code></pre>
 <p><img src="05-lab_files/figure-html/unnamed-chunk-15-1.png" width="768" /></p>
-<p>Here, each column of the plot shows all the values for each variable in a single cluster. Scanning across the data you might be able to identify differences among the clusters, or variables that are particularly high or low in one cluster relative to their values in others.</p>
+<p>Here, each column of the plot shows all the values for each variable
+in a single cluster. Scanning across the data you might be able to
+identify differences among the clusters, or variables that are
+particularly high or low in one cluster relative to their values in
+others.</p>
 </div>
-<div id="the-assignment-data-wellington-region-commutes-2018" class="section level1">
-<h1>The assignment data: Wellington region commutes, 2018</h1>
-<p>OK… you will be relieved to know that the assignment is based on a dataset you probably know a bit more about (and which is actually pretty relevant to thinking about recent lockdowns, disease spread, working from home, and so on), namely data from the 2018 census concerning travel to work and travel to education.</p>
-<p>Download the data from <a href="welly-commutes.gpkg?raw=true">this link</a> and save it to your project folder.</p>
+<div id="the-assignment-data-auckland-demographic-data-2018"
+class="section level1">
+<h1>The assignment data: Auckland demographic data, 2018</h1>
+<p>OK… you will be relieved to know that the assignment is based on a
+dataset you probably know a bit more about, namely data from the 2018
+census concerning general population characteristics across Auckland.
+The definition of Auckland used is non-standard, focused on the ‘old’
+Auckland cities of Waitakere, North Shore City, Manukau City and
+Auckland City ‘proper’ rather than on the extensive surrounding rural
+areas included in the ‘super city’.</p>
+<p>Download the data from <a
+href="ak-demographics-2018.gpkg?raw=true">this link</a> and save it to
+your project folder.</p>
 <p>Load the data, and make a data-only copy</p>
-<pre class="r"><code>commutes &lt;- st_read(&quot;welly-commutes.gpkg&quot;)</code></pre>
-<pre><code>## Reading layer `welly-commutes&#39; from data source 
-##   `/home/osullid3/Downloads/week5/welly-commutes.gpkg&#39; using driver `GPKG&#39;
-## Simple feature collection with 223 features and 24 fields
+<pre class="r"><code>ak_demo &lt;- st_read(&quot;ak-demographics-2018.gpkg&quot;)</code></pre>
+<pre><code>## Reading layer `ak-demographics-2018&#39; from data source 
+##   `/Users/osullid3/Documents/teaching/Geog315/_labs/week-05/ak-demographics-2018.gpkg&#39; 
+##   using driver `GPKG&#39;
+## Simple feature collection with 472 features and 39 fields
 ## Geometry type: MULTIPOLYGON
 ## Dimension:     XY
-## Bounding box:  xmin: 1735093 ymin: 5390595 xmax: 1908083 ymax: 5532431
+## Bounding box:  xmin: 1728669 ymin: 5887247 xmax: 1803822 ymax: 5971022
 ## Projected CRS: NZGD2000 / New Zealand Transverse Mercator 2000</code></pre>
-<pre class="r"><code>commutes.d &lt;- commutes %&gt;%
+<pre class="r"><code>ak_demo.d &lt;- ak_demo %&gt;%
   st_drop_geometry() %&gt;%
-  select(-id)</code></pre>
-<p>These data are a subset of Statistics New Zealand’s 2018 commuter data which they recently made available for the <a href="https://www.stats.govt.nz/2018-census/there-and-back-again-data-visualisation-competition">There and back again</a> visualization challenge. I entered <a href="https://dosull.github.io/commute-viewer/commute-viewer-app/">this web-application</a> in that contest, and would encourage you to explore it to get a feel for the kind of information contained in these data. I like my visualization even though I didn’t win the contest. Here is <a href="https://commuter.waka.app/">the winning entry</a>.</p>
-<p>Specifically the variables in this dataset are as follows:</p>
+  select(-(sa2_id:pop)) # remove the general variables</code></pre>
+<p>These data were compiled from various Census data tables, using the
+NZ.Stat tool at <a
+href="https://nzdotstat.stats.govt.nz/wbos/Index.aspx">this link</a>.
+You can get an overview of the distribution of the different attributes
+included in the data from <a
+href="https://southosullivan.com/geog315/ak_demo_webmap.html">this basic
+webmap</a>.</p>
+<p>Specifically the variables in this dataset are as follows, and unless
+otherwise stated are expressed as percentages (%) of the population
+responding to that question:</p>
 <table>
 <colgroup>
-<col width="28%" />
-<col width="71%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>name</th>
-<th>meaning</th>
+<th>Group</th>
+<th>Variable name</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td>General</td>
+<td><code>sa2_id</code></td>
+<td>Statistical area 2 ID</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>sa2_name</code></td>
+<td>Statistical area 2 name</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>ta_name</code></td>
+<td>Territorial authority name (these are all ‘Auckland’)</td>
+</tr>
+<tr class="even">
+<td> </td>
 <td><code>pop</code></td>
-<td>usually resident population</td>
-</tr>
-<tr class="even">
-<td><code>work</code></td>
-<td>total number working in the area (whether they live there or not)</td>
+<td>Total usually resident population</td>
 </tr>
 <tr class="odd">
-<td><code>study</code></td>
-<td>total number studying in the area (whether they live there or not)</td>
+<td>Age</td>
+<td><code>under15</code></td>
+<td>Aged under 15</td>
 </tr>
 <tr class="even">
-<td><code>w_home</code></td>
-<td>people working at home</td>
+<td> </td>
+<td><code>a_15to29years</code></td>
+<td>Aged 15-29</td>
 </tr>
 <tr class="odd">
-<td><code>w_loc_car</code></td>
-<td>people travelling to work by car within the area (i.e. they live and work in the area)</td>
+<td> </td>
+<td><code>a_30to64years</code></td>
+<td>Aged 30-64</td>
 </tr>
 <tr class="even">
-<td><code>w_loc_pt</code></td>
-<td>people travelling to work by public transport within the area</td>
+<td> </td>
+<td><code>over65</code></td>
+<td>Aged 65 or over</td>
 </tr>
 <tr class="odd">
-<td><code>w_loc_active</code></td>
-<td>people travelling to work by an active mode (walking, biking etc) within the area</td>
+<td>Ethnicity</td>
+<td><code>pakeha</code></td>
+<td>Pākeha</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>maori</code></td>
+<td>Māori</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>pacific</code></td>
+<td>Pacific peoples</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>asian</code></td>
+<td>Asian (includes East and South Asian)</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>melaa</code></td>
+<td>Middle Eastern, Latin American and African</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>other_ethnicity</code></td>
+<td>Other ethnicities</td>
+</tr>
+<tr class="odd">
+<td>Migration</td>
+<td><code>ur5_same</code></td>
+<td>Usually resident 5 years ago at the same location</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>ur5_in NZ</code></td>
+<td>Usually resident 5 years ago elsewhere in New Zealand</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>ur5_overseas</code></td>
+<td>Usually resident 5 years ago overseas</td>
+</tr>
+<tr class="even">
+<td>Income</td>
+<td><code>median_income</code></td>
+<td>Median household income (1000s of $)</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>under20k</code></td>
+<td>Household income under $20,000</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>i_20to30k</code></td>
+<td>Household income between $20,001 and $30,000</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>i_30to50k</code></td>
+<td>Household income between $30,001 and $50,000</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>i_50to70k</code></td>
+<td>Household income between $50,001 and $70,000</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>i_70to100k</code></td>
+<td>Household income between $70,001 and $100,000</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>i_100to150k</code></td>
+<td>Household income between $100,001 and $150,000</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>over150k</code></td>
+<td>Household income over $150,000</td>
+</tr>
+<tr class="even">
+<td>Tenure</td>
+<td><code>renting</code></td>
+<td>% of households renting</td>
+</tr>
+<tr class="odd">
+<td>Education</td>
+<td><code>bachelors</code></td>
+<td>Education to bachelors degree</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>high_school</code></td>
+<td>Education level between high school and degree</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>postgrad</code></td>
+<td>Education beyond bachelors degree</td>
+</tr>
+<tr class="even">
+<td>Religion</td>
+<td><code>christian</code></td>
+<td>Christian</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>maori_religions</code></td>
+<td>Māori religions, beliefs and philosophies</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>buddhism</code></td>
+<td>Buddhism</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>hinduism</code></td>
+<td>Hinduism</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>islam</code></td>
+<td>Islam</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>judaism</code></td>
+<td>Judaism</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>new_age</code></td>
+<td>Spiritualism and new age religions</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>sikhism</code></td>
+<td>Sikhism</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td><code>jedi</code></td>
+<td>Jedi</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><code>no_religion</code></td>
+<td>No religion</td>
 </tr>
 </tbody>
 </table>
-<p>The other variables are similar, but with <code>s_</code> indicating the total refers to study not work (this includes school age children); <code>_in_</code> indicating the trip is from some other area <em>into</em> this one, and <code>_out_</code> indicating the trip is from this local area <em>out to</em> some other local area.</p>
-<p>So, for example an area like Wellington CBD which has many inbound work trips will have high values of <code>w_in_</code> variables while Kelburn around the university will have a high value for <code>s_in_</code> variables. An area with not much employment where most people commute elsewhere to work will have high values of the <code>w_out_</code> variables.</p>
 <p>If you are unsure about any of this then ask.</p>
-<p>Note that all the attributes are provided as total counts. You may decide that you need to change variables to proportions or percentages of totals, but this can get quite complicated rather quickly, so consider your options carefully. To begin with you may find it easier simply to run clustering analysis to arrive at results and depending on interpretation then later return to do some data tidying.</p>
-<p>I advise you to make some maps to get a feel for the data before attempting to do cluster analysis.</p>
+<p>Note that the attributes are provided as percentages. You may decide
+that you need to change variables to estimated counts (based on the
+<code>pop</code> attribute) or to further standardise the numbers so
+that each attribute is expressed relative to its overall
+distribution.</p>
+<p>I advise you to make some maps to get a feel for the data before
+attempting to do cluster analysis.</p>
 </div>
-<div id="assignment-3-cluster-analysis-of-commuting-data" class="section level1">
-<h1>Assignment 3 Cluster analysis of commuting data</h1>
+<div id="assignment-3-cluster-analysis-of-demographica-data"
+class="section level1">
+<h1>Assignment 3 Cluster analysis of demographica data</h1>
 <p>This assignment is quite open-ended. Here is the description:</p>
-<p><strong>Run a cluster analysis of the provided Wellington commuter data and map the resulting clusters. Provide a short write up explaining how you did the analysis (not the commands used, focus instead on the number of clusters, variables included or excluded). Explain what you think the results tell us about the overall geographical structure of the Wellington Region. The overall write up should not be more than 2-3 pages (with this length <em>including</em> maps and diagrams if any).</strong></p>
+<p><strong>Run a cluster analysis of the provided Auckland demographic
+data and map the resulting clusters. Provide a short write up explaining
+how you did the analysis (not the commands used, focus instead on the
+number of clusters, variables included or excluded). Explain what you
+think the results tell us about the overall geographical community
+structure of the Auckland Region. The overall write up should not be
+more than 2-3 pages (with this length <em>including</em> maps and
+diagrams if any).</strong></p>
 <div id="things-to-consider" class="section level2">
 <h2>Things to consider</h2>
-<p>Here are a few things to be thinking about while working on this assignment.</p>
+<p>Here are a few things to be thinking about while working on this
+assignment.</p>
 <ul>
-<li>How many clusters make sense? How many different kinds of ‘place’ are there in a region like Wellington. Think about how you expect the region to break down into different kinds of place based specifically on commuting patterns.</li>
-<li>Try to provide verbal descriptions of the clusters you identify so that a reader can make sense of them without studying tables of data or complex charts.</li>
-<li>Keep in mind that clusters are a <em>categorical</em> data type which has implications for the <code>style</code> to use when mapping them.</li>
-<li>Consider if you want to retain all the supplied variables in the analysis. Maybe some are redundant, or you can get a clearer result by removing a few (but not so many that it no longer makes sense to cluster the remaining variables).</li>
-<li>Consider if it is appropriate to rescale variables so they are expressed as proportions or percentages (you don’t have to do this to get a good mark, but you should still <em>think</em> about it and explain your choice with respect to this option.)</li>
+<li>How many clusters make sense? How many different kinds of ‘place’
+are there in a region like Auckland? Think about how you expect the
+region to break down into different kinds of place based on the kinds of
+communities that live there.</li>
+<li>Try to provide verbal descriptions of the clusters you identify so
+that a reader can make sense of them without studying tables of data or
+complex charts.</li>
+<li>Keep in mind that clusters are a <em>categorical</em> data type
+which has implications for the <code>style</code> to use when mapping
+them.</li>
+<li>Consider if you want to retain all the supplied variables in the
+analysis. Maybe some are redundant, or you can get a clearer result by
+removing a few (but not so many that it no longer makes sense to cluster
+the remaining variables).</li>
+<li>Consider if it is appropriate to rescale variables so they are
+expressed relative to their own distribution (e.g. 50 might be a high
+number for some variables, but not at all high for others). You don’t
+have to do this to get a good mark, but you should still <em>think</em>
+about it and explain your choices.</li>
 </ul>
 </div>
 <div id="assessment" class="section level2">
 <h2>Assessment</h2>
-<p>Assessment will be based on the maps and any diagrams included, and an overall evaluation of your explanation of the analysis carried out and the discussion of what it shows. Pay equal attention to the quality of any maps or figures you include, and to the written discussion.</p>
+<p>Assessment will be based on the maps and any diagrams included, and
+an overall evaluation of your explanation of the analysis carried out
+and the discussion of what it shows. Pay equal attention to the quality
+of any maps or figures you include, and to the written discussion.</p>
 </div>
 <div id="submission" class="section level2">
 <h2>Submission</h2>
-<p>Prepare a PDF document that meets the requirements set out above. The whole document should only need to be 2-3 pages (maximum). Submit a PDF file to the dropbox provided on Blackboard. The due date is the end of the day on the due date indicated on the course schedule page..</p>
+<p>Prepare a PDF document that meets the requirements set out above. The
+whole document should only need to be 2-3 pages (maximum). Submit a PDF
+file to the dropbox provided on Nuku. The due date is the end of the day
+on the due date indicated on the course schedule page..</p>
 </div>
 </div>
 </div>
