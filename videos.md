@@ -2,7 +2,7 @@
 A variety of video content relevant to different stages of the course is linked from the pages below. Some of the videos may relate to slightly different earlier versions of the course, but will still be useful and relevant. I will keep you posted if any new video is added. Note that the lecture recordings are hosted on [Blackboard](https://blackboard.vuw.ac.nz "VUW Blackboard").
 
 ### [Week 1](video-indexes/week01.md)
-A zoom recorded lecture from 2021 (because I was unwell and staying home), and videos on installing _R_ and _RStudio_
+An overview of the course focusing on the idea of open science.
 
 ### [Week 2](video-indexes/week02.md)
 Lectures introducing _R_ and _RStudio_ and discussing the limitations of data.
