@@ -133,3 +133,7 @@ a:not(.image), .reveal a:not(.image) {
   from {opacity:0;}
   to {opacity:1;}
 }
+
+.reveal i {
+  font-style: italic;
+}
