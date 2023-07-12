@@ -43,7 +43,7 @@ Apologies for intermittent coughing throughout (probably just as well I was at h
 
 ### Demonstration and wrap
 + [A workflow to cut that big dataset down to size](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-8.mp4) 3m50s
-+ [Ask for help!](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-9.mp4) 3m50s
++ [Ask for help!](https://southosullivan.com/geog315/video/week-03-lecture-02/geog315-06-2022-data-wrangling-9.mp4) 1m20s
 
 ***
 
