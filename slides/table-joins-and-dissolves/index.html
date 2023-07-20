@@ -170,26 +170,6 @@
               <h2 class="fragment" data-fragment-index="5">The <code>factor</code> type can do unexpected things</h2>
             </div>
           </section>
-
-          <!-- <section>
-            <h1>Again, take care!</h1>
-            <h2><pre class="stretch"><code data-trim disable-spellcheck data-noescape contenteditable class="r">
-            # If the variable has different names
-            # in each table, then have to specify them
-            welly_pop <- welly %>%
-              left_join(pop, by=c('Meshblock'='MB_str'))
-            # If the types don't match, then best
-            # to make them match before joining
-            welly <- welly %>%
-              mutate(MB=as.character(Meshblock))
-            pop <- pop %>%
-              mutate(MB=as.character(MBnumber))
-
-            welly_pop <- welly %>%
-              left_join(pop, by=MB)
-            </code></pre>
-            </h2>
-          </section> -->
         </section>
 
 
@@ -230,7 +210,7 @@
           <section>
             <div class="left" style="width: 60%;">
               <img src="images/geo-hierarchy.png">
-            <caption>image source <a target="_blank" href="file:///home/osullid3/Downloads/statistical-standard-for-geographic-areas-2018.pdf">Statistics NZ</a></caption>
+            <caption>See <a href="https://www.stats.govt.nz/methods/geographic-hierarchy" target="_blank">this page at Statistics NZ</a> for more details</caption>
             </div>
             <div class='left' style="width: 36%;">
               <h1>New Zealand census geography</h1>
