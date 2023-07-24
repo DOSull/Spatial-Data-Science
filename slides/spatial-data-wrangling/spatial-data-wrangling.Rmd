@@ -312,7 +312,7 @@ crashes %>%
 # Operations applied to a collection of objects
 Some operations only make sense when applied to a collection of geometries, not one object at a time. Two in particular that are widely used are `st_voronoi()` and `st_triangulate()`.
 
-## Voronoi with st_voronoi
+## Voronoi with `st_voronoi`
 
 The _Voronoi region_ associated with a geometry is the region of space closer to that geometry than to any other geometry in a set of geometries. This is easiest to understand for points.
 
