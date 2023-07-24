@@ -54,7 +54,7 @@
         <section>
           <section data-background-image="images/bind-tables.jpg" class="translucent">
             <h1>Before we look at <code style="text-transform:lowercase;">join</code>s</h1>
-            <h2><code>bind_rows()</code> and <code>bind_cols</code></h2>
+            <h2><code>bind_rows()</code> and <code>bind_cols()</code></h2>
             <h2>These are like sticky-taping a table together</h2>
             <h2>Make sure the rows/columns match!</h2>
           </section>
@@ -99,7 +99,7 @@
             For example
             <pre class="stretch"><code data-trim disable-spellcheck data-noescape contenteditable class="r">
             welly_pop <- welly %>%
-              inner_join(pop, by = "Meshblock")
+              inner_join(pop_table, by = "Meshblock")
             </code></pre>
             </h2>
           </section>
@@ -111,7 +111,7 @@
             <h2>
             <pre class="stretch"><code data-trim disable-spellcheck data-noescape contenteditable class="r">
             welly_pop <- welly %>%
-              inner_join(pop, by = c("Meshblock" = "MB2013"))
+              inner_join(pop_table, by = c("Meshblock" = "MB2013"))
             </code></pre>
             </h2>
           </section>
