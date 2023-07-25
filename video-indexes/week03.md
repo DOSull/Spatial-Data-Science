@@ -48,7 +48,7 @@ Apologies for intermittent coughing throughout (probably just as well I was at h
 ***
 
 ## Making maps in *R*
-These are from 2020, but remain relevant in 2022!
+These are from 2020, but remain relevant today!
 
 Videos supporting each section are linked below. These use a different data set to demonstrate some of the ideas. You can download that dataset [here](../labs/ak-region-ethnicity.gpkg?raw=true), if you'd like to try following along. Video 'cuts' might overlap a little.
 
