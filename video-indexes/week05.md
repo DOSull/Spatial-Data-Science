@@ -29,6 +29,8 @@ I strongly encourage you to explore the demonstration web pages linked from the 
 ***
 
 ## Examples of clustering analysis lecture
+This material is from 2020 (COVID year zero), and at times it shows&mdash;some of the cuts from one video to the next are a little wonky. However, the overview provided is still relevant and holds true.
+
 + [Introduction](https://southosullivan.com/geog315/video/week-05-lecture-02/geog315-10-2020-clustering-applications-01.mp4) 2m56s
 + [Land Environments of New Zealand](https://southosullivan.com/geog315/video/week-05-lecture-02/geog315-10-2020-clustering-applications-02.mp4) 10m47s
 + [LENZ applications](https://southosullivan.com/geog315/video/week-05-lecture-02/geog315-10-2020-clustering-applications-03.mp4) 3m16s
