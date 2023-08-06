@@ -312,8 +312,10 @@ The result is just a table. If we want to map this, we have to add it back to th
 ```{r}
 plants <- plants %>%
   mutate(mean_t = mean_t$mat)
-tm_shape(plants) + 
-  tm_dots(col = "mean_t")
+tm_shape(hillshade) + 
+  tm_raster(palette = "Greys", alpha = 0.5) + 
+  tm_shape(plants) + 
+  tm_bubbles(col = "mean_t", palette = "-RdBu", alpha = 0.5)
 ```
 
 We can apply `terra::extract` to a raster stack to get a multi-attribute table all in one go:
