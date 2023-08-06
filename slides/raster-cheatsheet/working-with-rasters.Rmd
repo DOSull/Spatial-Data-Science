@@ -313,7 +313,8 @@ The result is just a table. If we want to map this, we have to add it back to th
 plants <- plants %>%
   mutate(mean_annual_temp = mean_t$mat)
 tm_shape(hillshade) + 
-  tm_raster(palette = "Greys", alpha = 0.5, legend.show = FALSE) + 
+  tm_raster(palette = "Greys", alpha = 0.5, style = "cont", 
+            legend.show = FALSE) + 
   tm_shape(plants) + 
   tm_bubbles(col = "mean_annual_temp", palette = "-RdBu", alpha = 0.5,
              title.col = "Mean Temp (x10 C)")
