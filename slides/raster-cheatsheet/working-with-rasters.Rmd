@@ -311,11 +311,12 @@ The result is just a table. If we want to map this, we have to add it back to th
 
 ```{r}
 plants <- plants %>%
-  mutate(mean_t = mean_t$mat)
+  mutate(mean_annual_temp = mean_t$mat)
 tm_shape(hillshade) + 
-  tm_raster(palette = "Greys", alpha = 0.5) + 
+  tm_raster(palette = "Greys", alpha = 0.5, legend.show = FALSE) + 
   tm_shape(plants) + 
-  tm_bubbles(col = "mean_t", palette = "-RdBu", alpha = 0.5)
+  tm_bubbles(col = "mean_annual_temp", palette = "-RdBu", alpha = 0.5,
+             title.col = "Mean Temp (x10 C)")
 ```
 
 We can apply `terra::extract` to a raster stack to get a multi-attribute table all in one go:
