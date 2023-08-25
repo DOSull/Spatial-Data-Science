@@ -25,10 +25,12 @@ And here's part II
 ***
 
 ## `terra` package 'cheatsheet'
+Note that in the current versions of _R_ and the `terra` and `tmap` packages the complaints about projections seem no longer to occur. 
+
 ### Basics
 + [Introduction to the 'cheatsheet'](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-01.mp4) 2m19s
 + [Reading a simple dataset](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-02.mp4) 3m46s
-+ [`tmap` and `terra` raster data](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-03.mp4) 4m12s \[**Note** there is a small difference in this one between the online cheatsheet and the one in the video... see if you can spot it!\]
++ [`tmap` and `terra` raster data](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-03.mp4) 4m12s
 
 ### More layers in a raster stack
 + [Reading a set of layers into a stack](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-04.mp4) 6m17s
@@ -37,10 +39,10 @@ And here's part II
 ### Raster calculations
 + [Local operations](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-06.mp4) 3m26s
 + [Raster overlay](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-07.mp4) 4m51s
-+ [Focal operations](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-08.mp4) 7m17s
++ [Focal operations](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-08.mp4) 7m11s (there is a slight glitch in this video around 6min where I had to cut out a terrible cough...)
 + [Zonal calculations](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-09.mp4) 12m15s
 + [Surface analysis](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-10.mp4) 4m13s
 
 ### Interoperation between raster and vector and close
-+ [Introduction to the 'cheatsheet'](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-11.mp4) 12m47s
++ [Combining raster and vector and close](https://southosullivan.com/geog315/video/week-06-lecture-02/geog315-12-2022-terra-cheatsheet-11.mp4) 12m47s
 

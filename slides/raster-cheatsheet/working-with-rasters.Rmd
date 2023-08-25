@@ -23,8 +23,6 @@ library(terra)
 library(sf)
 library(tmap)
 library(dplyr)
-library(tidyr)
-library(ggplot2)
 tmap_mode("plot")
 ```
 
@@ -107,7 +105,7 @@ plot(layers)
 
 ```{r warning=FALSE}
 tm_shape(layers) + 
-  tm_raster() + #title = names(layers)) # this fix no longer needed
+  tm_raster(title = names(layers)) +
   tm_layout(legend.position = c("RIGHT", "BOTTOM")) +
   tm_facets(free.scales = TRUE) # different scales on each layer
 ```
@@ -159,23 +157,27 @@ If we recode each layer by whether or not it is greater than some threshold, the
 below_250m <- layers$dem < 250
 flat <- layers$slope < 5
 result <- below_250m & flat
+names(result) <- c("flat_under_250m") # auto-assigned name is unhelpful
 ```
 
 As usual make some maps
 
 ```{r fig.width=8, fig.height=4, warning=FALSE}
 m1 <- tm_shape(below_250m) + 
-  tm_raster(palette = "Set1", style = "cat", title = "dem<250m") +
+  tm_raster(palette = c("white", "black"), 
+            style = "cat", title = "dem<250m") +
   tm_shape(welly) + 
-  tm_borders(col = "white", lwd = 0.2)
+  tm_borders(col = "darkgrey", lwd = 0.35)
 m2 <- tm_shape(flat) + 
-  tm_raster(palette = "Set1", style = "cat", title = "slope<5deg") + 
+  tm_raster(palette = c("white", "black"), 
+            style = "cat", title = "slope<5deg") + 
   tm_shape(welly) + 
-  tm_borders(col = "white", lwd = 0.2)
+  tm_borders(col = "darkgrey", lwd = 0.35)
 m3 <- tm_shape(result) + 
-  tm_raster(palette = "Set1", style = "cat") + 
+  tm_raster(palette = c("white", "black"), 
+            style = "cat", title = "Flat below 250m") + 
   tm_shape(welly) + 
-  tm_borders(col = "white", lwd = 0.2)
+  tm_borders(col = "darkgrey", lwd = 0.35)
 tmap_arrange(m1, m2, m3, nrow = 1)
 ```
 
@@ -224,7 +226,7 @@ welly_zones <- welly %>%
   as("SpatVector") %>%
   rasterize(relief, field = "ID")
 tm_shape(welly_zones) + 
-  tm_raster(n = 30, palette = "Set1", legend.show = FALSE) + 
+  tm_raster(n = 79, palette = "Set1", legend.show = FALSE) + 
   tm_shape(welly) +
   tm_borders()
 ```
@@ -251,11 +253,11 @@ tm_shape(zonal_relief) +
 
 In many situations, it is more appropriate to output the results from zonal calculations as a table of values which can be attached to the original vector data.
 
-```{r}
+```{r message = FALSE}
 zonal_relief_table <- relief %>%
   zonal(welly_zones, fun = mean)
 welly_relief <- welly %>%
-  merge(zonal_relief_table)
+  left_join(zonal_relief_table)
 tm_shape(welly_relief) +
   tm_polygons(col = "relief", style = "cont")
 ```
@@ -310,13 +312,13 @@ as_tibble(mean_t)
 The result is just a table. If we want to map this, we have to add it back to the original spatial data:
 
 ```{r}
-plants <- plants %>%
-  mutate(mean_annual_temp = mean_t$mat)
+plants <- plants %>% 
+  bind_cols(mean_t)
 tm_shape(hillshade) + 
   tm_raster(palette = "Greys", alpha = 0.5, style = "cont", 
             legend.show = FALSE) + 
   tm_shape(plants) + 
-  tm_bubbles(col = "mean_annual_temp", palette = "-RdBu", alpha = 0.5,
+  tm_bubbles(col = "mat", palette = "-RdBu", alpha = 0.5,
              title.col = "Mean Temp (x10 C)")
 ```
 
@@ -335,5 +337,5 @@ To convert vector data to a raster we convert first to `SpatVector` then to rast
 plants %>% as("SpatVector") %>% 
   rasterize(dem) %>%
   tm_shape() + 
-  tm_raster(palette = "Reds")
+  tm_raster(palette = c("black", "white")) # so we can see the pixels!
 ```
