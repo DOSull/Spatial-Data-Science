@@ -150,14 +150,16 @@
             <h1>Key is that there are many ways to combine layers</h2>
           </section>
 
-          <section data-background="images/black-and-white.png">
-            <h1><span style="color: #888;">Binary<br /></span style="color: #fff;">black</span> <span style="color:#888; text-transform:lowercase;">and</span> <span style="color: #000;">white</span></h1>
-            <h2 style="color: #888;">Input layers are yes/no, true/false, good/bad</h2>
-            <h2 style="color: #888;">Outcome of interest usually <em>all true</em> or
+          <section data-background="images/black-and-white-spiral.png" style=" -webkit-text-fill-color:rgba(1,1,1,0.4); -webkit-text-stroke:1px;">
+            <h1>Binary<br>
+              black <span style="text-transform:lowercase;">and</span> white
+            </h1>
+            <h2>Input layers are yes/no, true/false, good/bad</h2>
+            <h2>Outcome of interest usually <em>all true</em> or
             <em>all false</em></h2>
           </section>
 
-          <section data-background="images/gradient.png">
+          <section data-background="images/black-and-white-spiral-blurred.png" style="-webkit-text-fill-color:rgba(1,1,1,0.4); -webkit-text-stroke:1px;">
             <h1>Summation admits<br />shades of grey</h1>
             <h2>Input layers are scores from
             low to high values in some fixed range</h2>
@@ -209,19 +211,17 @@
             </h2>
           </section>
 
-          <section data-background-color='#000'>
-            <img src='images/weighted-overlay.png'>
-            <div class="fragment" style="position:relative; bottom:50px;">
+          <section>
+            <img src='images/weighted-overlay-2.png'>
+            <div class="fragment">
               <h2>
                 <pre class="stretch">
                   <code data-trim data-noescape contenteditable class="r" style='background:#00000060;'>
-                    # A tibble: 4 x 6
-                      label     area     n  in_density out_density    weight
-                      <fct>    <dbl> <int>       <dbl>       <dbl>     <dbl>
-                    1 A     3036.407    26    8.562751    9.328677 0.9178956
-                    2 B     1636.249     6    3.666925   10.098657 0.3631101
-                    3 C     2720.565    20    7.351414    9.713904 0.7567930
-                    4 D     3254.127    45   13.828593    7.033471 1.9661126
+                    Region     n  area in_density out_density weight  log_w
+                    <chr>  <int> <dbl>      <dbl>       <dbl>  <dbl>  <dbl>
+                  1 A        109 0.891      122.         25.1  4.87   0.688
+                  2 B         82 0.921       89.0       121.   0.735 -0.134
+                  3 C         38 0.525       72.4       115.   0.628 -0.202
                   </code>
                 </pre>
               </h2>
