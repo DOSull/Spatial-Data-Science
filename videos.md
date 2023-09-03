@@ -20,10 +20,10 @@ Lectures on clustering analysis and applications of clustering analysis.
 Lectures on surface analysis and handling raster data in _R_
 
 ### [Week 7](video-indexes/week07.md)
-A lecture on overlay and regression and practical information about using _RStudio_ with scripts and _Rmarkdown_
+Lectures on overlay and regression, regression modelling, and practical information about using _RStudio_ with scripts and _Rmarkdown_
 
 ### [Week 8](video-indexes/week08.md)
-More material about regression including practical materials as demonstrated in class.
+More material about regression including practical materials as demonstrated in class, plus an introduction to the mini-projects.
 
 ### [Week 9](video-indexes/week09.md)
-An introduction to the mini-projects, and a lecture about spatial analysis methods
+A lecture about spatial analysis methods and some 'bonus' material on zoomed-in maps.
