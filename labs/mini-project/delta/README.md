@@ -1,7 +1,9 @@
-**Geog 315 T1 2022**
+**Geog 315 T2 2023**
 
 # The 2021 Delta outbreak locations of interest
-Here's [another dataset](loi.geojson?raw=true) (right-click Save As... to download) pertaining to Aotearoa's SARS Covid-19 pandemic experience. This one is the Ministry of Healths's locations of interest as collated by me from August to October last year. The official published list was always 'current'. This list, was assembled over time so that early locations were not dropped when they were no longer of interest.
+Here's [another dataset](loi.geojson?raw=true) (right-click **Save As...** to download) pertaining to Aotearoa's SARS Covid-19 pandemic experience. This one is the Ministry of Healths's locations of interest as collated by me from August to October 2021, the 'delta outbreak' that led to the extended Auckland lockdown, and eventually the end of New Zealand being 'COVID-free'. 
+
+The official published list was always 'current'. This list, was assembled over time so that early locations were not dropped when they were no longer of interest.
 
 Here is a [dynamic map of the outbreak](https://southosullivan.com/misc/loi.html) (screenshot below) that I was able to make with these data.
 
