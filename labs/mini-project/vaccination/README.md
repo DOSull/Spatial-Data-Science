@@ -1,7 +1,7 @@
-**Geog 315 T1 2022**
+**Geog 315 T2 2023**
 
 # Aotearoa New Zealand SARS Covid-19 vaccination rollout
-Back in October 2021, as the Auckland August delta outbreak wore down the elimination strategy, the pandemic response switched to vaccination, which until that point had been pretty slow to get going.
+Back in October 2021, as the [Auckland August delta outbreak](../delta/README) wore down the elimination strategy, the pandemic response switched to vaccination, which until that point had been pretty slow to get going.
 
 [These data](vax-sa2-20211006.gpkg?raw=true) are from that period, with vaccination rates as reported by the Ministry of Health up to 6 October 2021, down to the Statistical Area 2 (SA2) level. They include information on both first and second doses, and the eligible population counts (at this time eligibility was limited to those aged 12 and above).
 

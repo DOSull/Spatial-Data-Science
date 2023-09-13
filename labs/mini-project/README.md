@@ -1,4 +1,4 @@
-**Geog 315 T1 2022**
+**Geog 315 T2 2023**
 
 # Mini-projects
 Datasets for the mini-project are linked below with project-specific datasets in the first section, and collections of more general datasets that might be relevant to more than one project in the second section.
@@ -16,7 +16,7 @@ Details of the various available datasets and some thoughts on what you might lo
 + [Distribution of _tradescantia fluminensis_](tradescantia)
 + [Mouse trapping at Zealandia, 2003-14](zealandia)
 + [US COVID 19 pandemic](us-covid19)
-+ [US UFO sightings](ufos)
++ [~~US~~Global UFO sightings](ufos) - new for 2023, global data!
 + [Aotearoa New Zealand COVID vaccination rollout](vaccination)
 + [The COVID delta outbreak in Aotearoa New Zealand 2021](delta)
 
@@ -30,8 +30,8 @@ Some other general datasets that may be of use, depending on your topic, are dis
 **In all cases, I strongly advise that you anticipate difficulties and challenges working with any of these and don't leave downloading them until the last minute! Please plan ahead!**
 
 ## Submission requirements
-You should submit a document (PDF preferred) conforming with the requirements set out in [this document](guidance-on-mini-project-report.md) to the dropbox provided on Blackboard by the end of the day on **{{ site.data.dates.assignment_5 }}**.
+You should submit a document (PDF preferred) conforming with the requirements set out in [this document](guidance-on-mini-project-report.md) to the dropbox provided on Nuku by the end of the day on **{{ site.data.dates.assignment_5 }}**.
 
 <!-- delete submission date from this page, or make sure it matches the schedule! -->
 
-Note that if you compile your report using _Rmarkdown_ you should still submit it in PDF format (Knit to Word, then convert to PDF).
+Note that if you compile your report using _Rmarkdown_ (which I recommend)  then you should still submit it in PDF format (Knit to Word, then convert to PDF).

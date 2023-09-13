@@ -1,4 +1,4 @@
-**Geog 315 T2 2021 - materials still to be finalised for T1 2022**
+**Geog 315 T2 2023**
 
 # Determinants of water quality
 The aim of this project would be to look at possible determinants of water quality at catchment levels.
@@ -14,6 +14,6 @@ These can be related to different catchments, which are available at a range of 
 ## Ideas
 The approach would be to consider one or other of the measures of pollution in relation to the relative area of catchment occupied by a variety of landuses. Landuses are included in the landcover database:
 
-+ [LCDB](https://lris.scinfo.org.nz/layer/104400-lcdb-v50-land-cover-database-version-50-mainland-new-zealand/data/)
++ [LCDB](https://lris.scinfo.org.nz/)
 
-Some simple examples of outcomes from analysis of this kind can be seen in this [Statistics NZ report](http://archive.stats.govt.nz/browse_for_stats/environment/environmental-reporting-series/environmental-indicators/Home/Fresh%20water/river-water-quality-nitrogen.aspx).
+Some simple examples of outcomes from analysis of this kind can be seen on this [Statistics NZ web page](https://www.stats.govt.nz/indicators/river-water-quality-nitrogen).
