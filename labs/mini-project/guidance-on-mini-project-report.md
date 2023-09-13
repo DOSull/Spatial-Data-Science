@@ -31,7 +31,7 @@ Again this does not need to be a blow-by-blow account of every single step, in d
 #### 5. Results and discussion (300-400 words) 
 Present any results in the form of maps, tables, charts, etc., and discuss their significance and implications.
 
-#### 6. Conclusions** (150-200 words) 
+#### 6. Conclusions (150-200 words) 
 Here you might consider:   
 
 - limitations of the results arising from data problems, questionable assumptions, problems with the tools, etc.,
