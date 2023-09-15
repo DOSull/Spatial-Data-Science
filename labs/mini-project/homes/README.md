@@ -1,7 +1,7 @@
 **Geog 315 T2 2023**
 
 # Wellington house sales, 2021-23
-These data are from [homes.co.nz](https://homes.co.nz) scraped from their website in September 2021, April 2022, and September 2023. There are several hundred recent sales at each of those times in each dataset.
+These data are from [homes.co.nz](https://homes.co.nz) scraped from their website in July 2021, April 2022, and September 2023. There are several hundred recent sales at each of those times in each dataset.
 
 ## Datasets
 Here are the data: 
