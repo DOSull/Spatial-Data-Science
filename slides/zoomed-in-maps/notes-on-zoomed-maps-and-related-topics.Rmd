@@ -1,9 +1,25 @@
-# Notes on zoomed in maps and related topics
+---
+title: "Zoomed in maps and related topics"
+subtitle: "Geog 315 T2 2023"
+output:
+  rmdformats::material:
+    lightbox: true
+    thumbnails: true
+    gallery: false
+    embed_fonts: true
+    self_contained: true
+    # toc_depth: 3
+    css: "extra.css" # to override the sidebar width
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Zoomed in maps and related topics
 You can download the materials for this notebook from [this link](zoomed-in-maps.zip?raw=true).
 
 First load the usual libraries
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(sf)
 library(tmap)
 library(tmaptools)
@@ -12,7 +28,7 @@ library(dplyr)
 
 Next, we'll load a couple of datasets. These are from the week 7 lab materials.
 
-```{r}
+```{r message=FALSE, warning=FALSE, echo=FALSE}
 abb <- st_read("abb-2193.gpkg")
 welly <- st_read("wellington-base-data.gpkg")
 ```
@@ -22,7 +38,7 @@ These layers are in the same projection, so we don't need to worry about that, b
 ## Web maps
 The easiest way to handle variations in scale and extent of layers is a web map. For this, use `tmap_mode("view")`
 
-```{r}
+```{r message=FALSE}
 tmap_mode("view")
 tm_shape(welly) +
   tm_polygons(col = "pop", alpha = 0.5) + 
@@ -32,7 +48,7 @@ tm_shape(welly) +
 
 The different extents of these two datasets might be a problem. If we are OK with filtering the point data to match the polygons data, then just use `st_filter()`:
 
-```{r}
+```{r message=FALSE}
 welly_abb <- abb %>%
   st_filter(welly)
 tmap_mode("view")
@@ -44,7 +60,7 @@ tm_shape(welly) +
 
 With a web map you can use the export options in _RStudio_ to make snapshots of zoomed in portions of your maps for inclusion in a report.
  
-## When a web map is no good
+# When a web map is no good
 Sometimes a web map is not a viable option. We have a number of static map options available. Before looking at them, I will switch back to static mapping:
 
 ```{r}
@@ -70,7 +86,7 @@ tm_shape(welly, bbox = abb) +
   tm_dots()
 ```
 
-We'll worry about the missing 'base' layer later in this document!
+We'll worry about the missing 'base' layer later!
 
 We can also use a bounding box to zoom in on an area. For example, if we make a bounding box that is from only the Lower Hutt City TA:
 
@@ -85,7 +101,7 @@ tm_shape(welly, bbox = lower_hutt) +
 
 Again, there is missing basemap, but we'll get to that in a bit.
 
-### Using a bounding box for a detailed local map
+# Using a bounding box for a detailed local map
 If we want to make a specific bounding box, then we need to figure out the relevant coordinates. For this purpose, it is useful to make a temporary map with a grid.
 
 ```{r}
@@ -94,7 +110,7 @@ tm_shape(welly) +
   tm_grid()
 ```
 
-Now say we wanted a map showing only the central city. This has an extent from 1,745,000 to 1,750,000 EW and 5,425,000 to 5,430,000 NS. We can use this information to make a bounding box using the `bb` function from `tmaptools`:
+Now say we wanted a map showing only the central city. From the grid, we can see that this has an extent from 1,745,000 to 1,750,000 EW and 5,425,000 to 5,430,000 NS. We can use this information to make a bounding box using the `bb()` function from `tmaptools`:
 
 ```{r}
 cbd <- bb(xlim = c(1745000, 1750000), ylim = c(5425000, 5430000))
@@ -119,12 +135,12 @@ tm_shape(welly, bbox = cbd) +
   tm_dots()
 ```
 
-This approach is a bit easier to recalculate if you want to zoom in a bit closer or zoom out a bit, by just changing the width and height of the bounding box. There is also an `ext` option in the `bb` function to increase or shrink the bounding box relative to the requested width and height.
+This approach is a bit easier to recalculate if you want to zoom in closer or zoom out a bit, by just changing the width and height of the bounding box. There is also an `ext` option in the `bb` function to increase or shrink the bounding box relative to the requested width and height.
 
-### But what I really want is a basemap
+# But what I really want is a basemap
 Often what we really want a web map for is the basemap.
 
-We can get basemaps in static maps using the `rget_tiles()` function in the package `maptiles` and including it as a `tm_rgb` layer in the map. Here's how we use it. First we grab the map tiles:
+We can get basemaps in static maps using the `get_tiles()` function in the package `maptiles` and including it as a `tm_rgb` layer in the map. Here's how we use it. First we grab the map tiles:
 
 ```{r}
 library(maptiles) # you may have to install this
@@ -140,60 +156,105 @@ tm_shape(basemap) +
   tm_dots()
 ```
 
-If the basemap is a bit blurry, then you can zoom in a bit. You have to be careful about this, as if you increase the zoom too much it will take ages to download (and you won't be able to read the detail anyway). By experiment zoom levels in the range 9 to 11 are about right for the Wellington region, and `get_tiles` is smart enough to get it about right most of the time, without you specifying a zoom level. The only other thing to watch out for is that `maptiles` delivers whole web map tiles, so the cropping might be a bit strange. You can fix this by setting the `crop = TRUE` parameter in the `get_tiles()` function, or just using `bbox` in `tm_shape()` as we have seen already:
- 
+If the basemap is a bit blurry, then you can zoom in a bit. You have to be careful about this, as if you increase the zoom too much it will take ages to download (and you won't be able to read the detail anyway). By experiment zoom levels in the range 9 to 11 are about right for the Wellington region, and `get_tiles()` is smart enough to get it about right most of the time, without you specifying a zoom level. 
+
+The only other thing to watch out for is that `get_tiles()` delivers whole web map tiles, so the cropping might seem a bit strange. You can fix this one of two ways, either: using `bbox` in `tm_shape()` as we have seen already:
+
 ```{r}
-# basemap <- get_tiles(abb, crop = TRUE) # this would crop the tiles to the data
+basemap <- get_tiles(abb)
 tm_shape(basemap, bbox = abb) + 
   tm_rgb() + 
   tm_shape(abb) + 
   tm_dots()
 ```
 
-If the colours are distracting, you can wash them out with the saturation option in `tm_rgb`
+or, by setting the `crop = TRUE` parameter in the `get_tiles()` function:
+ 
+```{r}
+basemap <- get_tiles(abb, crop = TRUE)
+tm_shape(basemap) + 
+  tm_rgb() + 
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+## Adjusting the zoom
+Both the above examples suffer from a problem that `get_tiles()` has downloaded at lower zoom level than we'd like (zoom level 9 as it turns out), resulting in blurry labels. If we specify a higher zoom level, we get a finer resolution, although the download will take a bit longer:
 
 ```{r}
-basemap <- get_tiles(abb, zoom = 10, crop = TRUE)
+basemap <- get_tiles(abb, crop = TRUE, zoom = 10)
 tm_shape(basemap) + 
+  tm_rgb() + 
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+### Removing that weird white margin
+For some reason, `get_tiles()` adds a white margin around the downloaded image. You can get rid of this by buffering the crop area. The buffer distance is in the units of the data set (here metres):
+
+```{r}
+basemap <- get_tiles(abb %>% st_buffer(2500), crop = TRUE, zoom = 10)
+tm_shape(basemap, bbox = abb) + 
+  tm_rgb() + 
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+# Some other refinements
+## Desaturate the basemap
+If the colours of the basemap are distracting, you can wash them out with the saturation option in `tm_rgb`
+
+```{r}
+tm_shape(basemap, bbox = abb) + 
   tm_rgb(saturation = 0.35) + 
   tm_shape(abb) + 
   tm_dots()
 ```
 
-Other basemaps are available than OpenStreetMap. You can see the options in the `get_tiles()` function help. For example, this is a nice one (if a bit distracting). Some of them provide no label and only label options, so you can this sort of thing:
+## Other basemaps
+Other basemaps are available than OpenStreetMap. You can see the options in the `get_tiles()` function help. For example, this is a nice one (if a bit distracting). Here's a nice one:
 
 ```{r}
 basemap <- get_tiles(abb %>% st_buffer(5000), 
                      provider = "Stamen.TerrainBackground", crop = TRUE, zoom = 10)
+
+tm_shape(basemap, bbox = abb) + 
+  tm_rgb() + 
+  tm_shape(abb) + 
+  tm_dots()
+```
+
+Some providers supply labelled and unlabelled versions, so you can do this kind of thing:
+
+```{r}
 labels <- get_tiles(abb %>% st_buffer(5000), 
                     provider = "Stamen.TerrainLabels", crop = TRUE, zoom = 10)
 
-tm_shape(basemap) + 
+tm_shape(basemap, bbox = abb) + 
   tm_rgb() + 
   tm_shape(abb) + 
-  tm_dots() + 
-  tm_shape(labels) + 
+  tm_dots() +
+  tm_shape(labels) +
   tm_rgb()
 ```
 
+# Partial transparency of overlaid polygons
 Remember that if you are overlaying polygons on a basemap you will probably want to set `alpha` (the opacity) to less than 1. So here is a final example.
 
 ```{r}
-basemap <- get_tiles(welly)
+basemap <- get_tiles(welly, crop = TRUE)
 tm_shape(basemap, bbox = welly) +
   tm_rgb(saturation = 0.3) +
   tm_shape(welly) + 
   tm_polygons(col = "pop", palette = "viridis", alpha = 0.5) +
-  tm_shape(abb) + 
-  tm_dots() +
   tm_layout(legend.outside = TRUE)
 ```
 
-No really... here's a final little extra. The `cbd` bounding box might be something we want to use in a map like this. Unfortunately a `bb` object is not able to be used directly to specify the limits of a web map. We have to convert it to a simple features object with a known projection. Here's how we can do that.
+Finally... here's a little extra. The `cbd` bounding box from up above, might be something we want to use in a map like this. A `bb` object cannot be used directly to specify the limits of a web map, so we need to make it into a proper `sf` dataset for that, which you can do like this:
 
 ```{r}
-cbd_sf <- cbd %>% 
-  st_as_sfc() %>% 
+cbd_sf <- cbd %>%
+  st_as_sfc() %>%
   st_set_crs(2193) # this is the known projection in this case
 basemap <- get_tiles(cbd_sf, zoom = 13) # I experimented to get best zoom
 tm_shape(basemap, bbox = cbd) +
