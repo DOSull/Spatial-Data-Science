@@ -153,20 +153,27 @@ tm_shape(basemap, bbox = abb) +
 If the colours are distracting, you can wash them out with the saturation option in `tm_rgb`
 
 ```{r}
-tm_shape(basemap, bbox = abb) + 
+basemap <- get_tiles(abb, zoom = 10, crop = TRUE)
+tm_shape(basemap) + 
   tm_rgb(saturation = 0.35) + 
   tm_shape(abb) + 
   tm_dots()
 ```
 
-Other basemaps are available than. You can see the options in the `get_tiles()` function help. For example, this is a nice one (if a bit distracting):
+Other basemaps are available than OpenStreetMap. You can see the options in the `get_tiles()` function help. For example, this is a nice one (if a bit distracting). Some of them provide no label and only label options, so you can this sort of thing:
 
 ```{r}
-basemap <- get_tiles(abb, provider = "Stamen.TerrainBackground")
-tm_shape(basemap, bbox = abb) + 
+basemap <- get_tiles(abb %>% st_buffer(5000), 
+                     provider = "Stamen.TerrainBackground", crop = TRUE, zoom = 10)
+labels <- get_tiles(abb %>% st_buffer(5000), 
+                    provider = "Stamen.TerrainLabels", crop = TRUE, zoom = 10)
+
+tm_shape(basemap) + 
   tm_rgb() + 
   tm_shape(abb) + 
-  tm_dots()
+  tm_dots() + 
+  tm_shape(labels) + 
+  tm_rgb()
 ```
 
 Remember that if you are overlaying polygons on a basemap you will probably want to set `alpha` (the opacity) to less than 1. So here is a final example.
