@@ -25,6 +25,6 @@ Some pointers on making zoomed in static maps or adding basemaps to static maps.
 - [Introduction](https://southosullivan.com/geog315/video/week-09-bonus-material/zoomed-in-maps-1.mp4) (1:16 min)
 - [Using web maps](https://southosullivan.com/geog315/video/week-09-bonus-material/zoomed-in-maps-2.mp4) (2:51 min)
 - [Using the bounding box of a static map](https://southosullivan.com/geog315/video/week-09-bonus-material/zoomed-in-maps-3.mp4) (3:05 min)
-- [Specifying the bouding box by coordinates](https://southosullivan.com/geog315/video/week-09-bonus-material/zoomed-in-maps-4.mp4) (4:09 min)
+- [Specifying the bounding box by coordinates](https://southosullivan.com/geog315/video/week-09-bonus-material/zoomed-in-maps-4.mp4) (4:09 min)
 - [Getting webmap basemap tiles using `read_osm`](https://southosullivan.com/geog315/video/week-09-bonus-material/zoomed-in-maps-5.mp4) (5:58  min)
 - [Some more details on `read_osm` and conclusion](https://southosullivan.com/geog315/video/week-09-bonus-material/zoomed-in-maps-6.mp4) (6:06 min) 
