@@ -124,10 +124,11 @@ This approach is a bit easier to recalculate if you want to zoom in a bit closer
 ### But what I really want is a basemap
 Often what we really want a web map for is the basemap.
 
-We can get basemaps in static maps using the `read_osm()` function in `tmaptools` and including it as a `tm_rgb` layer in the map. Here's how we use it. First we grab the map tiles:
+We can get basemaps in static maps using the `rget_tiles()` function in the package `maptiles` and including it as a `tm_rgb` layer in the map. Here's how we use it. First we grab the map tiles:
 
 ```{r}
-basemap <- read_osm(abb)
+library(maptiles) # you may have to install this
+basemap <- get_tiles(abb)
 ```
 
 Then we make a map
@@ -139,22 +140,30 @@ tm_shape(basemap) +
   tm_dots()
 ```
 
-If the basemap is a bit blurry, then you can zoom in a bit. You have to be careful about this, as if you increase the zoom too much it will take ages to download (and you won't be able to read the detail anyway). By experiment zoom levels in the range 9 to 11 are about right for the Wellington region, and `read_osm` is smart enough to get it about right most of the time, without you specifying a zoom level. If you'd like the basemap to extend a bit beyond the data you can use the `ext` option (look it up in the help for `read_osm`!).
+If the basemap is a bit blurry, then you can zoom in a bit. You have to be careful about this, as if you increase the zoom too much it will take ages to download (and you won't be able to read the detail anyway). By experiment zoom levels in the range 9 to 11 are about right for the Wellington region, and `get_tiles` is smart enough to get it about right most of the time, without you specifying a zoom level. The only other thing to watch out for is that `maptiles` delivers whole web map tiles, so the cropping might be a bit strange. You can fix this by setting the `crop = TRUE` parameter in the `get_tiles()` function, or just using `bbox` in `tm_shape()` as we have seen already:
  
+```{r}
+# basemap <- get_tiles(abb, crop = TRUE) # this would crop the tiles to the data
+tm_shape(basemap, bbox = abb) + 
+  tm_rgb() + 
+  tm_shape(abb) + 
+  tm_dots()
+```
+
 If the colours are distracting, you can wash them out with the saturation option in `tm_rgb`
 
 ```{r}
-tm_shape(basemap) + 
+tm_shape(basemap, bbox = abb) + 
   tm_rgb(saturation = 0.35) + 
   tm_shape(abb) + 
   tm_dots()
 ```
 
-Other basemaps are available than plain OSM, but they can be unreliable. You can see the options in the `openmap` package help. For example, this is a nice one (if a bit distracting):
+Other basemaps are available than. You can see the options in the `get_tiles()` function help. For example, this is a nice one (if a bit distracting):
 
 ```{r}
-basemap <- read_osm(abb, type = "stamen-terrain")
-tm_shape(basemap) + 
+basemap <- get_tiles(abb, provider = "Stamen.TerrainBackground")
+tm_shape(basemap, bbox = abb) + 
   tm_rgb() + 
   tm_shape(abb) + 
   tm_dots()
@@ -163,8 +172,8 @@ tm_shape(basemap) +
 Remember that if you are overlaying polygons on a basemap you will probably want to set `alpha` (the opacity) to less than 1. So here is a final example.
 
 ```{r}
-basemap <- read_osm(lower_hutt)
-tm_shape(basemap) +
+basemap <- get_tiles(welly)
+tm_shape(basemap, bbox = welly) +
   tm_rgb(saturation = 0.3) +
   tm_shape(welly) + 
   tm_polygons(col = "pop", palette = "viridis", alpha = 0.5) +
@@ -179,8 +188,8 @@ No really... here's a final little extra. The `cbd` bounding box might be someth
 cbd_sf <- cbd %>% 
   st_as_sfc() %>% 
   st_set_crs(2193) # this is the known projection in this case
-basemap <- read_osm(cbd_sf, zoom = 13) # I experimented to get best zoom
-tm_shape(basemap) +
+basemap <- get_tiles(cbd_sf, zoom = 13) # I experimented to get best zoom
+tm_shape(basemap, bbox = cbd) +
   tm_rgb(saturation = 0.3) +
   tm_shape(welly) + 
   tm_polygons(col = "pop", palette = "viridis", alpha = 0.5) +
