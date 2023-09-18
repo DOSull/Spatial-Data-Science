@@ -19,6 +19,6 @@ Week | Content | Video | Lab material<br>(mostly Friday)
 {{site.data.dates.w7}} | [From overlay to regression models](slides/from-overlay-to-regression/) <br> [Regression models](slides/regression/) | [Links](video-indexes/week07.html) | [**Building a simple statistical model**](labs/07-lab.html) (20%) due {{ site.data.dates.assignment_4 }}
 {{site.data.dates.w8}} | [More on regression](slides/more-on-regression/) <br> [Running a GIS project](slides/running-a-gis-project/) | [Links](video-indexes/week08.html) | [**Introducing the mini-projects**](labs/mini-project) (30%) due {{ site.data.dates.assignment_5 }} <br> Help with assignments
 {{site.data.dates.w9}} | [Other spatial analysis methods](slides/spatial-analysis-methods/) <br> [Bonus material on zoomed-in maps](slides/zoomed-in-maps/) | [Links](video-indexes/week09.html) | Help with assignments / project work
-{{site.data.dates.w10}} | [Network analysis](slides/network-analysis/) <br> [Time geography](slides/time-geography/) | | Help with assignments / project work
+{{site.data.dates.w10}} | [Network analysis](slides/network-analysis/) <br> [Time geography](slides/time-geography/) | [Links](video-indexes/week10.html) | Help with assignments / project work
 {{site.data.dates.w11}} | [Simulation models](slides/simulation-models/) | | Project work
 {{site.data.dates.w12}} | Project work | | Project work
