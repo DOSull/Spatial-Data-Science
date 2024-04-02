@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 site.baseurl: ''
-site.url: 'https://dosull.github.io/Geog315'
+site.url: 'https://dosull.github.io/Spatial-Data-Science'
 author: "David O'Sullivan"
 github_username: 'DOSull'
 kramdown:
