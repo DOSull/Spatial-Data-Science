@@ -1,5 +1,3 @@
-**Geog 315 T2 2023**
-
 # The 2021 Delta outbreak locations of interest
 Here's [another dataset](loi.geojson?raw=true) (right-click **Save As...** to download) pertaining to Aotearoa's SARS Covid-19 pandemic experience. This one is the Ministry of Healths's locations of interest as collated by me from August to October 2021, the 'delta outbreak' that led to the extended Auckland lockdown, and eventually the end of New Zealand being 'COVID-free'. 
 

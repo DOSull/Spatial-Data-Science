@@ -1,5 +1,3 @@
-**Geog 315 T2 2023**
-
 # Mini-projects
 Datasets for the mini-project are linked below with project-specific datasets in the first section, and collections of more general datasets that might be relevant to more than one project in the second section.
 

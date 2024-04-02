@@ -1,5 +1,3 @@
-**Geog 315 T2 2023**
-
 # Aoteroa New Zealand physical geography data
 The two major categories of data likely to be of interest for the mini-projects are elevation and various biophysical indicators.
 

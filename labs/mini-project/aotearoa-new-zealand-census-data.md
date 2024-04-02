@@ -1,5 +1,3 @@
-**Geog 315 T2 2023**
-
 # Aoteroa New Zealand Census data
 The primary data source for social data is the census of population.
 

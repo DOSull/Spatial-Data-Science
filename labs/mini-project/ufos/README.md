@@ -1,5 +1,3 @@
-**Geog 315 T2 2023**
-
 # Global UFO sightings
 Hurrah! A reprieve for the UFO data, with the added bonus that the dataset is now global...
 

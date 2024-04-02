@@ -1,5 +1,3 @@
-**Geog 315 T1 2022**
-
 ## Landslides in South Taranaki
 This project is based on data for over 13000 landslides recorded north of Waitotara in South Taranaki. The aim would be to produce landslide risk maps for the provided study area, based on some kind of overlay analysis of the provided data in combination with other datasets. The event leading to the landslides is documented in [this report from GNS](https://trc.govt.nz/assets/Documents/Research-reviews/Land/GNS-June2015Flood-w.pdf).
 

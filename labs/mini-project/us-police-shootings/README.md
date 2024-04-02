@@ -1,5 +1,3 @@
-**Geog 315 T2 2023**
-
 # US Fatal police shootings 2015-23
 These data were obtained from these [_Washington Post_](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/) and [_Guardian_](https://www.theguardian.com/us-news/ng-interactive/2015/jun/01/the-counted-police-killings-us-database) projects to record (to the extent possible) all police-involved fatal shootings in the United States from 2015 onwards. Specifically the data were downloaded from [this site](https://github.com/washingtonpost/data-police-shootings) in early September this year (so the most recent data are incomplete).
 

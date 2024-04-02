@@ -1,5 +1,3 @@
-**Geog 315 T2 2023**
-
 # Aotearoa New Zealand General Elections 2017 and 2020
 These data are for the general elections held in September 2017 and September 2020, and have been obtained from the [Electoral Commission website](https://www.electionresults.govt.nz).
 

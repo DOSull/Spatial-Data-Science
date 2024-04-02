@@ -1,5 +1,3 @@
-**Geog 315 T2 2023**
-
 # US Census data
 As you can imagine, actual US census data all the way down to the block level is abso-frickin-lutely _ginormous_, so it is not recommended that you go there.
 

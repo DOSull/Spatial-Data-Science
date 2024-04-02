@@ -1,5 +1,3 @@
-**Geog 315 T2 2023**
-
 # Aotearoa New Zealand SARS Covid-19 vaccination rollout
 Back in October 2021, as the [Auckland August delta outbreak](../delta/README) wore down the elimination strategy, the pandemic response switched to vaccination, which until that point had been pretty slow to get going.
 
