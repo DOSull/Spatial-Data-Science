@@ -45,7 +45,7 @@ to setup
     die
   ]
   ask turtles with [ not any? my-links ] [ die ]
-  ask turtles [ fd random-float 0.4 ]
+  ask turtles [ fd random-float irregularity ]
   reset-ticks
 end
 
@@ -88,8 +88,8 @@ end
 GRAPHICS-WINDOW
 148
 9
-999
-860
+996
+858
 -1
 -1
 40.0
@@ -172,7 +172,7 @@ n-sources
 n-sources
 1
 5
-1.0
+3.0
 1
 1
 NIL
@@ -185,9 +185,24 @@ SLIDER
 364
 kill-p
 kill-p
+0.0
+0.4
 0.1
-0.4
-0.4
+0.01
+1
+NIL
+HORIZONTAL
+
+SLIDER
+17
+376
+139
+409
+irregularity
+irregularity
+0
+0.5
+0.25
 0.01
 1
 NIL
@@ -512,7 +527,7 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.0.4
+NetLogo 6.4.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@

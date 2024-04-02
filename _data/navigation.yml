@@ -1,12 +1,6 @@
 - label: Overview
   url: /
   title: A brief overview of the course
-- label: Nuku
-  url: https://nuku.wgtn.ac.nz/courses/11944
-  title: Go to the course Nuku pages
-- label: Logistics
-  url: /logistics
-  title: Semester dates, mode of delivery, contacts
 - label: Schedule
   url: /schedule
   title: Schedule of lectures and labs with link to the materials
@@ -19,22 +13,3 @@
 - label: Videos
   url: /videos
   title: Supporting videos all linked from one place
-- label: Assessment
-  url: /assessment
-  title: Summary of course assessments
-- label: COVID
-  url: /covid
-  title: What will happen if COVID alert levels change
-- label: Resources
-  url: /resources
-  title: Links to additional university resources and support
-
-# - title: Group of Things
-#   url: /group/
-#   sublinks:
-#     - title: Sub-item 1
-#       url: /group/si1
-#     - title: Sub-item 2
-#       url: /group/si2
-#     - title: Sub-item 3
-#       url: /group/si3
