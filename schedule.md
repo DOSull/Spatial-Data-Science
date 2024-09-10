@@ -1,6 +1,6 @@
 # Schedule
 
-Week | Content | Video | Lab material<br>(mostly Friday)
+Week | Content | Video | Lab material
 --: | -- | -- | -- 
 {{site.data.dates.w1}} | Course introduction <br> [Open science, open source, and doing GIS in code](slides/open/) | [Links](video-indexes/week01.html) | [Lab session to get software setup](labs/01-lab.html) 
 {{site.data.dates.w2}} | [Starting *R*](slides/starting-r/) <br> [The myth of tidy data](slides/tidy-data/) | [Links](video-indexes/week02.html) | [Introducing *R* and *RStudio*](labs/02-lab.html)
