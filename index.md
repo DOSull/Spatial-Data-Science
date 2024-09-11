@@ -1,8 +1,25 @@
-# Overview
+# Introducing spatial data science
+These materials introduce 'spatial data science' or might also be considered a course in 'advanced GIS' which is what it was developed to be when it was Geog 315 at Victoria University of Wellington.
 
-## An Introduction to Spatial Data Science
-This course introduces 'spatial data science' or might also be considered a course in 'advanced GIS' which is what it was developed to be when it was Geog 315 at Victoria University of Wellington. Some remnants identifying materials as part of that course remain, but will be removed as I develop the material for use as training materials in 'R spatial'.
+I am happy to discuss developing any or all of these materials into short intensive one/two/three day courses to suit the needs of organisations grappling with connecting their geospatial and data analytics workflows.
 
-There is a particular emphasis on open source tools and on approaches to doing geospatial analysis in code using *R* as these are becoming increasingly important in science and other workplace settings. The major assessment component of the class is a mini-project exercise which gives students an opportunity to explore methods and topics of interest to themselves, and also to develop confidence exploring and present results from the analysis of spatial data using a modern literate programming approach.
-
-It is expected that students will have completed an introductory course in GIS and have some basic familiarity with spatial data and spatial data formats.
+Content | Hands-on materials
+-- | -- 
+**1. Introducing R for geospatial** |
+[Open science, open source, and doing GIS in code](slides/open/) | [Software setup](labs/01-lab.html) 
+[Starting *R*](slides/starting-r/) | [Introducing *R* and *RStudio*](labs/02-lab.html)
+**2. Making maps** |
+[Choropleth map design](slides/choropleth-maps/)<br> [Bonus material on zoomed-in maps](slides/zoomed-in-maps/) | [Making maps](labs/03-lab.html)
+**3. Wrangling spatial data** |
+[The myth of tidy data](slides/tidy-data/)<br>[Data wrangling](slides/data-wrangling/)<br>[Handling tables](slides/table-joins-and-dissolves/)<br>[Spatial data wrangling](slides/spatial-data-wrangling/) | [Spatial data manipulation](labs/04-lab.html)
+**4. Clustering analysis** |
+[Clustering analysis](slides/classification-clustering/)<br>[Applications of clustering analysis](slides/classification-examples/) | [Geographic cluster analysis](labs/05-lab.html)
+**5. Raster data** |
+[Introducing raster data](slides/surface-analysis/)<br>[Working with rasters](slides/raster-cheatsheet/) |
+**6. Simple statistical models** |
+[From overlay to regression models](slides/from-overlay-to-regression/)<br>[Regression models](slides/regression/)<br>[More on regression](slides/more-on-regression/) | [Building a simple statistical model](labs/07-lab.html)
+**7. Where to from here?** |
+[Other spatial analysis methods](slides/spatial-analysis-methods/) | See also [Spatial analysis & modelling](https://github.com/DOSull/Spatial-Analysis-and-Modelling)
+[Network analysis](slides/network-analysis/) |
+[Time geography](slides/time-geography/) | 
+[Simulation models](slides/simulation-models/) | 
