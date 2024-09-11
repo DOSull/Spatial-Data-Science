@@ -1,15 +1,15 @@
 - label: Overview
   url: /
   title: A brief overview of the course
-- label: Schedule
+- label: Materials
   url: /schedule
-  title: Schedule of lectures and labs with link to the materials
-- label: Readings
-  url: /readings
-  title: Links to additional readings
-- label: Labs & project
+  title: Sequence with links to materials
+# - label: Readings
+#   url: /readings
+#   title: Links to additional readings
+- label: Hands-on
   url: /labs
-  title: Details of the weekly lab assignments and the mini-project
-- label: Videos
-  url: /videos
-  title: Supporting videos all linked from one place
+  title: Details of practical assignments
+# - label: Videos
+#   url: /videos
+#   title: Supporting videos all linked from one place

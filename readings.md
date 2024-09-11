@@ -10,11 +10,11 @@ might be useful for anyone who wants to extend their *R* knowledge. It is also a
 
 Additional readings and useful links are organised by week, below. Some links to published materials may only work if you are logged in via the library or are on campus, depending on the exact details of library subscriptions.
 
-## Week 1 [General background](readings/week01.md)
-## Week 2 [Data](readings/week02.md)
-## Week 3 [Map design and colour](readings/week03.md)
-## Week 4 [Data wrangling](readings/week04.md)
-## Week 5 [Clustering analysis](readings/week05.md)
-## Week 6 [Raster data](readings/week06.md)
-## Weeks 7 & 8 [Regression](readings/week07-08.md)
-## Weeks 9, 10 & 11 [Various topics](readings/week09-10-11.md)
+## [General background](readings/week01.md)
+## [Data](readings/week02.md)
+## [Map design and colour](readings/week03.md)
+## [Data wrangling](readings/week04.md)
+## [Clustering analysis](readings/week05.md)
+## [Raster data](readings/week06.md)
+## [Regression](readings/week07-08.md)
+## [Various topics](readings/week09-10-11.md)
