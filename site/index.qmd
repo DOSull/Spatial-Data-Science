@@ -9,20 +9,16 @@ I am happy to discuss developing any or all of these materials into short intens
 Content | Hands-on materials
 -- | -- 
 **1. Introducing R for geospatial** |
-[Open science, open source, and doing GIS in code](content/open/) | [Software setup](labs/01-lab.html) 
-[Starting *R*](content/starting-r/) | [Introducing *R* and *RStudio*](labs/02-lab.html)
+[Open science, open source, and doing GIS in code](content/01-open.qmd)<br>[Starting *R*](content/02-starting-r.qmd) | [Software setup](labs/01-lab.html)<br>[Introducing *R* and *RStudio*](labs/02-lab.html)
 **2. Making maps** |
-[Choropleth map design](content/choropleth-maps/)<br> [Bonus material on zoomed-in maps](content/zoomed-in-maps/) | [Making maps](labs/03-lab.html)
+[Choropleth map design](content/03-choropleth-maps.qmd)<br> [Bonus material on zoomed-in maps](content/04-zoomed-in-maps.qmd) | [Making maps](labs/03-lab.html)
 **3. Wrangling spatial data** |
-[The myth of tidy data](content/tidy-data/)<br>[Data wrangling](content/data-wrangling/)<br>[Handling tables](content/table-joins-and-dissolves/)<br>[Spatial data wrangling](content/spatial-data-wrangling/) | [Spatial data manipulation](labs/04-lab.html)
+[The myth of tidy data](content/05-tidy-data.qmd)<br>[Data wrangling](content/06-data-wrangling.qmd)<br>[Handling tables](content/07-table-joins-and-dissolves.qmd)<br>[Spatial data wrangling](content/08-spatial-data-wrangling.qmd) | [Spatial data manipulation](labs/04-lab.html)
 **4. Clustering analysis** |
-[Clustering analysis](content/classification-clustering/)<br>[Applications of clustering analysis](content/classification-examples/) | [Geographic cluster analysis](labs/05-lab.html)
+[Clustering analysis](content/09-classification-clustering.qmd)<br>[Applications of clustering analysis](content/10-classification-examples.qmd) | [Geographic cluster analysis](labs/05-lab.html)
 **5. Raster data** |
-[Introducing raster data](content/surface-analysis/)<br>[Working with rasters](content/raster-cheatsheet/) |
+[Introducing raster data](content/11-surface-analysis.qmd)<br>[Working with rasters](content/12-raster-cheatsheet.qmd/) |
 **6. Simple statistical models** |
-[From overlay to regression models](content/from-overlay-to-regression/)<br>[Regression models](content/regression/)<br>[More on regression](content/more-on-regression/) | [Building a simple statistical model](labs/07-lab.html)
+[From overlay to regression models](content/13-from-overlay-to-regression.qmd)<br>[Regression models](content/14-regression.qmd)<br>[More on regression](content/15-more-on-regression.qmd) | [Building a simple statistical model](labs/07-lab.html)
 **7. Where to from here?** |
-[Other spatial analysis methods](content/spatial-analysis-methods/) | See also [Spatial analysis & modelling](https://github.com/DOSull/Spatial-Analysis-and-Modelling)
-[Network analysis](content/network-analysis/) |
-[Time geography](content/time-geography/) | 
-[Simulation models](content/simulation-models/) | 
+[Other spatial analysis methods](content/16-spatial-analysis-methods.qmd)<br>[Network analysis](content/17-network-analysis.qmd)<br>[Time geography](content/18-time-geography.qmd)<br>[Simulation models](content/19-simulation-models.qmd) | See also [Spatial analysis & modelling](https://github.com/DOSull/Spatial-Analysis-and-Modelling)
