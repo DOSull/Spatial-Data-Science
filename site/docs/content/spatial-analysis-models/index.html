@@ -35,16 +35,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -70,57 +70,169 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Introducing spatial data science
-      </li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Introducing spatial data science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-geospatial" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">R geospatial</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-r-geospatial">    
+        <li>
+    <a class="dropdown-item" href="../../content/01-open.html">
+ <span class="dropdown-text">Open data, open science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/02-starting-r.html">
+ <span class="dropdown-text">Getting started with R</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-making-maps" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Making maps</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-making-maps">    
+        <li>
+    <a class="dropdown-item" href="../../content/03-choropleth-maps.html">
+ <span class="dropdown-text">Choropleth maps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/04-zoomed-in-maps.html">
+ <span class="dropdown-text">Zoomed in maps</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-wrangling-spatial-data" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Wrangling spatial data</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-wrangling-spatial-data">    
+        <li>
+    <a class="dropdown-item" href="../../content/05-tidy-data.html">
+ <span class="dropdown-text">Tidy data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/06-data-wrangling.html">
+ <span class="dropdown-text">Data wrangling</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/07-table-joins-and-dissolves.html">
+ <span class="dropdown-text">Handling tables</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/08-spatial-data-wrangling.html">
+ <span class="dropdown-text">Spatial data wrangling</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-clustering" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Clustering</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-clustering">    
+        <li>
+    <a class="dropdown-item" href="../../content/09-classification-clustering.html">
+ <span class="dropdown-text">Clustering methods</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/10-classification-examples.html">
+ <span class="dropdown-text">Clustering examples</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-raster" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Raster</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-raster">    
+        <li>
+    <a class="dropdown-item" href="../../content/11-surface-analysis.html">
+ <span class="dropdown-text">Surface analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/12-raster-cheatsheet.html">
+ <span class="dropdown-text">Raster cheatsheet</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-statistical-models" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Statistical models</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-statistical-models">    
+        <li>
+    <a class="dropdown-item" href="../../content/13-from-overlay-to-regression.html">
+ <span class="dropdown-text">Overlay to regression</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/14-regression.html">
+ <span class="dropdown-text">Regression</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/15-more-on-regression.html">
+ <span class="dropdown-text">More on regression</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-what-next" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">What next?</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-what-next">    
+        <li>
+    <a class="dropdown-item" href="../../content/16-spatial-analysis-methods.html">
+ <span class="dropdown-text">Spatial analysis methods</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/17-network-analysis.html">
+ <span class="dropdown-text">Network analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/18-time-geography.html">
+ <span class="dropdown-text">Time geography</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../content/19-simulation-models.html">
+ <span class="dropdown-text">Simulation modelling</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../../">
-      Introducing spatial data science
-      </a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 
 
-<iframe src="https://dosull.github.io/Spatial-Data-Science/content/spatial-analysis-models/#/" width="100%" height="100%">
+<iframe src="https://dosull.github.io/Spatial-Data-Science/slides/spatial-analysis-models/#/" width="100%" height="100%">
 <div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden" data-render-id="quarto-int-sidebar-title">Introducing spatial data science</span> <span class="hidden" data-render-id="quarto-int-navbar-title">Introducing spatial data science</span></p>
+<p><span class="hidden" data-render-id="quarto-int-sidebar-title">Introducing spatial data science</span> <span class="hidden" data-render-id="quarto-int-navbar-title">Introducing spatial data science</span> <span class="hidden" data-render-id="quarto-int-navbar:R geospatial">R geospatial</span> <span class="hidden" data-render-id="quarto-int-navbar:Open data, open science">Open data, open science</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/01-open.html">/content/01-open.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Getting started with R">Getting started with R</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/02-starting-r.html">/content/02-starting-r.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Making maps">Making maps</span> <span class="hidden" data-render-id="quarto-int-navbar:Choropleth maps">Choropleth maps</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/03-choropleth-maps.html">/content/03-choropleth-maps.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Zoomed in maps">Zoomed in maps</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/04-zoomed-in-maps.html">/content/04-zoomed-in-maps.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Wrangling spatial data">Wrangling spatial data</span> <span class="hidden" data-render-id="quarto-int-navbar:Tidy data">Tidy data</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/05-tidy-data.html">/content/05-tidy-data.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Data wrangling">Data wrangling</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/06-data-wrangling.html">/content/06-data-wrangling.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Handling tables">Handling tables</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/07-table-joins-and-dissolves.html">/content/07-table-joins-and-dissolves.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Spatial data wrangling">Spatial data wrangling</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/08-spatial-data-wrangling.html">/content/08-spatial-data-wrangling.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Clustering">Clustering</span> <span class="hidden" data-render-id="quarto-int-navbar:Clustering methods">Clustering methods</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/09-classification-clustering.html">/content/09-classification-clustering.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Clustering examples">Clustering examples</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/10-classification-examples.html">/content/10-classification-examples.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Raster">Raster</span> <span class="hidden" data-render-id="quarto-int-navbar:Surface analysis">Surface analysis</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/11-surface-analysis.html">/content/11-surface-analysis.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Raster cheatsheet">Raster cheatsheet</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/12-raster-cheatsheet.html">/content/12-raster-cheatsheet.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Statistical models">Statistical models</span> <span class="hidden" data-render-id="quarto-int-navbar:Overlay to regression">Overlay to regression</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/13-from-overlay-to-regression.html">/content/13-from-overlay-to-regression.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Regression">Regression</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/14-regression.html">/content/14-regression.html</span> <span class="hidden" data-render-id="quarto-int-navbar:More on regression">More on regression</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/15-more-on-regression.html">/content/15-more-on-regression.html</span> <span class="hidden" data-render-id="quarto-int-navbar:What next?">What next?</span> <span class="hidden" data-render-id="quarto-int-navbar:Spatial analysis methods">Spatial analysis methods</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/16-spatial-analysis-methods.html">/content/16-spatial-analysis-methods.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Network analysis">Network analysis</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/17-network-analysis.html">/content/17-network-analysis.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Time geography">Time geography</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/18-time-geography.html">/content/18-time-geography.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Simulation modelling">Simulation modelling</span> <span class="hidden" data-render-id="quarto-int-navbar:/content/19-simulation-models.html">/content/19-simulation-models.html</span></p>
 </div>
 <div id="quarto-meta-markdown" class="hidden">
 <p><span class="hidden" data-render-id="quarto-metatitle">Introducing spatial data science</span> <span class="hidden" data-render-id="quarto-twittercardtitle">Introducing spatial data science</span> <span class="hidden" data-render-id="quarto-ogcardtitle">Introducing spatial data science</span> <span class="hidden" data-render-id="quarto-metasitename">Introducing spatial data science</span> <span class="hidden" data-render-id="quarto-twittercarddesc"></span> <span class="hidden" data-render-id="quarto-ogcardddesc"></span></p>
