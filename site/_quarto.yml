@@ -1,0 +1,53 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Introducing spatial data science"
+  navbar: 
+    left: 
+      - text: R geospatial
+        menu: 
+          - content/01-open.qmd
+          - content/02-starting-r.qmd
+      - text: Making maps
+        menu: 
+          - content/03-choropleth-maps.qmd
+          - content/04-zoomed-in-maps.qmd
+      - text: Wrangling spatial data
+        menu: 
+          - content/05-tidy-data.qmd
+          - content/06-data-wrangling.qmd
+          - content/07-table-joins-and-dissolves.qmd
+          - content/08-spatial-data-wrangling.qmd
+      - text: Clustering
+        menu: 
+          - content/09-classification-clustering.qmd
+          - content/10-classification-examples.qmd
+      - text: Raster
+        menu: 
+          - content/11-surface-analysis.qmd
+          - content/12-raster-cheatsheet.qmd
+      - text: Statistical models
+        menu: 
+          - content/13-from-overlay-to-regression.qmd
+          - content/14-regression.qmd
+          - content/15-more-on-regression.qmd
+      - text: What next?
+        menu: 
+          - content/16-spatial-analysis-methods.qmd
+          - content/17-network-analysis.qmd
+          - content/18-time-geography.qmd
+          - content/19-simulation-models.qmd
+  page-navigation: false
+
+format:
+  html:
+    title-block-style: none
+    theme: slate
+    toc: false
+    df-print: kable
+    grid:
+      sidebar-width: 200px
+      body-width: 1600px
+      margin-width: 0px

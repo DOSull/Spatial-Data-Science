@@ -1,0 +1,8 @@
+---
+title: Spatial analysis methods
+format:
+  html:
+    page-layout: full
+---
+
+<iframe src="https://dosull.github.io/Spatial-Data-Science/slides/spatial-analysis-methods/#/" width=100% height=100%>

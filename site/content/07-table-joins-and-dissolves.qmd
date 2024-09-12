@@ -1,0 +1,8 @@
+---
+title: Handling tables
+format:
+  html:
+    page-layout: full
+---
+
+<iframe src="https://dosull.github.io/Spatial-Data-Science/slides/table-joins-and-dissolves/#/" width=100% height=100%>

@@ -1,0 +1,8 @@
+---
+title: Raster cheatsheet
+format:
+  html:
+    page-layout: full
+---
+
+<iframe src="https://dosull.github.io/Spatial-Data-Science/slides/raster-cheatsheet/#/" width=100% height=100%>

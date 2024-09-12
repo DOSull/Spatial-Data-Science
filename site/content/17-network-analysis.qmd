@@ -1,0 +1,8 @@
+---
+title: Network analysis
+format:
+  html:
+    page-layout: full
+---
+
+<iframe src="https://dosull.github.io/Spatial-Data-Science/slides/network-analysis/#/" width=100% height=100%>

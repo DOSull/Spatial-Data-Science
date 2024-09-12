@@ -1,0 +1,8 @@
+---
+title: Time geography
+format:
+  html:
+    page-layout: full
+---
+
+<iframe src="https://dosull.github.io/Spatial-Data-Science/slides/time-geography/#/" width=100% height=100%>

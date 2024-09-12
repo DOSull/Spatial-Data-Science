@@ -167,7 +167,7 @@ Note that the initially selected polygon is considered to ‘touch’ itself. It
 
 A spatial join not only applies some spatial predicate to the relation between two layers, but will append the data from the second layer to the data table of the first.
 
-This is an effective way of spatially merging datasets for further analysis. An example of `st_join` is in the [main lab materials](https://dosull.github.io/Spatial-Data-Science/site/docs//labs/week-04/spatial-data-manipulation-03-spatial-joins). The trickiest aspect to spatial joins is when more than one object meets the join criterion. For example, if we are joining data from points to polygons then many points may intersect with each polygon:
+This is an effective way of spatially merging datasets for further analysis. An example of `st_join` is in the [main lab materials](https://dosull.github.io/Spatial-Data-Science/labs/week-04/spatial-data-manipulation-03-spatial-joins). The trickiest aspect to spatial joins is when more than one object meets the join criterion. For example, if we are joining data from points to polygons then many points may intersect with each polygon:
 
 ```{r}
 mblocks %>%

@@ -1,0 +1,8 @@
+---
+title: Zoomed in maps
+format:
+  html:
+    page-layout: full
+---
+
+<iframe src="https://dosull.github.io/Spatial-Data-Science/slides/zoomed-in-maps/#/" width=100% height=100%>
