@@ -10,11 +10,11 @@ website:
         menu: 
           - content/01-open.qmd
           - content/02-starting-r.qmd
-      - text: Making maps
+      - text: Mapping
         menu: 
           - content/03-choropleth-maps.qmd
           - content/04-zoomed-in-maps.qmd
-      - text: Wrangling spatial data
+      - text: Wrangling data
         menu: 
           - content/05-tidy-data.qmd
           - content/06-data-wrangling.qmd
@@ -44,7 +44,7 @@ website:
 format:
   html:
     title-block-style: none
-    theme: slate
+    theme: darkly
     toc: false
     df-print: kable
     grid:
