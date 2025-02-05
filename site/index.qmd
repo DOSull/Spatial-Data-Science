@@ -9,8 +9,6 @@ These materials introduce 'spatial data science' or might also be considered a c
 
 I am happy to discuss developing any or all of these materials into short intensive one/two/three day courses to suit the needs of organisations grappling with connecting their geospatial and data analytics workflows.
 
-::: {style="width:60vw;"}
-
 Content | Hands-on materials
 -- | -- 
 **1. Introducing R for geospatial** |
@@ -27,5 +25,3 @@ Content | Hands-on materials
 [From overlay to regression models](content/13-from-overlay-to-regression.qmd)<br>[Regression models](content/14-regression.qmd)<br>[More on regression](content/15-more-on-regression.qmd) | [Building a simple statistical model](labs/07-lab.html)
 **7. Where to from here?** |
 [Other spatial analysis methods](content/16-spatial-analysis-methods.qmd)<br>[Network analysis](content/17-network-analysis.qmd)<br>[Time geography](content/18-time-geography.qmd)<br>[Simulation models](content/19-simulation-models.qmd) | See also [Spatial analysis & modelling](https://github.com/DOSull/Spatial-Analysis-and-Modelling)
-
-:::

@@ -44,10 +44,10 @@ website:
 format:
   html:
     title-block-style: none
-    theme: darkly
+    theme: sandstone
     toc: false
     df-print: kable
     grid:
-      sidebar-width: 200px
-      body-width: 1600px
-      margin-width: 0px
+      sidebar-width: 400px
+      body-width: 1000px
+      margin-width: 400px
